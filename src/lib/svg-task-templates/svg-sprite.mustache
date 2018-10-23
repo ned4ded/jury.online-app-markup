@@ -1,0 +1,19 @@
+.icon {
+	display: inline-block;
+	height: 1em;
+	width: 1em;
+	fill: inherit;
+	stroke: inherit;
+}
+
+@mixin get-em-width($width, $height) {
+	width: ($width / $height)+em;
+}
+
+{{#shapes}}{{#selector.dimensions}}{{expression}}{{^last}},
+{{/last}}{{/selector.dimensions}} {
+	font-size: {{height.outer}}px;
+	@include get-em-width({{width.outer}}, {{height.outer}});
+}
+
+{{/shapes}}

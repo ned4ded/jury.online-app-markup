@@ -1,0 +1,56 @@
+// Fonts
+
+@mixin f($fz: $font-size-base, $font-weight: $font-weight-base, $line-height: $line-height-base) {
+  font-family: $font-family-base;
+}
+
+@mixin f-sm($font-weight: $font-weight-base, $line-height: $line-height-base) {
+  @include f($font-size-sm, $font-weight, $line-height);
+}
+
+@mixin f-lg($font-weight: $font-weight-base, $line-height: $line-height-base) {
+  @include f($font-size-lg, $font-weight, $line-height);
+}
+
+// Breakpoints
+
+@mixin bp-validate($breakpoint) {
+  @if map-has-key($grid-breakpoints, $breakpoint) {
+    @content;
+  }
+
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. Available breakpoints are: #{map-keys($grid-breakpoints)}.";
+  }
+}
+
+@mixin bp-up($breakpoint) {
+  @include bp-validate($breakpoint) {
+    @include media-breakpoint-up($breakpoint) {
+      @content;
+    }
+  }
+}
+
+@mixin bp-down($breakpoint) {
+  @include bp-validate($breakpoint) {
+    @include media-breakpoint-down($breakpoint) {
+      @content;
+    }
+  }
+}
+
+@mixin bp-only($breakpoint) {
+  @include bp-validate($breakpoint) {
+    @include media-breakpoint-only($breakpoint) {
+      @content;
+    }
+  }
+}
+
+// Fonts
+
+@mixin rem($s) {
+  font-size: $s;
+  font-size: rem($s);
+}

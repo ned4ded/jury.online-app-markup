@@ -1,0 +1,17 @@
+@import 'fonts';
+@import 'variables/base';
+@import 'bootfix/base';
+@import 'helpers/base';
+@import 'vendor/base';
+
+/* COMMON STYLES START */
+
+body {
+
+}
+
+/* COMMON STYLES END */
+
+@import 'generated/base';
+@import 'blocks/base';
+@import 'pages/base';
