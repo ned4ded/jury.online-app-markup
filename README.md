@@ -46,7 +46,7 @@ Default project has exact or similar structure:
 Contains .json files, which could be used as a data for Nunjucks templates. Loads up automatically after starting gulp.
 
 For example, any data from `datasets/data.json` could be accessed with this construct:
-``` javascript
+```
 {% set data = datasets.get('data') %}
 ```
 
