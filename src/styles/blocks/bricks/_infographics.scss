@@ -40,12 +40,6 @@
 
   &--navbar {
     .infographics {
-      color: $yiq-text-light;
-
-      @include bp-up($navbar-collapse-bp) {
-        color: theme-primary();
-      }
-
       &__item {
         @include bp-up($navbar-collapse-bp) {
           align-items: flex-end;
@@ -54,6 +48,12 @@
 
       &__line {
         font-size: rem(14px);
+
+        color: $yiq-text-light;
+
+        @include bp-up($navbar-collapse-bp) {
+          color: theme-primary();
+        }
 
         &--emphasis {
           font-size: $font-size-lg;

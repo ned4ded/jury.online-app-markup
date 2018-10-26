@@ -1,0 +1,29 @@
+.lining {
+  position: absolute;
+  z-index: $zindex-side-menu - 1;
+  top: 0;
+  left: 0;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  cursor: pointer;
+  transition: background-color .4s ease-in;
+
+  background-color: rgba(49, 48, 59, 0);
+
+  &[data-state="close"] {
+    display: none;
+  }
+
+  &[data-state="open"] {
+    display: block;
+    background-color: rgba(49, 48, 59, 0.8);
+
+    @include bp-up($navbar-collapse-bp) {
+      display: none;
+    }
+  }
+}

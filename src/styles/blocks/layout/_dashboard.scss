@@ -41,7 +41,7 @@
     z-index: $zindex-side-menu;
     top: $navbar-h;
 
-    width: 73.5%;
+    width: $side-bar-w-percentage;
     min-width: $side-bar-w;
     height: calc(100vh - #{$navbar-h});
 
@@ -50,6 +50,18 @@
 
       width: $side-bar-w;
       height: auto;
+    }
+
+    &[data-state="open"] {
+      display: block;
+    }
+
+    &[data-state="close"] {
+      display: none;
+
+      @include bp-up($navbar-collapse-bp) {
+        display: block;
+      }
     }
   }
 }
