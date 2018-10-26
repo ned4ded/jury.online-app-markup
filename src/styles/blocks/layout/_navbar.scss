@@ -1,4 +1,6 @@
 .navbar {
+  $bg-gradient-sm: linear-gradient(to right, theme-primary(), theme-primary('600'));
+
   position: relative;
 
   display: flex;
@@ -9,7 +11,7 @@
 
   list-style: none;
 
-  background-image: linear-gradient(to right, theme-primary(), theme-primary('600'));
+  background-image: $bg-gradient-sm;
 
   @include bp-up($navbar-collapse-bp) {
     padding: 0;
@@ -69,12 +71,20 @@
       width: 100%;
       min-height: 100%;
 
+      background-image: $bg-gradient-sm;
+
+      color: $white;
+
       @include bp-up($navbar-collapse-bp) {
+        color: inherit;
+
         position: static;
 
         display: flex;
         align-items: center;
         justify-content: center;
+
+        background-image: none;
       }
     }
 
@@ -128,7 +138,7 @@
     }
   }
 
-  &[data-state="opened"] &__block--data {
+  &[data-state="open"] &__block--data {
     display: flex;
   }
 
@@ -216,8 +226,10 @@
 
   &__infographics {
     padding: 0 #{$grid-gutter-width / 2};
+    width: $side-bar-w-percentage;
 
     @include bp-up($navbar-collapse-bp) {
+      width: auto;
       margin-right: spacer(8);
       padding: 0;
     }
@@ -234,10 +246,13 @@
 
     font-weight: bold;
 
+    width: 100% - $side-bar-w-percentage;
+
     @include bp-up($navbar-collapse-bp) {
       display: inline-block;
 
       min-width: 145px;
+      width: auto;
 
       border-radius: $border-radius;
     }

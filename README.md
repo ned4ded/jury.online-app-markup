@@ -45,11 +45,6 @@ Default project has exact or similar structure:
 ### Datasets
 Contains .json files, which could be used as a data for Nunjucks templates. Loads up automatically after starting gulp.
 
-For example, any data from `datasets/data.json` could be accessed with this construct:
-``` javascript
-// {% set data = datasets.get('data') %}
-```
-
 ### SVG sprite
 
 SVG sprite will be generated with all SVG files located in `src/assets/icons`. After sprite generation, the file (`src/styles/generated/_sprite.scss`) will be created, which contains specific rules for each icon. This file must not be customized. To override common styles for such an icon use `src/styles/generated/_sprite-custom.scss` file.
