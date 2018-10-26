@@ -1,0 +1,7 @@
+@each $color, $value in $theme-primary-shades {
+  @include bg-variant(".bg-primary-#{$color}", $value);
+}
+
+@each $color, $value in $grays {
+  @include bg-variant(".bg-gray-#{$color}", $value);
+}

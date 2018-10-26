@@ -1,0 +1,12 @@
+[
+  {
+    "name" : "уведомления",
+    "icon" : "bell",
+    "notify" : true
+  },
+  {
+    "name" : "диалоги",
+    "icon" : "blob",
+    "notify" : false
+  }
+]

@@ -3,3 +3,11 @@
 
   @return $rem * 1rem;
 }
+
+@function theme-primary($key: "500") {
+  @return map-get($theme-primary-shades, $key);
+}
+
+@function spacer($key: 4) {
+  @return map-get($spacers, $key);
+}

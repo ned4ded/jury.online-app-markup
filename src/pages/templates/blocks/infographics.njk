@@ -1,0 +1,14 @@
+{% import "lib/helpers.njk" as helpers %}
+
+{% macro make(data, classes = false) %}
+  <ul class="infographics{{ helpers.parse( classes ) }}">
+    {% for item in data %}
+
+    <li class="infographics__item">
+      <span class="infographics__line infographics__line--emphasis"> {{ item.count }}</span>
+      <span class="infographics__line">{{ item.name | capitalize }}</span>
+    </li>
+
+    {% endfor %}
+  </ul>
+{% endmacro %}

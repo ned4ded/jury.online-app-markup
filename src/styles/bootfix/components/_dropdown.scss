@@ -1,0 +1,21 @@
+.dropdown {
+  position: relative;
+
+  &-link {
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+  }
+
+  &-content {
+    position: absolute;
+    z-index: 1;
+    top: calc(100% + 20px);
+    left: 0;
+  }
+
+  &-align-right &-content {
+    right: 0;
+    left: auto;
+  }
+}

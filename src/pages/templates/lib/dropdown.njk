@@ -1,0 +1,12 @@
+{% import "lib/helpers.njk" as helpers %}
+
+{% macro make(link, content, id, classes, isOpen = false) %}
+<div class="dropdown{{ helpers.parse(classes) }}">
+  <a href="#{{id}}" class="dropdown-link" data-toggle="collapse" aria-expanded="{{isOpen}}" aria-controls="{{id}}">
+    {{ link | safe }}
+  </a>
+  <div id="{{id}}" class="dropdown-content collapse{{ ' show' if isOpen }}">
+    {{ content | safe }}
+  </div>
+</div>
+{% endmacro %}

@@ -2,23 +2,71 @@
 
 // Color system
 
-// $grays: ();
+$gray-100: hsl(0, 0, 89);
+$gray-200: hsl(0, 0, 80);
+$gray-300: hsl(0, 0, 73);
+$gray-400: hsl(0, 0, 60);
+$gray-500: hsl(0, 0, 53);
+$gray-600: hsl(0, 0, 45);
+$gray-700: hsl(0, 0, 34);
+$gray-800: hsl(0, 0, 23);
+$gray-900: hsl(0, 0, 14);
 
-// $primary:       $blue;
-// $secondary:     $gray-600;
-// $success:       $green;
-// $info:          $cyan;
-// $warning:       $yellow;
+$grays: (
+  '100': $gray-100,
+  '200': $gray-200,
+  '300': $gray-300,
+  '400': $gray-400,
+  '500': $gray-500,
+  '600': $gray-600,
+  '700': $gray-700,
+  '800': $gray-800,
+  '900': $gray-900,
+);
+
+$primary:       hsl(235, 19, 25); // #34364d
+$secondary:     hsl(222, 33, 94);
+$success:       hsl(120, 51, 67);
+$info:          hsl(208, 31, 63);
+$warning:       hsl(7, 100, 70);
 // $danger:        $red;
-// $light:         $gray-100;
-// $dark:          $gray-800;
+$light:         $gray-200;
+$dark:          $gray-800;
+
+$theme-primary-shades: (
+  "100" : hsl(235, 25, 65),
+  "200" : hsl(235, 20, 45),
+  "300" : hsl(235, 15, 38),
+  "400" : hsl(235, 20, 30),
+  "500" : $primary,
+  "600" : hsl(235, 30, 20), // #242842
+  "700" : hsl(235, 35, 15),
+);
+
+// $jo-baby-blue: hsl(212, 100, 85);
+// $jo-ice-blue: hsl(215, 100, 98);
+// $jo-ice-blue-two: hsl(218, 100, 98);
+// $jo-greyblue: hsl(208, 31, 63);
+// $jo-greyblue-100: hsl(208, 29, 61);
+// $jo-color-light-blue: hsl(218, 38, 63);
+// $jo-sky-blue: hsl(207, 100, 73);
+//
+//
+// $jo-purple: hsl(268, 100, 73);
+//
+// $jo-green: hsl(116, 100, 73);
+// $jo-green: hsl(120, 51, 67);
+// $jo-light-mint: hsl(127, 97, 86);
+//
+// $o-orange: hsl(27, 100, 73);
+
 
 // $theme-colors: ();
 
 // $theme-color-interval:      8%;
 
-// $yiq-contrasted-threshold:  150;
-// $yiq-text-dark:             $gray-900;
+$yiq-contrasted-threshold:  200; // 150 for contrast btns be with dark color
+$yiq-text-dark:             $primary;
 // $yiq-text-light:            $white;
 
 // Options
@@ -34,15 +82,25 @@
 
 // Spacing
 
-// $spacer: 1rem;
-// $spacers: (
-//   0: 0,
-//   1: ($spacer * .25),
-//   2: ($spacer * .5),
-//   3: $spacer,
-//   4: ($spacer * 1.5),
-//   5: ($spacer * 3)
-// );
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: ($spacer * .25),      // 4px
+  2: ($spacer * .5),       // 8px
+  3: ($spacer * .75),      // 12px
+  4: $spacer,              // 16px
+  5: ($spacer * 1.25),     // 20px
+  6: ($spacer * 1.625),    // 26px
+  7: ($spacer * 2),        // 32px
+  8: ($spacer * 2.375),    // 38px
+  9: ($spacer * 2.875),    // 46px
+  10: ($spacer * 3.375),   // 54px
+  11: ($spacer * 3.875),   // 62px
+  12: ($spacer * 4.875),   // 78px
+  13: ($spacer * 6.375),   // 102px
+  14: ($spacer * 8.375),   // 134px
+  15: ($spacer * 10),      // 160px
+);
 
 // $sizes: (
 //   25: 25%,
@@ -54,15 +112,15 @@
 
 // Body
 
-// $body-bg:                   $white;
-// $body-color:                $gray-900;
+$body-bg:                   $secondary;
+$body-color:                $primary;
 
 // Links
 
 // $link-color:                theme-color("primary");
 // $link-decoration:           none;
 // $link-hover-color:          darken($link-color, 15%);
-// $link-hover-decoration:     underline;
+$link-hover-decoration:     underline;
 
 // Paragraphs
 
@@ -72,33 +130,35 @@
 //
 // $grid-breakpoints map $container-max-widths map are not adding to the original maps but overrides the whole ones
 //
-// $grid-breakpoints: (
-//   xs: 0,
-//   sm: 576px,
-//   md: 768px,
-//   lg: 992px,
-//   xl: 1200px
-// );
-//
-// $container-max-widths: (
-//   sm: 540px,
-//   md: 720px,
-//   lg: 960px,
-//   xl: 1140px
-// );
-//
-// $grid-columns:                12;
-// $grid-gutter-width:           30px;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  2xl: 1600px,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  2xl: 1520px,
+);
+
+$grid-columns:                12;
+$grid-gutter-width:           50px;
 
 // Components
 
-// $line-height-lg:              1.5;
-// $line-height-sm:              1.5;
+$line-height-lg:              1.25;
+$line-height-sm:              1.25;
 
 // $border-width:                1px;
 // $border-color:                $gray-300;
 
-// $border-radius:               .25rem;
+$border-radius:               .4375rem;
 // $border-radius-lg:            .3rem;
 // $border-radius-sm:            .2rem;
 
@@ -117,34 +177,35 @@
 
 // Fonts
 
-// $font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-sans-serif:      'Proxima Nova', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 // $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 // $font-family-base:            $font-family-sans-serif;
 
-// $font-size-base:              1rem;
-// $font-size-lg:                ($font-size-base * 1.25);
-// $font-size-sm:                ($font-size-base * .875);
+$font-size-base:              1rem; // 16px
+$font-size-lg:                ($font-size-base * 1.125); // 18px
+$font-size-sm:                ($font-size-base * .875); // 14px
+$font-size-xs:                ($font-size-base * .75); // 12px
 
-// $font-weight-lighter:         lighter;
-// $font-weight-light:           300;
-// $font-weight-normal:          400;
-// $font-weight-bold:            700;
-// $font-weight-bolder:          bolder;
+$font-weight-lighter:         lighter;
+$font-weight-light:           300;
+$font-weight-normal:          400;
+$font-weight-bold:            600;
+$font-weight-bolder:          700;
 
-// $font-weight-base:            $font-weight-normal;
-// $line-height-base:            1.5;
+$font-weight-base:            $font-weight-normal;
+$line-height-base:            1.25;
 
-// $h1-font-size:                $font-size-base * 2.5;
-// $h2-font-size:                $font-size-base * 2;
-// $h3-font-size:                $font-size-base * 1.75;
-// $h4-font-size:                $font-size-base * 1.5;
-// $h5-font-size:                $font-size-base * 1.25;
-// $h6-font-size:                $font-size-base;
+$h1-font-size:                $font-size-base * 1.875;
+$h2-font-size:                $font-size-base * 1.625;
+$h3-font-size:                $font-size-base * 1.375;
+$h4-font-size:                $font-size-base * 1.3;
+$h5-font-size:                $font-size-base * 1.25;
+$h6-font-size:                $font-size-base;
 
 // $headings-margin-bottom:      ($spacer / 2);
 // $headings-font-family:        inherit;
-// $headings-font-weight:        500;
-// $headings-line-height:        1.2;
+$headings-font-weight:        600;
+$headings-line-height:        1;
 // $headings-color:              inherit;
 
 // $display1-size:               6rem;
@@ -213,10 +274,10 @@
 
 // Buttons and forms
 
-// $input-btn-padding-y:         .375rem;
-// $input-btn-padding-x:         .75rem;
-// $input-btn-font-size:         $font-size-base;
-// $input-btn-line-height:       $line-height-base;
+$input-btn-padding-y:         .675rem;
+$input-btn-padding-x:         1.875rem;
+$input-btn-font-size:         $font-size-base;
+$input-btn-line-height:       1;
 
 // $input-btn-focus-width:       .2rem;
 // $input-btn-focus-color:       rgba($component-active-bg, .25);

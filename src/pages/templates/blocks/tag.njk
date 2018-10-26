@@ -1,0 +1,12 @@
+{% import "lib/helpers.njk" as helpers %}
+
+{% macro make(classes) %}
+<div class="tag{{ helpers.parse(classes) }}">
+  <img src="assets/imgs/user-img.png" alt="User Image" class="tag__img" width="59" height="59">
+
+  <p class="tag__info">
+    <span class="tag__name">David G. </span>
+    <span class="tag__job">Investor</span>
+  </p>
+</div>
+{% endmacro %}

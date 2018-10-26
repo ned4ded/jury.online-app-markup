@@ -1,0 +1,43 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+<div class="content pb-6 pt-6">
+  <div class="container-fluid">
+    <div class="row mb-5">
+      <div class="col-12">
+        <h2 class="h1">Typography</h2>
+      </div>
+    </div>
+    {% include "partials/styleguide/type.njk" %}
+
+    <div class="row mt-9 mb-5">
+      <div class="col-12">
+        <h2>Buttons</h2>
+      </div>
+    </div>
+    {% include "partials/styleguide/buttons.njk" %}
+
+    <div class="row mt-9 mb-5">
+      <div class="col-12">
+        <h2>Spacers</h2>
+        <p>15 different spacers are presented</p>
+      </div>
+    </div>
+    {% include "partials/styleguide/spacers.njk" %}
+
+    <div class="row mt-9 mb-5">
+      <div class="col-12">
+        <h2>Boxes</h2>
+      </div>
+    </div>
+    {% include "partials/styleguide/boxes.njk" %}
+
+    <div class="row mt-9 mb-5">
+      <div class="col-12">
+        <h2>Colors</h2>
+      </div>
+    </div>
+    {% include "partials/styleguide/colors.njk" %}
+  </div>
+</div>
+{% endblock %}

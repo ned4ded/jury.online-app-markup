@@ -1,0 +1,7 @@
+{% import "lib/helpers.njk" as helpers %}
+
+{% macro make(classes) %}
+<a href="#" class="brand{{ helpers.parse(classes) }}">
+  <img src="assets/imgs/jo-logotype.png" alt="Jury.Online logotype" class="brand__img" width="212" height="39">
+</a>
+{% endmacro %}

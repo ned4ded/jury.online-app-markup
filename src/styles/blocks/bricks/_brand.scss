@@ -1,0 +1,15 @@
+.brand {
+  display: inline-block;
+
+  width: 212px;
+  height: 40px;
+
+  line-height: 1;
+
+  &__img {
+    display: inline-block;
+
+    width: 100%;
+    height: auto;
+  }
+}

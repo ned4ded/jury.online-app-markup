@@ -1,0 +1,29 @@
+{% import "lib/icon.njk" as icon %}
+{% import "blocks/brand.njk" as brand %}
+{% import "blocks/tools.njk" as tools %}
+{% import "blocks/infographics.njk" as info %}
+{% import "blocks/net.njk" as net %}
+
+<ul class="navbar" data-state="closed">
+  <li class="navbar__block navbar__block--brand">
+    {{ brand.make('navbar__brand') }}
+  </li>
+
+  <li class="navbar__block navbar__block--toggler">
+    <a href="#" class="navbar__toggler">
+      {{ icon.make('burger')}}
+    </a>
+  </li>
+
+  <li class="navbar__block navbar__block--data">
+      {{ info.make( datasets.get('infographics.json'), 'navbar__infographics infographics--navbar') }}
+
+      <a href="#" class="btn btn-warning navbar__btn">Buy ETH</a>
+  </li>
+
+  <li class="navbar__block navbar__block--toolbar">
+    {{ tools.make( datasets['tools.json'], 'navbar__tools') }}
+
+    {{ net.make('navbar-net-dropdown', 'navbar__net')}}
+  </li>
+</ul>

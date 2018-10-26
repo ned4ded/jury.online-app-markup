@@ -1,0 +1,6 @@
+{% import "lib/helpers.njk" as helpers %}
+
+{% macro make(name, classes) %}
+  <svg class="icon icon--{{name}}{{ helpers.parse(classes) }}">
+    <use xlink:href="{{ 'assets/sprite.svg#icon--' + name }}"></use>
+  </svg>{% endmacro %}

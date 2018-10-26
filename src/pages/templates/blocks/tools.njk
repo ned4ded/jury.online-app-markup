@@ -1,0 +1,16 @@
+{% import "lib/helpers.njk" as helpers %}
+{% import "lib/icon.njk" as icon %}
+
+{% macro make(tools, classes) %}
+<ul class="tools{{ helpers.parse(classes) }}">
+  {% for tool in tools %}
+
+  <li class="tools__item">
+    <a href="{{ tool.href }}" class="tools__link">
+      {{ icon.make(tool.icon, 'tools__icon') }}<span class="tools__name" data-notification="{{ tool.notify }}">{{ tool.name | capitalize }}</span>
+    </a>
+  </li>
+
+  {% endfor %}
+</ul>
+{% endmacro %}

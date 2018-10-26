@@ -1,0 +1,179 @@
+{% macro makeColor(name, color, contrast = false) %}
+  <div class="box__content box__content--fluid bg-{{name | lower}} pt-5 pb-5{{ ' text-white' if contrast }}">{{ color }} / {{ name }}</div>
+{% endmacro %}
+
+{% macro make(name, color, code, contrast = false) %}
+  <div class="box">
+    <p class="mb-0">{{ name | capitalize }} color.</p>
+    <p class="mb-2"><code>{{ code }}</code></p>
+    {{ makeColor(name, color, contrast) }}
+  </div>
+{% endmacro %}
+
+<div class="row">
+  <div class="col-12">
+    <h3>Theme colors:</h3>
+
+    {% set themeColors = [
+      {
+        name: 'primary',
+        color: 'hsl(235, 19, 25)',
+        code: 'theme-primary()',
+        isContrast: true
+      },
+      {
+        name: 'secondary',
+        color: 'hsl(222, 33, 94)',
+        code: "theme-color('secondary')",
+        isContrast: false
+      },
+      {
+        name: 'success',
+        color: 'hsl(120, 51, 67)',
+        code: "theme-color('success')",
+        isContrast: false
+      },
+      {
+        name: 'info',
+        color: 'hsl(7, 100, 70)',
+        code: "theme-color('info')",
+        isContrast: false
+      },
+      {
+        name: 'warning',
+        color: 'hsl(7, 100, 70)',
+        code: "theme-color('warning')",
+        isContrast: false
+      }
+    ] %}
+
+    <div class="row">
+      {% for item in themeColors %}
+        <div class="col-12 col-sm-6 col-md-3 mb-6">
+          {{ make(item.name, item.color, item.code, item.isContrast) }}
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+
+  <div class="col-12 col-sm-6 col-md-4 mb-6 mb-md-0">
+    <h3>Gray shades</h3>
+
+    {% set grays = [
+      {
+        name: 'gray-100',
+        color: 'hsl(0, 0, 89)',
+        isContrast: false
+      },
+      {
+        name: 'gray-200',
+        color: 'hsl(0, 0, 80)',
+        isContrast: false
+      },
+      {
+        name: 'gray-300',
+        color: 'hsl(0, 0, 73)',
+        isContrast: false
+      },
+      {
+        name: 'gray-400',
+        color: 'hsl(0, 0, 60)',
+        isContrast: true
+      },
+      {
+        name: 'gray-500',
+        color: 'hsl(0, 0, 53)',
+        isContrast: true
+      },
+      {
+        name: 'gray-600',
+        color: 'hsl(0, 0, 45)',
+        isContrast: true
+      },
+      {
+        name: 'gray-700',
+        color: 'hsl(0, 0, 34)',
+        isContrast: true
+      },
+      {
+        name: 'gray-800',
+        color: 'hsl(0, 0, 23)',
+        isContrast: true
+      },
+      {
+        name: 'gray-900',
+        color: 'hsl(0, 0, 14)',
+        isContrast: true
+      }
+    ] %}
+
+    <div class="row">
+      <div class="col-12">
+        <div class="box">
+          <p class="mb-0">Gray color shades.</p>
+          <p class="mb-2"><code>gray(<strong class="text-dark">#{$color-name}</strong>)</code></p>
+
+          {% for item in grays %}
+            {{ makeColor(item.name, item.color, item.isContrast) }}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 col-sm-6 col-md-4">
+    <h3>Primary shades</h3>
+
+    {% set primaries = [
+      {
+        name: 'primary-100',
+        color: 'hsl(235, 25, 65)',
+        isContrast: true
+      },
+      {
+        name: 'primary-200',
+        color: 'hsl(235, 20, 45)',
+        isContrast: true
+      },
+      {
+        name: 'primary-300',
+        color: 'hsl(235, 15, 38)',
+        isContrast: true
+      },
+      {
+        name: 'primary-400',
+        color: 'hsl(235, 20, 30)',
+        isContrast: true
+      },
+      {
+        name: 'primary-500',
+        color: 'hsl(235, 19, 25)',
+        isContrast: true
+      },
+      {
+        name: 'primary-600',
+        color: 'hsl(235, 30, 20)',
+        isContrast: true
+      },
+      {
+        name: 'primary-700',
+        color: 'hsl(235, 35, 15)',
+        isContrast: true
+      }
+    ] %}
+
+    <div class="row">
+      <div class="col-12">
+        <div class="box">
+          <p class="mb-0">Primary color shades.</p>
+          <p class="mb-2"><code>theme-primary(<strong class="text-dark">#{$color-name}</strong>)</code></p>
+
+          {% for item in primaries %}
+            {{ makeColor(item.name, item.color, item.isContrast) }}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

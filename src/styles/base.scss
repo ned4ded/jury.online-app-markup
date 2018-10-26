@@ -1,4 +1,4 @@
-@import 'fonts';
+@import 'fonts/base';
 @import 'variables/base';
 @import 'bootfix/base';
 @import 'helpers/base';
@@ -7,7 +7,7 @@
 /* COMMON STYLES START */
 
 body {
-
+  min-width: $body-min-w;
 }
 
 /* COMMON STYLES END */

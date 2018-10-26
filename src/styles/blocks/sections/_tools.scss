@@ -1,0 +1,51 @@
+.tools {
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  &__item {
+    position: relative;
+
+    display: flex;
+
+    margin: 0 15px;
+    padding: 5px 2px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__name {
+    font-size: 0;
+
+    &[data-notification="true"]:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      display: block;
+
+      width: 6px;
+      height: 6px;
+
+      content: '';
+
+      border-radius: 100%;
+      background-color: theme-color('warning');
+    }
+  }
+
+  &__link {
+    display: flex;
+  }
+}

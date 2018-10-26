@@ -45,7 +45,7 @@ function reloadWebserver(done) {
 }
 
 function watch(done) {
-  gulp.watch(config.paths.pages, gulp.series('html', reloadWebserver));
+  gulp.watch(config.paths.pagesAll, gulp.series('html', reloadWebserver));
   gulp.watch(config.paths.scriptsAll, gulp.series('scripts', reloadWebserver));
   gulp.watch(config.paths.stylesAll, gulp.series('styles', reloadWebserver));
 

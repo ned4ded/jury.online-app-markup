@@ -1,0 +1,68 @@
+.infographics {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin: 0 spacer();
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__line {
+    display: block;
+
+    text-transform: uppercase;
+
+    color: theme-primary();
+
+    font-size: $font-size-xs;
+    line-height: 1;
+
+    &--emphasis {
+      font-size: $font-size-lg;
+      font-weight: 600;
+    }
+  }
+
+  &--navbar {
+    .infographics {
+      color: $yiq-text-light;
+
+      @include bp-up($navbar-collapse-bp) {
+        color: theme-primary();
+      }
+
+      &__item {
+        @include bp-up($navbar-collapse-bp) {
+          align-items: flex-end;
+        }
+      }
+
+      &__line {
+        font-size: rem(14px);
+
+        &--emphasis {
+          font-size: $font-size-lg;
+
+          @include bp-up($navbar-collapse-bp) {
+            font-size: rem(29px);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-{% set m = datasets.get('meta') %}
+{% set meta = datasets.get('meta.json') %}
 
 <!doctype html>
 <html class="no-js" lang="{{ meta.lang }}">
@@ -18,10 +18,27 @@
   <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
-  {% block content %} {% endblock %}
+  {% set page = {} %}
 
+  <div class="dashboard">
+    <div class="dashboard__navbar">
+      {% include "partials/navbar.njk" %}
+    </div>
+
+    <div class="dashboard__display">
+      <div class="dashboard__side-menu">
+        {% include "partials/side-menu.njk" %}
+      </div>
+      <div class="dashboard__content">
+        {% block content %} {% endblock %}
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="js/bundle.js" charset="utf-8"></script>
-
 </body>
 
 </html>

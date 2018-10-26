@@ -1,0 +1,72 @@
+.icon {
+	display: inline-block;
+	height: 1em;
+	width: 1em;
+	fill: inherit;
+	stroke: inherit;
+}
+
+@mixin get-em-width($width, $height) {
+	width: ($width / $height)+em;
+}
+
+.icon--arrow {
+	font-size: 6px;
+	@include get-em-width(11, 6);
+}
+
+.icon--bell {
+	font-size: 20px;
+	@include get-em-width(18.03, 20);
+}
+
+.icon--blob {
+	font-size: 17px;
+	@include get-em-width(18, 17);
+}
+
+.icon--burger {
+	font-size: 39.53px;
+	@include get-em-width(50, 39.53);
+}
+
+.icon--calendar {
+	font-size: 17px;
+	@include get-em-width(12.97, 17);
+}
+
+.icon--feed {
+	font-size: 16px;
+	@include get-em-width(15.97, 16);
+}
+
+.icon--filters {
+	font-size: 19px;
+	@include get-em-width(20, 19);
+}
+
+.icon--folder {
+	font-size: 15px;
+	@include get-em-width(17, 15);
+}
+
+.icon--fox-head {
+	font-size: 45px;
+	@include get-em-width(43, 45);
+}
+
+.icon--gear {
+	font-size: 16px;
+	@include get-em-width(15.97, 16);
+}
+
+.icon--profile {
+	font-size: 17px;
+	@include get-em-width(15.94, 17);
+}
+
+.icon--search {
+	font-size: 17px;
+	@include get-em-width(17, 17);
+}
+

@@ -1,0 +1,55 @@
+.dashboard {
+  display: flex;
+  flex-flow: column nowrap;
+
+  &__navbar {
+    position: fixed;
+    z-index: $zindex-navbar;
+    top: 0;
+
+    width: 100%;
+    min-width: $body-min-w;
+
+    @include bp-up($navbar-collapse-bp) {
+      position: static;
+    }
+  }
+
+  &__display {
+    position: relative;
+
+    display: flex;
+    flex-flow: column nowrap;
+
+    @include bp-up($navbar-collapse-bp) {
+      overflow: hidden;
+      flex-flow: row nowrap;
+
+      height: calc(100vh - #{$navbar-h-lg});
+    }
+  }
+
+  &__content {
+    @include bp-up($navbar-collapse-bp) {
+      overflow-y: auto;
+      flex-grow: 1;
+    }
+  }
+
+  &__side-menu {
+    position: fixed;
+    z-index: $zindex-side-menu;
+    top: $navbar-h;
+
+    width: 73.5%;
+    min-width: $side-bar-w;
+    height: calc(100vh - #{$navbar-h});
+
+    @include bp-up($navbar-collapse-bp) {
+      position: static;
+
+      width: $side-bar-w;
+      height: auto;
+    }
+  }
+}

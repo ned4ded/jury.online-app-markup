@@ -17,6 +17,7 @@ export default {
     scripts: path.join(__dirname, 'src/scripts/terminal.js'),
     scriptsAll: path.join(__dirname, 'src/scripts/**/*.js'),
     pages: path.join(__dirname, 'src/pages/*.+(html|njk)'),
+    pagesAll: path.join(__dirname, 'src/pages/**/*.+(html|njk)'),
     icons: path.join(__dirname, 'src/assets/icons/*.svg'),
     svgTemplate: path.join(__dirname, 'src/lib/svg-task-templates/svg-sprite.mustache'),
     svgAll: path.join(__dirname, 'src/assets/icons/*.svg'),

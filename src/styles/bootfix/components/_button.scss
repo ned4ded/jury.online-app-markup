@@ -1,0 +1,12 @@
+.btn {
+  $offset: 0.025rem;
+
+  padding-top: $input-btn-padding-y + $offset;
+  padding-bottom: $input-btn-padding-y - $offset;
+}
+
+.btn-outline-primary-100 {
+  $color: map-get($theme-primary-shades, '100');
+
+  @include button-outline-variant(rgba($color, .6));
+}
