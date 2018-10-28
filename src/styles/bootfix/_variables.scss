@@ -43,23 +43,23 @@ $theme-primary-shades: (
   "700" : hsl(235, 35, 15),
 );
 
-// $jo-baby-blue: hsl(212, 100, 85);
-// $jo-ice-blue: hsl(215, 100, 98);
-// $jo-ice-blue-two: hsl(218, 100, 98);
-// $jo-greyblue: hsl(208, 31, 63);
-// $jo-greyblue-100: hsl(208, 29, 61);
-// $jo-color-light-blue: hsl(218, 38, 63);
-// $jo-sky-blue: hsl(207, 100, 73);
-//
-//
-// $jo-purple: hsl(268, 100, 73);
-//
-// $jo-green: hsl(116, 100, 73);
-// $jo-green: hsl(120, 51, 67);
-// $jo-light-mint: hsl(127, 97, 86);
-//
-// $o-orange: hsl(27, 100, 73);
+$theme-info-shades: (
+  "100" : hsl(208, 100, 98),
+  "200" : hsl(208, 100, 86),
+  "300" : hsl(208, 100, 72),
+  "400" : hsl(208, 53, 68),
+  "500" : $info,
+);
 
+$colors: (
+  "blue": map-get($theme-info-shades, '300'),
+  "purple" : hsl(268, 100, 73), // jo-purple
+  "green" : hsl(116, 100, 73), // jo-green
+  "orange" : hsl(27, 100, 73), // jo-orange
+  "gray" : $gray-400,
+);
+
+// $jo-light-mint: hsl(127, 97, 86);
 
 // $theme-colors: ();
 
@@ -716,10 +716,10 @@ $input-btn-line-height:       1;
 // Badges
 
 // $badge-font-size:                   75%;
-// $badge-font-weight:                 $font-weight-bold;
-// $badge-padding-y:                   .25em;
-// $badge-padding-x:                   .4em;
-// $badge-border-radius:               $border-radius;
+$badge-font-weight:                 $font-weight-base;
+$badge-padding-y:                   .1875em;
+$badge-padding-x:                   .75em;
+$badge-border-radius:               2px;
 
 // $badge-pill-padding-x:              .6em;
 // Use a higher than normal value to ensure completely rounded edges when

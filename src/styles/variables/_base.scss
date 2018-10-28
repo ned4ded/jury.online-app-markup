@@ -11,4 +11,7 @@ $navbar-brand-w-lg: 164px;
 $navbar-icon-color-sm: white;
 
 $side-bar-w: 250px;
-$side-bar-w-percentage: 73.5%;
+$side-bar-w-cc: 0.735;
+$side-bar-w-percentage: 100% * $side-bar-w-cc;
+
+$side-menu-p-x: 20px;

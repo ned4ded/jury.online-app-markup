@@ -176,4 +176,49 @@
       </div>
     </div>
   </div>
+
+  <div class="col-12 col-sm-6 col-md-4">
+    <h3>Info shades</h3>
+
+    {% set infos = [
+      {
+        name: 'info-100',
+        color: 'hsl(208, 100, 98)',
+        isContrast: false
+      },
+      {
+        name: 'info-200',
+        color: 'hsl(208, 100, 86)',
+        isContrast: true
+      },
+      {
+        name: 'info-300',
+        color: 'hsl(208, 100, 72)',
+        isContrast: true
+      },
+      {
+        name: 'info-400',
+        color: 'hsl(208, 53, 68)',
+        isContrast: true
+      },
+      {
+        name: 'info-500',
+        color: 'hsl(208, 31, 63)',
+        isContrast: true
+      }
+    ] %}
+
+    <div class="row">
+      <div class="col-12">
+        <div class="box">
+          <p class="mb-0">Info color shades.</p>
+          <p class="mb-2"><code>theme-info(<strong class="text-dark">#{$color-name}</strong>)</code></p>
+
+          {% for item in infos %}
+            {{ makeColor(item.name, item.color, item.isContrast) }}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

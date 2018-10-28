@@ -1,0 +1,6 @@
+.badge {
+  $offset: 0.05em;
+
+  padding-top: $badge-padding-y - $offset;
+  padding-bottom: $badge-padding-y + $offset;
+}

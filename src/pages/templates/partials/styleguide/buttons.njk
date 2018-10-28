@@ -1,5 +1,6 @@
 <div class="row">
-  <div class="col-12 mb-2 mt-4">
+  <div class="col-12 mb-2 mt-3">
+    <h3 class="mb-5">Primary buttons</h3>
     <p>
       <a href="#" class="btn">.btn</a>
       <a href="#" class="btn btn-primary">.btn-primary</a>
@@ -16,6 +17,29 @@
     <p class="bg-dark p-2">
       <a href="#" class="btn btn-outline-secondary">.btn-outline-secondary</a>
       <a href="#" class="btn btn-outline-info">.btn-outline-info</a>
+    </p>
+    <h3 class="mt-8 mb-5">Specific buttons</h3>
+    <p>
+      Specific buttons demonstrated in this section are an example of implemented styles, therefore it must not be used in a casual situation, the exception is a necessity to fastly prototype a markup.
+    </p>
+    <p>
+      To implement a new kind of specific buttons use the next code example, presented below.
+    </p>
+    <p>
+      <pre>
+        <code>
+          <span class="color-orange">.some-btn</span> {
+            $color: &lt;some_color&gt;;
+
+            @include button-variant($color, $color); <span class="text-muted">// signature: $background-color, $border-color</span>
+
+            <span class="text-muted">/* some specific non-bootstrap styles */</span>
+          }
+        </code>
+      </pre>
+    </p>
+    <p>
+      <a href="#" class="btn side-menu__btn--logout">.side-menu__btn--logout</a>
     </p>
   </div>
 </div>

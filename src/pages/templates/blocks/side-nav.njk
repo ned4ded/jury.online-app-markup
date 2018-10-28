@@ -1,0 +1,53 @@
+{% import "lib/helpers.njk" as helpers %}
+{% import "lib/icon.njk" as icon %}
+{% import "lib/dropdown.njk" as dropdown %}
+
+{% macro make(list, active, classes) %}
+
+<ul class="side-nav{{ helpers.parse(classes) }}">
+  {% for item in list %}
+  <li class="side-nav__item">
+    {% set link %}
+      <span class="side-nav__name{{ ' side-nav__name--dropdown' if item.subnav }}">
+        {% if item.bullet %}
+        <span class="side-nav__bullet bg-{{ item.bullet }}"></span>
+        {% endif %}
+
+        {% if item.icon %}
+        <span class="side-nav__icon">{{ icon.make(item.icon) }}</span>
+        {% endif %}
+
+        {{ item.name }}
+
+        {% if item.subnav %}
+        <span class="side-nav__icon-dropdown">
+          {{ icon.make('arrow') }}
+        </span>
+        {% endif %}
+      </span>
+
+      {% if item.msg %}
+      <span class="badge badge-warning side-nav__msg">{{ item.msg }}</span>
+      {% endif %}
+    {% endset %}
+
+    {% if item.subnav %}
+      {% set subnav = item.subnav.list %}
+
+      {% set content %}
+        {{ make(subnav, false, 'side-nav--sublist') }}
+      {% endset %}
+
+      {{ dropdown.make(link, content, item.subnav.id, 'side-nav__dropdown', true, { link: 'side-nav__link', content: 'side-nav__sublist'}) }}
+
+    {% else %}
+    <a href="{{ item.ref }}" class="side-nav__link {{'side-nav__link--active' if item.id == active}}">
+      {{ link | safe }}
+    </a>
+    {% endif %}
+
+  </li>
+  {% endfor %}
+</ul>
+
+{% endmacro %}

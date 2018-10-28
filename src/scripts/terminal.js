@@ -4,7 +4,7 @@
   const l = document.getElementById('lining');
 
   const navbar = document.querySelector('.navbar');
-  const sidemenu = document.querySelector('.dashboard__side-menu');
+  const sidemenu = document.querySelector('.dashboard__side-bar');
 
   const targets = [l , navbar, sidemenu];
 

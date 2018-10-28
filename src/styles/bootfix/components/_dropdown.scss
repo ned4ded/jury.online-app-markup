@@ -7,7 +7,7 @@
     flex-flow: row nowrap;
   }
 
-  &-content {
+  &-absolute &-content {
     position: absolute;
     z-index: 1;
     top: calc(100% + 20px);
