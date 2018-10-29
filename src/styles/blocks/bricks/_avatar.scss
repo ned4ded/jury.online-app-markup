@@ -1,0 +1,48 @@
+.avatar {
+	position: relative;
+	display: inline-block;
+	&__wrap {
+		margin-bottom: 0;
+		display: block;
+	}
+	&__img {
+		width: rem(135px);
+		height: rem(135px);
+		border-radius: 50%;
+		background-size: cover;
+		background-position: center;
+		box-shadow: 0 0 10px 0 rgba(0,0,0,0.13);
+		display: block;
+	}
+	&__upload {
+		position: absolute;
+		right: 0;
+		bottom: 1px;
+		z-index: 1;
+		width: rem(26px);
+		height: rem(26px);
+		border-radius: 50%;
+		cursor: pointer;
+		overflow: hidden;
+		background-color: $port-gore;
+		display: block;
+		input {
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+		}
+		svg {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			width: rem(13px);
+		}
+	}
+	&__info-block {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+}

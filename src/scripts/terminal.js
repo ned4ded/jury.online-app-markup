@@ -1,3 +1,5 @@
+import './initTooltip'; 
+
 (() => {
   const t = document.querySelector('[data-navbar-toggle]');
 

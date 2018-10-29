@@ -1,5 +1,9 @@
 .profile {
 	&__container {
-		padding-top: rem(28px);
-	}	
+		padding-top: rem(50px);
+		max-width: rem(1272px);
+	}
+	&__wrap {
+		margin-top: rem(50px);
+	}
 }
