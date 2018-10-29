@@ -8,6 +8,10 @@
   @return map-get($theme-primary-shades, $key);
 }
 
+@function theme-info($key: "500") {
+  @return map-get($theme-info-shades, $key);
+}
+
 @function spacer($key: 4) {
   @return map-get($spacers, $key);
 }

@@ -1,7 +1,35 @@
-.side-menu {
-  $side-menu-p-x: rem(20px);
-  $divider: 1px solid theme-primary('400');
+$side-menu-divider: 1px solid theme-primary('400');
 
+%side-menu-fluid-block {
+  margin-right: -$side-menu-p-x;
+  margin-left: -$side-menu-p-x;
+}
+
+%side-menu-flexible-block {
+  overflow-x: hidden;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+%side-menu-fluid-block-divider {
+  position: relative;
+
+  &:after {
+    position: absolute;
+    left: $side-menu-p-x;
+
+    display: block;
+
+    width: calc(100% - #{$side-menu-p-x * 2});
+    height: 0;
+
+    content: '';
+
+    border-bottom: $side-menu-divider;
+  }
+}
+
+.side-menu {
   overflow: hidden;
   height: 100%;
   display: flex;
@@ -10,10 +38,10 @@
   min-width: $side-bar-w;
   // height: 100%;
   // min-height: 100%;
-  padding: rem(20px) $side-menu-p-x rem(30px);
+  padding: rem(20px) rem($side-menu-p-x) rem(30px);
 
-  color: white;
-  background-image: linear-gradient(to top, theme-primary(), theme-primary('700'));
+  color: $white;
+  background-image: linear-gradient(to top, theme-primary(), theme-primary('600'));
 
 
   &__block {
@@ -33,20 +61,27 @@
       padding-bottom: 0;
     }
 
-    &--fluid {
-      margin-right: -$side-menu-p-x;
-      margin-left: -$side-menu-p-x;
-    }
-
-    &--flexible {
-      overflow-y: auto;
-      flex-grow: 1;
-      overflow-x: hidden;
-    }
-
     &--profile {
-      border-bottom: $divider;
+      border-bottom: $side-menu-divider;
     }
+
+    &--nav {
+      align-items: stretch;
+
+      @extend %side-menu-fluid-block;
+      @extend %side-menu-flexible-block;
+    }
+  }
+
+  &__nav {
+    @extend %side-menu-fluid-block-divider;
+
+    bottom: -1px;
+    margin-bottom: 1px;
+  }
+
+  &__sub-nav {
+
   }
 
   &__btn {
@@ -60,6 +95,10 @@
     }
 
     &--logout {
+      $color: map-get($theme-primary-shades, '100');
+
+      @include button-outline-variant(rgba($color, .6));
+
       text-transform: uppercase;
       padding-top: 1rem;
       padding-bottom: .9375rem;

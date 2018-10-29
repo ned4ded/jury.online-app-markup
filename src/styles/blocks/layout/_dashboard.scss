@@ -36,19 +36,20 @@
     }
   }
 
-  &__side-menu {
+  &__side-bar {
     position: fixed;
     z-index: $zindex-side-menu;
     top: $navbar-h;
 
     width: $side-bar-w-percentage;
-    min-width: $side-bar-w;
+    min-width: $body-min-w * $side-bar-w-cc;
     height: calc(100vh - #{$navbar-h});
 
     @include bp-up($navbar-collapse-bp) {
       position: static;
 
       width: $side-bar-w;
+      min-width: $side-bar-w;
       height: auto;
     }
 

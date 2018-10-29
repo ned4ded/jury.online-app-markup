@@ -3,3 +3,11 @@ code {
   padding: 0 5px;
   border-radius: 5px;
 }
+
+pre {
+  background-color: gray("100");
+
+  & code {
+    background: none;
+  }
+}

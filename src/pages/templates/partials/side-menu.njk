@@ -1,4 +1,9 @@
+{% import "lib/icon.njk" as icon %}
 {% import "blocks/tag.njk" as tag %}
+{% import "blocks/side-nav.njk" as nav %}
+
+{% set navList = datasets.get('side-bar-nav.json') %}
+{% set subnavList = datasets.get('side-bar-sub-nav.json') %}
 
 <div class="side-menu">
   <div class="side-menu__block side-menu__block--profile">
@@ -7,11 +12,13 @@
     <a href="#" class="btn btn-outline-info side-menu__btn side-menu__btn--add">+ Add Contract</a>
   </div>
 
-  <div class="side-menu__block side-menu__block--fluid side-menu__block--flexible side-menu__block--nav">
-    
+  <div class="side-menu__block side-menu__block--nav">
+    {{ nav.make(navList, page.active, 'side-menu__nav') }}
+
+    {{ nav.make(subnavList, page.active, 'side-nav--sub-nav side-menu__sub-nav') }}
   </div>
 
   <div class="side-menu__block side-menu__block--logout">
-    <a href="#" class="btn btn-outline-primary-100 side-menu__btn side-menu__btn--logout">Sign Out</a>
+    <a href="#" class="btn side-menu__btn side-menu__btn--logout">Sign Out</a>
   </div>
 </div>

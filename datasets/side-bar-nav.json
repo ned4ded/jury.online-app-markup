@@ -1,0 +1,68 @@
+[
+  {
+    "id": "profile",
+    "name": "My Profile",
+    "icon": "profile",
+    "ref" : "#"
+  },
+  {
+    "id": "admin",
+    "name": "Admin Area",
+    "icon": "calendar",
+    "ref" : "/"
+  },
+  {
+    "id": "projects",
+    "name": "ICO Projects",
+    "icon": "folder",
+    "ref" : "#"
+  },
+  {
+    "id": "portfolio",
+    "name": "Portfolio",
+    "icon": "feed",
+    "ref" : "#",
+    "subnav": {
+      "id" : "side-nav-contracts",
+      "list" : [
+        {
+          "id": "active",
+          "name": "Active",
+          "ref" : "#",
+          "bullet" : "green"
+        },
+        {
+          "id": "pending",
+          "name": "Pending",
+          "ref" : "#",
+          "msg" : "notify",
+          "bullet" : "blue"
+        },
+        {
+          "id": "disputes",
+          "name": "Disputes",
+          "ref" : "#",
+          "bullet" : "purple"
+        },
+        {
+          "id": "drafts",
+          "name": "Drafts",
+          "ref" : "#",
+          "bullet" : "orange"
+        },
+        {
+          "id": "closed",
+          "name": "Closed",
+          "ref" : "#",
+          "bullet" : "gray"
+        }
+      ]
+    }
+  },
+  {
+    "id": "platform",
+    "name": "Demo Platform",
+    "icon": "gear",
+    "ref" : "#"
+  }
+]
