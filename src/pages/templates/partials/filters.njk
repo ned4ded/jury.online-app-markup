@@ -14,14 +14,16 @@
 {% endmacro %}
 
 <form class="filters">
-  <div class="filters__block filter__block--top">
+  <div class="filters__block filters__block--top">
     <div class="filters__options">
       <a href="#" class="filters__toggler">
         {{ icon.make('filters') }}
       </a>
-      <select class="filters__categories" name="">
-        <option value="">Categories</option>
-      </select>
+      <p class="filters__categories">
+        <select name="">
+          <option value="">Categories</option>
+        </select>
+      </p>
     </div>
 
     {{ makeTabs(filters.states, 'filters__states') }}
@@ -34,6 +36,12 @@
     <div class="filters__section">
       <h4 class="filters__sub-heading">Status</h4>
       {{ makeTabs(filters.states, 'filters__states') }}
+    </div>
+    <div class="filters__section">
+      <h4 class="filters__sub-heading">Raiting (starting from): 4</h4>
+    </div>
+    <div class="filters__section">
+      <h4 class="filters__sub-heading">Invest</h4>
     </div>
   </div> #}
 </form>

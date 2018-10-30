@@ -2,17 +2,17 @@
   &__filters {
     margin-right: -$grid-gutter-width / 2;
     margin-left: -$grid-gutter-width / 2;
+
+    @include bp-up($navbar-collapse-bp) {
+      margin-right: 0;
+      margin-left: 0;
+    }
   }
 
   &__recommended {
     @include bp-up('lg') {
       padding-left: 50px;
       padding-right: 50px;
-    }
-
-    @include bp-up(3xl) {
-      padding-left: 75px;
-      padding-right: 75px;
     }
   }
 

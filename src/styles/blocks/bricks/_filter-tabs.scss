@@ -9,14 +9,25 @@
 
   width: 100%;
 
-  border-bottom: 1px solid gray('300');
-
   &__item {
     display: inline-flex;
     align-items: center;
 
     min-height: 50px;
     margin: 0 $item-m-x;
+
+    @include bp-up($navbar-collapse-bp) {
+      margin: 0 $item-m-x / 2;
+    }
+
+    @include bp-up(xl) {
+      margin: 0 spacer(2);
+      align-items: stretch;
+    }
+
+    @include bp-up(2xl) {
+      margin: 0 spacer(7);
+    }
 
     &:first-child {
       margin-left: 0;
@@ -25,6 +36,10 @@
     &:last-child {
       margin-right: 0;
       padding-right: $item-m-x;
+
+      @include bp-up($navbar-collapse-bp) {
+        padding-right: 0;
+      }
     }
   }
 
@@ -41,6 +56,16 @@
 
     &:hover {
       text-decoration: none;
+    }
+
+    @include bp-up(xl) {
+      display: inline-flex;
+      align-items: center;
+
+      padding-right: 10px;
+      padding-left: 10px;
+
+      font-weight: bold;
     }
 
     &--active {
