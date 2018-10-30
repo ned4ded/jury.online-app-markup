@@ -94,7 +94,7 @@
 
     width: auto;
 
-    margin: 0;
+    margin-bottom: .5rem;
 
     @include bp-up($navbar-collapse-bp) {
       align-items: center;
