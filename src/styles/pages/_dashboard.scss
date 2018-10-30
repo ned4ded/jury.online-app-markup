@@ -11,22 +11,17 @@
     }
 
     @include bp-up(3xl) {
-      padding-left: 150px;
-      padding-right: 150px;
+      padding-left: 75px;
+      padding-right: 75px;
     }
   }
 
   &__projects {
     width: 100%;
-    
+
     @include bp-up('lg') {
       padding-left: 50px;
       padding-right: 50px;
-    }
-
-    @include bp-up(3xl) {
-      padding-left: 150px;
-      padding-right: 150px;
     }
   }
 }

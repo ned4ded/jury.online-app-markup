@@ -29,7 +29,7 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-12 col-md-6 col-lg-12 col-xl-6 col-2xl-4 mb-6">
-              <div class="card-dyed mr-auto ml-auto">
+              <div class="card-dyed ml-auto ml-3xl-auto mr-auto">
                 <div class="card-dyed__block card-dyed__block--brand">
                   {% set content %}
                   <p class="mb-0 h2 font-weight-bolder text-uppercase text-primary text-lg-white">Brixby</p>
@@ -83,7 +83,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-lg-12 col-xl-6 col-2xl-4">
-              <div class="card-dyed mr-auto ml-auto">
+              <div class="card-dyed mr-auto mr-3x-0 ml-auto">
                 <div class="card-dyed__block card-dyed__block--brand">
                   {% set content %}
                   <p class="mb-0 h2 font-weight-bolder text-uppercase text-primary text-lg-white">Brixby</p>
@@ -124,7 +124,6 @@
     </div>
   </div>
 
-
   <div class="row d-none d-lg-flex mb-7">
     <div class="col-12 d-flex flex-column">
       <h2 class="order-1 mb-0">ICO Projects</h2>
@@ -133,28 +132,30 @@
   </div>
 
   <div class="row">
-    <div class="page-dashboard__projects">
-      <div class="container-fluid">
-        <div class="row">
+    <div class="col-12">
+      <div class="page-dashboard__projects">
+        <div class="container-fluid">
+          <div class="row">
 
-        {% set projects = datasets.get('ico-projects.json') %}
+            {% set projects = datasets.get('ico-projects.json') %}
 
-        {% for project in projects %}
-        <div class="col-12 mb-6 col-md-6 col-xl-4 col-2xl-3">
-          {% set brandContent %}
-          <p class="mb-0 h3 font-weight-bold text-primary">{{ project.name }}</p>
-          <p class="mb-0 font-weight-bold text-muted">{{ project.field }}</p>
-          {% endset %}
+            {% for project in projects %}
+            <div class="col-12 mb-6 col-md-6 col-2xl-4 col-3xl-3">
+              {% set brandContent %}
+              <p class="mb-0 h3 font-weight-bold text-primary">{{ project.name }}</p>
+              <p class="mb-0 font-weight-bold text-muted">{{ project.field }}</p>
+              {% endset %}
 
-          {% set brandOptions = {
-            content: brandContent,
-            src: project.brand
-          } %}
+              {% set brandOptions = {
+                content: brandContent,
+                src: project.brand
+              } %}
 
-          {{ cardLight.make(brandOptions, project.description, project.period, project.investment, project.status, project['days left'], project.kyc) }}
-        </div>
-        {% endfor %}
+              {{ cardLight.make(brandOptions, project.description, project.period, project.investment, project.status, project['days left'], project.kyc) }}
+            </div>
+            {% endfor %}
 
+          </div>
         </div>
       </div>
     </div>
