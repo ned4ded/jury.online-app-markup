@@ -45,9 +45,19 @@
 	@include get-em-width(7, 5);
 }
 
+.icon--check-valid {
+	font-size: 9px;
+	@include get-em-width(14, 9);
+}
+
 .icon--duble {
 	font-size: 21px;
 	@include get-em-width(16, 21);
+}
+
+.icon--eye {
+	font-size: 10px;
+	@include get-em-width(16, 10);
 }
 
 .icon--feed {
@@ -73,6 +83,11 @@
 .icon--gear {
 	font-size: 16px;
 	@include get-em-width(15.97, 16);
+}
+
+.icon--pdf {
+	font-size: 15px;
+	@include get-em-width(15, 15);
 }
 
 .icon--photo {

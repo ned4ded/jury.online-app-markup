@@ -7,7 +7,7 @@
     <div class="profile__container container-fluid mt-28">
       <div class="profile__row row">
         <div class="profile__col col-12">
-          <div class="profile__box box box--p--xxl box--fluid">
+          <div class="profile__box box box--p--xxl">
             <div class="profile__group row">
               <div class="profile__avatar col">
                 <!-- begin avatar -->
@@ -47,7 +47,12 @@
                     </div>
                   </div>
                   <div class="col-xl-4 col-md-12">
-                    <label class="form-label" for="last-name">Role</label>
+                    <div class="form-group">
+                      <div class="form-inline form-stretch">
+                        <label class="form-label" for="">Role</label>
+                        <div class="info-block" data-toggle="tooltip" title="Disabled tooltip">?</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="row">
@@ -81,7 +86,7 @@
       <div class="profile__wrap">
         <div class="profile__row row">
           <div class="col-xxl-8 mt-9">
-            <div class="box box--fluid box--has--head">
+            <div class="box box--has--head">
               <div class="box__head">Contact Info</div>
               <div class="box__wrap">
                 <!-- begin box-form -->
@@ -149,7 +154,7 @@
                   <div class="box__head text-center">Account Settings</div>
                   <div class="box__wrap box__wrap--sm">
                     <div class="form-group">
-                      <label class="email" for="email">Facebook</label>
+                      <label class="email" for="email">E-mail</label>
                       <input type="text" readonly class="form-control-plaintext" id="email" value="email@example.com">
                     </div>
                     <form class="form-inline form-stretch">

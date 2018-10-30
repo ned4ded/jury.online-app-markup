@@ -4,7 +4,52 @@
   padding-top: $input-btn-padding-y + $offset;
   padding-bottom: $input-btn-padding-y - $offset;
   &--md {
-	padding-top: rem(8px);
-	padding-bottom: rem(8px);
+	padding-top: spacer(2);
+	padding-bottom: spacer(2);
   }
+  &--tag {
+  	margin: spacer(2) spacer(4) spacer(2) 0;
+  	padding-left: spacer(4);
+  	padding-right: spacer(4);
+  }
+  &__flug {
+  	margin-right: spacer(4);
+  	vertical-align: top;
+  	display: inline-block;
+  }
+}
+
+.btn-plus {
+	position: relative;
+	width: 20px;
+	min-width: 20px;
+	height: 20px;
+	cursor: pointer;
+	border-radius: 50%;
+	border: 1px solid $port-gore;
+	vertical-align: top;
+	display: inline-block;
+	&:focus {
+		outline: none;
+	}
+	&:before,
+	&:after {
+		position: absolute;
+		content: "";
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: $port-gore;
+	}
+	&:before {
+		width: 2px;
+		height: 8px;
+	}
+	&:after {
+		height: 2px;
+		width: 8px;
+	}
+	.form-stretch & {
+		margin-left: spacer(5);
+	}
 }
