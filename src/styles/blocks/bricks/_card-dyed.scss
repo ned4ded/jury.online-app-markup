@@ -1,0 +1,111 @@
+.card-dyed {
+  $p-x: spacer(4);
+  $bdrs-sm: 5px;
+  $bdrs-md: 10px;
+  $bg-green: (
+    "emphasis" : #5b6a78,
+    "default" : #839fa4,
+    "gradient" : linear-gradient(180deg, #70ada7 60%, #3d8084),
+  );
+
+
+  $bg-purple: (
+    "emphasis" : rgb(122, 97, 147),
+    "default" : rgb(184, 148, 202),
+    "gradient" : linear-gradient(178deg, rgb(194, 140, 218), rgb(139, 85, 196)),
+  );
+
+  $bgs: (
+    "emphasis" : #5b6a78,
+    "default" : #839fa4,
+    "gradient" : linear-gradient(180deg, #70ada7 60%, #3d8084),
+  );
+
+  position: relative;
+
+  display: flex;
+  flex-flow: row wrap;
+
+  max-width: 375px;
+
+  @include bp-up($navbar-collapse-bp) {
+    border-radius: $bdrs-md;
+    background-image: map-get($bgs, 'gradient');
+  }
+
+  p, h1, h2, h3, h4, h5, h6 {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__block {
+    width: 100%;
+    padding: spacer(1) $p-x;
+
+    @include bp-up($navbar-collapse-bp) {
+      padding: spacer(3) $p-x;
+    }
+
+    & > * {
+      position: relative;
+      z-index: 10;
+    }
+
+    &--brand {
+      padding-right: 0;
+      padding-left: 0;
+
+      @include bp-up($navbar-collapse-bp) {
+        padding-right: $p-x;
+        padding-left: $p-x;
+      }
+    }
+
+    &--status {
+      border-top-left-radius: $bdrs-sm;
+      border-top-right-radius: $bdrs-sm;
+      background-color: map-get($bgs, 'emphasis');
+
+      @include bp-up($navbar-collapse-bp) {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+    }
+
+    &--meta {
+      border-bottom-right-radius: $bdrs-sm;
+      border-bottom-left-radius: $bdrs-sm;
+      background-color: map-get($bgs, 'default');
+
+      @include bp-up($navbar-collapse-bp) {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        background-color: transparent;
+      }
+    }
+  }
+
+  &__img {
+    position: absolute;
+    right: -$grid-gutter-width / 2;
+    bottom: -12px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+
+    &--car {
+      width: 175px;
+      height: 105px;
+
+      background-image: url(../assets/imgs/rec-card-car-bg.png);
+
+      @include bp-up($navbar-collapse-bp) {
+        width: 265px;
+        height: 100%;
+        background-size: auto;
+      }
+    }
+  }
+}

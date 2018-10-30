@@ -1,0 +1,14 @@
+{% import "lib/helpers.njk" as helpers %}
+
+{% macro make(content, classes) %}
+<div class="vote{{ helpers.parse(classes) }}">
+  <div class="box box--bdrs--circled vote__box">
+    <span class="vote__icon"></span>
+    <div class="vote__question">
+      {{ content | safe }}
+    </div>
+    <a href="#" class="vote__btn vote__btn--like">Like</a>
+    <a href="#" class="vote__btn vote__btn--dislike">Dislike</a>
+  </div>
+</div>
+{% endmacro %}

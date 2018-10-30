@@ -1,0 +1,51 @@
+.card-brand {
+  display: inline-flex;
+
+  padding: 0;
+
+  &__badge {
+    position: relative;
+
+    display: inline-block;
+
+    min-width: 45px;
+    height: 45px;
+    margin-right: 10px;
+
+    border: 1px solid white;
+    border-radius: 100%;
+    background-color: theme-primary('300');
+
+    &--green {
+      background-image: linear-gradient(to bottom, #45bcce, #166a79);
+    }
+
+    &--light-blue {
+      background-color: #5286e5;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 100%;
+    height: 100%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 27px auto;
+  }
+
+  &__name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    color: theme-primary();
+  }
+}

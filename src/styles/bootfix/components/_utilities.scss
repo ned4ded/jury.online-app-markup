@@ -13,3 +13,31 @@
 @each $color, $value in $colors {
   @include bg-variant(".bg-#{$color}", $value);
 }
+
+@each $bp in map-keys($grid-breakpoints) {
+  $infix: breakpoint-infix($bp, $grid-breakpoints);
+
+  @include media-breakpoint-up($bp) {
+    @each $color, $value in $theme-colors {
+      .text-#{$bp}-white {
+        color: $white !important;
+      }
+    }
+  }
+
+  @include media-breakpoint-up($bp) {
+    @each $color, $value in $theme-colors {
+      @include text-emphasis-variant(".text-#{$bp}-#{$color}", $value);
+    }
+  }
+}
+
+@each $color, $value in $colors {
+  @include text-emphasis-variant(".text-#{$color}", $value);
+}
+
+.font-weight {
+  &-bolder {
+    font-weight: $font-weight-bolder;
+  }
+}

@@ -1,0 +1,53 @@
+.filter-tabs {
+  @extend %drop-list;
+
+  $item-m-x: spacer();
+
+  display: inline-flex;
+  overflow-x: auto;
+  position: relative;
+
+  width: 100%;
+
+  border-bottom: 1px solid gray('300');
+
+  &__item {
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 50px;
+    margin: 0 $item-m-x;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+      padding-right: $item-m-x;
+    }
+  }
+
+  &__link {
+    $p-y: 3px;
+    $border-w: 2px;
+
+    padding: rem($p-y + $border-w) 0 rem($p-y);
+
+    color: gray('400');
+    border-bottom: $border-w solid transparent;
+
+    line-height: 1;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &--active {
+      color: theme-primary();
+      border-bottom: $border-w solid theme-color('warning');
+
+      font-weight: bold;
+    }
+  }
+}

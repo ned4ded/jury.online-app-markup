@@ -1,7 +1,8 @@
 import gulp from 'gulp';
 import config from '../gulpfile.config';
 import path from 'path';
-import webpack from 'webpack-stream';
+import webpackStream from 'webpack-stream';
+import webpack from 'webpack';
 
 let wpConfig = {
   mode: 'production',
@@ -20,10 +21,16 @@ let wpConfig = {
     ]
   },
   devtool: "source-map",
+  plugins: [
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      Popper: 'popper.js'
+    })
+  ]
 }
 
 export function scripts() {
   return gulp.src(config.paths.scripts)
-    .pipe(webpack(wpConfig))
+    .pipe(webpackStream(wpConfig))
     .pipe(gulp.dest(path.join(config.server.dest, 'js')));
 }

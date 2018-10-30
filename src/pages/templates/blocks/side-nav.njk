@@ -38,7 +38,7 @@
         {{ make(subnav, false, 'side-nav--sublist') }}
       {% endset %}
 
-      {{ dropdown.make(link, content, item.subnav.id, 'side-nav__dropdown', true, { link: 'side-nav__link', content: 'side-nav__sublist'}) }}
+      {{ dropdown.make(link, content, item.subnav.id, 'side-nav__dropdown', false, { link: 'side-nav__link', content: 'side-nav__sublist'}) }}
 
     {% else %}
     <a href="{{ item.ref }}" class="side-nav__link {{'side-nav__link--active' if item.id == active}}">
