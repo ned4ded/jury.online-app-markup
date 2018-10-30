@@ -2,7 +2,7 @@
   {
     "name" : "Elysian",
     "field" : "E-commerce",
-    "brand" : "../assets/imgs/icon-ico-project-elysian.png",
+    "brand" : "assets/imgs/icon-ico-project-elysian.png",
     "description" : "Decentralized platform to build websites",
     "status" : {
       "text" : "deployed",
@@ -16,7 +16,7 @@
   {
     "name" : "GoodWork",
     "field" : "E-commerce",
-    "brand" : "../assets/imgs/icon-ico-project-goodwork.png",
+    "brand" : "assets/imgs/icon-ico-project-goodwork.png",
     "description" : "Ecosystem for remote teams",
     "status" : {
       "text" : "Sealed",
@@ -30,7 +30,7 @@
   {
     "name" : "GridEx",
     "field" : "Banking",
-    "brand" : "../assets/imgs/icon-ico-project-gridex.png",
+    "brand" : "assets/imgs/icon-ico-project-gridex.png",
     "description" : false,
     "status" : {
       "text" : "active",
@@ -44,7 +44,7 @@
   {
     "name" : "Melysian",
     "field" : "Finance",
-    "brand" : "../assets/imgs/icon-ico-project-melysian.png",
+    "brand" : "assets/imgs/icon-ico-project-melysian.png",
     "description" : "Supersystem for superteams",
     "status" : {
       "text" : "cooming soon",
