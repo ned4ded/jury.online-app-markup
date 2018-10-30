@@ -1,3 +1,5 @@
+import './tooltip'; 
+import './select';
 import 'bootstrap';
 
 (() => {

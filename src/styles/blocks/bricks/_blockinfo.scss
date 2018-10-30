@@ -1,0 +1,11 @@
+.info-block {
+	width: 20px;
+	height: 20px;
+	line-height: rem(19px);
+	font-size: rem(14px);
+	color: $glacier;
+	text-align: center;
+	border-radius: 50%;
+	cursor: pointer;
+	border: 1px solid $catskill-white;
+}

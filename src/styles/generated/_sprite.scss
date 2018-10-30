@@ -35,6 +35,16 @@
 	@include get-em-width(12.97, 17);
 }
 
+.icon--check {
+	font-size: 7px;
+	@include get-em-width(9, 7);
+}
+
+.icon--check-input {
+	font-size: 5px;
+	@include get-em-width(7, 5);
+}
+
 .icon--feed {
 	font-size: 16px;
 	@include get-em-width(15.97, 16);
@@ -58,6 +68,11 @@
 .icon--gear {
 	font-size: 16px;
 	@include get-em-width(15.97, 16);
+}
+
+.icon--photo {
+	font-size: 13px;
+	@include get-em-width(14, 13);
 }
 
 .icon--profile {
