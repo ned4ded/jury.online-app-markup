@@ -8,6 +8,7 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  align-content: space-between;
 
   width: 100%;
   max-width: 375px;
@@ -40,7 +41,6 @@
       border-radius: 0;
 
       @include drop-box;
-      // padding: 0;
     }
   }
 
@@ -55,9 +55,11 @@
     }
 
     &--brand {
-      flex-grow: 20;
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
 
-      width: auto;
+      width: 100%;
 
       @include bp-up($navbar-collapse-bp) {
         padding-right: $p-x;
@@ -82,25 +84,24 @@
 
       text-align: right;
     }
+  }
 
-    &--status {
-      display: inline-flex;
-      align-items: flex-end;
-      flex-direction: column;
-      flex-grow: 1;
+  &__info {
+    display: inline-flex;
+    align-items: flex-end;
+    flex-direction: column;
+    flex-grow: 1;
 
-      width: auto;
+    width: auto;
 
-      @include bp-up($navbar-collapse-bp) {
-        align-items: center;
+    margin: 0;
 
-        padding-right: $p-x;
-        padding-left: $p-x;
-      }
+    @include bp-up($navbar-collapse-bp) {
+      align-items: center;
+    }
 
-      *:nth-child(n + 2) {
-        margin-top: spacer(1);
-      }
+    *:nth-child(n + 2) {
+      margin-top: spacer(1);
     }
   }
 
@@ -173,6 +174,11 @@
   }
 
   &__brand {
+    flex-grow: 1;
+
+    margin-right: spacer(1);
+    margin-bottom: spacer(2);
+
     .card-brand__badge {
       min-width: 52px;
       height: 52px;

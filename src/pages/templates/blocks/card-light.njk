@@ -5,12 +5,12 @@
 <div class="card-light">
   <div class="card-light__block card-light__block--brand">
     {{ brand.make(brandOptions.content, brandOptions.src, 'card-light__brand') }}
-  </div>
 
-  <p class="card-light__block card-light__block--status">
-    <span class="card-light__status badge badge-gradient-{{ status.color }}">{{ status.text }}</span>
-    <span class="card-light__left">{{ left }}</span>
-  </p>
+    <p class="card-light__info">
+      <span class="card-light__status badge badge-gradient-{{ status.color }}">{{ status.text }}</span>
+      <span class="card-light__left">{{ left }}</span>
+    </p>
+  </div>
 
   <div class="card-light__wrapper">
     {% if descr %}
