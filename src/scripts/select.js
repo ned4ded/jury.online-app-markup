@@ -1,4 +1,4 @@
-// import selectpicker from 'bootstrap-select';
+import selectpicker from 'bootstrap-select';
 const select = $('.js-select');
-// select.selectpicker();
-console.log(selectpicker);
+const sel = select.selectpicker();
+console.log(sel);
