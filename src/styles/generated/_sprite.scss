@@ -45,6 +45,11 @@
 	@include get-em-width(7, 5);
 }
 
+.icon--duble {
+	font-size: 21px;
+	@include get-em-width(16, 21);
+}
+
 .icon--feed {
 	font-size: 16px;
 	@include get-em-width(15.97, 16);
