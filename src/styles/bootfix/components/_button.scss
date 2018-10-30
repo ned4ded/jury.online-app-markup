@@ -3,4 +3,8 @@
 
   padding-top: $input-btn-padding-y + $offset;
   padding-bottom: $input-btn-padding-y - $offset;
+  &--md {
+	padding-top: rem(8px);
+	padding-bottom: rem(8px);
+  }
 }

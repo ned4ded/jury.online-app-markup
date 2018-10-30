@@ -6,4 +6,20 @@
 	&__wrap {
 		margin-top: rem(50px);
 	}
+	&__group {
+		display: flex;
+		flex-wrap: wrap;
+		align-content: stretch;
+		align-items: center;
+	}
+	&__avatar {
+		flex: 0 0 185px;
+		max-width: 185px;
+	}
+	&__controls {
+	}
+	&__verified {
+		flex: 0 0 290px;
+		max-width: 290px;
+	}
 }

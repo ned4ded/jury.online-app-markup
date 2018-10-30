@@ -1,3 +1,6 @@
+.form-group {
+  margin-bottom: rem(35px);
+}
 .form-label {
   margin-bottom: rem(10px);
   font-size: 14px;
@@ -36,23 +39,116 @@
   &--rad {
     border-radius: 6px;
   }
-  &--color-blue {
-    color: $glacier;
-    &:focus {
-      color: darken($glacier, 20%);
-    }
-    &.form-control:disabled:focus, 
-    &.form-control[readonly]:focus {
-      color: $glacier
-    }
-  }
-  &.form-control:disabled, 
-  &.form-control[readonly] {
+  &:disabled, 
+  &[readonly] {
     border: 0;
+    color: #9F9F9F;
     background-color: rgba($seashell, .7);
     &:focus {
       background-color: rgba($seashell, .7);
       box-shadow: none;
     }
   }
+  &--color-blue {
+    color: $glacier;
+    &:focus {
+      color: darken($glacier, 20%);
+    }
+    &.form-control:disabled, 
+    &.form-control[readonly] {
+      color: $glacier;
+    }
+    &.form-control:disabled:focus, 
+    &.form-control[readonly]:focus {
+      color: $glacier
+    }
+  }
 }
+
+.form-number {
+  margin: 0 -12px;
+  display: flex;
+  font-weight: wrap;
+  align-content: stretch;
+  
+  &__code {
+    padding: 0 12px;
+    width: rem(110px);
+  }
+  &__body {
+    padding: 0 12px;
+  }
+}
+
+.form-check {
+  position: relative;
+  padding-left: rem(30px);
+  font-size: 14px;
+  display: block;
+  & + .form-check {
+    margin-top: 18px;
+  }
+  .form-check-icon {
+    position: absolute;
+    top: 6px;
+    left: 5px;
+    fill: #75A3BF;
+    font-size: 5px;
+    display: none;
+  }
+}
+
+.form-check-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+  &:checked ~ .form-check-icon {
+    display: block;
+  }
+  &:disabled ~ .form-check-label {
+    cursor: default;
+    color: rgba(#75A3BF, .7);
+  }
+}
+
+.form-check-label {
+  cursor: pointer;
+  color: #75A3BF;
+  user-select: none;
+  &:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: rem(17px);
+    height: rem(17px);
+    border-radius: 2px;
+    border: 1px solid #75A3BF;
+  }
+  &__bold {
+    font-weight: 600;
+  }
+}
+
+.form-control-plaintext {
+  padding: 0;
+  color: #75A3BF;
+  font-size: 17px;
+}
+
+.form-stretch {
+  justify-content: stretch;
+  flex-flow: nowrap;
+  .form-group:not(:last-child) {
+    padding-right: 23px;
+  }
+  .form-control {
+    width: 100%;
+  }
+  .form-group {
+    flex: initial;
+  }
+}
+

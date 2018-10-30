@@ -8,7 +8,8 @@ $box-spacers: (
   "sm" : (spacer(3) spacer(4)),
   "md" : (spacer(5) spacer(7)),
   "lg" : (spacer(7) spacer(9)),
-  "xl" : (spacer(8) spacer(10))
+  "xl" : (spacer(8) spacer(10)),
+  "xxl" : (spacer(11) spacer(11))
 );
 
 .box {
@@ -51,6 +52,24 @@ $box-spacers: (
 
     &--rounded {
       border-radius: 7px;
+    }
+  }
+
+  &--has--head {
+    padding: 0;
+  }
+
+  &__head {
+    padding: spacer(4) spacer(8);
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  &__wrap {
+    border-top: 1px solid #E7E7E7;
+    padding: spacer(8) spacer(11);
+    &--md {
+      padding: spacer(8) spacer(9);
     }
   }
 

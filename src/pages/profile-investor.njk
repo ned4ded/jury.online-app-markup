@@ -7,16 +7,23 @@
     <div class="profile__container container-fluid mt-28">
       <div class="profile__row row">
         <div class="profile__col col-12">
-          <div class="profile__box box box--p--xl box--p--xxl box--fluid">
-            <div class="row">
-              <div class="col-md-2">
+          <div class="profile__box box box--p--xxl box--fluid">
+            <div class="profile__group row">
+              <div class="profile__avatar col">
                 <!-- begin avatar -->
                 <div class="avatar">
                   <label class="avatar__wrap">
                     <span class="avatar__img" style="background-image: url(./assets/imgs/avatar.png);"></span>
                     <span class="avatar__upload">
                       <input type="file">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="12.44" height="11.41" viewBox="0 0 12.44 11.41"><title>Photoins</title><g ><g ><g><g><g><g><g><g><g><path d="M2.46,3.34A1.26,1.26,0,0,0,1.2,4.6v6a1.26,1.26,0,0,0,1.26,1.26h9.07a1.26,1.26,0,0,0,1.26-1.26v-6a1.26,1.26,0,0,0-1.26-1.26H2.46Z" transform="translate(-0.78 -0.85)" fill="#fff"/><path d="M11.54,12.26H2.46A1.68,1.68,0,0,1,.78,10.58v-6A1.68,1.68,0,0,1,2.46,2.92h9.07A1.68,1.68,0,0,1,13.22,4.6v6A1.68,1.68,0,0,1,11.54,12.26ZM2.46,3.76a0.84,0.84,0,0,0-.84.84v6a0.84,0.84,0,0,0,.84.84h9.07a0.84,0.84,0,0,0,.84-0.84v-6a0.84,0.84,0,0,0-.84-0.84H2.46Z" transform="translate(-0.78 -0.85)" fill="#fff"/></g><g><path d="M7,10.6a2.92,2.92,0,0,1-2.81-3A2.92,2.92,0,0,1,7,4.58a2.92,2.92,0,0,1,2.81,3A2.92,2.92,0,0,1,7,10.6ZM7,5.42A2.08,2.08,0,0,0,5,7.59,2.08,2.08,0,0,0,7,9.76,2.08,2.08,0,0,0,9,7.59,2.08,2.08,0,0,0,7,5.42Z" transform="translate(-0.78 -0.85)" fill="#2a2550"/></g><g><path d="M5.45,1.27A0.42,0.42,0,0,0,5,1.69V3.12a0.42,0.42,0,0,0,.42.42h3.1A0.42,0.42,0,0,0,9,3.12V1.69a0.42,0.42,0,0,0-.42-0.42H5.45Z" transform="translate(-0.78 -0.85)" fill="#fff"/><path d="M8.55,4H5.45a0.84,0.84,0,0,1-.84-0.84V1.69A0.84,0.84,0,0,1,5.45.85h3.1a0.84,0.84,0,0,1,.84.84V3.12A0.84,0.84,0,0,1,8.55,4ZM5.45,1.69V3.12h3.1V1.69H5.45Z" transform="translate(-0.78 -0.85)" fill="#fff"/></g></g></g></g></g></g></g></g></g></svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12.44" height="11.41" viewBox="0 0 12.44 11.41">
+                        <title>Photoins</title>
+                        <path d="M2.46,3.34A1.26,1.26,0,0,0,1.2,4.6v6a1.26,1.26,0,0,0,1.26,1.26h9.07a1.26,1.26,0,0,0,1.26-1.26v-6a1.26,1.26,0,0,0-1.26-1.26H2.46Z" transform="translate(-0.78 -0.85)" fill="#fff"/>
+                        <path d="M11.54,12.26H2.46A1.68,1.68,0,0,1,.78,10.58v-6A1.68,1.68,0,0,1,2.46,2.92h9.07A1.68,1.68,0,0,1,13.22,4.6v6A1.68,1.68,0,0,1,11.54,12.26ZM2.46,3.76a0.84,0.84,0,0,0-.84.84v6a0.84,0.84,0,0,0,.84.84h9.07a0.84,0.84,0,0,0,.84-0.84v-6a0.84,0.84,0,0,0-.84-0.84H2.46Z" transform="translate(-0.78 -0.85)" fill="#fff"/>
+                        <path d="M7,10.6a2.92,2.92,0,0,1-2.81-3A2.92,2.92,0,0,1,7,4.58a2.92,2.92,0,0,1,2.81,3A2.92,2.92,0,0,1,7,10.6ZM7,5.42A2.08,2.08,0,0,0,5,7.59,2.08,2.08,0,0,0,7,9.76,2.08,2.08,0,0,0,9,7.59,2.08,2.08,0,0,0,7,5.42Z" transform="translate(-0.78 -0.85)" fill="#2a2550"/>
+                        <path d="M5.45,1.27A0.42,0.42,0,0,0,5,1.69V3.12a0.42,0.42,0,0,0,.42.42h3.1A0.42,0.42,0,0,0,9,3.12V1.69a0.42,0.42,0,0,0-.42-0.42H5.45Z" transform="translate(-0.78 -0.85)" fill="#fff"/>
+                        <path d="M8.55,4H5.45a0.84,0.84,0,0,1-.84-0.84V1.69A0.84,0.84,0,0,1,5.45.85h3.1a0.84,0.84,0,0,1,.84.84V3.12A0.84,0.84,0,0,1,8.55,4ZM5.45,1.69V3.12h3.1V1.69H5.45Z" transform="translate(-0.78 -0.85)" fill="#fff"/>
+                      </svg>
                     </span>
                   </label>
                   <!-- begin info -->
@@ -25,7 +32,7 @@
                 </div>
                 <!-- end avatar -->
               </div>
-              <div class="col-md-6">
+              <div class="profile__controls col">
                 <div class="row">
                   <div class="col-md-4">
                     <div class="form-group">
@@ -50,27 +57,31 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="profile__verified col">
                 <!-- begin verified-progress -->
                 <div class="verified-progress">
-                  <p>Your account is being verified</p>
+                  <div class="verified-progress__title">Your account is being verified</div>
                   <div class="verified-progress__bar">
+                    <div class="verified-progress__item is-check">{{ icon.make('check') }}</div>
+                    <div class="verified-progress__item is-check">{{ icon.make('check') }}</div>
                     <div class="verified-progress__item">{{ icon.make('check') }}</div>
-                    <div class="verified-progress__item">{{ icon.make('check') }}</div>
-                    <div class="verified-progress__item">{{ icon.make('check') }}</div>
+                  </div>
+                  <div class="verified-progress__content">
+                    <div class="verified-progress__text">Phone</div>
+                    <div class="verified-progress__text">ETH Adress</div>
+                    <div class="verified-progress__text">Verify</div>
                   </div>
                 </div>
                 <!-- end verified-progress -->
               </div>
             </div>
-            
           </div>
         </div>
       </div>
       <div class="profile__wrap">
         <div class="profile__row row">
           <div class="col-md-8">
-            <div class="box box--p--xl box--p--xxl box--fluid box--has-head">
+            <div class="box box--fluid box--has--head">
               <div class="box__head">Contact Info</div>
               <div class="box__wrap">
                 <!-- begin box-form -->
@@ -78,15 +89,52 @@
                   <div class="box-form__row row">
                     <div class="box-form__col col-md-6">
                       <div class="form-group">
-                        <label for="exampleFormControlInput1">Email address</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                        <label class="form-label" for="mobile-phone">Mobile Phone</label>
+                        <div class="form-number">
+                          <div class="form-number__code">
+                            <input type="text" class="form-control" id="mobile-phone" value="+44" placeholder="+44">
+                          </div>
+                          <div class="form-number__body">
+                            <input type="text" class="form-control" id="mobile-phone-body" value="774 534 23" placeholder="Phone number">
+                          </div>
+                        </div>
                        </div>
                     </div>
                     <div class="box-form__col col-md-6">
                       <div class="form-group">
-                        <label for="exampleFormControlInput1">Email address</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                        <label class="form-label" for="telegram">Telegram</label>
+                        <input type="text" class="form-control" value="t.me/dg" id="telegram" placeholder="Telegram">
                        </div>
+                    </div>
+                  </div>
+                  <div class="box-form__row row">
+                    <div class="box-form__col col-md-6">
+                      <div class="form-group">
+                        <label class="form-label" for="linkedin">LinkedIn</label>
+                        <input type="text" class="form-control" id="linkedin" value="li.com/dg" placeholder="LinkedIn">
+                       </div>
+                    </div>
+                    <div class="box-form__col col-md-6">
+                      <div class="form-group">
+                        <label class="form-label" for="facebook">Facebook</label>
+                        <input type="text" class="form-control" value="fb.com/dg" id="facebook" placeholder="Telegram">
+                       </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="terms">
+                      <label class="form-check-label" for="terms">
+                        I agree with <span class="form-check-label__bold">Terms and Conditions</span>
+                      </label>
+                      {{ icon.make('check-input', 'form-check-icon') }}
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="privacy" disabled>
+                      <label class="form-check-label" for="privacy">
+                        I agree with <span class="form-check-label__bold">Privacy Policy & Cookies Policy</span>
+                      </label>
+                      {{ icon.make('check-input', 'form-check-icon') }}
                     </div>
                   </div>
                 </div>
@@ -95,10 +143,20 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="box box--p--xl box--p--xxl box--fluid box--has-head">
-              <div class="box__head">Account Information</div>
-              <div class="box__wrap">
-                
+            <div class="box box--has--head">
+              <div class="box__head text-center">Account Settings</div>
+              <div class="box__wrap box__wrap--md">
+                <div class="form-group">
+                  <label class="email" for="email">Facebook</label>
+                  <input type="text" readonly class="form-control-plaintext" id="email" value="email@example.com">
+                </div>
+                <form class="form-inline form-stretch">
+                  <div class="form-group">
+                    <label for="inputPassword" class="sr-only">Password</label>
+                    <input type="password" readonly class="form-control form-control--rad text-center" id="inputPassword" placeholder="Password" value="1111111111">
+                  </div>
+                  <button type="button" class="btn btn--md btn-outline-info">CHANGE</button>
+                </form>
               </div>
             </div>
           </div>

@@ -40,6 +40,11 @@
 	@include get-em-width(9, 7);
 }
 
+.icon--check-input {
+	font-size: 5px;
+	@include get-em-width(7, 5);
+}
+
 .icon--feed {
 	font-size: 16px;
 	@include get-em-width(15.97, 16);
