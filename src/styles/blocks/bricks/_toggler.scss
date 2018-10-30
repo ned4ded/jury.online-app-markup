@@ -1,0 +1,60 @@
+.toggler-group {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.toggler-group-justify {
+	justify-content: space-between;
+}
+.toggler-wrap {
+	margin: rem(2px) 0;
+}
+.toggler-text {
+	margin-right: rem(10px);
+	font-weight: 600;
+	font-size: 16px;
+	&--blue {
+		color: $glacier;
+	}
+}
+.toggler-icon {
+	margin-right: rem(10px);
+	color: $glacier;
+}
+.toggler {
+	vertical-align: top;
+	cursor: pointer;
+	display: inline-block;
+	input {
+		position: absolute;
+		top: 0;
+		opacity: 0;
+		&:checked ~ .toggler__block {
+			border-color: #67DC8A;
+			&:before {
+				transform: translateX(26px);
+				background-color: #67DC8A;
+			}
+		}
+	}
+	&__block {
+		position: relative;
+		height: 23px;
+		width: 50px;
+		border-radius: 24px;
+		border: 1px solid #9F9F9F;
+		transition: border-color .3s;
+		display: block;
+		&:before {
+			position: absolute;
+			content: "";
+			top: 3px;
+			left: 3px;
+			width: 15px;
+			height: 15px;
+			border-radius: 50%;
+			transition: background-color .3s, transform .3s;
+			background-color: #9F9F9F;
+		}
+	}
+}

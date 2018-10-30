@@ -1,10 +1,8 @@
 .profile {
 	&__container {
-		padding-top: rem(50px);
+		padding-top: rem(50px); 
+		padding-bottom: rem(132px);
 		max-width: rem(1272px);
-	}
-	&__wrap {
-		margin-top: rem(50px);
 	}
 	&__group {
 		display: flex;
@@ -15,11 +13,24 @@
 	&__avatar {
 		flex: 0 0 185px;
 		max-width: 185px;
-	}
-	&__controls {
+		@include bp-down(sm) {
+			flex: 0 0 100%;
+			max-width: 100%;
+			justify-content: center;
+			display: flex;
+		}
 	}
 	&__verified {
 		flex: 0 0 290px;
 		max-width: 290px;
+		@include bp-down(xl) {
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+		&:not(:first-child) {
+			@include bp-down(xl) {
+				margin-top: spacer(7);
+			}
+		}
 	}
 }

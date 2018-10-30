@@ -34,19 +34,19 @@
               </div>
               <div class="profile__controls col">
                 <div class="row">
-                  <div class="col-md-4">
+                  <div class="col-xl-4 col-md-12">
                     <div class="form-group">
                       <label class="form-label" for="first-name">First Name</label>
                       <input type="text" class="form-control form-control--lg" id="first-name" value="David" placeholder="First Name">
                     </div>
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-xl-4 col-md-12">
                     <div class="form-group">
                       <label class="form-label" for="last-name">Last Name</label>
                       <input type="text" class="form-control form-control--lg" id="last-name" value="Guetta" placeholder="Last Name">
                     </div>
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-xl-4 col-md-12">
                     <label class="form-label" for="last-name">Role</label>
                   </div>
                 </div>
@@ -80,7 +80,7 @@
       </div>
       <div class="profile__wrap">
         <div class="profile__row row">
-          <div class="col-md-8">
+          <div class="col-xxl-8 mt-9">
             <div class="box box--fluid box--has--head">
               <div class="box__head">Contact Info</div>
               <div class="box__wrap">
@@ -130,7 +130,7 @@
                       {{ icon.make('check-input', 'form-check-icon') }}
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="privacy" disabled>
+                      <input class="form-check-input" type="checkbox" id="privacy">
                       <label class="form-check-label" for="privacy">
                         I agree with <span class="form-check-label__bold">Privacy Policy & Cookies Policy</span>
                       </label>
@@ -142,23 +142,51 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="box box--has--head">
-              <div class="box__head text-center">Account Settings</div>
-              <div class="box__wrap box__wrap--md">
-                <div class="form-group">
-                  <label class="email" for="email">Facebook</label>
-                  <input type="text" readonly class="form-control-plaintext" id="email" value="email@example.com">
-                </div>
-                <form class="form-inline form-stretch">
-                  <div class="form-group">
-                    <label for="inputPassword" class="sr-only">Password</label>
-                    <input type="password" readonly class="form-control form-control--rad text-center" id="inputPassword" placeholder="Password" value="1111111111">
+          <div class="col-xxl-4">
+            <div class="row">
+              <div class="col-xxl-12 col-xl-6 mt-9">
+                <div class="box box--has--head">
+                  <div class="box__head text-center">Account Settings</div>
+                  <div class="box__wrap box__wrap--sm">
+                    <div class="form-group">
+                      <label class="email" for="email">Facebook</label>
+                      <input type="text" readonly class="form-control-plaintext" id="email" value="email@example.com">
+                    </div>
+                    <form class="form-inline form-stretch">
+                      <div class="form-group">
+                        <label for="inputPassword" class="sr-only">Password</label>
+                        <input type="password" readonly class="form-control form-control--rad text-center" id="inputPassword" placeholder="Password" value="1111111111">
+                      </div>
+                      <button type="button" class="btn btn--md btn-outline-info">CHANGE</button>
+                    </form>
                   </div>
-                  <button type="button" class="btn btn--md btn-outline-info">CHANGE</button>
-                </form>
+                </div>
+              </div>
+              <div class="col-xxl-12 col-xl-6 mt-9">
+                <div class="box box--has--head">
+                  <div class="box__head text-center">Authentification</div>
+                  <div class="box__wrap box__wrap--sm">
+                    <div class="form-group">
+                      <label class="toggler-group toggler-group-justify">
+                        <span class="toggler-wrap">
+                          <span class="toggler-icon"> {{ icon.make('duble') }}</span>
+                          <span class="toggler-text toggler-text--blue">Two factor authentification</span>
+                        </span>
+                        <span class="toggler">
+                          <input type="checkbox" checked>
+                          <span class="toggler__block"></span>
+                        </span>
+                      </label>
+                    </div>
+                    <div class="box__footer">
+                      Add another security layer to your account <a class="link" href="#">Read more</a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+            
+            
           </div>
         </div>
       </div>

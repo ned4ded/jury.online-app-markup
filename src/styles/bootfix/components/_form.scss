@@ -1,5 +1,5 @@
 .form-group {
-  margin-bottom: rem(35px);
+  margin-bottom: spacer(7);
 }
 .form-label {
   margin-bottom: rem(10px);
@@ -92,7 +92,7 @@
     position: absolute;
     top: 6px;
     left: 5px;
-    fill: #75A3BF;
+    fill: $glacier;
     font-size: 5px;
     display: none;
   }
@@ -109,13 +109,13 @@
   }
   &:disabled ~ .form-check-label {
     cursor: default;
-    color: rgba(#75A3BF, .7);
+    color: rgba($glacier, .7);
   }
 }
 
 .form-check-label {
   cursor: pointer;
-  color: #75A3BF;
+  color: $glacier;
   user-select: none;
   &:before {
     position: absolute;
@@ -125,7 +125,7 @@
     width: rem(17px);
     height: rem(17px);
     border-radius: 2px;
-    border: 1px solid #75A3BF;
+    border: 1px solid $glacier;
   }
   &__bold {
     font-weight: 600;
@@ -134,7 +134,7 @@
 
 .form-control-plaintext {
   padding: 0;
-  color: #75A3BF;
+  color: $glacier;
   font-size: 17px;
 }
 

@@ -40,6 +40,10 @@ $box-spacers: (
   @extend %box;
 
   padding: $padding-y $padding-x;
+  
+  & + .box {
+    margin-top: rem(50px);
+  }
 
   &--fluid {
     height: 100%;
@@ -85,6 +89,9 @@ $box-spacers: (
     &--md {
       padding: spacer(8) spacer(9);
     }
+    &--sm {
+      padding: spacer(6) spacer(5);
+    }
   }
 
   &__content {
@@ -94,6 +101,11 @@ $box-spacers: (
     &--fluid {
       @include make-content-fluid($padding-x);
     }
+  }
+
+  &__footer {
+    font-size: 14px;
+    color: #9F9F9F;
   }
 
   @each $size, $length-map in $box-spacers {
