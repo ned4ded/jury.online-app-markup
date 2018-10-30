@@ -1,0 +1,39 @@
+{% import "lib/icon.njk" as icon %}
+{% import "lib/helpers.njk" as helpers %}
+
+{% set filters = datasets.get('filters.json') %}
+
+{% macro makeTabs(list, classes) %}
+  <ul class="filter-tabs{{ helpers.parse(classes) }}">
+  {% for item in list %}
+    <li class="filter-tabs__item">
+      <a href="#" class="filter-tabs__link{{ ' filter-tabs__link--active' if item.value == 'active' }}">{{ item.text }}</a>
+    </li>
+  {% endfor %}
+  </ul>
+{% endmacro %}
+
+<form class="filters">
+  <div class="filters__block filter__block--top">
+    <div class="filters__options">
+      <a href="#" class="filters__toggler">
+        {{ icon.make('filters') }}
+      </a>
+      <select class="filters__categories" name="">
+        <option value="">Categories</option>
+      </select>
+    </div>
+
+    {{ makeTabs(filters.states, 'filters__states') }}
+  </div>
+
+  {# <div class="filters__block filters__block--bottom">
+    <div class="filters__section">
+      <h3 class="filters__heading">Filters</h3>
+    </div>
+    <div class="filters__section">
+      <h4 class="filters__sub-heading">Status</h4>
+      {{ makeTabs(filters.states, 'filters__states') }}
+    </div>
+  </div> #}
+</form>

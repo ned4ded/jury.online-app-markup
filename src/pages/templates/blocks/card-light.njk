@@ -1,0 +1,35 @@
+{% import "blocks/card-brand.njk" as brand %}
+{% import "lib/helpers.njk" as parse %}
+
+{% macro make(brandOptions, descr, period, investment, status, left, isKyc = false) %}
+<div class="card-light">
+  <div class="card-light__block card-light__block--brand">
+    {{ brand.make(brandOptions.content, brandOptions.src, 'card-light__brand') }}
+
+    <p class="card-light__info">
+      <span class="card-light__status badge badge-gradient-{{ status.color }}">{{ status.text }}</span>
+      <span class="card-light__left">{{ left }}</span>
+    </p>
+  </div>
+
+  <div class="card-light__wrapper">
+    {% if descr %}
+    <p class="card-light__block card-light__block--descr card-light__descr">
+      {{ descr }}
+    </p>
+    {% endif %}
+
+    <div class="card-light__block card-light__block--meta">
+      <p class="card-light__period">{{ period }}</p>
+      <p class="card-light__invest">MIN Invest: <span class="card-light__invest-value">{{ investment }}</span></p>
+    </div>
+
+    <p class="card-light__block card-light__block--rating">
+      <span class="card-light__bookmark"></span>
+      {% if isKyc %}
+      <span class="card-light__tag badge badge-sm badge-outline-info">KYC</span>
+      {% endif %}
+    </p>
+  </div>
+</div>
+{% endmacro %}

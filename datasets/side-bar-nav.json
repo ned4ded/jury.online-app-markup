@@ -6,7 +6,7 @@
     "ref" : "#"
   },
   {
-    "id": "admin",
+    "id": "dashboard",
     "name": "Admin Area",
     "icon": "calendar",
     "ref" : "/"

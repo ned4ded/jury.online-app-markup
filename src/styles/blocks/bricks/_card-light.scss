@@ -1,0 +1,187 @@
+.card-light {
+  $p-x: spacer(4);
+  $bdrs-sm: 5px;
+  $bdrs-md: 10px;
+
+  position: relative;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: space-between;
+
+  width: 100%;
+  max-width: 375px;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: spacer(2) 0;
+
+  @include bp-up($navbar-collapse-bp) {
+    // max-width: 285px;
+    max-width: 350px;
+
+    border-radius: $bdrs-md;
+
+    @include box;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-flow: row wrap;
+
+    width: 100%;
+    padding-right: $p-x;
+    padding-left: $p-x;
+
+    border-radius: $bdrs-sm;
+
+    @extend %box;
+    @include bp-up($navbar-collapse-bp) {
+      border-radius: 0;
+
+      @include drop-box;
+    }
+  }
+
+  &__block {
+    width: 100%;
+    margin: 0;
+    padding: spacer(2) 0;
+
+    & > * {
+      position: relative;
+      z-index: 10;
+    }
+
+    &--brand {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+
+      width: 100%;
+
+      @include bp-up($navbar-collapse-bp) {
+        padding-right: $p-x;
+        padding-left: $p-x;
+      }
+    }
+
+    &--descr {
+      padding-bottom: spacer(1);
+    }
+
+    &--meta {
+      width: 50%;
+
+      border-top: 1px solid rgba(gray('400'), .4);
+    }
+
+    &--rating {
+      width: 50%;
+
+      border-top: 1px solid rgba(gray('400'), .4);
+
+      text-align: right;
+    }
+  }
+
+  &__info {
+    display: inline-flex;
+    align-items: flex-end;
+    flex-direction: column;
+    flex-grow: 1;
+
+    width: auto;
+
+    margin: 0;
+
+    @include bp-up($navbar-collapse-bp) {
+      align-items: center;
+    }
+
+    *:nth-child(n + 2) {
+      margin-top: spacer(1);
+    }
+  }
+
+  &__status {
+    width: 100%;
+
+    text-transform: uppercase;
+
+    font-size: inherit;
+    font-weight: bold;
+
+    @include bp-up($navbar-collapse-bp) {
+      font-size: $font-size-xs;
+    }
+  }
+
+  &__left {
+    font-weight: bold;
+
+    @include bp-up($navbar-collapse-bp) {
+      text-transform: none;
+      font-size: $font-size-xs;
+      color: #3c6f7c;
+    }
+  }
+
+  &__descr {
+    text-transform: uppercase;
+
+    color: rgba(gray('800'), .8);
+
+    font-size: $font-size-sm;
+    font-weight: bold;
+
+    @include bp-up($navbar-collapse-bp) {
+      text-transform: none;
+    }
+  }
+
+  &__period {
+    margin-bottom: spacer(2);
+
+    text-transform: uppercase;
+
+    font-weight: bold;
+
+    @include bp-up($navbar-collapse-bp) {
+      margin-bottom: 0;
+
+      font-size: $font-size-sm;
+    }
+  }
+
+  &__invest {
+    margin: 0;
+
+    text-transform: uppercase;
+
+    @include bp-up($navbar-collapse-bp) {
+      font-size: $font-size-sm;
+    }
+
+    &-value {
+      font-weight: bold;
+    }
+  }
+
+  &__tag {
+    font-weight: bold;
+  }
+
+  &__brand {
+    flex-grow: 1;
+
+    margin-right: spacer(1);
+    margin-bottom: spacer(2);
+
+    .card-brand__badge {
+      min-width: 52px;
+      height: 52px;
+    }
+  }
+}

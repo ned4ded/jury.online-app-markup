@@ -1,5 +1,7 @@
 {% extends "layout.njk" %}
 
+{% set page = { active: 'styleguide' } %}
+
 {% block content %}
 <div class="content pb-6 pt-6">
   <div class="container-fluid">
@@ -38,6 +40,13 @@
       </div>
     </div>
     {% include "partials/styleguide/colors.njk" %}
+
+    <div id="badges" class="row mt-9 mb-5">
+      <div class="col-12">
+        <h2>Badges</h2>
+      </div>
+    </div>
+    {% include "partials/styleguide/badges.njk" %}
   </div>
 </div>
 {% endblock %}

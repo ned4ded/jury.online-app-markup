@@ -1,9 +1,12 @@
 [
   {
     "name": "F.A.Q.",
+    "id": "faq",
     "ref" : "#"
   },
-  { "name": "WIKI",
-    "ref" : "#"
+  {
+    "name": "Styleguide",
+    "id":   "styleguide",
+    "ref" : "/styleguide.html"
   }
 ]

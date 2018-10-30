@@ -1,6 +1,6 @@
-// import 'bootstrap/js/dist/bootstrap.js';
-// import './tooltip'; 
-// import './select';
+import './tooltip'; 
+import './select';
+import 'bootstrap';
 
 (() => {
   const t = document.querySelector('[data-navbar-toggle]');

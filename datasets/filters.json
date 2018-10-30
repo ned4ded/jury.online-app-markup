@@ -1,0 +1,46 @@
+{
+  "states" : [
+    {
+      "value" : "favorites",
+      "text" : "All"
+    },
+    {
+      "value" : "active",
+      "text" : "Active"
+    },
+    {
+      "value" : "deployed",
+      "text" : "Deployed"
+    },
+    {
+      "value" : "draft",
+      "text" : "Draft"
+    },
+    {
+      "value" : "successful",
+      "text" : "Successful"
+    },
+    {
+      "value" : "favorites",
+      "text" : "Favorites"
+    }
+  ],
+  "statuses" : [
+    {
+      "value" : "soon",
+      "text" : "Coming Soon"
+    },
+    {
+      "value" : "pre-ico",
+      "text" : "Pre ICO"
+    },
+    {
+      "value" : "private-sales",
+      "text" : "Private Sales"
+    },
+    {
+      "value" : "ico",
+      "text" : "ICO"
+    }
+  ]
+}

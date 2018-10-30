@@ -3,6 +3,16 @@
   box-shadow: 0px 0 16px 0 rgba(0, 0, 0, 0.1);
 };
 
+@mixin box {
+  background-color: #ffffff;
+  box-shadow: 0px 0 16px 0 rgba(0, 0, 0, 0.1);
+}
+
+@mixin drop-box {
+  background-color: transparent;
+  box-shadow: none;
+}
+
 $box-spacers: (
   "xs" : (spacer(1) spacer(2)),
   "sm" : (spacer(3) spacer(4)),
@@ -52,6 +62,10 @@ $box-spacers: (
 
     &--rounded {
       border-radius: 7px;
+    }
+
+    &--circled {
+      border-radius: 10px;
     }
   }
 
