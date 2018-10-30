@@ -1,0 +1,73 @@
+.card-light {
+  $p-x: spacer(4);
+  $bdrs-sm: 5px;
+  $bdrs-md: 10px;
+  position: relative;
+
+  display: flex;
+  flex-flow: row wrap;
+
+  max-width: 375px;
+
+  padding: spacer(2) 0;
+
+  @include bp-up($navbar-collapse-bp) {
+    max-width: 285px;
+    border-radius: $bdrs-md;
+
+    @include box;
+  }
+
+  p, h1, h2, h3, h4, h5, h6 {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__wrapper {
+    @extend %box;
+
+    width: 100%;
+    border-radius: $bdrs-sm;
+    padding-right: $p-x;
+    padding-left: $p-x;
+
+    @include bp-up($navbar-collapse-bp) {
+      border-radius: 0;
+      @include drop-box;
+      // padding: 0;
+    }
+  }
+
+
+  &__block {
+    width: 100%;
+    padding: spacer(1) $p-x;
+
+    & > * {
+      position: relative;
+      z-index: 10;
+    }
+
+    &--brand {
+      padding-right: 0;
+      padding-left: 0;
+
+      @include bp-up($navbar-collapse-bp) {
+        padding-right: $p-x;
+        padding-left: $p-x;
+      }
+    }
+
+    &--status {
+      padding-left: 0;
+      padding-right: 0;
+      border-bottom: 1px solid rgba(gray('400'), .4);
+    }
+
+    &--meta {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

@@ -1,3 +1,5 @@
+import 'bootstrap';
+
 (() => {
   const t = document.querySelector('[data-navbar-toggle]');
 

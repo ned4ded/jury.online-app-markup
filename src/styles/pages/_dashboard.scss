@@ -1,0 +1,30 @@
+.page-dashboard {
+  &__filters {
+    margin-right: -$grid-gutter-width / 2;
+    margin-left: -$grid-gutter-width / 2;
+  }
+
+  &__recommended {
+    @include bp-up('lg') {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    @include bp-up(3xl) {
+      padding-left: 150px;
+      padding-right: 150px;
+    }
+  }
+
+  &__projects {
+    @include bp-up('lg') {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    @include bp-up(3xl) {
+      padding-left: 150px;
+      padding-right: 150px;
+    }
+  }
+}

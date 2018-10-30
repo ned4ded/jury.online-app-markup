@@ -170,7 +170,7 @@
     line-height: 1;
 
     & .icon {
-      font-size: rem(21px);
+      font-size: rem(19px);
 
       fill: $navbar-icon-color-sm;
       @include bp-up($navbar-collapse-bp) {
@@ -198,11 +198,10 @@
   &__tools {
     .tools__link {
       .icon {
-        font-size: rem(21px);
+        font-size: rem(19px);
 
         fill: $white;
         @include bp-up($navbar-collapse-bp) {
-          font-size: rem(19px);
 
           fill: theme-color('info');
         }

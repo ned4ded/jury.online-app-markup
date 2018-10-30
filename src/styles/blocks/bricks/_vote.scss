@@ -1,0 +1,86 @@
+.vote {
+  position: relative;
+
+  min-height: 62px;
+  padding-top: spacer(7);
+  padding-bottom: spacer(7);
+
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 24px;
+
+    width: calc(100% - 48px);
+    height: 1px;
+
+    content: '';
+
+    background-color: gray('200');
+  }
+
+  &:before {
+    position: absolute;
+    bottom: 0;
+    left: 24px;
+
+    width: calc(100% - 48px);
+    height: 1px;
+
+    content: '';
+
+    background-color: gray('200');
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__question {
+    margin: 0;
+    padding: 0 25px;
+
+    p, h1, h2, h3, h4, h5, h6 {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__icon {
+    min-width: 39px;
+    height: 39px;
+
+    background-image: url('../assets/imgs/icon-puzzles.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+
+    font-size: 0;
+  }
+
+  &__btn {
+    margin: 0 7px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+
+    font-size: 0;
+
+    &--like {
+      min-width: 20px;
+      height: 22px;
+
+      background-image: url('../assets/imgs/icon-like.png');
+    }
+
+    &--dislike {
+      min-width: 20px;
+      height: 22px;
+
+      background-image: url('../assets/imgs/icon-dislike.png');
+    }
+  }
+}
