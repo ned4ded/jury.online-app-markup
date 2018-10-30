@@ -72,17 +72,21 @@
     }
 
     &--meta {
-      width: 50%;
+      flex-grow: 20;
+
+      width: auto;
 
       border-top: 1px solid rgba(gray('400'), .4);
     }
 
     &--rating {
-      width: 50%;
+      flex-grow: 1;
 
-      border-top: 1px solid rgba(gray('400'), .4);
+      width: auto;
 
       text-align: right;
+
+      border-top: 1px solid rgba(gray('400'), .4);
     }
   }
 
@@ -174,7 +178,7 @@
   }
 
   &__brand {
-    flex-grow: 1;
+    flex-grow: 20;
 
     margin-right: spacer(1);
     margin-bottom: spacer(2);

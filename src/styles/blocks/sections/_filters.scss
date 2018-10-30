@@ -1,4 +1,10 @@
 .filters {
+  @include bp-up($navbar-collapse-bp) {
+    @include box;
+
+    border-radius: 10px;
+  }
+
   &__options {
     display: inline-flex;
     align-items: center;
@@ -7,27 +13,117 @@
     padding: 12px $grid-gutter-width / 2;
 
     background-color: $white;
+
+    @include bp-up($navbar-collapse-bp) {
+      width: auto;
+      padding: 0;
+
+      background-color: transparent;
+    }
+
+    @include bp-up(xl) {
+      margin-right: 0;
+    }
   }
 
   &__categories {
     flex-grow: 1;
+
+    margin: 0;
     margin-left: 25px;
+
+    @include bp-up($navbar-collapse-bp) {
+      margin-left: 0;
+      padding-right: spacer(4);
+
+    }
+
+    @include bp-up(xl) {
+      display: inline-flex;
+      align-items: center;
+      align-self: stretch;
+
+      min-width: 220px;
+
+      border-right: solid 1px rgba(theme-primary(), .1);
+    }
+
+    select {
+      width: 100%;
+    }
   }
 
   &__toggler {
+    @include bp-up($navbar-collapse-bp) {
+      order: 1;
+
+      margin-right: spacer(4);
+    }
+
+    @include bp-up(xl) {
+      display: inline-flex;
+      align-items: center;
+      align-self: stretch;
+
+      margin-left: spacer(4);
+      padding: 0 spacer(4);
+    }
+
+    @include bp-up(2xl) {
+      margin: 0 spacer(7);
+    }
+
     & svg {
       font-size: rem(25px);
+
+      @include bp-up($navbar-collapse-bp) {
+        font-size: rem(22px);
+      }
     }
   }
 
   &__states {
+    vertical-align: top;
     padding-right: $grid-gutter-width / 2;
     padding-left: $grid-gutter-width / 2;
+
+    @include bp-up($navbar-collapse-bp) {
+      padding: 0;
+
+      width: auto;
+    }
+
+    @include bp-up(xl) {
+      flex-grow: 1;
+    }
   }
 
   &__block {
+    &--top {
+      border-bottom: 1px solid rgb(186, 186, 186);
+
+      @include bp-up($navbar-collapse-bp) {
+        border-bottom: none;
+        padding: 0 spacer(7);
+        display: inline-flex;
+        min-height: 62px;
+      }
+
+      @include bp-up(xl) {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+      }
+
+      @include bp-up(xl) {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+      }
+    }
+
     &--bottom {
-      
+      background-color: $white;
     }
   }
 }
