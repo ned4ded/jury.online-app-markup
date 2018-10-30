@@ -1,6 +1,7 @@
 {% extends "layout.njk" %}
 
 {% import "blocks/card-brand.njk" as brand %}
+{% import "blocks/card-light.njk" as cardLight %}
 {% import "blocks/vote.njk" as vote %}
 
 {% set page = { active: 'dashboard' } %}
@@ -35,7 +36,7 @@
                   <p class="mb-0 h2 font-weight-bold text-uppercase text-xs text-primary text-lg-white">Carasharing</p>
                   {% endset %}
 
-                  {{ brand.make(content, 'assets/imgs/icon-card-brand-brixby.png', '27px', 'card-dyed__brand', 'green') }}
+                  {{ brand.make(content, 'assets/imgs/icon-ico-project-brixby.png', 'card-dyed__brand') }}
                 </div>
 
                 <div class="card-dyed__block card-dyed__block--status">
@@ -62,7 +63,7 @@
                   <p class="mb-0 h2 font-weight-bold text-uppercase text-xs text-primary text-lg-white">Carasharing</p>
                   {% endset %}
 
-                  {{ brand.make(content, 'assets/imgs/icon-card-brand-brixby.png', '27px', 'card-dyed__brand', 'green') }}
+                  {{ brand.make(content, 'assets/imgs/icon-ico-project-brixby.png', 'card-dyed__brand') }}
                 </div>
 
                 <div class="card-dyed__block card-dyed__block--status">
@@ -89,7 +90,7 @@
                   <p class="mb-0 h2 font-weight-bold text-uppercase text-xs text-primary text-lg-white">Carasharing</p>
                   {% endset %}
 
-                  {{ brand.make(content, 'assets/imgs/icon-card-brand-brixby.png', '27px', 'card-dyed__brand', 'green') }}
+                  {{ brand.make(content, 'assets/imgs/icon-ico-project-brixby.png', 'card-dyed__brand') }}
                 </div>
 
                 <div class="card-dyed__block card-dyed__block--status">
@@ -126,8 +127,8 @@
 
   <div class="row d-none d-lg-flex mb-7">
     <div class="col-12 d-flex flex-column">
-      <h2 class="order-1 mb-0">Recommended for You</h2>
-      <p class="text-lg mb-1">Don’t Miss them</p>
+      <h2 class="order-1 mb-0">ICO Projects</h2>
+      <p class="text-lg mb-1">Discover new</p>
     </div>
   </div>
 
@@ -136,190 +137,23 @@
       <div class="container-fluid">
         <div class="row">
 
-          <div class="col-12 mr-auto ml-auto mb-6 col-md-6 col-xl-4 col-2xl-3">
-            <div class="card-light mr-auto ml-auto">
-              <div class="card-light__block card-light__block--brand">
-                {% set content %}
-                <p class="mb-0 h3 font-weight-bold text-primary">Elysian</p>
-                <p class="mb-0 font-weight-bold text-muted">E-commerce</p>
-                {% endset %}
+        {% set projects = datasets.get('ico-projects.json') %}
 
-                {{ brand.make(content, 'assets/imgs/icon-card-brand-elysian.png', '41px', 'card-light__brand', 'light-blue') }}
-              </div>
+        {% for project in projects %}
+        <div class="col-12 mb-6 col-md-6 col-xl-4 col-2xl-3">
+          {% set brandContent %}
+          <p class="mb-0 h3 font-weight-bold text-primary">{{ project.name }}</p>
+          <p class="mb-0 font-weight-bold text-muted">{{ project.field }}</p>
+          {% endset %}
 
-              <div class="card-light__wrapper">
-                <div class="card-light__block card-light__block--status">
-                  <p class="text-uppercase text-gray font-weight-bold text-sm">Decentralized platform to build websites</p>
-                </div>
+          {% set brandOptions = {
+            content: brandContent,
+            src: project.brand
+          } %}
 
-                <div class="card-light__block card-light__block--meta">
-                  <p class="text-uppercase mb-0"><strong>5 sep - 5 oct</strong></p>
-                  <p class="text-uppercase">MIN Invest: <strong>10 ETH</strong></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 mr-auto ml-auto mb-6 col-md-6 col-xl-4 col-2xl-3">
-            <div class="card-light mr-auto ml-auto">
-              <div class="card-light__block card-light__block--brand">
-                {% set content %}
-                <p class="mb-0 h3 font-weight-bold text-primary">Elysian</p>
-                <p class="mb-0 font-weight-bold text-muted">E-commerce</p>
-                {% endset %}
-
-                {{ brand.make(content, 'assets/imgs/icon-card-brand-elysian.png', '41px', 'card-light__brand', 'light-blue') }}
-              </div>
-
-              <div class="card-light__wrapper">
-                <div class="card-light__block card-light__block--status">
-                  <p class="text-uppercase text-gray font-weight-bold text-sm">Decentralized platform to build websites</p>
-                </div>
-
-                <div class="card-light__block card-light__block--meta">
-                  <p class="text-uppercase mb-0"><strong>5 sep - 5 oct</strong></p>
-                  <p class="text-uppercase">MIN Invest: <strong>10 ETH</strong></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 mr-auto ml-auto mb-6 col-md-6 col-xl-4 col-2xl-3">
-            <div class="card-light mr-auto ml-auto">
-              <div class="card-light__block card-light__block--brand">
-                {% set content %}
-                <p class="mb-0 h3 font-weight-bold text-primary">Elysian</p>
-                <p class="mb-0 font-weight-bold text-muted">E-commerce</p>
-                {% endset %}
-
-                {{ brand.make(content, 'assets/imgs/icon-card-brand-elysian.png', '41px', 'card-light__brand', 'light-blue') }}
-              </div>
-
-              <div class="card-light__wrapper">
-                <div class="card-light__block card-light__block--status">
-                  <p class="text-uppercase text-gray font-weight-bold text-sm">Decentralized platform to build websites</p>
-                </div>
-
-                <div class="card-light__block card-light__block--meta">
-                  <p class="text-uppercase mb-0"><strong>5 sep - 5 oct</strong></p>
-                  <p class="text-uppercase">MIN Invest: <strong>10 ETH</strong></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 mr-auto ml-auto mb-6 col-md-6 col-xl-4 col-2xl-3">
-            <div class="card-light mr-auto ml-auto">
-              <div class="card-light__block card-light__block--brand">
-                {% set content %}
-                <p class="mb-0 h3 font-weight-bold text-primary">Elysian</p>
-                <p class="mb-0 font-weight-bold text-muted">E-commerce</p>
-                {% endset %}
-
-                {{ brand.make(content, 'assets/imgs/icon-card-brand-elysian.png', '41px', 'card-light__brand', 'light-blue') }}
-              </div>
-
-              <div class="card-light__wrapper">
-                <div class="card-light__block card-light__block--status">
-                  <p class="text-uppercase text-gray font-weight-bold text-sm">Decentralized platform to build websites</p>
-                </div>
-
-                <div class="card-light__block card-light__block--meta">
-                  <p class="text-uppercase mb-0"><strong>5 sep - 5 oct</strong></p>
-                  <p class="text-uppercase">MIN Invest: <strong>10 ETH</strong></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 mr-auto ml-auto mb-6 col-md-6 col-xl-4 col-2xl-3">
-            <div class="card-light mr-auto ml-auto">
-              <div class="card-light__block card-light__block--brand">
-                {% set content %}
-                <p class="mb-0 h3 font-weight-bold text-primary">Elysian</p>
-                <p class="mb-0 font-weight-bold text-muted">E-commerce</p>
-                {% endset %}
-
-                {{ brand.make(content, 'assets/imgs/icon-card-brand-elysian.png', '41px', 'card-light__brand', 'light-blue') }}
-              </div>
-
-              <div class="card-light__wrapper">
-                <div class="card-light__block card-light__block--status">
-                  <p class="text-uppercase text-gray font-weight-bold text-sm">Decentralized platform to build websites</p>
-                </div>
-
-                <div class="card-light__block card-light__block--meta">
-                  <p class="text-uppercase mb-0"><strong>5 sep - 5 oct</strong></p>
-                  <p class="text-uppercase">MIN Invest: <strong>10 ETH</strong></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 mr-auto ml-auto mb-6 col-md-6 col-xl-4 col-2xl-3">
-            <div class="card-light mr-auto ml-auto">
-              <div class="card-light__block card-light__block--brand">
-                {% set content %}
-                <p class="mb-0 h3 font-weight-bold text-primary">Elysian</p>
-                <p class="mb-0 font-weight-bold text-muted">E-commerce</p>
-                {% endset %}
-
-                {{ brand.make(content, 'assets/imgs/icon-card-brand-elysian.png', '41px', 'card-light__brand', 'light-blue') }}
-              </div>
-
-              <div class="card-light__wrapper">
-                <div class="card-light__block card-light__block--status">
-                  <p class="text-uppercase text-gray font-weight-bold text-sm">Decentralized platform to build websites</p>
-                </div>
-
-                <div class="card-light__block card-light__block--meta">
-                  <p class="text-uppercase mb-0"><strong>5 sep - 5 oct</strong></p>
-                  <p class="text-uppercase">MIN Invest: <strong>10 ETH</strong></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 mr-auto ml-auto mb-6 col-md-6 col-xl-4 col-2xl-3">
-            <div class="card-light mr-auto ml-auto">
-              <div class="card-light__block card-light__block--brand">
-                {% set content %}
-                <p class="mb-0 h3 font-weight-bold text-primary">Elysian</p>
-                <p class="mb-0 font-weight-bold text-muted">E-commerce</p>
-                {% endset %}
-
-                {{ brand.make(content, 'assets/imgs/icon-card-brand-elysian.png', '41px', 'card-light__brand', 'light-blue') }}
-              </div>
-
-              <div class="card-light__wrapper">
-                <div class="card-light__block card-light__block--status">
-                  <p class="text-uppercase text-gray font-weight-bold text-sm">Decentralized platform to build websites</p>
-                </div>
-
-                <div class="card-light__block card-light__block--meta">
-                  <p class="text-uppercase mb-0"><strong>5 sep - 5 oct</strong></p>
-                  <p class="text-uppercase">MIN Invest: <strong>10 ETH</strong></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 mr-auto ml-auto mb-6 col-md-6 col-xl-4 col-2xl-3">
-            <div class="card-light mr-auto ml-auto">
-              <div class="card-light__block card-light__block--brand">
-                {% set content %}
-                <p class="mb-0 h3 font-weight-bold text-primary">Elysian</p>
-                <p class="mb-0 font-weight-bold text-muted">E-commerce</p>
-                {% endset %}
-
-                {{ brand.make(content, 'assets/imgs/icon-card-brand-elysian.png', '41px', 'card-light__brand', 'light-blue') }}
-              </div>
-
-              <div class="card-light__wrapper">
-                <div class="card-light__block card-light__block--status">
-                  <p class="text-uppercase text-gray font-weight-bold text-sm">Decentralized platform to build websites</p>
-                </div>
-
-                <div class="card-light__block card-light__block--meta">
-                  <p class="text-uppercase mb-0"><strong>5 sep - 5 oct</strong></p>
-                  <p class="text-uppercase">MIN Invest: <strong>10 ETH</strong></p>
-                </div>
-              </div>
-            </div>
-          </div>
+          {{ cardLight.make(brandOptions, project.description, project.period, project.investment, project.status, project['days left'], project.kyc) }}
+        </div>
+        {% endfor %}
 
         </div>
       </div>

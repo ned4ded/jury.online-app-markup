@@ -1,0 +1,58 @@
+[
+  {
+    "name" : "Elysian",
+    "field" : "E-commerce",
+    "brand" : "../assets/imgs/icon-ico-project-elysian.png",
+    "description" : "Decentralized platform to build websites",
+    "status" : {
+      "text" : "deployed",
+      "color" : "orange"
+    },
+    "days left" : "15 days left",
+    "period" : "8 JUN - 20 JUL",
+    "investment" : "1.5 ETH",
+    "kyc" : true
+  },
+  {
+    "name" : "GoodWork",
+    "field" : "E-commerce",
+    "brand" : "../assets/imgs/icon-ico-project-goodwork.png",
+    "description" : "Ecosystem for remote teams",
+    "status" : {
+      "text" : "Sealed",
+      "color" : "blue"
+    },
+    "days left" : "15 days left",
+    "period" : "20 Jul - 30 sep",
+    "investment" : "2 ETH",
+    "kyc" : false
+  },
+  {
+    "name" : "GridEx",
+    "field" : "Banking",
+    "brand" : "../assets/imgs/icon-ico-project-gridex.png",
+    "description" : false,
+    "status" : {
+      "text" : "active",
+      "color" : "green"
+    },
+    "days left" : "2 days left",
+    "period" : "15 jun - 19 jul",
+    "investment" : "5 ETH",
+    "kyc" : true
+  },
+  {
+    "name" : "Melysian",
+    "field" : "Finance",
+    "brand" : "../assets/imgs/icon-ico-project-melysian.png",
+    "description" : "Supersystem for superteams",
+    "status" : {
+      "text" : "cooming soon",
+      "color" : "gray"
+    },
+    "days left" : "2 days left",
+    "period" : "21 sep - 8 nov",
+    "investment" : "10 ETH",
+    "kyc" : true
+  }
+]

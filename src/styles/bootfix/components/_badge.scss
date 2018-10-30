@@ -1,6 +1,60 @@
+$badges-colors: (
+  "orange" : (
+    color: #673f42,
+    background-image: linear-gradient(135deg, #ffe3ad, #f5c58e)
+  ),
+  "blue" : (
+    color: #30496a,
+    background-image: linear-gradient(135deg, #a3d6ff, #66abe2)
+  ),
+  "green" : (
+    color: #415c40,
+    background-image: linear-gradient(135deg, #bbfec3, #92e9c1)
+  ),
+  "gray" : (
+    color: gray('800'),
+    background-image: linear-gradient(135deg, #eaeaea, #cfcfcf)
+  )
+);
+
 .badge {
   $offset: 0.05em;
 
-  padding-top: $badge-padding-y - $offset;
-  padding-bottom: $badge-padding-y + $offset;
+  padding-top: $badge-padding-y + $offset;
+  padding-bottom: $badge-padding-y - $offset;
+
+  &-gradient {
+    @each $name, $props in $badges-colors {
+      &-#{$name} {
+        @each $propName, $value in $props {
+          #{$propName} : $value;
+        }
+      }
+    }
+  }
+
+  &-outline {
+    @each $color, $value in $theme-colors {
+      &-#{$color} {
+        color: $value;
+        border: 1px solid $value;
+
+        @at-root a#{&} {
+          @include hover-focus {
+            color: color-yiq($value);
+            background-color: darken($value, 10%);
+          }
+        }
+      }
+    }
+  }
+
+  &-sm {
+    $offset: 0.05em;
+
+    padding-top: $badge-padding-y / 2 + $offset;
+    padding-right: $badge-padding-x / 2;
+    padding-bottom: $badge-padding-y / 2 - $offset;
+    padding-left: $badge-padding-x / 2;
+  }
 }

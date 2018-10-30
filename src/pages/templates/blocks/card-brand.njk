@@ -1,10 +1,10 @@
 {% import "lib/helpers.njk" as helpers %}
 
-{% macro make(content, src = false, size = false, classes = false, color = false) %}
+{% macro make(content, src = false, classes = false) %}
 <div class="card-brand{{ helpers.parse(classes) }}">
   {% if src %}
-  <span class="card-brand__badge{{ ' card-brand__badge--' + color if color }}">
-    <span class="card-brand__logo" style="background-image: url({{ src }}); background-size: {{ size }} auto;"></span>
+  <span class="card-brand__badge">
+    <span class="card-brand__logo" style="background-image: url({{ src }});"></span>
   </span>
   {% endif %}
 
