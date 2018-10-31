@@ -48,16 +48,21 @@
                   </div>
                   <div class="col-xl-4 col-md-12">
                     <div class="form-group">
-                      <div class="form-inline form-stretch">
+                      <div class="form-inline form-stretch form-label">
                         <label class="form-label" for="">Role</label>
                         <div class="info-block" data-toggle="tooltip" title="Disabled tooltip">?</div>
                       </div>
+                      <select class="select-btn js-select" data-width="100%" data-icon-arrow="down">
+                        <option value="investor">INVESTOR</option>
+                        <option value="arbiter">Arbiter</option>
+                      </select>
                     </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-12">
                     <label class="form-label" for="code">Ethereum address</label>
+                    <div class="info-block" data-toggle="tooltip" title="Disabled tooltip">?</div>
                     <input type="text" class="form-control form-control--rad form-control--color-blue text-center" id="code" value="0x123f681646d4a755815f9cb19e1acc8565a0c2ac" placeholder="Last Name" readonly>
                   </div>
                 </div>
@@ -87,7 +92,7 @@
         <div class="profile__row row">
           <div class="col-xxl-8 mt-9">
             <div class="box box--has--head">
-              <div class="box__head">Contact Info</div>
+              <div class="box__head text-center">Contact Info</div>
               <div class="box__wrap">
                 <!-- begin box-form -->
                 <div class="box-form">
@@ -130,14 +135,14 @@
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" id="terms">
                       <label class="form-check-label" for="terms">
-                        I agree with <span class="form-check-label__bold">Terms and Conditions</span>
+                        I agree with <a href="#" class="form-check-label__bold" target="_blank">Terms and Conditions</a>
                       </label>
                       {{ icon.make('check-input', 'form-check-icon') }}
                     </div>
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" id="privacy">
                       <label class="form-check-label" for="privacy">
-                        I agree with <span class="form-check-label__bold">Privacy Policy & Cookies Policy</span>
+                        I agree with <a href="#" class="form-check-label__bold" target="_blank">Privacy Policy & Cookies Policy</a>
                       </label>
                       {{ icon.make('check-input', 'form-check-icon') }}
                     </div>
@@ -153,17 +158,55 @@
                 <div class="box box--has--head">
                   <div class="box__head text-center">Account Settings</div>
                   <div class="box__wrap box__wrap--sm">
-                    <div class="form-group">
-                      <label class="email" for="email">E-mail</label>
-                      <input type="text" readonly class="form-control-plaintext" id="email" value="email@example.com">
-                    </div>
-                    <form class="form-inline form-stretch">
+                    <div class="js-change-password-parent">
                       <div class="form-group">
-                        <label for="inputPassword" class="sr-only">Password</label>
-                        <input type="password" readonly class="form-control form-control--rad text-center" id="inputPassword" placeholder="Password" value="1111111111">
+                        <label class="email" for="email">E-mail</label>
+                        <input type="text" readonly class="form-control-plaintext" id="email" value="email@example.com">
                       </div>
-                      <button type="button" class="btn btn--md btn-outline-info">CHANGE</button>
-                    </form>
+                      <div class="js-change-password-head">
+                        <div class="form-inline form-stretch">
+                          <div class="form-group">
+                            <label for="inputPassword" class="sr-only">Password</label>
+                            <input type="password" readonly class="form-control form-control--rad text-center" id="inputPassword" placeholder="Password" value="1111111111">
+                          </div>
+                          <button type="button" class="btn btn--md btn-outline-info js-change-password-head-hide">CHANGE</button>
+                        </div>
+                      </div>
+                      <div class="js-change-password-body hide">
+                        <div class="form-group mb-8 is-valid">
+                          <label class="form-label" for="project">Current password</label>
+                          <div class="form-password">
+                            <input type="password" class="form-control" id="current-pass" value="****************" placeholder="">
+                            <div class="form-check-icon">
+                              {{ icon.make('check-valid') }}
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group mb-4 is-valid">
+                          <label class="form-label" for="project">New password</label>
+                          <div class="form-password">
+                            <input type="password" class="form-control" id="new-pass" value="****************" placeholder="">
+                            <div class="form-check-icon">
+                              {{ icon.make('check-valid') }}
+                            </div>
+                            <button type="button" class="form-password__show-pass">{{ icon.make('eye') }}</button>
+                          </div>
+                        </div>
+                        <div class="form-group mb-0 is-valid">
+                          <label class="form-label" for="project">Repeat new password</label>
+                          <div class="form-password">
+                            <input type="password" class="form-control" id="repeat-pass" value="****************" placeholder="">
+                            <div class="form-check-icon">
+                              {{ icon.make('check-valid') }}
+                            </div>
+                            <button type="button" class="form-password__show-pass">{{ icon.make('eye') }}</button>
+                          </div>
+                        </div>
+                        <div class="box__footer mt-8 text-center">
+                          <button class="btn btn-outline-success js-change-password-body-hide" type="button">Change Password</button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

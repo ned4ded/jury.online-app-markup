@@ -24,6 +24,9 @@
   font-weight: 600;
   cursor: pointer;
   user-select: none;
+  & + .info-block {
+    margin-left: rem(10px);
+  }
   .form-stretch & {
     margin-right: auto;
   }
@@ -148,6 +151,11 @@
   }
   &__bold {
     font-weight: 600;
+    color: currentColor;
+    &:hover {
+      color: currentColor;
+      text-decoration: none;
+    }
   }
 }
 

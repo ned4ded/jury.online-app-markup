@@ -62,3 +62,88 @@
     font-size: $font-size-base;
   }
 }
+
+.tags-control {
+  position: relative;
+  &__add {
+    position: absolute;
+    top: 5px;
+    right: 0;
+  }
+}
+
+.selectize-control {
+  position: relative;
+  padding-top: rem(52px);
+  width: 100%;
+  .selectize-input {
+    border: none;
+    padding: 0;
+    position: static !important;
+    width: 100% !important;
+    & > input {
+      position: absolute !important;
+      top: 0;
+      left: 0;
+      margin-right: rem(43px);
+      width: calc(100% - 43px) !important;
+      height: 34px;
+      padding: .3125rem .9375rem !important;
+      padding-left: 0 !important;
+      border-radius: 0 !important;
+      font-family: "Proxima Nova",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+      height: rem(34px) !important;
+      font-size: 1rem !important;
+      border: none !important;
+      color: #2a2550;
+      border-bottom: 1px solid #dadada !important;
+      &:focus {
+        color: #05050a;
+        background-color: #fff;
+        border-color: #a7a7a7 !important;
+        box-shadow: none;
+      }
+    }
+  }
+  &.multi {
+    .selectize-input.has-items {
+      padding: 0;
+      border: none;
+      box-shadow: none;
+    }
+    .selectize-input > div {
+      margin: .5rem 1rem .5rem 0;
+      padding: .7rem 1rem .65rem;
+      color: #34364c;
+      background-color: transparent;
+      background-image: none;
+      border: 1px solid #34364c;
+      font-size: 1rem;
+      line-height: 1;
+      border-radius: .4375rem;
+      display: inline-block;
+      font-weight: 400;
+      text-align: center;
+      pointer-events: none;
+    }
+  }
+    
+  .selectize-dropdown {
+    top: 34px !important;
+    width: calc(100% - 43px) !important;
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,0.23);
+    border: 1px solid #d5dde5;
+    font-size: 14px;
+  }
+
+  .selectize-dropdown-content {
+    background-color: #FFF;
+    .create {
+      background-color: #FFF;
+    }
+  }
+
+  .selectize-wrap-control {
+    pointer-events: none;
+  }
+}

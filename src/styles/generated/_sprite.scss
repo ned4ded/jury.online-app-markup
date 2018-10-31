@@ -50,6 +50,11 @@
 	@include get-em-width(14, 9);
 }
 
+.icon--down {
+	font-size: 6px;
+	@include get-em-width(10, 6);
+}
+
 .icon--duble {
 	font-size: 21px;
 	@include get-em-width(16, 21);

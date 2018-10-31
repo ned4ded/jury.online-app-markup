@@ -1,6 +1,8 @@
+import 'bootstrap';
 import './tooltip'; 
 import './select';
-import 'bootstrap';
+import './tags';
+import './changeToggle';
 
 (() => {
   const t = document.querySelector('[data-navbar-toggle]');

@@ -48,20 +48,21 @@
                   </div>
                   <div class="col-xl-4 col-md-12">
                     <div class="form-group">
-                      <div class="form-inline form-stretch">
+                      <div class="form-inline form-stretch form-label">
                         <label class="form-label" for="">Role</label>
                         <div class="info-block" data-toggle="tooltip" title="Disabled tooltip">?</div>
                       </div>
+                      <select class="select-btn js-select" data-width="100%" data-icon-arrow="down">
+                        <option value="investor">INVESTOR</option>
+                        <option value="arbiter">Arbiter</option>
+                      </select>
                     </div>
-                    <!-- <select class="select-btn js-select">
-                      <option value="investor">INVESTOR</option>
-                      <option value="arbiter">arbiter</option>
-                    </select> -->
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-12">
                     <label class="form-label" for="code">Ethereum address</label>
+                    <div class="info-block" data-toggle="tooltip" title="Disabled tooltip">?</div>
                     <input type="text" class="form-control form-control--rad form-control--color-blue text-center" id="code" value="0x123f681646d4a755815f9cb19e1acc8565a0c2ac" placeholder="Last Name" readonly>
                   </div>
                 </div>
@@ -134,14 +135,14 @@
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" id="terms">
                       <label class="form-check-label" for="terms">
-                        I agree with <span class="form-check-label__bold">Terms and Conditions</span>
+                        I agree with <a href="#" class="form-check-label__bold" target="_blank">Terms and Conditions</a>
                       </label>
                       {{ icon.make('check-input', 'form-check-icon') }}
                     </div>
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" id="privacy">
                       <label class="form-check-label" for="privacy">
-                        I agree with <span class="form-check-label__bold">Privacy Policy & Cookies Policy</span>
+                        I agree with <a href="#" class="form-check-label__bold" target="_blank">Privacy Policy & Cookies Policy</a>
                       </label>
                       {{ icon.make('check-input', 'form-check-icon') }}
                     </div>
@@ -194,21 +195,11 @@
                       <div class="box-form__col col-md-6">
                         <div class="form-group mb-4">
                           <label class="form-label" for="add-lang">Add New</label>
-                          <div class="form-inline form-stretch">
-                            <input type="text" class="form-control" id="add-lang" value="Russian" placeholder="Phone number">
-                            <button type="button" class="btn-plus"></button>
+                          <div class="tags-control js-tags-control">
+                            <input type="text" class="tagsinput js-tagsinput" id="competenc" value="English">
+                            <button type="button" class="tags-control__add btn-plus js-selectize-add"></button>
                           </div>
                          </div>
-                      </div>
-                      <div class="box-form__col col-md-12">
-                        <div class="form-group mb-0">
-                          <a href="#" class="btn btn--tag btn-outline-primary">
-                             <img src="./assets/imgs/flags/gb.svg" alt="flug" class="btn__flug">English
-                           </a>
-                          <a href="#" class="btn btn--tag btn-outline-primary">
-                             <img src="./assets/imgs/flags/in.svg" alt="flug" class="btn__flug">Indian
-                          </a>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -221,22 +212,14 @@
                   <h5>Area of competences</h5>
                   <div class="box-form__wrap">
                     <div class="box-form__row row mt-7">
-                      <div class="box-form__col col-md-6">
+                      <div class="box-form__col col-md-12">
                         <div class="form-group mb-4">
                           <label class="form-label" for="competenc">New competenc</label>
-                          <div class="form-inline form-stretch">
-                            <input type="text" class="form-control" id="competenc" value="Parkour" placeholder="Phone number">
-                            <button type="button" class="btn-plus"></button>
+                          <div class="tags-control js-tags-control">
+                            <input type="text" class="tagsinput js-tagsinput" id="competenc" value="IT, Education, Medicine, Motor-car industry">
+                            <button type="button" class="tags-control__add btn-plus js-selectize-add"></button>
                           </div>
                          </div>
-                      </div>
-                      <div class="box-form__col col-md-12">
-                        <div class="form-group mb-0">
-                          <a href="#" class="btn btn--tag btn-outline-primary">IT</a>
-                          <a href="#" class="btn btn--tag btn-outline-primary">Education</a>
-                          <a href="#" class="btn btn--tag btn-outline-primary">Medicine</a>
-                          <a href="#" class="btn btn--tag btn-outline-primary">Motor-car industry</a>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -339,42 +322,55 @@
               <div class="col-xxl-12 col-xl-6 mt-9">
                 <div class="box box--has--head">
                   <div class="box__head text-center">Account Settings</div>
-                  <div class="box__wrap box__wrap--md">
-                    <div class="form-group is-valid">
-                      <label class="email" for="email">E-mail</label>
-                      <input type="text" readonly class="form-control-plaintext" id="email" value="email@example.com">
-                    </div>
-                    <div class="form-group mb-8 is-valid">
-                      <label class="form-label" for="project">Current password</label>
-                      <div class="form-password">
-                        <input type="password" class="form-control" id="project" value="****************" placeholder="">
-                        <div class="form-check-icon">
-                          {{ icon.make('check-valid') }}
+                  <div class="box__wrap box__wrap--sm">
+                    <div class="js-change-password-parent">
+                      <div class="form-group">
+                        <label class="email" for="email">E-mail</label>
+                        <input type="text" readonly class="form-control-plaintext" id="email" value="email@example.com">
+                      </div>
+                      <div class="js-change-password-head">
+                        <div class="form-inline form-stretch">
+                          <div class="form-group">
+                            <label for="inputPassword" class="sr-only">Password</label>
+                            <input type="password" readonly class="form-control form-control--rad text-center" id="inputPassword" placeholder="Password" value="1111111111">
+                          </div>
+                          <button type="button" class="btn btn--md btn-outline-info js-change-password-head-hide">CHANGE</button>
                         </div>
                       </div>
-                    </div>
-                    <div class="form-group mb-4 is-valid">
-                      <label class="form-label" for="project">New password</label>
-                      <div class="form-password">
-                        <input type="password" class="form-control" id="project" value="****************" placeholder="">
-                        <div class="form-check-icon">
-                          {{ icon.make('check-valid') }}
+                      <div class="js-change-password-body">
+                        <div class="form-group mb-8 is-valid">
+                          <label class="form-label" for="project">Current password</label>
+                          <div class="form-password">
+                            <input type="password" class="form-control" id="current-pass" value="****************" placeholder="">
+                            <div class="form-check-icon">
+                              {{ icon.make('check-valid') }}
+                            </div>
+                          </div>
                         </div>
-                        <button type="button" class="form-password__show-pass">{{ icon.make('eye') }}</button>
-                      </div>
-                    </div>
-                    <div class="form-group mb-0 is-valid">
-                      <label class="form-label" for="project">Repeat new password</label>
-                      <div class="form-password">
-                        <input type="password" class="form-control" id="project" value="****************" placeholder="">
-                        <div class="form-check-icon">
-                          {{ icon.make('check-valid') }}
+                        <div class="form-group mb-4 is-valid">
+                          <label class="form-label" for="project">New password</label>
+                          <div class="form-password">
+                            <input type="password" class="form-control" id="new-pass" value="****************" placeholder="">
+                            <div class="form-check-icon">
+                              {{ icon.make('check-valid') }}
+                            </div>
+                            <button type="button" class="form-password__show-pass">{{ icon.make('eye') }}</button>
+                          </div>
                         </div>
-                        <button type="button" class="form-password__show-pass">{{ icon.make('eye') }}</button>
+                        <div class="form-group mb-0 is-valid">
+                          <label class="form-label" for="project">Repeat new password</label>
+                          <div class="form-password">
+                            <input type="password" class="form-control" id="repeat-pass" value="****************" placeholder="">
+                            <div class="form-check-icon">
+                              {{ icon.make('check-valid') }}
+                            </div>
+                            <button type="button" class="form-password__show-pass">{{ icon.make('eye') }}</button>
+                          </div>
+                        </div>
+                        <div class="box__footer mt-8 text-center">
+                          <button class="btn btn-outline-success js-change-password-body-hide" type="button">Change Password</button>
+                        </div>
                       </div>
-                    </div>
-                    <div class="box__footer mt-8 text-center">
-                      <a href="#" class="btn btn-outline-success">Change Password</a>
                     </div>
                   </div>
                 </div>
@@ -402,8 +398,6 @@
                 </div>
               </div>
             </div>
-            
-            
           </div>
         </div>
       </div>
