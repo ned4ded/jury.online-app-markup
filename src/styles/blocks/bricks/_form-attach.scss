@@ -1,0 +1,22 @@
+.form-attach {
+	margin: spacer(2) spacer(7) spacer(2) 0;
+	padding: spacer(2) spacer(5);
+	display: flex;
+	width: 265px;
+	font-size: 14px;
+	color: $dusty-gray;
+	font-weight: 400;
+	justify-content: space-between;
+	border: 1px solid $dusty-gray;
+	border-radius: 7px;
+	align-items: center;
+	&__text {
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+	&__icon	 {
+		margin-left: 10px;
+		font-size: 15px;
+	}
+}

@@ -8,4 +8,9 @@
 	border-radius: 50%;
 	cursor: pointer;
 	border: 1px solid $catskill-white;
+	vertical-align: top;
+	display: inline-block;
+	.form-stretch & {
+		margin-right: rem(10px);
+	}
 }

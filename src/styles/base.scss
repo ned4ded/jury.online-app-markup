@@ -18,6 +18,16 @@ body {
 	}
 }
 
+.title-info {
+	color: $dusty-gray;
+	font-weight: 400;
+	font-size: 14px;
+}
+
+.hide {
+	display: none;
+}
+
 /* COMMON STYLES END */
 
 @import 'generated/base';

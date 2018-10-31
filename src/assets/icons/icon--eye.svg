@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="10px" viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>view_simple [#815]</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Accout-Information-New" transform="translate(-298.000000, -382.000000)" fill="#75A3BF">
+            <g id="Password-block" transform="translate(19.000000, 123.000000)">
+                <g id="Passwords" transform="translate(28.000000, 44.000000)">
+                    <g id="Repeat" transform="translate(0.000000, 179.000000)">
+                        <path d="M260.6,40.8004153 C260.6,41.7181417 259.884,42.4614586 259,42.4614586 C258.116,42.4614586 257.4,41.7181417 257.4,40.8004153 C257.4,39.8826888 258.116,39.1393719 259,39.1393719 C259.884,39.1393719 260.6,39.8826888 260.6,40.8004153 M259,43.9389567 C256.6088,43.9389567 254.356,42.7579548 252.9192,40.8004153 C254.356,38.8428757 256.6088,37.6610433 259,37.6610433 C261.3912,37.6610433 263.644,38.8428757 265.0808,40.8004153 C263.644,42.7579548 261.3912,43.9389567 259,43.9389567 M259,36 C255.5792,36 252.5992,37.9334545 251,40.8004153 C252.5992,43.6673761 255.5792,45.6 259,45.6 C262.4208,45.6 265.4008,43.6673761 267,40.8004153 C265.4008,37.9334545 262.4208,36 259,36" id="view_simple-[#815]"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

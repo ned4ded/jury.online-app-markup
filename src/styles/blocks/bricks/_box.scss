@@ -74,7 +74,7 @@ $box-spacers: (
   }
 
   &--has--head {
-    padding: 0;
+    padding: 0  0 spacer(6);
   }
 
   &__head {
@@ -87,10 +87,10 @@ $box-spacers: (
     border-top: 1px solid #E7E7E7;
     padding: spacer(8) spacer(11);
     &--md {
-      padding: spacer(8) spacer(9);
+      padding: spacer(8) spacer(9) spacer(5);
     }
     &--sm {
-      padding: spacer(6) spacer(5);
+      padding: spacer(6) spacer(5) spacer(2);
     }
   }
 
@@ -120,4 +120,10 @@ $box-spacers: (
       @include make-content-fluid($p-x);
     }
   };
+}
+
+.box-form {
+  &__wrap {
+    padding-left: spacer(7);
+  }
 }
