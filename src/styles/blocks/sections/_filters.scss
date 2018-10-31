@@ -336,7 +336,7 @@
         @include bp-up($navbar-collapse-bp) {
           align-items: stretch;
 
-          margin: 0 rem(28px);
+          margin: 0 rem(25px);
         }
 
         @include bp-up(2xl) {
@@ -344,7 +344,7 @@
         }
 
         @include bp-up(3xl) {
-          margin: 0 rem(28px);
+          margin: 0 rem(25px);
         }
 
         &:first-child {
