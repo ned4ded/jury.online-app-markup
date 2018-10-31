@@ -1,0 +1,30 @@
+.rating {
+  display: inline-flex;
+  align-items: center;
+
+  &__icon {
+    display: inline-block;
+
+    margin: 0 4px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &-last-child {
+      margin-right: 0;
+    }
+
+    svg {
+      font-size: 15px;
+
+      fill: gray('200');
+    }
+
+    &--active {
+      svg {
+        fill: #f2ca5d;
+      }
+    }
+  }
+}

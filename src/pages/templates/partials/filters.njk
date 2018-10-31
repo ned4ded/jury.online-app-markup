@@ -1,5 +1,6 @@
 {% import "lib/icon.njk" as icon %}
 {% import "lib/helpers.njk" as helpers %}
+{% import "blocks/rating.njk" as rating %}
 
 {% set filters = datasets.get('filters.json') %}
 
@@ -7,7 +8,7 @@
   <ul class="filter-tabs{{ helpers.parse(classes) }}">
   {% for item in list %}
     <li class="filter-tabs__item">
-      <a href="#" class="filter-tabs__link{{ ' filter-tabs__link--active' if item.value == 'active' }}">{{ item.text }}</a>
+      <a href="#" class="filter-tabs__link{{ ' filter-tabs__link--active' if item.value == 'active' or item.value == 'private-sales' }}">{{ item.text }}</a>
     </li>
   {% endfor %}
   </ul>
@@ -29,19 +30,48 @@
     {{ makeTabs(filters.states, 'filters__states') }}
   </div>
 
-  {# <div class="filters__block filters__block--bottom">
-    <div class="filters__section">
+  <div class="filters__block filters__block--bottom">
+    <div class="filters__section filters__section--heading">
       <h3 class="filters__heading">Filters</h3>
     </div>
-    <div class="filters__section">
+
+    <div class="filters__section filters__section--statuses">
       <h4 class="filters__sub-heading">Status</h4>
-      {{ makeTabs(filters.states, 'filters__states') }}
+      {{ makeTabs(filters.statuses, 'filters__section-content filters__statuses') }}
     </div>
-    <div class="filters__section">
-      <h4 class="filters__sub-heading">Raiting (starting from): 4</h4>
+
+    <div class="filters__section filters__section--rating">
+      <h4 class="filters__sub-heading d-lg-none">Raiting (starting from): 4</h4>
+      <span class="filters__sub-heading d-none d-lg-inline-block">Raiting</span>
+
+      <div class="filters__section-content">
+        {{ rating.make(4, 'filters__rating') }}
+      </div>
     </div>
-    <div class="filters__section">
+
+    <div class="filters__section filters__section--invest">
       <h4 class="filters__sub-heading">Invest</h4>
+      <div class="filters__section-content filters__range range-input">
+        <span class="range-input__value range-input__value--min">5 ETH</span>
+        <span class="range-input__slider">
+          <span class="range-input__handler range-input__handler--min"></span>
+          <span class="range-input__scale"></span>
+          <span class="range-input__handler range-input__handler--max"></span>
+        </span>
+        <span class="range-input__value range-input__value--max">79 ETH</span>
+      </div>
     </div>
-  </div> #}
+
+    <div class="filters__section filters__section--kyc">
+      <p class="filters__section-content filters__kyc">
+        <span class="form-check form-check-right filters__form-check">
+          <input class="form-check-input" type="checkbox" id="kyc">
+          <label class="form-check-label" for="kyc">KYC</label>
+          {{ icon.make('check-input', 'form-check-icon') }}
+        </span>
+
+        <a href="#" class="btn btn-warning filters__submit">Apply</a>
+      </p>
+    </div>
+  </div>
 </form>

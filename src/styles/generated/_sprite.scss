@@ -90,3 +90,8 @@
 	@include get-em-width(17, 17);
 }
 
+.icon--star {
+	font-size: 45.09px;
+	@include get-em-width(47.41, 45.09);
+}
+

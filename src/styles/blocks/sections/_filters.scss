@@ -1,8 +1,204 @@
 .filters {
-  @include bp-up($navbar-collapse-bp) {
-    @include box;
+  $filters-bottom-border-lg: 1px solid gray('200');
 
-    border-radius: 10px;
+  position: relative;
+  z-index: 0;
+
+  &__block {
+    &--top {
+      border-bottom: 1px solid rgb(186, 186, 186);
+
+      @include bp-up($navbar-collapse-bp) {
+        @include box;
+
+        display: inline-flex;
+
+        width: 100%;
+        min-height: 62px;
+        padding: 0 spacer(7);
+
+        border-bottom: none;
+        border-radius: 10px;
+      }
+
+      @include bp-up(xl) {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+      }
+
+      @include bp-up(xl) {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+      }
+    }
+
+    &--bottom {
+      position: relative;
+      z-index: -1;
+
+      background-color: $white;
+
+      @include bp-up($navbar-collapse-bp) {
+        margin-top: -15px;
+        padding-top: 15px;
+
+        border: $filters-bottom-border-lg;
+        border-radius: 10px;
+        background-color: transparent;
+        box-shadow: 2.1px 2.1px 22.1px 1.9px rgba(224, 237, 245, 0.35);
+      }
+
+      @include bp-up(xl) {
+        display: flex;
+        flex-flow: row wrap;
+      }
+
+      @include bp-up(3xl) {
+        margin-left: 251px;
+      }
+    }
+  }
+
+  &__section {
+    padding: spacer();
+
+    border-bottom: 2px solid rgba(theme-info(), .3);
+
+    @include bp-up($navbar-collapse-bp) {
+      border-bottom: $filters-bottom-border-lg;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &--heading {
+      @include bp-up($navbar-collapse-bp) {
+        display: none;
+      }
+    }
+
+    &--statuses {
+      @include bp-up($navbar-collapse-bp) {
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: spacer() - rem(10px);
+      }
+
+      @include bp-up(xl) {
+        flex-grow: 1;
+
+        border-right: $filters-bottom-border-lg;
+      }
+
+      @include bp-up(2xl) {
+        border-bottom: none;
+      }
+    }
+
+    &--rating {
+      @include bp-up(2xl) {
+        border-bottom: none;
+      }
+
+      .filters__sub-heading {
+        margin-bottom: spacer(3);
+
+        @include bp-up($navbar-collapse-bp) {
+          margin-right: rem(30px);
+          margin-bottom: 0;
+
+          color: gray('500');
+
+          font-size: $font-size-base;
+          font-weight: 600;
+        }
+      }
+
+      @include bp-up($navbar-collapse-bp) {
+        .filters__section-content {
+          display: inline-block;
+        }
+      }
+    }
+
+    &--invest {
+      border-bottom: none;
+
+      @include bp-up($navbar-collapse-bp) {
+        border-bottom: inherit;
+      }
+
+      @include bp-up(xl) {
+        border-bottom: none;
+        border-right: $filters-bottom-border-lg;
+        width: 50%;
+      }
+
+      @include bp-up(2xl) {
+        width: auto;
+
+        border-right: $filters-bottom-border-lg;
+        border-bottom: none;
+      }
+
+      .filters__sub-heading {
+        margin-bottom: spacer(3);
+
+        @include bp-up($navbar-collapse-bp) {
+          display: inline-block;
+
+          margin-right: rem(30px);
+          margin-bottom: 0;
+
+          color: gray('500');
+
+          font-size: $font-size-base;
+        }
+      }
+    }
+
+    &--kyc {
+      padding-top: 0;
+
+      @include bp-up($navbar-collapse-bp) {
+        padding-top: inherit;
+      }
+
+      @include bp-up(2xl) {
+        display: flex;
+      }
+    }
+
+    &-content {
+      padding-left: spacer(8);
+
+      @include bp-up($navbar-collapse-bp) {
+        padding-left: 0;
+      }
+    }
+  }
+
+  &__heading {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: rem(65px) - spacer();
+    margin: 0;
+  }
+
+  &__sub-heading {
+    font-size: $font-size-sm;
+    margin: 0;
+    color: theme-info();
+
+    @include bp-up($navbar-collapse-bp) {
+      display: none;
+    }
   }
 
   &__options {
@@ -98,32 +294,125 @@
     }
   }
 
-  &__block {
-    &--top {
-      border-bottom: 1px solid rgb(186, 186, 186);
+  &__statuses {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: spacer(8) / 2;
+    text-transform: uppercase;
+    font-weight: bold;
 
-      @include bp-up($navbar-collapse-bp) {
-        border-bottom: none;
-        padding: 0 spacer(7);
-        display: inline-flex;
-        min-height: 62px;
-      }
+    @include bp-up($navbar-collapse-bp) {
+      margin-bottom: -1px;
+      padding-left: 0;
 
-      @include bp-up(xl) {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-      }
+      text-transform: none;
 
-      @include bp-up(xl) {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: flex-start;
-      }
+      font-size: $font-size-base;
     }
 
-    &--bottom {
-      background-color: $white;
+    @include bp-up(xl) {
+      height: 100%;
+    }
+
+    & .filter-tabs {
+
+      &__link {
+        @include bp-up($navbar-collapse-bp) {
+          display: inline-flex;
+          align-items: center;
+          padding-right: 10px;
+          padding-left: 10px;
+          font-weight: bold;
+
+          &--active {
+            border-bottom-color: theme-info();
+          }
+        }
+      }
+
+      &__item {
+        margin: 0 spacer(8) / 2;
+
+        @include bp-up($navbar-collapse-bp) {
+          align-items: stretch;
+
+          margin: 0 rem(28px);
+        }
+
+        @include bp-up(2xl) {
+          margin: 0 rem(20px);
+        }
+
+        @include bp-up(3xl) {
+          margin: 0 rem(28px);
+        }
+
+        &:first-child {
+          margin-left: spacer(8) / 2;
+
+          @include bp-up($navbar-collapse-bp) {
+            margin-left: inherit;
+          }
+        }
+
+        &:last-child {
+          margin-right: spacer(8) / 2;
+          padding-right: 0;
+
+          @include bp-up($navbar-collapse-bp) {
+            margin-right: inherit;
+          }
+        }
+      }
+    }
+  }
+
+  &__kyc {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    width: 100%;
+    margin: 0;
+
+    font-weight: bold;
+  }
+
+  &__checkbox {
+    margin: 0;
+  }
+
+  &__form-check {
+    display: inline-block;
+
+    @include bp-up($navbar-collapse-bp) {
+      .form-check-label {
+        color: gray('500');
+
+        &:before {
+          border-color: gray('500');
+        }
+      }
+    }
+  }
+
+  &__submit {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 4px;
+
+    @include bp-up($navbar-collapse-bp) {
+      display: none;
+    }
+  }
+
+  &__range {
+    width: 100%;
+    max-width: 350px;
+
+    @include bp-up($navbar-collapse-bp) {
+      width: 325px;
     }
   }
 }

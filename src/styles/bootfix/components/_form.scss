@@ -39,7 +39,7 @@
   &--rad {
     border-radius: 6px;
   }
-  &:disabled, 
+  &:disabled,
   &[readonly] {
     border: 0;
     color: #9F9F9F;
@@ -54,11 +54,11 @@
     &:focus {
       color: darken($glacier, 20%);
     }
-    &.form-control:disabled, 
+    &.form-control:disabled,
     &.form-control[readonly] {
       color: $glacier;
     }
-    &.form-control:disabled:focus, 
+    &.form-control:disabled:focus,
     &.form-control[readonly]:focus {
       color: $glacier
     }
@@ -70,7 +70,7 @@
   display: flex;
   font-weight: wrap;
   align-content: stretch;
-  
+
   &__code {
     padding: 0 12px;
     width: rem(110px);
@@ -88,6 +88,12 @@
   & + .form-check {
     margin-top: 18px;
   }
+
+  &-right {
+    padding-left: 0;
+    padding-right: rem(30px);
+  }
+
   .form-check-icon {
     position: absolute;
     top: 6px;
@@ -95,6 +101,11 @@
     fill: $glacier;
     font-size: 5px;
     display: none;
+  }
+
+  &-right .form-check-icon {
+    left: auto;
+    right: 5px;
   }
 }
 
@@ -132,6 +143,12 @@
   }
 }
 
+.form-check-right .form-check-label:before {
+  left: auto;
+  right: 0;
+}
+
+
 .form-control-plaintext {
   padding: 0;
   color: $glacier;
@@ -151,4 +168,3 @@
     flex: initial;
   }
 }
-
