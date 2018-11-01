@@ -27,10 +27,16 @@
   flex-flow: row wrap;
 
   max-width: 375px;
+  min-width: 300px;
+  margin: 0 auto;
 
   @include bp-up($navbar-collapse-bp) {
     border-radius: $bdrs-md;
     background-image: map-get($bgs, 'gradient');
+  }
+
+  &:hover {
+    text-decoration: none;
   }
 
   p, h1, h2, h3, h4, h5, h6 {

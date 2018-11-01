@@ -18,3 +18,16 @@ export const DOC = $(document);
 export const HTMLBODY = $('html, body');
 
 export const WIN_WIDTH = $(window).width();
+
+export const Breakpoints = {
+  XS: 0,
+  SM: 576,
+  MD: 768,
+  LG: 992,
+  XL: 1200,
+  XXL: 1366,
+  '2XL': 1600,
+  '3XL' : 1850,
+}
+
+export const NAVBAR_COLLAPSE_BP = Breakpoints.LG;

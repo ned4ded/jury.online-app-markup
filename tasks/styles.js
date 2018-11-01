@@ -9,12 +9,14 @@ import clean from 'gulp-clean-css';
 
 // postcss plugins
 import presetEnv from 'postcss-preset-env';
+import cssImport from 'postcss-import';
 
 export function styles() {
   return gulp.src(config.paths.stylesBase)
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
+      cssImport(),
       presetEnv({
         stage: 2,
         browsers: 'last 2 versions'

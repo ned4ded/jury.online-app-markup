@@ -15,3 +15,8 @@
 @function spacer($key: 4) {
   @return map-get($spacers, $key);
 }
+
+@function breakpoint-prev($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints)) {
+  $n: index($breakpoint-names, $name);
+  @return if($n < length($breakpoint-names), nth($breakpoint-names, $n - 1), null);
+}

@@ -3,6 +3,7 @@
 {% import "blocks/card-brand.njk" as brand %}
 {% import "blocks/card-light.njk" as cardLight %}
 {% import "blocks/vote.njk" as vote %}
+{% import "lib/swiper.njk" as swiper %}
 
 {% set page = { active: 'dashboard' } %}
 
@@ -22,98 +23,137 @@
       <p class="text-lg mb-1">Don’t Miss them</p>
     </div>
   </div>
+</div>
 
-  <div class="row mb-8">
-    <div class="col-12">
-      <div class="page-dashboard__recommended">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-12 col-md-6 col-lg-12 col-xl-6 col-2xl-4 mb-6">
-              <div class="card-dyed ml-auto ml-3xl-auto mr-auto">
-                <div class="card-dyed__block card-dyed__block--brand">
-                  {% set content %}
-                  <p class="mb-0 h2 font-weight-bolder text-uppercase text-primary text-lg-white">Brixby</p>
-                  <p class="mb-0 h2 font-weight-bold text-uppercase text-xs text-primary text-lg-white">Carasharing</p>
-                  {% endset %}
+<div class="page-dashboard__featured mb-8">
+{% set content1 %}
+<div class="card-dyed">
+  <div class="card-dyed__block card-dyed__block--brand">
+    {% set content %}
+    <p class="mb-0 h2 font-weight-bolder text-uppercase text-primary text-lg-white">Brixby</p>
+    <p class="mb-0 h2 font-weight-bold text-uppercase text-xs text-primary text-lg-white">Carasharing</p>
+    {% endset %}
 
-                  {{ brand.make(content, 'assets/imgs/icon-ico-project-brixby.png', 'card-dyed__brand') }}
-                </div>
-
-                <div class="card-dyed__block card-dyed__block--status">
-                  <p class="text-uppercase text-white">Coming soon</p>
-                </div>
-
-                <div class="card-dyed__block  card-dyed__block--meta">
-                  <p class="text-uppercase text-white mb-0"><strong>5 sep - 5 oct</strong></p>
-                  <p class="text-uppercase text-white">MIN Invest: <strong>10 ETH</strong></p>
-                </div>
-
-                {# <div class="card-dyed__block card-dyed__block--rating">
-
-                </div> #}
-                <span class="card-dyed__img card-dyed__img--car"></span>
-              </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-12 col-xl-6 col-2xl-4 mb-6">
-              <div class="card-dyed mr-auto ml-auto">
-                <div class="card-dyed__block card-dyed__block--brand">
-                  {% set content %}
-                  <p class="mb-0 h2 font-weight-bolder text-uppercase text-primary text-lg-white">Brixby</p>
-                  <p class="mb-0 h2 font-weight-bold text-uppercase text-xs text-primary text-lg-white">Carasharing</p>
-                  {% endset %}
-
-                  {{ brand.make(content, 'assets/imgs/icon-ico-project-brixby.png', 'card-dyed__brand') }}
-                </div>
-
-                <div class="card-dyed__block card-dyed__block--status">
-                  <p class="text-uppercase text-white">Coming soon</p>
-                </div>
-
-                <div class="card-dyed__block  card-dyed__block--meta">
-                  <p class="text-uppercase text-white mb-0"><strong>5 sep - 5 oct</strong></p>
-                  <p class="text-uppercase text-white">MIN Invest: <strong>10 ETH</strong></p>
-                </div>
-
-                {# <div class="card-dyed__block card-dyed__block--rating">
-
-                </div> #}
-                <span class="card-dyed__img card-dyed__img--car"></span>
-              </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-12 col-xl-6 col-2xl-4">
-              <div class="card-dyed mr-auto mr-3x-0 ml-auto">
-                <div class="card-dyed__block card-dyed__block--brand">
-                  {% set content %}
-                  <p class="mb-0 h2 font-weight-bolder text-uppercase text-primary text-lg-white">Brixby</p>
-                  <p class="mb-0 h2 font-weight-bold text-uppercase text-xs text-primary text-lg-white">Carasharing</p>
-                  {% endset %}
-
-                  {{ brand.make(content, 'assets/imgs/icon-ico-project-brixby.png', 'card-dyed__brand') }}
-                </div>
-
-                <div class="card-dyed__block card-dyed__block--status">
-                  <p class="text-uppercase text-white">Coming soon</p>
-                </div>
-
-                <div class="card-dyed__block  card-dyed__block--meta">
-                  <p class="text-uppercase text-white mb-0"><strong>5 sep - 5 oct</strong></p>
-                  <p class="text-uppercase text-white">MIN Invest: <strong>10 ETH</strong></p>
-                </div>
-
-                {# <div class="card-dyed__block card-dyed__block--rating">
-
-                </div> #}
-                <span class="card-dyed__img card-dyed__img--car"></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    {{ brand.make(content, 'assets/imgs/icon-ico-project-brixby.png', 'card-dyed__brand') }}
   </div>
 
+  <div class="card-dyed__block card-dyed__block--status">
+    <p class="text-uppercase text-white">Coming soon</p>
+  </div>
+
+  <div class="card-dyed__block  card-dyed__block--meta">
+    <p class="text-uppercase text-white mb-0"><strong>5 sep - 5 oct</strong></p>
+    <p class="text-uppercase text-white">MIN Invest: <strong>10 ETH</strong></p>
+  </div>
+
+  <span class="card-dyed__img card-dyed__img--car"></span>
+</div>
+{% endset %}
+{% set content2 %}
+<div class="card-dyed">
+  <div class="card-dyed__block card-dyed__block--brand">
+    {% set content %}
+    <p class="mb-0 h2 font-weight-bolder text-uppercase text-primary text-lg-white">Brixby</p>
+    <p class="mb-0 h2 font-weight-bold text-uppercase text-xs text-primary text-lg-white">Carasharing</p>
+    {% endset %}
+
+    {{ brand.make(content, 'assets/imgs/icon-ico-project-brixby.png', 'card-dyed__brand') }}
+  </div>
+
+  <div class="card-dyed__block card-dyed__block--status">
+    <p class="text-uppercase text-white">Coming soon</p>
+  </div>
+
+  <div class="card-dyed__block  card-dyed__block--meta">
+    <p class="text-uppercase text-white mb-0"><strong>5 sep - 5 oct</strong></p>
+    <p class="text-uppercase text-white">MIN Invest: <strong>10 ETH</strong></p>
+  </div>
+
+  <span class="card-dyed__img card-dyed__img--car"></span>
+</div>
+{% endset %}
+{% set content3 %}
+<div class="card-dyed">
+  <div class="card-dyed__block card-dyed__block--brand">
+    {% set content %}
+    <p class="mb-0 h2 font-weight-bolder text-uppercase text-primary text-lg-white">Brixby</p>
+    <p class="mb-0 h2 font-weight-bold text-uppercase text-xs text-primary text-lg-white">Carasharing</p>
+    {% endset %}
+
+    {{ brand.make(content, 'assets/imgs/icon-ico-project-brixby.png', 'card-dyed__brand') }}
+  </div>
+
+  <div class="card-dyed__block card-dyed__block--status">
+    <p class="text-uppercase text-white">Coming soon</p>
+  </div>
+
+  <div class="card-dyed__block  card-dyed__block--meta">
+    <p class="text-uppercase text-white mb-0"><strong>5 sep - 5 oct</strong></p>
+    <p class="text-uppercase text-white">MIN Invest: <strong>10 ETH</strong></p>
+  </div>
+
+  <span class="card-dyed__img card-dyed__img--car"></span>
+</div>
+{% endset %}
+{% set content4 %}
+<div class="card-dyed">
+  <div class="card-dyed__block card-dyed__block--brand">
+    {% set content %}
+    <p class="mb-0 h2 font-weight-bolder text-uppercase text-primary text-lg-white">Brixby</p>
+    <p class="mb-0 h2 font-weight-bold text-uppercase text-xs text-primary text-lg-white">Carasharing</p>
+    {% endset %}
+
+    {{ brand.make(content, 'assets/imgs/icon-ico-project-brixby.png', 'card-dyed__brand') }}
+  </div>
+
+  <div class="card-dyed__block card-dyed__block--status">
+    <p class="text-uppercase text-white">Coming soon</p>
+  </div>
+
+  <div class="card-dyed__block  card-dyed__block--meta">
+    <p class="text-uppercase text-white mb-0"><strong>5 sep - 5 oct</strong></p>
+    <p class="text-uppercase text-white">MIN Invest: <strong>10 ETH</strong></p>
+  </div>
+
+  <span class="card-dyed__img card-dyed__img--car"></span>
+</div>
+{% endset %}
+{% set content5 %}
+<div class="card-dyed">
+  <div class="card-dyed__block card-dyed__block--brand">
+    {% set content %}
+    <p class="mb-0 h2 font-weight-bolder text-uppercase text-primary text-lg-white">Brixby</p>
+    <p class="mb-0 h2 font-weight-bold text-uppercase text-xs text-primary text-lg-white">Carasharing</p>
+    {% endset %}
+
+    {{ brand.make(content, 'assets/imgs/icon-ico-project-brixby.png', 'card-dyed__brand') }}
+  </div>
+
+  <div class="card-dyed__block card-dyed__block--status">
+    <p class="text-uppercase text-white">Coming soon</p>
+  </div>
+
+  <div class="card-dyed__block  card-dyed__block--meta">
+    <p class="text-uppercase text-white mb-0"><strong>5 sep - 5 oct</strong></p>
+    <p class="text-uppercase text-white">MIN Invest: <strong>10 ETH</strong></p>
+  </div>
+
+  <span class="card-dyed__img card-dyed__img--car"></span>
+</div>
+{% endset %}
+
+{% set options = {
+  container: 'page-dashboard__featured-carousel',
+  wrapper: 'page-dashboard__featured-wrapper',
+  slide: 'page-dashboard__featured-slide',
+  btnPrev: 'page-dashboard__featured-btn page-dashboard__featured-btn--prev',
+  btnNext: 'page-dashboard__featured-btn page-dashboard__featured-btn--next'
+} %}
+
+{{ swiper.make([content1, content2, content3, content4, content5], options) }}
+</div>
+
+<div class="container-fluid">
   <div class="row mb-8">
     <div class="col-12">
       {% set content %}
@@ -131,32 +171,28 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-12">
+  <div class="row mb-8">
+    <div class="col-12 d-flex justify-content-center">
       <div class="page-dashboard__projects">
-        <div class="container-fluid">
-          <div class="row">
 
-            {% set projects = datasets.get('ico-projects.json') %}
+        {% set projects = datasets.get('ico-projects.json') %}
 
-            {% for project in projects %}
-            <div class="col-12 mb-6 col-md-6 col-2xl-4 col-3xl-3">
-              {% set brandContent %}
-              <p class="mb-0 h3 font-weight-bold text-primary">{{ project.name }}</p>
-              <p class="mb-0 font-weight-bold text-muted">{{ project.field }}</p>
-              {% endset %}
+        {% for project in projects %}
+        <div class="page-dashboard__projects-item">
+          {% set brandContent %}
+          <p class="mb-0 h3 font-weight-bold text-primary">{{ project.name }}</p>
+          <p class="mb-0 font-weight-bold text-muted">{{ project.field }}</p>
+          {% endset %}
 
-              {% set brandOptions = {
-                content: brandContent,
-                src: project.brand
-              } %}
+          {% set brandOptions = {
+            content: brandContent,
+            src: project.brand
+          } %}
 
-              {{ cardLight.make(brandOptions, project.description, project.period, project.investment, project.status, project['days left'], project.kyc) }}
-            </div>
-            {% endfor %}
-
-          </div>
+          {{ cardLight.make(brandOptions, project.description, project.period, project.investment, project.status, project['days left'], project.kyc) }}
         </div>
+        {% endfor %}
+
       </div>
     </div>
   </div>
