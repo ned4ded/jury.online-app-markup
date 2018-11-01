@@ -46,10 +46,7 @@
     <p class="text-uppercase text-white">MIN Invest: <strong>10 ETH</strong></p>
   </div>
 
-  {# <div class="card-dyed__block card-dyed__block--rating">
-
-</div> #}
-<span class="card-dyed__img card-dyed__img--car"></span>
+  <span class="card-dyed__img card-dyed__img--car"></span>
 </div>
 {% endset %}
 {% set content2 %}
@@ -72,10 +69,7 @@
     <p class="text-uppercase text-white">MIN Invest: <strong>10 ETH</strong></p>
   </div>
 
-  {# <div class="card-dyed__block card-dyed__block--rating">
-
-</div> #}
-<span class="card-dyed__img card-dyed__img--car"></span>
+  <span class="card-dyed__img card-dyed__img--car"></span>
 </div>
 {% endset %}
 {% set content3 %}
@@ -98,10 +92,7 @@
     <p class="text-uppercase text-white">MIN Invest: <strong>10 ETH</strong></p>
   </div>
 
-  {# <div class="card-dyed__block card-dyed__block--rating">
-
-</div> #}
-<span class="card-dyed__img card-dyed__img--car"></span>
+  <span class="card-dyed__img card-dyed__img--car"></span>
 </div>
 {% endset %}
 {% set content4 %}
@@ -124,10 +115,7 @@
     <p class="text-uppercase text-white">MIN Invest: <strong>10 ETH</strong></p>
   </div>
 
-  {# <div class="card-dyed__block card-dyed__block--rating">
-
-</div> #}
-<span class="card-dyed__img card-dyed__img--car"></span>
+  <span class="card-dyed__img card-dyed__img--car"></span>
 </div>
 {% endset %}
 {% set content5 %}
@@ -150,10 +138,7 @@
     <p class="text-uppercase text-white">MIN Invest: <strong>10 ETH</strong></p>
   </div>
 
-  {# <div class="card-dyed__block card-dyed__block--rating">
-
-</div> #}
-<span class="card-dyed__img card-dyed__img--car"></span>
+  <span class="card-dyed__img card-dyed__img--car"></span>
 </div>
 {% endset %}
 
@@ -186,32 +171,28 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-12">
+  <div class="row mb-8">
+    <div class="col-12 d-flex justify-content-center">
       <div class="page-dashboard__projects">
-        <div class="container-fluid">
-          <div class="row">
 
-            {% set projects = datasets.get('ico-projects.json') %}
+        {% set projects = datasets.get('ico-projects.json') %}
 
-            {% for project in projects %}
-            <div class="col-12 mb-6 col-md-6 col-2xl-4 col-3xl-3">
-              {% set brandContent %}
-              <p class="mb-0 h3 font-weight-bold text-primary">{{ project.name }}</p>
-              <p class="mb-0 font-weight-bold text-muted">{{ project.field }}</p>
-              {% endset %}
+        {% for project in projects %}
+        <div class="page-dashboard__projects-item">
+          {% set brandContent %}
+          <p class="mb-0 h3 font-weight-bold text-primary">{{ project.name }}</p>
+          <p class="mb-0 font-weight-bold text-muted">{{ project.field }}</p>
+          {% endset %}
 
-              {% set brandOptions = {
-                content: brandContent,
-                src: project.brand
-              } %}
+          {% set brandOptions = {
+            content: brandContent,
+            src: project.brand
+          } %}
 
-              {{ cardLight.make(brandOptions, project.description, project.period, project.investment, project.status, project['days left'], project.kyc) }}
-            </div>
-            {% endfor %}
-
-          </div>
+          {{ cardLight.make(brandOptions, project.description, project.period, project.investment, project.status, project['days left'], project.kyc) }}
         </div>
+        {% endfor %}
+
       </div>
     </div>
   </div>

@@ -27,6 +27,8 @@
   flex-flow: row wrap;
 
   max-width: 375px;
+  min-width: 300px;
+  margin: 0 auto;
 
   @include bp-up($navbar-collapse-bp) {
     border-radius: $bdrs-md;
