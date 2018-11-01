@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bootstrap-tagsinput": "^0.7.1",
     "selectize": "^0.12.6",
     "typeahead.js": "^0.11.1"
   },

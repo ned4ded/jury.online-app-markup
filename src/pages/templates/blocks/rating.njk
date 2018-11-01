@@ -1,12 +1,15 @@
 {% import "lib/helpers.njk" as helpers %}
 {% import "lib/icon.njk" as icon %}
 
-{% macro make(rating, classes = false) %}
+{% macro make(rating, classes = false, eval = false) %}
   <div class="rating{{ helpers.parse(classes) }}">
     {% for item in range(5) %}
     <span class="rating__icon{{ ' rating__icon--active' if rating >= loop.index }}">
       {{ icon.make('star') }}
     </span>
     {% endfor %}
+   {% if eval %}
+   <span class="rating__eval">{{ eval }}</span>
+   {% endif %}
   </div>
 {% endmacro %}

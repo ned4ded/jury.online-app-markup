@@ -2,6 +2,14 @@
   display: inline-flex;
   align-items: center;
 
+  &--simple {
+    padding: 6px 10px;
+    border: 1px solid #e3e3e3;
+    border-radius: 16px;
+    align-items: flex-start;
+    background-color: #FFF;
+  }
+
   &__icon {
     display: inline-block;
 
@@ -19,6 +27,9 @@
       font-size: 15px;
 
       fill: gray('200');
+      .rating--simple & {
+        font-size: 12px;
+      }
     }
 
     &--active {
@@ -26,5 +37,19 @@
         fill: #f2ca5d;
       }
     }
+    .rating--simple & {
+      margin: 1px 2px 0;
+      line-height: 1;
+      font-size: 0;
+    }
+  }
+  &__eval {
+    margin-left: 4px;
+    color: #4c4c4c;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.1;
+    vertical-align: middle;
+    display: inline-block;
   }
 }

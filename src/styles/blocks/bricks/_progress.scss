@@ -1,0 +1,20 @@
+.progress {
+	width: 166px;
+	padding: 3px;
+	height: 14px;
+	background-color: #fdfdfd;
+	border-radius: 7px;
+	vertical-align: top;
+	display: inline-block;
+	&__inner {
+		height: 8px;
+		background-color: #e9beaf;
+		border-radius: 4px;
+		&--md {
+			background-color: #e9dbaf;
+		}
+		&--lg {
+			background-color: #dce9af;
+		}
+	}
+}

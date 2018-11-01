@@ -1,0 +1,72 @@
+.project {
+	vertical-align: middle;
+	display: inline-flex;
+	&__logo {
+		width: 37px;
+		height: 37px;
+		border-radius: 50%;
+		border: 2px solid #fff;
+		box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.22);
+		background-color: #000;
+		background-size: cover;
+		background-position: center;
+		display: block;
+	}
+	&__wrap {
+		padding-left: rem(10px);
+	}
+	&__name {
+		color: #3a3a3a;
+		font-size: 16px;
+		font-weight: 600;
+	}
+	&__type {
+		color: #7f7f7f;
+		font-size: 14px;
+		font-weight: 400;
+	}
+}
+
+.project-trigger {
+	position: relative;
+	margin-right: rem(12px);
+	vertical-align: middle;
+	display: inline-block;
+	cursor: pointer;
+	transition: transform .3s;
+	&:before {
+		position: absolute;
+		content: "";
+		top: -10px;
+		right: -10px;
+		bottom: -10px;
+		left: -10px;
+	}
+	.is-open-project & {
+		transform: translateY(8px)
+	}
+	&__text {
+		position: absolute;
+		left: 0;
+		bottom: 100%;
+		color: #809fba;
+		font-size: 15px;
+		font-weight: 600;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity .3s, visibility .3s;
+		.is-open-project & {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+	&__icon	{
+		@include arr(9,11,#bbb,r);
+		display: inline-block;
+		transition: border-color .3s, transform .3s;
+		.is-open-project & {
+			transform: rotate(90deg);
+			@include arr(9,11,#83a2bd,r);
+		}
+	}
+}

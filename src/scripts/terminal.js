@@ -4,7 +4,9 @@ import './select';
 import './tags';
 import './changeToggle';
 
+
 (() => {
+
   const t = document.querySelector('[data-navbar-toggle]');
 
   const l = document.getElementById('lining');

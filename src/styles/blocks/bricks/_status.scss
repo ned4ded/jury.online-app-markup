@@ -1,0 +1,34 @@
+.status {
+	padding: rem(5px) rem(10px);
+	min-width: 82px;
+	color: #3a3a3a;
+	font-size: 11px;
+	font-weight: 600;
+	text-transform: uppercase;
+	background-color: rgba(#dfe4dd, 0.6);
+	background-image: linear-gradient(135deg, #8efd9b 0%, #4ada98 100%);
+	border-radius: 6px;
+	vertical-align: top;
+	display: inline-block;
+	&.is-draft {
+		background-color: rgba(#dfe4dd, 0.76);
+		background-image: linear-gradient(135deg, #e3e3e3 0%, silver 99%, silver 100%);
+		border-radius: 6px;
+	}
+	&.is-finished {
+		background-color: rgba(#dfe4dd, .65);
+		background-image: linear-gradient(135deg, #ffd481 0%, #efa651 100%);
+	}
+}
+
+.status-sm {
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	vertical-align: middle;
+	display: inline-block;
+	background-color: #7fff75;
+	&.is-draft {
+		background-color: #ffb375;	
+	}
+}

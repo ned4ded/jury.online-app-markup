@@ -3,16 +3,12 @@
 	&__container {
 		max-width: rem(1490px);
 	}
-	&__head {
-
-	}
-	&__title {
-
-	}
 	&__body {
-
-	}
-	&__wrap	{
-
+		padding-left: rem(60px);
+		overflow: auto;
+		@include bp-down(xxl) {
+			padding-left: 0;
+			margin-bottom: 0;
+		}
 	}
 }

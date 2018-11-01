@@ -1,15 +1,119 @@
 .toggle-table {
 	width: 100%;
+	min-width: 1190px;
 	border-radius: 5px;
 	box-shadow: 0.7px 0.7px 0 #e3e6e9;
 	background-color: #fff;
-	table-layout: fixed;
+	border-radius: 5px;
+	box-shadow: 2.1px 2.1px 22.1px 1.9px rgba(224, 237, 245, 0.35);
+	background-color: #FDFDFD;
 	thead {
-		
+		border-radius: 0 0 5px 5px;
+		box-shadow: 0 1px 0 #e3e6e9;
+		background-color: #fff;
+	}
+	th {
+		padding: rem(20px) rem(10px);
+		color: #34364d;
+		font-size: 16px;
+		font-weight: 600;
+	}
+	td {
+		padding: rem(16px) rem(8px);
+		color: #3a3a3a;
+		font-size: 15px;
+		font-weight: 400;
+		&:first-child {
+			padding-left: rem(26px);
+		}
+	}
+	&__inner-table {
+		display: none;
+	}
+	.toggle-table__wrap {
+		padding: 0;
+		&:first-child {
+			padding: 0;
+		}
 	}
 }
 
 .table-toggle-inner {
 	width: 100%;
-	table-layout: fixed;
+	color: #101541;
+	font-weight: 400;
+	font-size: 14px;
+	border-top: 1px solid #EBEEF5;
+	border-bottom: 1px solid #EBEEF5;
+	background-color: #f9f9f9;
+	thead {
+		box-shadow: none;
+		background-color: transparent;
+	}
+	th {
+		padding: rem(20px) rem(24px) (8px);
+		color: #b5b5b5;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 18px;
+	}
+	td {
+		padding: rem(8px) 0;
+		color: #2d3259;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 1.4;
+		&:first-child {
+			.table-toggle-inner__block {
+				border-radius: 5px 0 0 5px;
+			}
+		}
+		&:last-child {
+			.table-toggle-inner__block {
+				border-radius: 0 5px 5px 0;
+			}
+		}
+	}
+	td,
+	th {
+		&:first-child {
+			padding-left: rem(64px);
+			@include bp-down(xxl) {
+				padding-left: rem(24px);
+			}
+		}
+		&:last-child {
+			padding-right: rem(64px);
+			@include bp-down(xxl) {
+				padding-right: rem(24px);
+			}
+		}
+	}
+	tr:last-child td {
+		padding-bottom: rem(26px);
+	}
+	a {
+		color: #68a2b7;
+		text-decoration: none;
+		border-bottom: 1px solid transparent;
+		transition: border-color .3s;
+		&:hover {
+			border-color: currentColor;
+		}
+	}
+	sub {
+		bottom: 0;
+		font-size: 10px;
+		text-transform: uppercase;
+	}
+	&__block {
+		padding: rem(8px) rem(24px);
+		background-color: #f3f3f3;
+	}
+	&__progress {
+		margin: 3px 22px 0 0;
+	}
+	&__status-sm {
+		margin-right: 7px;
+	}
 }
