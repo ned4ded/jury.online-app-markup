@@ -26,12 +26,18 @@
     }
 
     &-wrapper {
+      $before-navbar-collapse: breakpoint-prev($navbar-collapse-bp);
+
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
 
       width: 100%;
       max-width: $cards-max-width + $slide-gutters;
+
+      @include bp-down($before-navbar-collapse) {
+        transform: none !important;
+      }
 
       @include bp-up($navbar-collapse-bp) {
         flex-wrap: nowrap;
@@ -40,7 +46,8 @@
     }
 
     &-slide {
-      margin: 0 25px 40px;
+      margin: 0 0 40px;
+      max-width: calc(100% - #{$grid-gutter-width});
 
       transition: opacity .3s ease-in;
 
