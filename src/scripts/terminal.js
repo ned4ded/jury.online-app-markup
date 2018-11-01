@@ -3,8 +3,14 @@ import './tooltip';
 import './select';
 import './tags';
 import './changeToggle';
+import swiper from './vendor/swiper';
 
-(() => {
+
+$(document).ready(function () {
+  const body = document.querySelector('body');
+
+  body.classList.remove('no-js');
+
   const t = document.querySelector('[data-navbar-toggle]');
 
   const l = document.getElementById('lining');
@@ -41,4 +47,6 @@ import './changeToggle';
   })(ev);
 
   t.addEventListener('click', toggleHandler);
-})();
+
+  swiper();
+});
