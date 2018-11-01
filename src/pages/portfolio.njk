@@ -1,0 +1,94 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+  <!-- begin portfolio -->
+  <div class="portfolio">
+    <div class="portfolio__container container-fluid">
+      <div class="portfolio__head">
+        <div class="portfolio__title"></div>
+        <div class="portfolio__filter">
+          
+        </div>
+      </div>
+      <div class="portfolio__body">
+        <div class="portfolio__wrap">
+          <!-- begin toggle-table -->
+          <table class="toggle-table">
+            <thead>
+              {% for text in ['Project', 'Description', 'Round', 'Status', 'Current Cycle', 'ICO Date', 'Rating'] %}
+              <th{% if loop.index > 1 %} class="text-center"{% endif %}>{{ text }}</th>
+              {% endfor %}
+            </thead>
+            <tbody>
+              {% for item in [
+                  {
+                    project: 'Elysian',
+                    description: 'Decentralized platform based on blockchain',
+                    round: 'Private Sale',
+                    status: 'DRAFT',
+                    currentcycle: '---',
+                    icodate: '15 aug - 24 oct 2018',
+                    table: [
+                      {
+                        hash: '...x3GV5ej1Ka3Ct',
+                        status: {
+                          type: 'active',
+                          text: 'Active'
+                        },
+                        date: '01.02.2018',
+                        price: '0.5 ETH',
+                        amount: '510 ETH  /  22 000 LNT',
+                        release: {
+                          progress: '70%',
+                          text: '359 / 510 ETH',
+                          color: 'green'
+                        }
+                      }
+                    ]
+                  }
+                ] %}
+              <tr>
+                <td>{{ item.project }}</td>
+                <td class="text-center">{{ item.description }}</td>
+                <td class="text-center">{{ item.round }}</td>
+                <td class="text-center">{{ item.status }}</td>
+                <td class="text-center">{{ item.currentcycle }}</td>
+                <td class="text-center">{{ item.icodate }}</td>
+              </tr>
+              <tr>
+                <td class="toggle-table__wrap" colspan="7">
+                  <div class="toggle-table__inner-table">
+                    <table class="table-toggle-inner">
+                      <thead>
+                        {% for text in ['Contract Hash', 'Contract Status', 'Investment Date', 'Token Price', 'Investment / Token Amount', 'Investment Release'] %}
+                        <th class="text-center">{{ text }}</th>
+                        {% endfor %}
+                      </thead>
+                      <tbody>
+                        <tr>
+                          {% for item in item.table %}
+                          <td class="text-center">{{ item.hash }}</td>
+                          <td class="text-center">{{ item.status.text }}</td>
+                          <td class="text-center">{{ item.date }}</td>
+                          <td class="text-center">{{ item.price }}</td>
+                          <td class="text-center">{{ item.amount }}</td>
+                          <td >{{ item.release.text }}</td>
+                          {% endfor %}
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          <!-- end toggle-table -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end portfolio -->
+
+{% endblock %}
