@@ -8,14 +8,19 @@
   <div class="portfolio">
     <div class="portfolio__container container-fluid">
       <div class="portfolio__head">
-        <!-- <div class="portfolio__title">My Portfolio</div> -->
+        <div class="portfolio__title">My Portfolio</div>
         <div class="portfolio__filter">
-         <!--  <a href="#" class="portfolio__show-all show-all">Show All</a>
+          <a href="#" class="portfolio__show-all show-all">Show All</a>
+          <!-- begin sort-list -->
           <ul class="sort-list">
             {% for text in ['Active', 'Pending', 'Disputes', 'Draft', 'Closed'] %}
             <li class="sort-list__item"><a href="#" class="sort-list__link">{{ text }}</a></li>
             {% endfor %}
-          </ul> -->
+          </ul>
+          <!-- end sort-list -->
+          <!-- begin inline-calendar -->
+          <div class="inline-calendar"></div>
+          <!-- end inline-calendar -->
         </div>
       </div>
       <div class="portfolio__body">
@@ -37,7 +42,7 @@
                   description: 'Decentralized platform based on blockchain',
                   round: 'Private Sale',
                   status: {
-                    type: 'draft',
+                    type: 'badge-gradient-gray',
                     text: 'DRAFT'
                   },
                   currentcycle: '---',
@@ -99,7 +104,8 @@
                   description: 'Decentralized platform based on blockchain',
                   round: 'Private Sale',
                   status: {
-                    text: 'DRAFT'
+                    type: 'badge-gradient-green',
+                    text: 'ACTIVE'
                   },
                   currentcycle: 'Cycle 3',
                   icodate: '15 aug - 24 oct 2018',
@@ -130,7 +136,7 @@
                   description: 'Decentralized platform based on blockchain',
                   round: 'Private Sale',
                   status: {
-                    type: 'draft',
+                    type: 'badge-gradient-gray',
                     text: 'DRAFT'
                   },
                   currentcycle: '---',
@@ -139,7 +145,7 @@
                     {
                       hash: '...x3GV5ej1Ka3Ct',
                       status: {
-                        type: 'active',
+                        type: 'badge-gradient-green',
                         text: 'Active'
                       },
                       date: '01.02.2018',
@@ -192,8 +198,8 @@
                   description: 'Decentralized platform based on blockchain',
                   round: 'Private Sale',
                   status: {
-                    type: 'active',
-                    text: 'Active'
+                    type: 'badge-gradient-orange',
+                    text: 'FINISHED'
                   },
                   currentcycle: '---',
                   icodate: '15 aug - 24 oct 2018',
@@ -264,7 +270,7 @@
               <td class="text-center">{{ item.round }}</td>
               <td class="text-center">
                 <!-- begin status -->
-                <div class="status{% if item.status.type %} is-{{ item.status.type }}{% endif %}">{{ item.status.text }}</div>
+                <div class="badge{% if item.status.type %} {{ item.status.type }}{% endif %}">{{ item.status.text }}</div>
                 <!-- end status -->
               </td>
               <td class="text-center">{{ item.currentcycle }}</td>
@@ -290,7 +296,7 @@
                         </td>
                         <td class="text-center">
                           <div class="table-toggle-inner__block">
-                            <span class="table-toggle-inner__status-sm status-sm"></span>{{ item.status.text }}
+                            <span class="table-toggle-inner__status-sm status-sm {% if item.status.type %} is-{{ item.status.type }}{% endif %}"></span>{{ item.status.text }}
                           </div>
                         </td>
                         <td class="text-center">

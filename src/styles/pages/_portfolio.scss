@@ -3,6 +3,21 @@
 	&__container {
 		max-width: rem(1490px);
 	}
+	&__title {
+		padding-right: 15px;
+		color: #101541;
+		font-size: rem(23px);
+		font-weight: 700;
+	}
+	&__head,
+	&__filter {
+		display: flex;
+		align-items: center;
+	}
+	&__head {
+		margin-bottom: rem(50px);
+		justify-content: space-between;
+	}
 	&__body {
 		padding-left: rem(60px);
 		overflow: auto;
