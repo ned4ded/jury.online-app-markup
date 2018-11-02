@@ -12,6 +12,19 @@
   	padding-left: spacer(4);
   	padding-right: spacer(4);
   }
+  &--white {
+  	color: rgba(#101541, .86);
+  	border: 1px solid #e3e3e3;
+  	background-color: #FFF;
+  	&:hover {
+	    color: #fff;
+	    background-color: #34364c;
+	    border-color: #34364c;
+	}
+  }
+  &--uppercase {
+  	text-transform: uppercase;
+  }
   &__flug {
   	margin-right: spacer(4);
   	vertical-align: top;

@@ -1,10 +1,11 @@
-// import 'bootstrap';
-// import './tooltip';
-// import './select';
-// import './tags';
-// import './changeToggle';
-// import swiper from './vendor/swiper';
-// import './projectAccordeon';
+import 'bootstrap';
+import './tooltip';
+import './select';
+import './tags';
+import './changeToggle';
+import swiper from './vendor/swiper';
+import './projectAccordeon';
+import './calendar';
 import initNavbarToggle from './navbarToggle';
 
 
@@ -13,6 +14,6 @@ $(document).ready(function () {
 
   body.classList.remove('no-js');
 
-  // swiper();
+  swiper();
   initNavbarToggle();
 });

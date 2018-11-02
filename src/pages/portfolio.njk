@@ -8,319 +8,339 @@
   <div class="portfolio">
     <div class="portfolio__container container-fluid">
       <div class="portfolio__head">
-        <!-- <div class="portfolio__title">My Portfolio</div> -->
+        <div class="portfolio__title">My Portfolio</div>
         <div class="portfolio__filter">
-         <!--  <a href="#" class="portfolio__show-all show-all">Show All</a>
-          <ul class="sort-list">
+          <a href="#" class="portfolio__show-all show-all">Show All</a>
+          <!-- begin sort-list -->
+          <ul class="portfolio__sort-list sort-list">
             {% for text in ['Active', 'Pending', 'Disputes', 'Draft', 'Closed'] %}
             <li class="sort-list__item"><a href="#" class="sort-list__link">{{ text }}</a></li>
             {% endfor %}
-          </ul> -->
+          </ul>
+          <!-- end sort-list -->
+          <!-- begin icon-calendar -->
+          <div class="portfolio__calendar icon-calendar icon-calendar--lg-pos-left js-icon-calendar">
+            <span class="icon-calendar__tigger js-icon-calendar-trigger">
+              <div class="icon-calendar__icon">{{ icon.make('calendar-inline') }}</div>
+              <div class="icon-calendar__text">Period</div>
+            </span>
+            <input type="text" class="icon-calendar__input js-icon-calendar-input" data-range="true" data-inline="true" data-position="bottom right">
+          </div>
+          <!-- end inline-calendar -->
         </div>
       </div>
       <div class="portfolio__body">
-        <!-- begin toggle-table -->
-        <table class="toggle-table">
-          <thead>
-            {% for text in ['Project', 'Description', 'Round', 'Status', 'Current Cycle', 'ICO Date', 'Rating'] %}
-            <th class="text-center">{{ text }}</th>
-            {% endfor %}
-          </thead>
-          <tbody>
-            {% for item in [
-                {
-                  project: {
-                    name: 'Elysian',
-                    type: 'E-commerce',
-                    logo: 'elysian-logo.jpg'
-                  },
-                  description: 'Decentralized platform based on blockchain',
-                  round: 'Private Sale',
-                  status: {
-                    type: 'draft',
-                    text: 'DRAFT'
-                  },
-                  currentcycle: '---',
-                  icodate: '15 aug - 24 oct 2018',
-                  table: [
-                    {
-                      hash: '...x3GV5ej1Ka3Ct',
-                      status: {
-                        type: 'active',
-                        text: 'Active'
-                      },
-                      date: '01.02.2018',
-                      price: '0.5 <sub>ETH</sub>',
-                      amount: '510 <sub>ETH</sub>  /  22 000 <sub>LNT</sub>',
-                      release: {
-                        progress: '70%',
-                        text: '359 / 510 <sub>ETH</sub>',
-                        color: 'lg'
-                      }
+        <div class="portfolio__table">
+          <!-- begin toggle-table -->
+          <table class="toggle-table">
+            <thead>
+              {% for text in ['Project', 'Description', 'Round', 'Status', 'Current Cycle', 'ICO Date', 'Rating'] %}
+              <th class="text-center">{{ text }}</th>
+              {% endfor %}
+            </thead>
+            <tbody>
+              {% for item in [
+                  {
+                    project: {
+                      name: 'Elysian',
+                      type: 'E-commerce',
+                      logo: 'elysian-logo.jpg'
                     },
-                    {
-                      hash: '...x3GV5ej1Ka3Ct',
-                      status: {
-                        type: 'active',
-                        text: 'Active'
-                      },
-                      date: '01.02.2018',
-                      price: '0.5 <sub>ETH</sub>',
-                      amount: '510 <sub>ETH</sub>  /  22 000 <sub>LNT</sub>',
-                      release: {
-                        progress: '30%',
-                        text: '359 / 510 <sub>ETH</sub>',
-                        color: 'md'
-                      }
+                    description: 'Decentralized platform based on blockchain',
+                    round: 'Private Sale',
+                    status: {
+                      type: 'badge-gradient-gray',
+                      text: 'DRAFT'
                     },
-                    {
-                      hash: '...x3GV5ej1Ka3Ct',
-                      status: {
-                        type: 'draft',
-                        text: 'Drafts'
+                    currentcycle: '---',
+                    icodate: '15 aug - 24 oct 2018',
+                    table: [
+                      {
+                        hash: '...x3GV5ej1Ka3Ct',
+                        status: {
+                          type: 'active',
+                          text: 'Active'
+                        },
+                        date: '01.02.2018',
+                        price: '0.5 <sub>ETH</sub>',
+                        amount: '510 <sub>ETH</sub>  /  22 000 <sub>LNT</sub>',
+                        release: {
+                          progress: '70%',
+                          text: '359 / 510 <sub>ETH</sub>',
+                          color: 'lg'
+                        }
                       },
-                      date: '01.02.2018',
-                      price: '0.5 <sub>ETH</sub>',
-                      amount: '510 <sub>ETH</sub>  /  22 000 <sub>LNT</sub>',
-                      release: {
-                        progress: '5%',
-                        text: '359 / 510 <sub>ETH</sub>',
-                        color: ''
-                      }
-                    }
-                  ]
-                },
-                {
-                  project: {
-                    name: 'Elysian',
-                    type: 'E-commerce',
-                    logo: 'elysian-logo.jpg'
-                  },
-                  description: 'Decentralized platform based on blockchain',
-                  round: 'Private Sale',
-                  status: {
-                    text: 'DRAFT'
-                  },
-                  currentcycle: 'Cycle 3',
-                  icodate: '15 aug - 24 oct 2018',
-                  table: [
-                    {
-                      hash: '...x3GV5ej1Ka3Ct',
-                      status: {
-                        type: 'active',
-                        text: 'Active'
+                      {
+                        hash: '...x3GV5ej1Ka3Ct',
+                        status: {
+                          type: 'active',
+                          text: 'Active'
+                        },
+                        date: '01.02.2018',
+                        price: '0.5 <sub>ETH</sub>',
+                        amount: '510 <sub>ETH</sub>  /  22 000 <sub>LNT</sub>',
+                        release: {
+                          progress: '30%',
+                          text: '359 / 510 <sub>ETH</sub>',
+                          color: 'md'
+                        }
                       },
-                      date: '01.02.2018',
-                      price: '0.5 <sub>ETH</sub>',
-                      amount: '510 <sub>ETH</sub>  /  22 000 <sub>LNT</sub>',
-                      release: {
-                        progress: '70%',
-                        text: '359 / 510 <sub>ETH</sub>',
-                        color: 'lg'
+                      {
+                        hash: '...x3GV5ej1Ka3Ct',
+                        status: {
+                          type: 'draft',
+                          text: 'Drafts'
+                        },
+                        date: '01.02.2018',
+                        price: '0.5 <sub>ETH</sub>',
+                        amount: '510 <sub>ETH</sub>  /  22 000 <sub>LNT</sub>',
+                        release: {
+                          progress: '5%',
+                          text: '359 / 510 <sub>ETH</sub>',
+                          color: ''
+                        }
                       }
-                    }
-                  ]
-                },
-                {
-                  project: {
-                    name: 'Elysian',
-                    type: 'E-commerce',
-                    logo: 'elysian-logo.jpg'
+                    ]
                   },
-                  description: 'Decentralized platform based on blockchain',
-                  round: 'Private Sale',
-                  status: {
-                    type: 'draft',
-                    text: 'DRAFT'
-                  },
-                  currentcycle: '---',
-                  icodate: '15 aug - 24 oct 2018',
-                  table: [
-                    {
-                      hash: '...x3GV5ej1Ka3Ct',
-                      status: {
-                        type: 'active',
-                        text: 'Active'
-                      },
-                      date: '01.02.2018',
-                      price: '0.5 <sub>ETH</sub>',
-                      amount: '510 <sub>ETH</sub>  /  22 000 <sub>LNT</sub>',
-                      release: {
-                        progress: '70%',
-                        text: '359 / 510 <sub>ETH</sub>',
-                        color: 'lg'
-                      }
+                  {
+                    project: {
+                      name: 'Elysian',
+                      type: 'E-commerce',
+                      logo: 'elysian-logo.jpg'
                     },
-                    {
-                      hash: '...x3GV5ej1Ka3Ct',
-                      status: {
-                        type: 'active',
-                        text: 'Active'
-                      },
-                      date: '01.02.2018',
-                      price: '0.5 <sub>ETH</sub>',
-                      amount: '510 <sub>ETH</sub>  /  22 000 <sub>LNT</sub>',
-                      release: {
-                        progress: '30%',
-                        text: '359 / 510 <sub>ETH</sub>',
-                        color: 'md'
-                      }
+                    description: 'Decentralized platform based on blockchain',
+                    round: 'Private Sale',
+                    status: {
+                      type: 'badge-gradient-green',
+                      text: 'ACTIVE'
                     },
-                    {
-                      hash: '...x3GV5ej1Ka3Ct',
-                      status: {
-                        type: 'draft',
-                        text: 'Drafts'
-                      },
-                      date: '01.02.2018',
-                      price: '0.5 <sub>ETH</sub>',
-                      amount: '510 <sub>ETH</sub>  /  22 000 <sub>LNT</sub>',
-                      release: {
-                        progress: '5%',
-                        text: '359 / 510 <sub>ETH</sub>',
-                        color: ''
+                    currentcycle: 'Cycle 3',
+                    icodate: '15 aug - 24 oct 2018',
+                    table: [
+                      {
+                        hash: '...x3GV5ej1Ka3Ct',
+                        status: {
+                          type: 'active',
+                          text: 'Active'
+                        },
+                        date: '01.02.2018',
+                        price: '0.5 <sub>ETH</sub>',
+                        amount: '510 <sub>ETH</sub>  /  22 000 <sub>LNT</sub>',
+                        release: {
+                          progress: '70%',
+                          text: '359 / 510 <sub>ETH</sub>',
+                          color: 'lg'
+                        }
                       }
-                    }
-                  ]
-                },
-                {
-                  project: {
-                    name: 'Elysian',
-                    type: 'E-commerce',
-                    logo: 'elysian-logo.jpg'
+                    ]
                   },
-                  description: 'Decentralized platform based on blockchain',
-                  round: 'Private Sale',
-                  status: {
-                    type: 'active',
-                    text: 'Active'
+                  {
+                    project: {
+                      name: 'Elysian',
+                      type: 'E-commerce',
+                      logo: 'elysian-logo.jpg'
+                    },
+                    description: 'Decentralized platform based on blockchain',
+                    round: 'Private Sale',
+                    status: {
+                      type: 'badge-gradient-gray',
+                      text: 'DRAFT'
+                    },
+                    currentcycle: '---',
+                    icodate: '15 aug - 24 oct 2018',
+                    table: [
+                      {
+                        hash: '...x3GV5ej1Ka3Ct',
+                        status: {
+                          type: 'badge-gradient-green',
+                          text: 'Active'
+                        },
+                        date: '01.02.2018',
+                        price: '0.5 <sub>ETH</sub>',
+                        amount: '510 <sub>ETH</sub>  /  22 000 <sub>LNT</sub>',
+                        release: {
+                          progress: '70%',
+                          text: '359 / 510 <sub>ETH</sub>',
+                          color: 'lg'
+                        }
+                      },
+                      {
+                        hash: '...x3GV5ej1Ka3Ct',
+                        status: {
+                          type: 'active',
+                          text: 'Active'
+                        },
+                        date: '01.02.2018',
+                        price: '0.5 <sub>ETH</sub>',
+                        amount: '510 <sub>ETH</sub>  /  22 000 <sub>LNT</sub>',
+                        release: {
+                          progress: '30%',
+                          text: '359 / 510 <sub>ETH</sub>',
+                          color: 'md'
+                        }
+                      },
+                      {
+                        hash: '...x3GV5ej1Ka3Ct',
+                        status: {
+                          type: 'draft',
+                          text: 'Drafts'
+                        },
+                        date: '01.02.2018',
+                        price: '0.5 <sub>ETH</sub>',
+                        amount: '510 <sub>ETH</sub>  /  22 000 <sub>LNT</sub>',
+                        release: {
+                          progress: '5%',
+                          text: '359 / 510 <sub>ETH</sub>',
+                          color: ''
+                        }
+                      }
+                    ]
                   },
-                  currentcycle: '---',
-                  icodate: '15 aug - 24 oct 2018',
-                  table: [
-                    {
-                      hash: '...x3GV5ej1Ka3Ct',
-                      status: {
-                        type: 'active',
-                        text: 'Active'
-                      },
-                      date: '01.02.2018',
-                      price: '0.5 <sub>ETH</sub>',
-                      amount: '510 <sub>ETH</sub>  /  22 000 <sub>LNT</sub>',
-                      release: {
-                        progress: '70%',
-                        text: '359 / 510 <sub>ETH</sub>',
-                        color: 'lg'
-                      }
+                  {
+                    project: {
+                      name: 'Elysian',
+                      type: 'E-commerce',
+                      logo: 'elysian-logo.jpg'
                     },
-                    {
-                      hash: '...x3GV5ej1Ka3Ct',
-                      status: {
-                        type: 'active',
-                        text: 'Active'
-                      },
-                      date: '01.02.2018',
-                      price: '0.5 <sub>ETH</sub>',
-                      amount: '510 <sub>ETH</sub>  /  22 000 <sub>LNT</sub>',
-                      release: {
-                        progress: '30%',
-                        text: '359 / 510 <sub>ETH</sub>',
-                        color: 'md'
-                      }
+                    description: 'Decentralized platform based on blockchain',
+                    round: 'Private Sale',
+                    status: {
+                      type: 'badge-gradient-orange',
+                      text: 'FINISHED'
                     },
-                    {
-                      hash: '...x3GV5ej1Ka3Ct',
-                      status: {
-                        type: 'draft',
-                        text: 'Drafts'
+                    currentcycle: '---',
+                    icodate: '15 aug - 24 oct 2018',
+                    table: [
+                      {
+                        hash: '...x3GV5ej1Ka3Ct',
+                        status: {
+                          type: 'active',
+                          text: 'Active'
+                        },
+                        date: '01.02.2018',
+                        price: '0.5 <sub>ETH</sub>',
+                        amount: '510 <sub>ETH</sub>  /  22 000 <sub>LNT</sub>',
+                        release: {
+                          progress: '70%',
+                          text: '359 / 510 <sub>ETH</sub>',
+                          color: 'lg'
+                        }
                       },
-                      date: '01.02.2018',
-                      price: '0.5 <sub>ETH</sub>',
-                      amount: '510 <sub>ETH</sub>  /  22 000 <sub>LNT</sub>',
-                      release: {
-                        progress: '5%',
-                        text: '359 / 510 <sub>ETH</sub>',
-                        color: ''
+                      {
+                        hash: '...x3GV5ej1Ka3Ct',
+                        status: {
+                          type: 'active',
+                          text: 'Active'
+                        },
+                        date: '01.02.2018',
+                        price: '0.5 <sub>ETH</sub>',
+                        amount: '510 <sub>ETH</sub>  /  22 000 <sub>LNT</sub>',
+                        release: {
+                          progress: '30%',
+                          text: '359 / 510 <sub>ETH</sub>',
+                          color: 'md'
+                        }
+                      },
+                      {
+                        hash: '...x3GV5ej1Ka3Ct',
+                        status: {
+                          type: 'draft',
+                          text: 'Drafts'
+                        },
+                        date: '01.02.2018',
+                        price: '0.5 <sub>ETH</sub>',
+                        amount: '510 <sub>ETH</sub>  /  22 000 <sub>LNT</sub>',
+                        release: {
+                          progress: '5%',
+                          text: '359 / 510 <sub>ETH</sub>',
+                          color: ''
+                        }
                       }
-                    }
-                  ]
-                }
-              ] %}
-            <tr>
-              <td>
-                <div class="project-trigger" data-project-trigger="{{ loop.index }}">
-                  <div class="project-trigger__text">3</div>
-                  <div class="project-trigger__icon"></div>
-                </div>
-                <div class="project">
-                  <div class="project__logo" style="background-image: url(./assets/imgs/{{ item.project.logo }});"></div>
-                  <div class="project__wrap">
-                    <div class="project__name">{{ item.project.name }}</div>
-                    <div class="project__type">{{ item.project.type }}</div>
+                    ]
+                  }
+                ] %}
+              <tr>
+                <td>
+                  <div class="project-trigger" data-project-trigger="{{ loop.index }}">
+                    <div class="project-trigger__text">3</div>
+                    <div class="project-trigger__icon"></div>
                   </div>
-                </div>
-              </td>
-              <td class="text-center">{{ item.description }}</td>
-              <td class="text-center">{{ item.round }}</td>
-              <td class="text-center">
-                <!-- begin status -->
-                <div class="status{% if item.status.type %} is-{{ item.status.type }}{% endif %}">{{ item.status.text }}</div>
-                <!-- end status -->
-              </td>
-              <td class="text-center">{{ item.currentcycle }}</td>
-              <td class="text-center">{{ item.icodate }}</td>
-              <td class="text-center">
-               {{ rating.make(4, 'rating--simple', '4.5') }}
-              </td>
-            </tr>
-            <tr>
-              <td class="toggle-table__wrap" colspan="7">
-                <div class="toggle-table__inner-table" data-project-id="{{ loop.index }}">
-                  <table class="table-toggle-inner">
-                    <thead>
-                      {% for text in ['Contract Hash', 'Contract Status', 'Investment Date', 'Token Price', 'Investment / Token Amount', 'Investment Release'] %}
-                      <th class="text-center">{{ text }}</th>
-                      {% endfor %}
-                    </thead>
-                    <tbody>
-                      {% for item in item.table %}
-                      <tr>
-                        <td class="text-center">
-                          <div class="table-toggle-inner__block"><a href="#">{{ item.hash }}</a></div>
-                        </td>
-                        <td class="text-center">
-                          <div class="table-toggle-inner__block">
-                            <span class="table-toggle-inner__status-sm status-sm"></span>{{ item.status.text }}
-                          </div>
-                        </td>
-                        <td class="text-center">
-                          <div class="table-toggle-inner__block">{{ item.date }}</div>
-                        </td>
-                        <td class="text-center">
-                          <div class="table-toggle-inner__block">{{ item.price | safe }}</div>
-                        </td>
-                        <td class="text-center">
-                          <div class="table-toggle-inner__block">{{ item.amount | safe }}</div>
-                        </td>
-                        <td >
-                          <div class="table-toggle-inner__block">
-                            <div class="table-toggle-inner__progress progress">
-                              <div class="progress__inner progress__inner--{{ item.release.color }}" style="width: {{ item.release.progress }}"></div>
+                  <div class="project">
+                    <div class="project__logo" style="background-image: url(./assets/imgs/{{ item.project.logo }});"></div>
+                    <div class="project__wrap">
+                      <div class="project__name">{{ item.project.name }}</div>
+                      <div class="project__type">{{ item.project.type }}</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="text-center">{{ item.description }}</td>
+                <td class="text-center">{{ item.round }}</td>
+                <td class="text-center">
+                  <!-- begin status -->
+                  <div class="badge{% if item.status.type %} {{ item.status.type }}{% endif %}">{{ item.status.text }}</div>
+                  <!-- end status -->
+                </td>
+                <td class="text-center">{{ item.currentcycle }}</td>
+                <td class="text-center">{{ item.icodate }}</td>
+                <td class="text-center">
+                 {{ rating.make(4, 'rating--simple', '4.5') }}
+                </td>
+              </tr>
+              <tr>
+                <td class="toggle-table__wrap" colspan="7">
+                  <div class="toggle-table__inner-table" data-project-id="{{ loop.index }}">
+                    <table class="table-toggle-inner">
+                      <thead>
+                        {% for text in ['Contract Hash', 'Contract Status', 'Investment Date', 'Token Price', 'Investment / Token Amount', 'Investment Release'] %}
+                        <th class="text-center">{{ text }}</th>
+                        {% endfor %}
+                      </thead>
+                      <tbody>
+                        {% for item in item.table %}
+                        <tr>
+                          <td class="text-center">
+                            <div class="table-toggle-inner__block"><a href="#">{{ item.hash }}</a></div>
+                          </td>
+                          <td class="text-center">
+                            <div class="table-toggle-inner__block">
+                              <span class="table-toggle-inner__status-sm status-sm {% if item.status.type %} is-{{ item.status.type }}{% endif %}"></span>{{ item.status.text }}
                             </div>
-                            {{ item.release.text | safe }}
-                          </div>
-                        </td>
-                      </tr>
-                      {% endfor %}
-                    </tbody>
-                  </table>
-                </div>
-              </td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
-        <!-- end toggle-table -->
+                          </td>
+                          <td class="text-center">
+                            <div class="table-toggle-inner__block">{{ item.date }}</div>
+                          </td>
+                          <td class="text-center">
+                            <div class="table-toggle-inner__block">{{ item.price | safe }}</div>
+                          </td>
+                          <td class="text-center">
+                            <div class="table-toggle-inner__block">{{ item.amount | safe }}</div>
+                          </td>
+                          <td >
+                            <div class="table-toggle-inner__block">
+                              <div class="table-toggle-inner__progress progress">
+                                <div class="progress__inner progress__inner--{{ item.release.color }}" style="width: {{ item.release.progress }}"></div>
+                              </div>
+                              {{ item.release.text | safe }}
+                            </div>
+                          </td>
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                    </table>
+                  </div>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          <!-- end toggle-table -->
+        </div>
+        <div class="portfolio__footer">
+          <div class="portfolio__info">
+            Explore new projects and become most “Attractive” investor in the world of ICO 
+          </div>
+          <a href="#" class="btn btn--white btn--uppercase">Invest now</a>
+        </div>
       </div>
     </div>
   </div>

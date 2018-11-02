@@ -1,0 +1,49 @@
+.icon-calendar {
+	position: relative;
+	z-index: 2;
+	cursor: pointer;
+	display: block;
+	user-select: none;
+	&.is-open {
+		.datepicker-inline {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+	&.icon-calendar--lg-pos-left {
+		.datepicker-inline {
+			@include bp-down(lg) {
+				left: 0;
+			}
+		}
+	}
+	.datepicker-inline {
+		position: absolute;
+		top: 100%;
+		right: 0;
+		margin-top: 10px;
+		opacity: 0;
+		visibility: hidden;
+	}
+	&__input {
+		display: none;
+	}
+	&__tigger {
+		cursor: pointer;
+		padding: rem(19px);
+		display: flex;
+		align-items: center;
+		border-bottom: 1px solid #DBDDE2;
+	}
+	&__icon {
+		.icon {
+			fill: #a1b7cb;
+			font-size: 23px;
+		}
+	}
+	&__text {
+		&:not(:first-child) {
+			margin-left: 19px;
+		}
+	}
+}
