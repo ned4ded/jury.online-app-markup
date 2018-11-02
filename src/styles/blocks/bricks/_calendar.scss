@@ -12,7 +12,9 @@
 	}
 	&.icon-calendar--lg-pos-left {
 		.datepicker-inline {
-			left: 0;
+			@include bp-down(lg) {
+				left: 0;
+			}
 		}
 	}
 	.datepicker-inline {
