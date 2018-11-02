@@ -4,6 +4,7 @@ import './select';
 import './tags';
 import './changeToggle';
 import swiper from './vendor/swiper';
+import './projectAccordeon';
 
 
 $(document).ready(function () {
