@@ -14,11 +14,11 @@
 
   background-color: rgba(49, 48, 59, 0);
 
-  &[data-state="close"] {
+  &[data-state="closed"] {
     display: none;
   }
 
-  &[data-state="open"] {
+  &[data-state="opened"] {
     display: block;
     background-color: rgba(49, 48, 59, 0.8);
 

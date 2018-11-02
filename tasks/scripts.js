@@ -23,8 +23,8 @@ let wpConfig = {
   devtool: "source-map",
   plugins: [
     new webpack.ProvidePlugin({
-      $: 'jquery',
-      Popper: 'popper.js'
+      // $: 'jquery',
+      // Popper: 'popper.js'
     })
   ]
 }
