@@ -15,23 +15,11 @@
 .sort-list {
 	position: relative;
 	margin: 0;
-	padding: rem(7px) 0 rem(7px) rem(22px);
 	vertical-align: top;
 	display: inline-block;
-	&:not(:first-child) {
-		margin-left: 20px;
-	}
-	&:before {
-		position: absolute;
-		content: "";
-		top: 0;
-		left: 0;
-		bottom: 0;
-		width: 1px;
-		background-color: #DBDDE2;
-	}
 	&__item {
 		position: relative;
+		margin: rem(7px) 0;
 		padding-left: rem(20px);
 		min-width: rem(72px);
 		position: relative;
@@ -49,8 +37,8 @@
 			border-radius: 50%;
 			background-color: #818181;
 		}
-		&:not(:first-child) {
-			margin-left: rem(45px);
+		&:not(:last-child) {
+			margin-right: rem(40px);
 		}
 	}
 	&__link	{

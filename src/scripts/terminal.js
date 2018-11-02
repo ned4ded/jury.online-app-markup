@@ -5,6 +5,7 @@ import './tags';
 import './changeToggle';
 import swiper from './vendor/swiper';
 import './projectAccordeon';
+import './calendar';
 
 
 $(document).ready(function () {

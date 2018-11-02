@@ -35,6 +35,11 @@
 	@include get-em-width(12.97, 17);
 }
 
+.icon--calendar-inline {
+	font-size: 32px;
+	@include get-em-width(32, 32);
+}
+
 .icon--check {
 	font-size: 7px;
 	@include get-em-width(9, 7);
