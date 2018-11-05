@@ -161,11 +161,11 @@
 
   max-width: 375px;
   min-width: 300px;
-  min-height: 200px;
   margin: 0 auto;
 
   @include bp-up($navbar-collapse-bp) {
     border-radius: $bdrs-md;
+    min-height: 200px;
 
     @each $prop, $value in get-properties($value: 'gradient') {
       #{$prop} : $value;
