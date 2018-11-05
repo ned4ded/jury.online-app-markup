@@ -157,9 +157,11 @@
 
   display: flex;
   flex-flow: row wrap;
+  align-content: flex-start;
 
   max-width: 375px;
   min-width: 300px;
+  min-height: 200px;
   margin: 0 auto;
 
   @include bp-up($navbar-collapse-bp) {
@@ -200,6 +202,7 @@
 
       @include bp-up($navbar-collapse-bp) {
         padding-right: $p-x;
+        padding-bottom: spacer(1);
         padding-left: $p-x;
       }
     }
@@ -238,7 +241,7 @@
       border-radius: $bdrs-md;
 
       @each $prop, $value in get-properties() {
-        #{$prop} : inherit;
+        #{$prop} : initial;
       }
     }
   }
@@ -319,7 +322,7 @@
           border-radius: $bdrs-md;
 
           @each $prop, $value in get-properties($theme-name, 'flat') {
-            #{$prop} : inherit;
+            #{$prop} : initial;
           }
         }
       }
