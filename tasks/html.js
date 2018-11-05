@@ -20,6 +20,16 @@ export function html() {
 
       return getType(type);
     }),
+    env => env.addFilter('addToArray', function(array, element) {
+      array.push(element);
+
+      return;
+    }),
+    env => env.addFilter('objectAssign', function(obj1, ...objects) {
+      Object.assign(obj1, ...objects);
+
+      return;
+    }),
   ]
 
   const data = fs.readdirSync(config.paths.datasets).reduce((acc, fileName) => {

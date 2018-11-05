@@ -54,7 +54,7 @@
       @include bp-up($navbar-collapse-bp) {
         width: calc(33.333% - #{$slide-gutters});
         min-width: 380px;
-        margin: 0 $slide-gutters / 2;
+        margin: 0 $slide-gutters / 2 rem(18px);
 
         &:not(.swiper-slide-active) {
           opacity: 0.5;

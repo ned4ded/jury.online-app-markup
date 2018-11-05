@@ -1,0 +1,47 @@
+[
+  {
+    "name" : "BRIXBY",
+    "field" : "Carasharing",
+    "brand" : "assets/imgs/icon-ico-project-brixby.png",
+    "images" : {
+      "mobile" : "style=\"background-image: url('assets/imgs/rec-card-car-bg.png'); width: 175px; height: 105px;\"",
+      "desktop" : "style=\"background-image: url('assets/imgs/rec-card-car-bg.png'); width: 265px; height: 100%;\""
+    },
+    "stage-type" : "soon",
+    "days left" : "25",
+    "period" : "8 JUN - 20 JUL",
+    "investment" : "1.5 ETH",
+    "theme" : "ziggurate",
+    "kyc" : false
+  },
+  {
+    "name" : "GG Rocket",
+    "field" : "First Gaming Market",
+    "brand" : "assets/imgs/icon-ico-project-gg-rocket.png",
+    "images" : {
+      "mobile" : "style=\"background-image: url('assets/imgs/premium-card-robot.png'); width: 137px; height: 133px;\"",
+      "desktop" : "style=\"background-image: url('assets/imgs/premium-card-robot.png'); width: 199px; height: 100%;\""
+    },
+    "stage-type" : "pre-ico",
+    "days left" : "25",
+    "period" : "20 JUN - 22 SEP",
+    "investment" : "5 ETH",
+    "theme" : "east-side",
+    "kyc" : false
+  },
+  {
+    "name" : "Lancer Network",
+    "field" : "Decentralized Freelance",
+    "brand" : "assets/imgs/icon-ico-project-lancer-network.png",
+    "images" : {
+      "mobile" : "style=\"background-image: url('assets/imgs/premium-card-laptop.png'); width: 165px; height: 135px;\"",
+      "desktop" : "style=\"background-image: url('assets/imgs/premium-card-laptop.png'); width: 239px; height: 100%; right: -30px;\""
+    },
+    "stage-type" : "ico",
+    "days left" : "18",
+    "period" : "8 JUN - 20 JUL",
+    "investment" : "1 ETH",
+    "theme" : "shakespeare",
+    "kyc" : false
+  }
+]

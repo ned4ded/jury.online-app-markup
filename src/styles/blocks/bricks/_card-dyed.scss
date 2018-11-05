@@ -2,24 +2,139 @@
   $p-x: spacer(4);
   $bdrs-sm: 5px;
   $bdrs-md: 10px;
-  $bg-green: (
-    "emphasis" : #5b6a78,
-    "default" : #839fa4,
-    "gradient" : linear-gradient(180deg, #70ada7 60%, #3d8084),
+
+  $ziggurat: (
+    "emphasis" : (
+      background-color: rgba(52, 54, 77, .5)
+    ),
+    "flat" : (
+      background-color: #839fa4,
+      box-shadow: 0px 6px 13px 0px rgba(69, 193, 165, 0.29),
+    ),
+    "gradient" : (
+      background-image: linear-gradient(180deg, #70ada7 60%, #3d8084),
+      box-shadow: 0px 6px 13px 0px rgba(69, 193, 165, 0.29),
+    ),
+    "stage" : (
+      color: lighten(rgb(184, 148, 202), 5%),
+    )
+  );
+
+  $east-side: (
+    "emphasis" : (
+      background-color: rgba(52, 54, 77, .5)
+    ),
+    "flat" : (
+      background-color: rgb(184, 148, 202),
+      box-shadow: 0px 6px 13px 0px rgba(122, 69, 193, 0.29),
+    ),
+    "gradient" : (
+      background-image: (linear-gradient(to top, rgba(#8c26cc, .5), transparent 30%), linear-gradient(135deg, #c28cda, #936dcc)),
+      box-shadow: 0px 6px 13px 0px rgba(122, 69, 193, 0.29),
+    ),
+    "stage" : (
+      color: #b3d7ff,
+    )
+  );
+
+  $shakespeare: (
+    "emphasis" : (
+      background-color: rgba(52, 54, 77, .5)
+    ),
+    "flat" : (
+      background-color: #6880af,
+      box-shadow: 0px 6px 13px 0px rgba(69, 92, 193, 0.29),
+    ),
+    "gradient" : (
+      background-image: (linear-gradient(to top, rgba(#2c54b4, .7), transparent 30%), linear-gradient(135deg, #6698c2, #5074ab)),
+      box-shadow: 0px 6px 13px 0px rgba(69, 92, 193, 0.29),
+    ),
+    "stage" : (
+      color: #aceabb,
+    )
   );
 
 
-  $bg-purple: (
-    "emphasis" : rgb(122, 97, 147),
-    "default" : rgb(184, 148, 202),
-    "gradient" : linear-gradient(178deg, rgb(194, 140, 218), rgb(139, 85, 196)),
+  $tradewind: (
+    "emphasis" : (
+      background-color: rgba(52, 54, 77, .5)
+    ),
+    "flat" : (
+      background-color: #6AB6B1,
+      box-shadow: 0px 6px 13px 0px rgba(69, 193, 165, 0.29)
+    ),
+    "gradient" : (
+      background-image: linear-gradient(180deg, #6AB6B1, #245a83),
+      box-shadow: 0px 6px 13px 0px rgba(69, 193, 165, 0.29)
+    )
   );
 
-  $bgs: (
-    "emphasis" : #5b6a78,
-    "default" : #839fa4,
-    "gradient" : linear-gradient(180deg, #70ada7 60%, #3d8084),
+  $charm: (
+    "emphasis" : (
+      background-color: rgba(52, 54, 77, .5)
+    ),
+    "flat" : (
+      background-color: #d66986
+    ),
+    "gradient" : (
+      background-image: linear-gradient(180deg, #d66986, #5b287d)
+    )
   );
+
+  $purple: (
+    "emphasis" : (
+      background-color: rgba(52, 54, 77, .5)
+    ),
+    "flat" : (
+      background-color: #9570e5
+    ),
+    "gradient" : (
+      background-image: linear-gradient(180deg, #9570e5, #232a8c)
+    )
+  );
+
+  $danube: (
+    "emphasis" : (
+      background-color: rgba(52, 54, 77, .5)
+    ),
+    "flat" : (
+      background-color: #6589ba
+    ),
+    "gradient" : (
+      background-image: linear-gradient(180deg, #6589ba, #2f4073)
+    )
+  );
+
+  $themes: (
+    'ziggurat' : $ziggurat,
+    'east-side' : $east-side,
+    'tradewind' : $tradewind,
+    'charm' : $charm,
+    'purple' : $purple,
+    'danube' : $danube,
+    'default' : $ziggurat,
+    'shakespeare' : $shakespeare
+  );
+
+  @function get-properties($theme-name: 'default', $value: 'flat') {
+    @if map-has($themes, $theme-name) {
+      $theme: map-get($themes, $theme-name);
+
+      @if map-has($theme, $value) {
+        @return map-get($theme, $value);
+
+      } @else {
+        @warn 'Value "#{$value}" for #{$theme-name} was not found';
+      }
+
+    } @else {
+      @warn 'Theme was not found';
+    }
+  }
+
+  @function get-themes() {
+    @return map-keys(map-remove($themes, 'default'));
+  }
 
   position: relative;
 
@@ -32,8 +147,12 @@
 
   @include bp-up($navbar-collapse-bp) {
     border-radius: $bdrs-md;
-    background-image: map-get($bgs, 'gradient');
+
+    @each $prop, $value in get-properties($value: 'gradient') {
+      #{$prop} : $value;
+    }
   }
+
 
   &:hover {
     text-decoration: none;
@@ -68,10 +187,13 @@
       }
     }
 
-    &--status {
+    &--stage {
       border-top-left-radius: $bdrs-sm;
       border-top-right-radius: $bdrs-sm;
-      background-color: map-get($bgs, 'emphasis');
+
+      @each $prop, $value in get-properties($value: 'emphasis') {
+        #{$prop} : $value;
+      }
 
       @include bp-up($navbar-collapse-bp) {
         border-top-left-radius: 0;
@@ -80,16 +202,42 @@
     }
 
     &--meta {
-      border-bottom-right-radius: $bdrs-sm;
-      border-bottom-left-radius: $bdrs-sm;
-      background-color: map-get($bgs, 'default');
+    }
+  }
 
-      @include bp-up($navbar-collapse-bp) {
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-        background-color: transparent;
+  &__wrapper {
+    width: 100%;
+    border-radius: $bdrs-sm;
+
+    @each $prop, $value in get-properties() {
+      #{$prop} : $value;
+    }
+
+    @include bp-up($navbar-collapse-bp) {
+      border-radius: $bdrs-md;
+
+      @each $prop, $value in get-properties() {
+        #{$prop} : inherit;
       }
     }
+  }
+
+  &__stage {
+    color: $white;
+
+    &-name {
+      @each $prop, $value in get-properties($value: 'stage') {
+        #{$prop} : $value;
+      }
+    }
+  }
+
+  &__meta {
+    margin-bottom: 0;
+
+    text-transform: uppercase;
+
+    color: $white;
   }
 
   &__img {
@@ -101,16 +249,58 @@
     background-position: center;
     background-size: 100%;
 
-    &--car {
-      width: 175px;
-      height: 105px;
+    &--sm {
+      @include bp-up($navbar-collapse-bp) {
+        display: none;
+      }
+    }
 
-      background-image: url(../assets/imgs/rec-card-car-bg.png);
+    &--lg {
+      display: none;
 
       @include bp-up($navbar-collapse-bp) {
-        width: 265px;
-        height: 100%;
-        background-size: auto;
+        display: block;
+        background-size: contain;
+      }
+    }
+
+  }
+
+  @each $theme-name in get-themes() {
+    &[data-color-theme="#{$theme-name}"] {
+      @include bp-up($navbar-collapse-bp) {
+        @each $prop, $value in get-properties($theme-name, 'gradient') {
+          #{$prop} : $value;
+        }
+      }
+
+      & .card-dyed__block--stage {
+        @each $prop, $value in get-properties($theme-name, 'emphasis') {
+          #{$prop} : $value;
+        }
+      }
+
+      & .card-dyed__stage-name {
+        @each $prop, $value in get-properties($theme-name, 'stage') {
+          #{$prop} : $value;
+        }
+      }
+
+      & .card-dyed__wrapper {
+        width: 100%;
+        border-radius: $bdrs-sm;
+
+        @each $prop, $value in get-properties($theme-name, 'flat') {
+          #{$prop} : $value;
+        }
+
+        @include bp-up($navbar-collapse-bp) {
+          border-radius: $bdrs-md;
+
+          @each $prop, $value in get-properties($theme-name, 'flat') {
+            #{$prop} : inherit;
+          }
+        }
       }
     }
   }
