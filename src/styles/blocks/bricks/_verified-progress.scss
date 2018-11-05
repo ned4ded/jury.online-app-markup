@@ -25,7 +25,6 @@
 		&:not(:last-child) {
 			width: 50%;
 			height: 2px;
-			background-color: $de-york;
 		}
 		&:first-child {
 			left: 0;
@@ -53,7 +52,7 @@
 			}
 		}
 		&.is-check {
-			border-color: $de-york;
+			background-color: $de-york;
 			&:not(:last-child):before {
 				border-color: $de-york;
 			}
