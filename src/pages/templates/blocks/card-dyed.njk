@@ -16,7 +16,8 @@
   images: {
     mobile: false,
     desktop: false
-  }
+  },
+  badge: false
 } %}
 
 {% macro daysLeft(stage, left) %}
@@ -53,6 +54,17 @@
       <p class="card-dyed__meta"><strong>{{ default.period }}</strong></p>
       <p class="card-dyed__meta">MIN Invest: <strong>{{ default.investment }}</strong></p>
     </div>
+
+    {% if (default.badge) %}
+    <div class="card-dyed__block card-dyed__block--about">
+      <p>
+        {% if (default.badge) %}
+        <span class="text-sm text-uppercase font-weight-bold badge badge-gradient-{{default.badge.color}}">{{default.badge.text}}</span>
+        {% endif %}
+      </p>
+    </div>
+    {% endif %}
+
   </div>
 
   <span class="card-dyed__img card-dyed__img--sm" {{ default.images.mobile | safe }}></span>

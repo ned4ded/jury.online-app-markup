@@ -12,7 +12,7 @@
       box-shadow: 0px 6px 13px 0px rgba(69, 193, 165, 0.29),
     ),
     "gradient" : (
-      background-image: linear-gradient(180deg, #70ada7 60%, #3d8084),
+      background-image: (linear-gradient(to top, rgba(#0a5462, .5), transparent 30%), linear-gradient(180deg, #70ada7 60%, #3d8084)),
       box-shadow: 0px 6px 13px 0px rgba(69, 193, 165, 0.29),
     ),
     "stage" : (
@@ -54,18 +54,20 @@
     )
   );
 
-
   $tradewind: (
     "emphasis" : (
       background-color: rgba(52, 54, 77, .5)
     ),
     "flat" : (
       background-color: #6AB6B1,
-      box-shadow: 0px 6px 13px 0px rgba(69, 193, 165, 0.29)
+      box-shadow: 0px 6px 13px 0px rgba(81, 202, 180, 0.29),
     ),
     "gradient" : (
-      background-image: linear-gradient(180deg, #6AB6B1, #245a83),
-      box-shadow: 0px 6px 13px 0px rgba(69, 193, 165, 0.29)
+      background-image: (linear-gradient(to top, rgba(#10255c, .5), transparent 30%), linear-gradient(180deg, #6AB6B1, #245a83)),
+      box-shadow: 0px 6px 13px 0px rgba(81, 202, 180, 0.29),
+    ),
+    "stage" : (
+      color: #bfeeff,
     )
   );
 
@@ -74,10 +76,15 @@
       background-color: rgba(52, 54, 77, .5)
     ),
     "flat" : (
-      background-color: #d66986
+      background-color: #d66986,
+      box-shadow: 0px 6px 13px 0px rgba(141, 95, 204, 0.29),
     ),
     "gradient" : (
-      background-image: linear-gradient(180deg, #d66986, #5b287d)
+      background-image: (linear-gradient(to top, rgba(#10255c, .5), transparent 30%), linear-gradient(180deg, #d66986, #5b287d)),
+      box-shadow: 0px 6px 13px 0px rgba(141, 95, 204, 0.29),
+    ),
+    "stage" : (
+      color: #e0a6c0,
     )
   );
 
@@ -86,10 +93,15 @@
       background-color: rgba(52, 54, 77, .5)
     ),
     "flat" : (
-      background-color: #9570e5
+      background-color: #9570e5,
+      box-shadow: 0px 6px 13px 0px rgba(112, 94, 204, 0.29),
     ),
     "gradient" : (
-      background-image: linear-gradient(180deg, #9570e5, #232a8c)
+      background-image: (linear-gradient(to top, rgba(#2d277e, .5), transparent 30%), linear-gradient(180deg, #9570e5, #232a8c)),
+      box-shadow: 0px 6px 13px 0px rgba(112, 94, 204, 0.29),
+    ),
+    "stage" : (
+      color: #e8c4ff,
     )
   );
 
@@ -98,10 +110,15 @@
       background-color: rgba(52, 54, 77, .5)
     ),
     "flat" : (
-      background-color: #6589ba
+      background-color: #6589ba,
+      box-shadow: 0px 6px 13px 0px rgba(68, 56, 175, 0.29),
     ),
     "gradient" : (
-      background-image: linear-gradient(180deg, #6589ba, #2f4073)
+      background-image: (linear-gradient(to top, rgba(#10255c, .5), transparent 30%), linear-gradient(180deg, #6589ba, #2f4073)),
+      box-shadow: 0px 6px 13px 0px rgba(68, 56, 175, 0.29),
+    ),
+    "stage" : (
+      color: #c0e0ff,
     )
   );
 
@@ -203,6 +220,10 @@
 
     &--meta {
     }
+
+    &--about {
+      padding-top: 0;
+    }
   }
 
   &__wrapper {
@@ -246,7 +267,7 @@
     bottom: -12px;
 
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center right;
     background-size: 100%;
 
     &--sm {
