@@ -31,6 +31,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      align-items: center;
 
       width: 100%;
       max-width: $cards-max-width + $slide-gutters;
@@ -46,21 +47,24 @@
     }
 
     &-slide {
-      margin: 0 0 40px;
+      display: flex;
+      // align-items: stretch;
+
       max-width: calc(100% - #{$grid-gutter-width});
+      height: auto;
+      margin: 0 0 40px;
 
       transition: opacity .3s ease-in;
 
       @include bp-up($navbar-collapse-bp) {
         width: calc(33.333% - #{$slide-gutters});
         min-width: 380px;
-        margin: 0 $slide-gutters / 2;
+        margin: 0 $slide-gutters / 2 rem(18px);
 
         &:not(.swiper-slide-active) {
           opacity: 0.5;
         }
       }
-
       @include bp-up(2xl) {
         &.swiper-slide-next,
         &.swiper-slide-prev {

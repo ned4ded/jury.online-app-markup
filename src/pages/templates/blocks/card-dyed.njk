@@ -1,0 +1,73 @@
+{% import "lib/helpers.njk" as helpers %}
+
+{% import "blocks/card-brand.njk" as brand %}
+
+{% set default = {
+  brand: {
+    content: '',
+    src: ''
+  },
+  theme: false,
+  'days left': '23 D',
+  classes: false,
+  'stage-type': 'soon',
+  period: '5 sep - 5 oct',
+  investment: '10 ETH',
+  images: {
+    mobile: false,
+    desktop: false
+  },
+  badge: false
+} %}
+
+{% macro daysLeft(stage, left) %}
+  {% set stages = {
+    'pre-ico' : 'PRE ICO',
+    'ico' : 'ICO'
+  } %}
+
+  <span class="card-dyed__stage-name">{{ stages[stage] }}</span> / {{ left }} D left
+{% endmacro %}
+
+{% macro stage(name, left) %}
+  {% if name == 'soon' %}
+    COMING SOON
+  {% else %}
+  {{ daysLeft(name, left) }}
+  {% endif %}
+{% endmacro %}
+
+{% macro make(options = {}) %}
+{{ default | objectAssign(options) }}
+
+<div {% if default.theme %} data-color-theme="{{ default.theme }}" {% endif %} class="card-dyed{{ helpers.parse(default.classes) }}">
+  <div class="card-dyed__block card-dyed__block--brand">
+    {{ brand.make(default.brand.content, default.brand.src, 'card-dyed__brand') }}
+  </div>
+
+  <div class="card-dyed__wrapper">
+    <div class="card-dyed__block card-dyed__block--stage">
+      <p class="card-dyed__stage">{{ stage(default['stage-type'], default['days left']) }}</p>
+    </div>
+
+    <div class="card-dyed__block card-dyed__block--meta">
+      <p class="card-dyed__meta"><strong>{{ default.period }}</strong></p>
+      <p class="card-dyed__meta">MIN Invest: <strong>{{ default.investment }}</strong></p>
+    </div>
+
+    {% if (default.badge) %}
+    <div class="card-dyed__block card-dyed__block--about">
+      <p>
+        {% if (default.badge) %}
+        <span class="text-sm text-uppercase font-weight-bold badge badge-gradient-{{default.badge.color}}">{{default.badge.text}}</span>
+        {% endif %}
+      </p>
+    </div>
+    {% endif %}
+
+  </div>
+
+  <span class="card-dyed__img card-dyed__img--sm" {{ default.images.mobile | safe }}></span>
+  <span class="card-dyed__img card-dyed__img--lg" {{ default.images.desktop | safe }}></span>
+</div>
+{% endmacro %}

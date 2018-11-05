@@ -1,0 +1,123 @@
+[
+  {
+    "name" : "BRIXBY",
+    "field" : "Carasharing",
+    "brand" : "assets/imgs/icon-ico-project-brixby.png",
+    "images" : {
+      "mobile" : "style=\"background-image: url('assets/imgs/rec-card-car-bg.png'); width: 175px; height: 105px;\"",
+      "desktop" : "style=\"background-image: url('assets/imgs/rec-card-car-bg.png'); width: 265px; height: 100%; max-height: 175px;\""
+    },
+    "stage-type" : "soon",
+    "days left" : "25",
+    "period" : "8 JUN - 20 JUL",
+    "investment" : "1.5 ETH",
+    "theme" : "ziggurate",
+    "kyc" : false
+  },
+  {
+    "name" : "GG Rocket",
+    "field" : "First Gaming Market",
+    "brand" : "assets/imgs/icon-ico-project-gg-rocket.png",
+    "images" : {
+      "mobile" : "style=\"background-image: url('assets/imgs/premium-card-robot.png'); width: 137px; height: 133px;\"",
+      "desktop" : "style=\"background-image: url('assets/imgs/premium-card-robot.png'); width: 199px; height: 100%; max-height: 197px;\""
+    },
+    "stage-type" : "pre-ico",
+    "days left" : "25",
+    "period" : "20 JUN - 22 SEP",
+    "investment" : "5 ETH",
+    "theme" : "east-side",
+    "kyc" : false
+  },
+  {
+    "name" : "Lancer Network",
+    "field" : "Decentralized Freelance",
+    "brand" : "assets/imgs/icon-ico-project-lancer-network.png",
+    "images" : {
+      "mobile" : "style=\"background-image: url('assets/imgs/premium-card-laptop.png'); width: 165px; height: 135px;\"",
+      "desktop" : "style=\"background-image: url('assets/imgs/premium-card-laptop.png'); width: 239px; height: 100%; max-height: 195px; right: -30px;\""
+    },
+    "stage-type" : "ico",
+    "days left" : "18",
+    "period" : "8 JUN - 20 JUL",
+    "investment" : "1 ETH",
+    "theme" : "shakespeare",
+    "kyc" : false
+  },
+  {
+    "name" : "Dataeum",
+    "field" : "Crowdsourcing",
+    "brand" : "assets/imgs/icon-ico-project-dataeum.png",
+    "images" : {
+      "mobile" : "style=\"background-image: url('assets/imgs/premium-card-crowdsale.png'); width: 145px; height: 143px;\"",
+      "desktop" : "style=\"background-image: url('assets/imgs/premium-card-crowdsale.png'); width: 183px; height: 100%; max-height: 180px; bottom: auto; transform: translateY(-50%); top: 50%;\""
+    },
+    "stage-type" : "pre-ico",
+    "days left" : "25",
+    "period" : "20 JUN - 22 SEP",
+    "investment" : "5 ETH",
+    "theme" : "tradewind",
+    "badge" : {
+      "color": "orange",
+      "text" : "active"
+    },
+    "kyc" : false
+  },
+  {
+    "name" : "RichBit",
+    "field" : "Social Network",
+    "brand" : "assets/imgs/icon-ico-project-richbit.png",
+    "images" : {
+      "mobile" : "style=\"background-image: url('assets/imgs/premium-card-hipsters.png'); width: 125px; height: 132px; bottom: 0; right: -10px;\"",
+      "desktop" : "style=\"background-image: url('assets/imgs/premium-card-hipsters.png'); width: 171px; height: 100%; max-height: 180px; bottom: 0;\""
+    },
+    "stage-type" : "pre-ico",
+    "days left" : "25",
+    "period" : "20 JUN - 22 SEP",
+    "investment" : "5 ETH",
+    "theme" : "charm",
+    "badge" : {
+      "color": "orange",
+      "text" : "active"
+    },
+    "kyc" : false
+  },
+  {
+    "name" : "Kvantor",
+    "field" : "E-commerce",
+    "brand" : "assets/imgs/icon-ico-project-kvantor.png",
+    "images" : {
+      "mobile" : "style=\"background-image: url('assets/imgs/premium-card-cubes.png'); width: 160px; height: 136px;\"",
+      "desktop" : "style=\"background-image: url('assets/imgs/premium-card-cubes.png'); width: 206px; height: 100%; max-height: 176px; bottom: auto; transform: translateY(-50%); top: 50%;\""
+    },
+    "stage-type" : "ico",
+    "days left" : "25",
+    "period" : "20 JUN - 22 SEP",
+    "investment" : "5 ETH",
+    "theme" : "purple",
+    "badge" : {
+      "color": "orange",
+      "text" : "active"
+    },
+    "kyc" : false
+  },
+  {
+    "name" : "Endo",
+    "field" : "Verification Protocol",
+    "brand" : "assets/imgs/icon-ico-project-endo.png",
+    "images" : {
+      "mobile" : "style=\"background-image: url('assets/imgs/premium-card-cube.png'); width: 135px; height: 125px; right: -10px;\"",
+      "desktop" : "style=\"background-image: url('assets/imgs/premium-card-cube.png'); width: 188px; height: 100%; max-height: 174px; bottom: auto; transform: translateY(-50%); top: 50%;\""
+    },
+    "stage-type" : "pre-ico",
+    "days left" : "25",
+    "period" : "20 JUN - 22 SEP",
+    "investment" : "5 ETH",
+    "theme" : "danube",
+    "badge" : {
+      "color": "orange",
+      "text" : "active"
+    },
+    "kyc" : false
+  }
+]
