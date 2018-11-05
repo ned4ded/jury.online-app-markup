@@ -54,6 +54,8 @@
       @include bp-up($navbar-collapse-bp) {
         min-width: $side-bar-w;
 
+        transition: min-width .5s ease-in;
+
         background-color: theme-primary();
       }
     }
@@ -138,8 +140,29 @@
     }
   }
 
-  &[data-state="open"] &__block--data {
+  &[data-state="opened"] &__block--data {
     display: flex;
+  }
+
+  &[data-state="closing"] &__block--brand {
+    @include bp-up($navbar-collapse-bp) {
+      min-width: $side-bar-w-closed;
+      width: $side-bar-w-closed;
+    }
+  }
+
+  &[data-state="opening"] &__block--brand {
+    @include bp-up($navbar-collapse-bp) {
+      min-width: $side-bar-w;
+      width: $side-bar-w;
+    }
+  }
+
+  &[data-state="closed"] &__block--brand {
+    @include bp-up($navbar-collapse-bp) {
+      min-width: $side-bar-w-closed;
+      width: $side-bar-w-closed;
+    }
   }
 
   &__brand {
@@ -153,6 +176,43 @@
     @include bp-up($navbar-collapse-bp) {
       width: $navbar-brand-w-lg;
       padding-top: rem(15px);
+    }
+  }
+
+  &[data-state="closing"] &__brand {
+    @include bp-up($navbar-collapse-bp) {
+      background-image: url('../assets/imgs/jo-logo-sm.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: auto;
+
+      .brand__img {
+        display: none;
+      }
+    }
+  }
+  &[data-state="opening"] &__brand {
+    @include bp-up($navbar-collapse-bp) {
+      background-image: url('../assets/imgs/jo-logo-sm.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: auto;
+
+      .brand__img {
+        display: none;
+      }
+    }
+  }
+  &[data-state="closed"] &__brand {
+    @include bp-up($navbar-collapse-bp) {
+      background-image: url('../assets/imgs/jo-logo-sm.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: auto;
+
+      .brand__img {
+        display: none;
+      }
     }
   }
 

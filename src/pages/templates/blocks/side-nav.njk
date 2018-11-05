@@ -17,7 +17,9 @@
         <span class="side-nav__icon">{{ icon.make(item.icon) }}</span>
         {% endif %}
 
-        {{ item.name }}
+        <span class="side-nav__text">
+          {{ item.name }}
+        </span>
 
         {% if item.subnav %}
         <span class="side-nav__icon-dropdown">

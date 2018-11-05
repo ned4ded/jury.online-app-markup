@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="67px" height="65px" viewBox="0 0 67 65" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Sign Out</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-29.0%" y="-4.4%" width="192.0%" height="109.3%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="15" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="11" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.247848732 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Project-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Side_panel" transform="translate(-329.000000, -418.000000)">
+            <g id="Side_Panel(small)" filter="url(#filter-1)" transform="translate(303.000000, 0.000000)">
+                <g id="Sign-Out" transform="translate(33.000000, 438.000000)">
+                    <rect id="Create-ICO-Copy" stroke="#44486A" x="0.5" y="0.5" width="20" height="20" rx="4"></rect>
+                    <path d="M16.38,13.863 L15.423,12.842 C15.124,12.522 15.351,12 15.788,12 L25.7646484,12 C26.3176484,12 26.7646484,11.552 26.7646484,11 C26.7646484,10.448 26.3176484,10 25.7646484,10 L15.803,10 C15.363,10 15.138,9.473 15.442,9.155 L16.37,8.181 C16.752,7.782 16.734,7.148 16.331,6.771 C15.932,6.397 15.305,6.416 14.929,6.814 L12.24,9.662 C11.51,10.436 11.513,11.646 12.247,12.415 L14.933,15.231 C15.308,15.624 15.929,15.643 16.327,15.274 C16.734,14.896 16.756,14.265 16.38,13.863 Z" id="arrow_in_left-[#389]" fill="#44486A"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

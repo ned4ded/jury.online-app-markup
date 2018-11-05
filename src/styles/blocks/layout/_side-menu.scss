@@ -43,6 +43,15 @@ $side-menu-divider: 1px solid theme-primary('400');
   color: $white;
   background-image: linear-gradient(to top, theme-primary(), theme-primary('600'));
 
+  @include bp-up($navbar-collapse-bp) {
+    &[data-state="closed"] {
+      width: 100%;
+      min-width: 0;
+
+      padding-right: rem(12px);
+      padding-left: rem(12px);
+    }
+  }
 
   &__block {
     display: flex;
@@ -73,6 +82,25 @@ $side-menu-divider: 1px solid theme-primary('400');
     }
   }
 
+  @include bp-up($navbar-collapse-bp) {
+    &[data-state="closed"] &__block--profile {
+      .tag__info {
+        display: none;
+      }
+
+      .tag__img {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @include bp-up($navbar-collapse-bp) {
+    &[data-state="closed"] &__block--nav {
+      margin-right: rem(-12px);
+      margin-left: rem(-12px);
+    }
+  }
+
   &__nav {
     @extend %side-menu-fluid-block-divider;
 
@@ -80,8 +108,30 @@ $side-menu-divider: 1px solid theme-primary('400');
     margin-bottom: 1px;
   }
 
+  &[data-state="closed"] &__nav {
+    @include bp-up($navbar-collapse-bp) {
+      .side-nav__text {
+        display: none;
+      }
+
+      .side-nav__name {
+        margin: 0;
+      }
+
+      .side-nav--sublist {
+        display: none;
+      }
+    }
+  }
+
   &__sub-nav {
 
+  }
+
+  &[data-state="closed"] &__sub-nav {
+    @include bp-up($navbar-collapse-bp) {
+      display: none;
+    }
   }
 
   &__btn {
@@ -104,6 +154,24 @@ $side-menu-divider: 1px solid theme-primary('400');
       padding-bottom: .9375rem;
 
       border-radius: 3px;
+    }
+
+    &-icon {
+      display: none;
+    }
+  }
+
+  @include bp-up($navbar-collapse-bp) {
+    &[data-state="closed"] &__btn--add {
+      display: none;
+    }
+
+    &[data-state="closed"] &__btn--logout {
+      font-size: 0;
+    }
+
+    &[data-state="closed"] &__btn-icon {
+      display: block;
     }
   }
 }
