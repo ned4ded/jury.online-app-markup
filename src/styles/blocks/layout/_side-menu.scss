@@ -11,25 +11,9 @@ $side-menu-divider: 1px solid theme-primary('400');
   flex-grow: 1;
 }
 
-%side-menu-fluid-block-divider {
-  position: relative;
-
-  &:after {
-    position: absolute;
-    left: $side-menu-p-x;
-
-    display: block;
-
-    width: calc(100% - #{$side-menu-p-x * 2});
-    height: 0;
-
-    content: '';
-
-    border-bottom: $side-menu-divider;
-  }
-}
-
 .side-menu {
+  $side-menu-p-x-closed: rem(12px);
+
   overflow: hidden;
   height: 100%;
   display: flex;
@@ -48,8 +32,8 @@ $side-menu-divider: 1px solid theme-primary('400');
       width: 100%;
       min-width: 0;
 
-      padding-right: rem(12px);
-      padding-left: rem(12px);
+      padding-right: $side-menu-p-x-closed;
+      padding-left: $side-menu-p-x-closed;
     }
   }
 
@@ -92,6 +76,10 @@ $side-menu-divider: 1px solid theme-primary('400');
         margin-right: 0;
       }
     }
+
+    &[data-state="closed"] &__block--logout {
+      margin: 0 -$side-menu-p-x-closed;
+    }
   }
 
   @include bp-up($navbar-collapse-bp) {
@@ -102,14 +90,34 @@ $side-menu-divider: 1px solid theme-primary('400');
   }
 
   &__nav {
-    @extend %side-menu-fluid-block-divider;
-
+    position: relative;
     bottom: -1px;
+
     margin-bottom: 1px;
+
+    &:after {
+      position: absolute;
+      left: $side-menu-p-x;
+
+      display: block;
+
+      width: calc(100% - #{$side-menu-p-x * 2});
+      height: 0;
+
+      content: '';
+
+      border-bottom: $side-menu-divider;
+    }
   }
 
   &[data-state="closed"] &__nav {
     @include bp-up($navbar-collapse-bp) {
+      &:after {
+        left: $side-menu-p-x-closed;
+
+        width: calc(100% - #{$side-menu-p-x-closed * 2});
+      }
+
       .side-nav__text {
         display: none;
       }
@@ -167,6 +175,13 @@ $side-menu-divider: 1px solid theme-primary('400');
     }
 
     &[data-state="closed"] &__btn--logout {
+      width: 100%;
+      padding-right: rem(2px);
+      padding-left: rem(2px);
+
+      border: 0;
+      border-radius: 0;
+
       font-size: 0;
     }
 
