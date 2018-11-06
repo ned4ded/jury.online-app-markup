@@ -1,6 +1,6 @@
 .profile {
 	&__container {
-		padding-top: rem(50px); 
+		padding-top: rem(50px);
 		padding-bottom: rem(132px);
 		max-width: rem(1272px);
 	}
@@ -31,6 +31,12 @@
 			@include bp-down(xl) {
 				margin-top: spacer(7);
 			}
+		}
+	}
+
+	&__select {
+		&.chosen-container-single .chosen-single {
+			padding: .490rem 1rem .510rem;
 		}
 	}
 }

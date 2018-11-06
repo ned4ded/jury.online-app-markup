@@ -2,6 +2,9 @@
 
 @mixin f($fz: $font-size-base, $font-weight: $font-weight-base, $line-height: $line-height-base) {
   font-family: $font-family-base;
+  font-size: $fz;
+  font-weight: $font-weight;
+  line-height: $line-height;
 }
 
 @mixin f-sm($font-weight: $font-weight-base, $line-height: $line-height-base) {

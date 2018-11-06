@@ -3,7 +3,8 @@ import './tooltip';
 import './select';
 import './tags';
 import './changeToggle';
-import swiper from './vendor/swiper';
+import carousel from './lib/carousel';
+import select from './lib/select';
 import './projectAccordeon';
 import './calendar';
 import initNavbarToggle from './navbarToggle';
@@ -14,6 +15,7 @@ $(document).ready(function () {
 
   body.classList.remove('no-js');
 
-  swiper();
+  carousel();
+  select();
   initNavbarToggle();
 });
