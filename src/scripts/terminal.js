@@ -1,6 +1,5 @@
 import 'bootstrap';
 import './tooltip';
-import './select';
 import './tags';
 import './changeToggle';
 import carousel from './lib/carousel';
