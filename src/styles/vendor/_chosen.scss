@@ -120,7 +120,7 @@
             @include button-outline-variant($value);
 
             div {
-              right: $btn-padding-y;
+              right: $btn-padding-x;
 
               b {
                 position: relative;
