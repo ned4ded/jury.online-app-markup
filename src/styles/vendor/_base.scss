@@ -1,7 +1,7 @@
-@import '../../node_modules/bootstrap-select/dist/css/bootstrap-select.css';
 @import '../../node_modules/selectize/dist/css/selectize.css';
 @import '../../node_modules/air-datepicker/dist/css/datepicker.css';
 
 @import 'swiper';
 @import 'chosen';
-@import './lib/horizontal-timeline';
+@import 'vendor/lib/horizontal-timeline.css';
+@import 'jquery-ui';

@@ -2,12 +2,12 @@ import { DOC } from './constants';
 
 import 'bootstrap';
 
-import carousel from './lib/carousel';
-import select from './lib/select';
 import './lib/horizontal-timeline';
+import carousel from './lib/carousel';
+import slider from './lib/slider';
+import select from './lib/select';
 
 import './tooltip';
-import './select';
 import './tags';
 import './changeToggle';
 import './projectAccordeon';
@@ -22,6 +22,7 @@ DOC.ready(function () {
   body.classList.remove('no-js');
 
   carousel();
+  slider();
   select();
   initNavbarToggle();
 });
