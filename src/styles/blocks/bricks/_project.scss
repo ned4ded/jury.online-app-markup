@@ -1,6 +1,11 @@
 .project {
 	vertical-align: middle;
 	display: inline-flex;
+	&--sm {
+		.project__name {
+			max-width: 130px;
+		}
+	}
 	&__logo {
 		width: 37px;
 		height: 37px;
@@ -29,8 +34,9 @@
 
 .project-trigger {
 	position: relative;
+	margin-top: rem(13px);
 	margin-right: rem(12px);
-	vertical-align: middle;
+	vertical-align: top;
 	display: inline-block;
 	cursor: pointer;
 	transition: transform .3s;
