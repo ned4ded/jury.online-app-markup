@@ -5,21 +5,28 @@
     max-width: 325px;
 
     &__value {
+      margin: 0;
       padding-right: 11px;
       padding-left: 11px;
-
-      white-space: nowrap;
-
-      color: theme-primary();
-
-      font-weight: bold;
 
       &:first-child {
         padding-left: 0;
       }
 
       &-last-child {
-        right: 0;
+        padding-right: 0;
+      }
+    }
+
+    &__amount {
+      white-space: nowrap;
+
+      color: theme-primary();
+
+      font-weight: bold;
+
+      &:after {
+        content: ' ' attr(data-range-amount-postfix);
       }
     }
 
@@ -50,7 +57,7 @@
       background-color: #83a2bd;
     }
 
-    &__handler {
+    & &__handler {
       position: absolute;
       z-index: 1;
 
@@ -60,17 +67,10 @@
       height: 17px;
 
       transform: translateY(-50%);
+      top: 50%;
 
       border-radius: 100%;
       background-color: white;
       box-shadow: 0 0 4px 0 rgba(black, .3);
-
-      &:first-child {
-        left: 22px;
-      }
-
-      &:last-child {
-        left: 129px;
-      }
     }
   }
