@@ -1,17 +1,17 @@
 {% macro make(options) %}
-<div data-range class="range-input">
-  <label data-range-value="min" class="range-input__value range-input__value--min">
-    <input data-range-input="0" type="text" name="" value="5">
+<div data-range-slider class="range-input">
+  <label data-range-slider-value="min" class="range-input__value range-input__value--min">
+    <input data-range-slider-input="0" type="text" name="" value="5">
 
-    <span data-range-amount data-range-amount-postfix="ETH" class="range-input__amount" hidden></span>
+    <span data-range-slider-amount data-range-slider-amount-postfix="ETH" class="range-input__amount" hidden></span>
   </label>
 
-  <div data-range-container></div>
+  <div data-range-slider-container></div>
 
-  <label data-range-value="max" class="range-input__value range-input__value--max">
-    <input data-range-input="100" type="text" name="" value="79">
+  <label data-range-slider-value="max" class="range-input__value range-input__value--max">
+    <input data-range-slider-input="100" type="text" name="" value="79">
 
-    <span data-range-amount data-range-amount-postfix="ETH" class="range-input__amount" hidden></span>
+    <span data-range-slider-amount data-range-slider-amount-postfix="ETH" class="range-input__amount" hidden></span>
   </label>
 </div>
 {% endmacro %}

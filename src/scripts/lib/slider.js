@@ -7,11 +7,11 @@ const Classes = {
 }
 
 const Attrs = {
-  MAIN: 'data-range',
-  CONTAINER: 'data-range-container',
-  VALUE: 'data-range-value',
-  AMOUNT: 'data-range-amount',
-  INPUT: 'data-range-input',
+  MAIN: 'data-range-slider',
+  CONTAINER: 'data-range-slider-container',
+  VALUE: 'data-range-slider-value',
+  AMOUNT: 'data-range-slider-amount',
+  INPUT: 'data-range-slider-input',
 }
 
 const Selectors = {
