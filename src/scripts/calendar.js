@@ -31,7 +31,7 @@ parentWrap.each((i,el) => {
 const trigger = $('.js-icon-calendar-trigger');
 trigger.on('click', function(){
 	const that = $(this);
-	const parent = that.parents(parentWrap);
+	const parent = that.parents('.js-icon-calendar');
 	(!parent.hasClass(OPEN))
 		? parent.addClass(OPEN)
 		: parent.removeClass(OPEN);

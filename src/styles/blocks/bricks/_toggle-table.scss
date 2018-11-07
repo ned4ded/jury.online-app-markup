@@ -7,6 +7,9 @@
 	border-radius: 5px;
 	box-shadow: 2.1px 2.1px 22.1px 1.9px rgba(224, 237, 245, 0.35);
 	background-color: #FDFDFD;
+	table-layout: fixed;
+	border-collapse: collapse;
+	border-spacing: 0;
 	thead {
 		border-radius: 0 0 5px 5px;
 		box-shadow: 0 1px 0 #e3e6e9;
@@ -22,16 +25,39 @@
 		padding: rem(16px) rem(8px);
 		color: #3a3a3a;
 		font-size: 15px;
+		// width: 16.6%;
 		font-weight: 400;
 		&:first-child {
 			padding-left: rem(26px);
 		}
+	}
+	.toggle-table__project {
+		width: 20%;
+	}
+	.toggle-table__description {
+		width: 22%;
+	}
+	.toggle-table__round {
+		width: 10.6%;
+	}
+	.toggle-table__status {
+		width: 9.95%;
+	}
+	.toggle-table__currentcycle {
+		width: 12.35%;
+	}
+	.toggle-table__icodate {
+		width: 12.8%;
+	}
+	.toggle-table__rating {
+		width: 12.31%;
 	}
 	&__inner-table {
 		display: none;
 	}
 	.toggle-table__wrap {
 		padding: 0;
+		max-width: 100%;
 		&:first-child {
 			padding: 0;
 		}
@@ -46,6 +72,9 @@
 	border-top: 1px solid #EBEEF5;
 	border-bottom: 1px solid #EBEEF5;
 	background-color: #f9f9f9;
+	table-layout: fixed;
+	border-collapse: collapse;
+	border-spacing: 0;
 	thead {
 		box-shadow: none;
 		background-color: transparent;
@@ -58,11 +87,21 @@
 		line-height: 18px;
 	}
 	td {
+		position: relative;
 		padding: rem(8px) 0;
 		color: #2d3259;
 		font-size: 14px;
 		font-weight: 400;
 		line-height: 1.4;
+		&:before {
+			position: absolute;
+			content: "";
+			top: rem(8px);
+			left: 0;
+			right: 0;
+			bottom: rem(8px);
+			background-color: #f3f3f3;
+		};
 		&:first-child {
 			.table-toggle-inner__block {
 				border-radius: 5px 0 0 5px;
@@ -73,6 +112,12 @@
 				border-radius: 0 5px 5px 0;
 			}
 		}
+	}
+	tr:last-child td {
+		padding-bottom: rem(26px);
+		&:before {
+			bottom: rem(18px);
+		};
 	}
 	td,
 	th {
@@ -89,8 +134,23 @@
 			}
 		}
 	}
-	tr:last-child td {
-		padding-bottom: rem(26px);
+	.table-toggle-inner__hash {
+		width: 17.07%;
+	}
+	.table-toggle-inner__status {
+		width: 11.4%;
+	}
+	.table-toggle-inner__date {
+		width: 13.07%;
+	}
+	.table-toggle-inner__price {
+		width: 11.04%;
+	}
+	.table-toggle-inner__amount {
+		width: 17%;
+	}
+	.table-toggle-inner__release {
+		width: 30%;
 	}
 	a {
 		color: #68a2b7;
@@ -107,11 +167,19 @@
 		text-transform: uppercase;
 	}
 	&__block {
-		padding: rem(8px) rem(24px);
+		position: relative;
+		z-index: 1;
+		padding: rem(8px) rem(15px);
 		background-color: #f3f3f3;
 	}
 	&__progress {
-		margin: 3px 22px 0 0;
+		margin: 3px 0 0 0;
+	}
+	&__progress-text {
+		padding-left: 22px;
+		width: calc(100% - 166px);
+		vertical-align: top;
+		display: inline-block;
 	}
 	&__status-sm {
 		margin-right: 7px;

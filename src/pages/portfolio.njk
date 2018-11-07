@@ -34,19 +34,23 @@
           <!-- begin toggle-table -->
           <table class="toggle-table">
             <thead>
-              {% for text in ['Project', 'Description', 'Round', 'Status', 'Current Cycle', 'ICO Date', 'Rating'] %}
-              <th class="text-center">{{ text }}</th>
-              {% endfor %}
+              <th class="toggle-table__project text-center">Project</th>
+              <th class="toggle-table__description text-center">Description</th>
+              <th class="toggle-table__round text-center">Round</th>
+              <th class="toggle-table__status text-center">Status</th>
+              <th class="toggle-table__currentcycle text-center">Current Cycle</th>
+              <th class="toggle-table__icodate text-center">ICO Date</th>
+              <th class="toggle-table__rating text-center">Rating</th>
             </thead>
             <tbody>
               {% for item in [
                   {
                     project: {
-                      name: 'Elysian',
+                      name: 'Jury.Online Official Project',
                       type: 'E-commerce',
                       logo: 'elysian-logo.jpg'
                     },
-                    description: 'Decentralized platform based on blockchain',
+                    description: 'The KVANTOR platform elevates your transactions to a whole new level, providing freedom in relationships between economic entities and going beyond traditional payment channels, bypassing intermedi...',
                     round: 'Private Sale',
                     status: {
                       type: 'badge-gradient-gray',
@@ -66,12 +70,12 @@
                         amount: '510 <sub>ETH</sub>  /  22 000 <sub>LNT</sub>',
                         release: {
                           progress: '70%',
-                          text: '359 / 510 <sub>ETH</sub>',
+                          text: '565 / 58 816 465 <sub>ETH</sub>',
                           color: 'lg'
                         }
                       },
                       {
-                        hash: '...x3GV5ej1Ka3Ct',
+                        hash: '0x38e02bd735c28de020f7e5ff28f47968537d66298f03454f21ab9172f8a5072e',
                         status: {
                           type: 'active',
                           text: 'Active'
@@ -260,12 +264,12 @@
                   }
                 ] %}
               <tr>
-                <td>
+                <td class="toggle-table__project">
                   <div class="project-trigger" data-project-trigger="{{ loop.index }}">
                     <div class="project-trigger__text">3</div>
                     <div class="project-trigger__icon"></div>
                   </div>
-                  <div class="project">
+                  <div class="project project--sm">
                     <div class="project__logo" style="background-image: url(./assets/imgs/{{ item.project.logo }});"></div>
                     <div class="project__wrap">
                       <div class="project__name">{{ item.project.name }}</div>
@@ -273,16 +277,16 @@
                     </div>
                   </div>
                 </td>
-                <td class="text-center">{{ item.description }}</td>
-                <td class="text-center">{{ item.round }}</td>
-                <td class="text-center">
+                <td class="toggle-table__description text-center"><p>{{ item.description }}</p></td>
+                <td class="toggle-table__round text-center">{{ item.round }}</td>
+                <td class="toggle-table__status text-center">
                   <!-- begin status -->
                   <div class="badge{% if item.status.type %} {{ item.status.type }}{% endif %}">{{ item.status.text }}</div>
                   <!-- end status -->
                 </td>
-                <td class="text-center">{{ item.currentcycle }}</td>
-                <td class="text-center">{{ item.icodate }}</td>
-                <td class="text-center">
+                <td class="toggle-table__currentcycle text-center">{{ item.currentcycle }}</td>
+                <td class="toggle-table__icodate text-center">{{ item.icodate }}</td>
+                <td class="toggle-table__rating text-center">
                  {{ rating.make(4, 'rating--simple', '4.5') }}
                 </td>
               </tr>
@@ -291,41 +295,42 @@
                   <div class="toggle-table__inner-table" data-project-id="{{ loop.index }}">
                     <table class="table-toggle-inner">
                       <thead>
-                        {% for text in ['Contract Hash', 'Contract Status', 'Investment Date', 'Token Price', 'Investment / Token Amount', 'Investment Release'] %}
-                        <th class="text-center">{{ text }}</th>
-                        {% endfor %}
+                        <th class="text-center table-toggle-inner__hash">Contract Hash</th>
+                        <th class="text-center table-toggle-inner__status">Contract Status</th>
+                        <th class="text-center table-toggle-inner__date">Investment Date</th>
+                        <th class="text-center table-toggle-inner__price">Token Price</th>
+                        <th class="text-center table-toggle-inner__amount">Investment / Token Amount</th>
+                        <th class="text-center table-toggle-inner__release">Investment Release</th>
                       </thead>
-                      <tbody>
-                        {% for item in item.table %}
+                      {% for item in item.table %}
                         <tr>
-                          <td class="text-center">
-                            <div class="table-toggle-inner__block"><a href="#">{{ item.hash }}</a></div>
+                          <td class="text-center table-toggle-inner__hash">
+                            <div class="table-toggle-inner__block text-ellipsis"><a href="#">{{ item.hash }}</a></div>
                           </td>
-                          <td class="text-center">
+                          <td class="text-center table-toggle-inner__status">
                             <div class="table-toggle-inner__block">
                               <span class="table-toggle-inner__status-sm status-sm {% if item.status.type %} is-{{ item.status.type }}{% endif %}"></span>{{ item.status.text }}
                             </div>
                           </td>
-                          <td class="text-center">
+                          <td class="text-center table-toggle-inner__date">
                             <div class="table-toggle-inner__block">{{ item.date }}</div>
                           </td>
-                          <td class="text-center">
+                          <td class="text-center table-toggle-inner__price">
                             <div class="table-toggle-inner__block">{{ item.price | safe }}</div>
                           </td>
-                          <td class="text-center">
+                          <td class="text-center table-toggle-inner__amount">
                             <div class="table-toggle-inner__block">{{ item.amount | safe }}</div>
                           </td>
-                          <td >
+                          <td class="table-toggle-inner__release">
                             <div class="table-toggle-inner__block">
                               <div class="table-toggle-inner__progress progress">
                                 <div class="progress__inner progress__inner--{{ item.release.color }}" style="width: {{ item.release.progress }}"></div>
                               </div>
-                              {{ item.release.text | safe }}
+                              <div class="table-toggle-inner__progress-text">{{ item.release.text | safe }}</div>
                             </div>
                           </td>
                         </tr>
                         {% endfor %}
-                      </tbody>
                     </table>
                   </div>
                 </td>

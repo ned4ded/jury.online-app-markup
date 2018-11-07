@@ -1,16 +1,22 @@
+import { DOC } from './constants';
+
 import 'bootstrap';
-import './tooltip';
-import './tags';
-import './changeToggle';
+
+import './lib/horizontal-timeline';
 import carousel from './lib/carousel';
 import slider from './lib/slider';
 import select from './lib/select';
+
+import './tooltip';
+import './tags';
+import './changeToggle';
 import './projectAccordeon';
 import './calendar';
 import initNavbarToggle from './navbarToggle';
+import './chart';
 
 
-$(document).ready(function () {
+DOC.ready(function () {
   const body = document.querySelector('body');
 
   body.classList.remove('no-js');
