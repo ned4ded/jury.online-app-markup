@@ -1,7 +1,9 @@
-{% macro make(options) %}
-<div data-range-slider class="range-input">
+{% import "lib/helpers.njk" as helpers %}
+
+{% macro make(min, max, initMin, initMax, classes) %}
+<div data-range-slider class="range-input{{ helpers.parse(classes) }}">
   <label data-range-slider-value="min" class="range-input__value range-input__value--min">
-    <input data-range-slider-input="0" type="text" name="" value="5">
+    <input data-range-slider-input="{{ min }}" type="text" name="" value="{{ initMin }}">
 
     <span data-range-slider-amount data-range-slider-amount-postfix="ETH" class="range-input__amount" hidden></span>
   </label>
@@ -9,7 +11,7 @@
   <div data-range-slider-container></div>
 
   <label data-range-slider-value="max" class="range-input__value range-input__value--max">
-    <input data-range-slider-input="100" type="text" name="" value="79">
+    <input data-range-slider-input="{{ max }}" type="text" name="" value="{{ initMax }}">
 
     <span data-range-slider-amount data-range-slider-amount-postfix="ETH" class="range-input__amount" hidden></span>
   </label>

@@ -1,6 +1,7 @@
 {% import "lib/icon.njk" as icon %}
 {% import "lib/helpers.njk" as helpers %}
 {% import "blocks/rating.njk" as rating %}
+{% import "blocks/range-input.njk" as range %}
 
 {% set filters = datasets.get('filters.json') %}
 
@@ -54,15 +55,7 @@
 
     <div class="filters__section filters__section--invest">
       <h4 class="filters__sub-heading">Invest</h4>
-      <div class="filters__section-content filters__range range-input">
-        <span class="range-input__value range-input__value--min">5 ETH</span>
-        <span class="range-input__slider">
-          <span class="range-input__handler range-input__handler--min"></span>
-          <span class="range-input__scale"></span>
-          <span class="range-input__handler range-input__handler--max"></span>
-        </span>
-        <span class="range-input__value range-input__value--max">79 ETH</span>
-      </div>
+      {{ range.make(0.00, 100.00, 5.00, 79.00, 'filters__section-content filters__range') }}
     </div>
 
     <div class="filters__section filters__section--kyc">
