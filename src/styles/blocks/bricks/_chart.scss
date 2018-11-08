@@ -1,0 +1,39 @@
+.chart {
+	text-align: center;
+	&--sm {
+		width: 38px;
+		height: 38px;
+		line-height: 38px;
+	}
+	&--md {
+		height: 105px;
+		width: 105px;
+		line-height: 105px;
+	}
+	&--sm,
+	&--md {
+		position: relative;
+		canvas {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+	}
+	&__inner {
+		vertical-align: middle;
+		line-height: 1.4;
+		display: inline-block;
+	}
+	&__value {
+		font-weight: 400;
+		font-size: rem(24px);
+		display: inline;
+	}
+	&__parcent {
+		margin-left: 5px;
+		font-size: rem(18px);
+		color: #75A3BF;
+		display: inline;
+	}
+}

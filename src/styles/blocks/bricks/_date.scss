@@ -1,0 +1,9 @@
+.date {
+	font-size: 14px;
+	font-weight: 600;
+	color: $glacier;
+	&__label {
+		font-weight: 400;
+		color: $dusty-gray;
+	}
+}

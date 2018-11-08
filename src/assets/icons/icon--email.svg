@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="12px" viewBox="0 0 16 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>icon--email</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M3,0 L13,0 C14.6568542,-3.04359188e-16 16,1.34314575 16,3 L16,9 C16,10.6568542 14.6568542,12 13,12 L3,12 C1.34314575,12 2.02906125e-16,10.6568542 0,9 L0,3 C-2.02906125e-16,1.34314575 1.34314575,3.04359188e-16 3,0 Z" id="path-1"></path>
+        <path d="M3,0 L13,0 C14.6568542,-3.04359188e-16 16,1.34314575 16,3 L16,9 C16,10.6568542 14.6568542,12 13,12 L3,12 C1.34314575,12 2.02906125e-16,10.6568542 0,9 L0,3 C-2.02906125e-16,1.34314575 1.34314575,3.04359188e-16 3,0 Z" id="path-3"></path>
+        <path d="M3,0 L13,0 C14.6568542,-3.04359188e-16 16,1.34314575 16,3 L16,9 C16,10.6568542 14.6568542,12 13,12 L3,12 C1.34314575,12 2.02906125e-16,10.6568542 0,9 L0,3 C-2.02906125e-16,1.34314575 1.34314575,3.04359188e-16 3,0 Z" id="path-5"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon--email">
+            <g id="Mask" fill="#FFFFFF">
+                <path d="M3,0 L13,0 C14.6568542,-3.04359188e-16 16,1.34314575 16,3 L16,9 C16,10.6568542 14.6568542,12 13,12 L3,12 C1.34314575,12 2.02906125e-16,10.6568542 0,9 L0,3 C-2.02906125e-16,1.34314575 1.34314575,3.04359188e-16 3,0 Z" id="path-1"></path>
+            </g>
+            <g id="Path-2-Clipped">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="path-1"></g>
+                <polyline id="Path-2" stroke="#75A3BF" mask="url(#mask-2)" points="-4.36363636 15 8 5.25 20.3636364 15"></polyline>
+            </g>
+            <g id="Path-Clipped">
+                <mask id="mask-4" fill="white">
+                    <use xlink:href="#path-3"></use>
+                </mask>
+                <g id="path-1"></g>
+                <polygon id="Path" stroke="#75A3BF" fill="#FFFFFF" mask="url(#mask-4)" points="-0.256029802 -0.25 8.203189 8.29531887 16.9541229 -0.25"></polygon>
+            </g>
+            <g id="Rectangle-Copy-Clipped">
+                <mask id="mask-6" fill="white">
+                    <use xlink:href="#path-5"></use>
+                </mask>
+                <g id="path-1"></g>
+                <path d="M3,0.5 C1.61928813,0.5 0.5,1.61928813 0.5,3 L0.5,9 C0.5,10.3807119 1.61928813,11.5 3,11.5 L13,11.5 C14.3807119,11.5 15.5,10.3807119 15.5,9 L15.5,3 C15.5,1.61928813 14.3807119,0.5 13,0.5 L3,0.5 Z" id="Rectangle-Copy" stroke="#75A3BF" mask="url(#mask-6)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

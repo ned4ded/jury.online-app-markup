@@ -75,6 +75,9 @@
       box-shadow: none;
     }
   }
+  &[readonly] {
+    padding-left: rem(15px);
+  }
   &--color-blue {
     color: $glacier;
     &:focus {
