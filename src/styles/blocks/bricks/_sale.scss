@@ -189,8 +189,8 @@
 		width: 100%;
 	}
 	&__head {
-		padding: 14px 12px 12px;
-		font-size: rem(16px);
+		padding: 7px 12px;
+		font-size: 0;
 		font-weight: 600;
 		color: #686678;
 		text-align: center;
@@ -198,12 +198,24 @@
 		border-bottom: 1px solid #E5E5E5;
 		background-color: #F5F5F5;
 	}
+	&__head-title {
+		font-size: rem(16px);
+		font-weight: 600;
+	}
 	&__wrap {
 		padding: 15px 15px 16px;
 		color: #2A2550;
 		font-size: rem(14px);
 		font-weight: 400;
 		text-align: center;
+	}
+	&__date {
+		padding: 0 5px;
+		color: #6d8199;
+		font-size: 12px;
+		border-top: 1px solid #E5E5E5;
+		display: inline-block;
+		vertical-align: top;
 	}
 	&__description {
 		font-size: rem(16px);
