@@ -22,7 +22,7 @@ DOC.ready(function () {
   body.classList.remove('no-js');
 
   carousel();
-  // slider();
+  slider();
   select();
   initNavbarToggle();
 });

@@ -1,5 +1,11 @@
 .contact {
 	padding-bottom: 200px;
+	@include bp-down(lg) {
+		padding-bottom: 100px;
+	}
+	@include bp-down(sm) {
+		padding-bottom: 50px;
+	}
 	&__container {
 		max-width: 1320px;
 	}

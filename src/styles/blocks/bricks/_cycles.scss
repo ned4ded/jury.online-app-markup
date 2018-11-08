@@ -7,8 +7,19 @@
 		padding-bottom: 42px;
 		vertical-align: top;
 		display: inline-block;
+		@include bp-down(md) {
+			padding-bottom: 0;
+			display: block;
+		}
 		&:not(:last-child) {
 			margin-right: 50px;
+			@include bp-down(lg) {
+				margin-right: 16px;
+			}
+			@include bp-down(md) {
+				padding-bottom: 25px;
+				margin-right: 0;
+			}
 			&:before {
 				position: absolute;
 				content: "";
@@ -17,6 +28,9 @@
 				height: 1px;
 				width: 32px;
 				background-color: #E7E7E7;
+				@include bp-down(lg) {
+					display: none;
+				}
 			}
 		}
 	}
@@ -26,6 +40,9 @@
 		bottom: 0;
 		opacity: 0;
 		margin-left: -10px;
+		@include bp-down(md) {
+			display: none;
+		}
 		.cycles__item.is-active & {
 			opacity: 1;
 		}

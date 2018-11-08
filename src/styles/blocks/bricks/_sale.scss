@@ -3,26 +3,58 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		@include bp-down(lg) {
+			flex-wrap: wrap;
+			flex-direction: column;
+		}
+	}
+	&__center {
+		@include bp-down(sm) {
+			width: 100%;
+		}
 	}
 	&__left {
 		padding-right: 38px;
-	}
-	&__center {
-
+		@include bp-down(lg) {
+			padding: 0 0 38px;
+		}
+		@include bp-down(sm) {
+			padding: 0 0 25px;
+		}
 	}
 	&__right {
 		padding-left: 38px;
+		@include bp-down(lg) {
+			padding: 38px 0 0;
+		}
+		@include bp-down(sm) {
+			padding: 30px 0 0;
+		}
 	}
 	&__body {
 		margin-top: 42px;
 		display: flex;
 		align-items: center;
+		@include bp-down(lg) {
+			flex-wrap: wrap;
+			flex-direction: column;
+		}
 	}
 	&__compare {
 		width: 372px;
+		@include bp-down(lg) {
+			width: 100%;
+		}
 	}
 	&__box {
 		width: calc((100% - 372px) / 2);
+		@include bp-down(lg) {
+			width: 100%;
+		}
+		@include bp-down(sm) {
+			padding-left: rem(16px);
+			padding-right: rem(16px);
+		}
 	}
 }
 
@@ -32,12 +64,36 @@
 	display: inline-block;
 	&--check-right {
 		margin-right: 68px;
+		@include bp-down(lg) {
+			margin: 0;
+		}
 	}
 	&--check-left {
 		margin-left: 68px;
+		@include bp-down(lg) {
+			margin: 0;
+		}
 	}
 	&__wrap {
-		
+		@include bp-down(lg) {
+			position: relative;
+		}
+		.user--check-right & {
+			@include bp-down(lg) {
+				padding-bottom: 112px;
+			}
+			@include bp-down(sm) {
+				padding-bottom: 0;
+			}
+		}
+		.user--check-left & {
+			@include bp-down(lg) {
+				padding-top: 112px;
+			}
+			@include bp-down(sm) {
+				padding-top: 0;
+			}
+		}
 	}
 	&__avatar {
 		position: relative;
@@ -47,6 +103,9 @@
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
+		@include bp-down(lg) {
+			position: static;
+		}
 	}
 	&__name {
 		margin-top: 18px;
@@ -72,6 +131,9 @@
 		height: 17px;
 		border-radius: 2px;
 		border: 1px solid #67DC8A;
+		@include bp-down(sm) {
+			display: none;
+		}
 		&:before {
 			position: absolute;
 			content: "";
@@ -92,12 +154,28 @@
 			left: 50%;
 			transform: translate(-50%, -50%);
 			font-size: 6px;
+			@include bp-down(lg) {
+				transform: translate(-50%,-50%) rotate(-90deg);
+			}
 		}
 		.user--check-right & {
 			right: -112px;
+			@include bp-down(lg) {
+				right: 50%;
+				top: auto;
+				bottom: 0;
+				margin-right: -8px;
+				transform: rotate(90deg);
+			}
 		} 
 		.user--check-left & {
 			left: -112px;
+			@include bp-down(lg) {
+				left: 50%;
+				top: 0;
+				margin-left: -8px;
+				transform: rotate(90deg);
+			}
 		}
 	}
 }
@@ -107,6 +185,9 @@
 	border: 1px solid #E5E5E5;
 	overflow: hidden;
 	border-radius: 10px;
+	@include bp-down(sm) {
+		width: 100%;
+	}
 	&__head {
 		padding: 14px 12px 12px;
 		font-size: rem(16px);

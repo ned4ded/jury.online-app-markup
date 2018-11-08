@@ -99,14 +99,43 @@ $box-spacers: (
   &__head-left {
     flex: 0 0 20%;
     max-width: 20%;
+    @include bp-down(lg) {
+      order: 2;
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+    @include bp-down(sm) {
+      padding-top: 15px;
+    }
   }
   &__head-center {
     flex: 0 0 60%;
     max-width: 60%;
+    @include bp-down(lg) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      order: 1;
+    }
   }
   &__head-right {
     flex: 0 0 20%;
     max-width: 20%;
+    @include bp-down(lg) {
+      margin-top: 5px;
+      order: 3;
+      flex: 0 0 50%;
+      max-width: 50%;
+      text-align: right;
+    }
+  }
+  &__head-left,
+  &__head-center, 
+  &__head-right {
+    @include bp-down(sm) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      text-align: center;
+    }
   }
 
   &__wrap {

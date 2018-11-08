@@ -8,6 +8,9 @@
 		padding: 25px 0;
 		display: flex;
 		align-items: center;
+		@include bp-down(sm) {
+			flex-wrap: wrap;
+		}
 		&:not(:last-child) {
 			border-bottom: 1px solid #E7E7E7;
 		}
@@ -25,13 +28,26 @@
 			counter-increment: section;                 /* Инкрементирует счетчик*/
 			content: counter(section) '. ';
 		}
+		@include bp-down(sm) {
+			margin-bottom: 5px;
+			padding: 0;
+			width: 100%;
+		}
 	}
 	&__control {
 		flex-grow: 1;
+		@include bp-down(sm) {
+			width: calc(100% - 70px;);
+		}
 	}
 	&__time {
 		padding: 0 25px;
 		width: 113px;
 		color: #9B9B9B;
+		@include bp-down(sm) {
+			padding-right: 0;
+			width: 70px;
+			text-align: right;
+		}
 	}
 }

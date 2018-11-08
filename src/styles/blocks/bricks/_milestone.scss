@@ -2,8 +2,18 @@
 	align-items: center;
 	display: flex;
 	color: #2A2550;
+	@include bp-down(sm) {
+		flex-wrap: wrap;
+		flex-direction: column;
+		text-align: center;
+	}
 	&__wrap {
 		padding-left: 45px;
+		@include bp-down(sm) {
+			margin-top: 15px;
+			width: 100%;
+			padding-left: 0;
+		}
 	}
 	&__title {
 		margin-bottom: 4px;
