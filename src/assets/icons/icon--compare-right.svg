@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>EX Icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Project-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Smart-contract-/-Web-version" transform="translate(-1233.000000, -617.000000)" fill="#CDD5DF">
+            <g id="Main" transform="translate(453.000000, 156.000000)">
+                <g id="Exchange" transform="translate(41.000000, 192.000000)">
+                    <g id="Agreement" transform="translate(265.000000, 0.000000)">
+                        <g id="EX" transform="translate(151.000000, 249.000000)">
+                            <g id="EX-Icon" transform="translate(335.500000, 32.500000) scale(-1, 1) translate(-335.500000, -32.500000) translate(323.000000, 20.000000)">
+                                <path d="M11.7142857,0 L24,-2.44249065e-15 C24.5522847,-1.56288892e-15 25,0.44771525 25,1 L25,1 C25,1.55228475 24.5522847,2 24,2 L11.7142857,2 C11.162001,2 10.7142857,1.55228475 10.7142857,1 L10.7142857,1 C10.7142857,0.44771525 11.162001,1.01453063e-16 11.7142857,0 Z" id="Rectangle"></path>
+                                <rect id="Rectangle" x="0" y="8" width="21.4285714" height="2" rx="1"></rect>
+                                <path d="M11.7142857,15 L24,15 C24.5522847,15 25,15.4477153 25,16 L25,16 C25,16.5522847 24.5522847,17 24,17 L11.7142857,17 C11.162001,17 10.7142857,16.5522847 10.7142857,16 L10.7142857,16 C10.7142857,15.4477153 11.162001,15 11.7142857,15 Z" id="Rectangle"></path>
+                                <path d="M1,23 L20.4285714,23 C20.9808562,23 21.4285714,23.4477153 21.4285714,24 L21.4285714,24 C21.4285714,24.5522847 20.9808562,25 20.4285714,25 L1,25 C0.44771525,25 6.76353751e-17,24.5522847 0,24 L0,24 C-6.76353751e-17,23.4477153 0.44771525,23 1,23 Z" id="Rectangle"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

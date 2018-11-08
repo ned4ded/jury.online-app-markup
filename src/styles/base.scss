@@ -10,12 +10,89 @@ body {
   min-width: $body-min-w;
 }
 
+// links
 .link {
 	color: $glacier;
+	transition: color .3s, border-color .3s;
+	border-bottom: 1px solid transparent;
+	&:hover {
+		color: darken($glacier, 20%);
+		border-color: currentColor;
+		text-decoration: none;
+	}
+}
+.source-link {
+	font-size: 14px;
+	color: $glacier;
+	font-weight: 400;
 	transition: color .3s;
 	&:hover {
 		color: darken($glacier, 20%);
+		text-decoration: none;
 	}
+	.icon {
+		margin-right: rem(10px);
+		font-size: 14px;
+		vertical-align: sub;
+		display: inline-block;
+	}
+}
+.icon-link {
+	position: relative;
+	padding-left: 24px;
+	font-size: 14px;
+	color: #6D8199;
+	font-weight: 400;
+	transition: color .3s;
+	vertical-align: top;
+	display: inline-block;
+	&:hover {
+		color: darken(#6D8199, 20%);
+		text-decoration: none;
+	}
+	.icon {
+		position: absolute;
+		left: 0;
+		top: 3px;
+		vertical-align: top;
+		display: inline-block;
+	}
+}
+
+.link-attach {
+	position: relative;
+	padding-left: 35px;
+	color: #75A3BF;
+	font-size: 14px;
+	vertical-align: top;
+	transition: color .3s;
+	display: inline-block;
+	&:hover {
+		text-decoration: none;
+		color: darken(#6D8199, 20%);
+	}
+	&__icon {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	&__text	{
+		text-decoration: underline;
+	}
+}
+
+// texts styles
+.text-ellipsis {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.text-uppercase {
+	text-transform: uppercase;
+}
+
+.text-blue {
+	color: $glacier !important;
 }
 
 .title-info {
@@ -28,11 +105,7 @@ body {
 	display: none;
 }
 
-.text-ellipsis {
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	overflow: hidden;
-}
+
 
 /* COMMON STYLES END */
 

@@ -73,6 +73,11 @@ $box-spacers: (
     }
   }
 
+  &--border {
+    box-shadow: none;
+    border: 1px solid #E3E3E3;
+  }
+
   &--has--head {
     padding: 0  0 spacer(6);
   }
@@ -81,6 +86,27 @@ $box-spacers: (
     padding: spacer(4) spacer(8);
     font-size: 18px;
     font-weight: 600;
+    &--md {
+      padding: spacer(7) spacer(8) spacer(6);
+    }
+  }
+
+  &__head-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__head-left {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+  &__head-center {
+    flex: 0 0 60%;
+    max-width: 60%;
+  }
+  &__head-right {
+    flex: 0 0 20%;
+    max-width: 20%;
   }
 
   &__wrap {
@@ -88,6 +114,9 @@ $box-spacers: (
     padding: spacer(8) spacer(11);
     &--md {
       padding: spacer(8) spacer(9) spacer(5);
+    }
+    &--2md {
+      padding: spacer(8) spacer(8);
     }
     &--sm {
       padding: spacer(6) spacer(5) spacer(2);
@@ -106,6 +135,31 @@ $box-spacers: (
   &__footer {
     font-size: 14px;
     color: #9F9F9F;
+  }
+
+  &__cols {
+    margin-top: rem(16px);
+    font-size: 14px;
+    color: #6D8199;
+  }
+  
+  &__row {
+    margin: rem(-5px);
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__col {
+    padding: 0 rem(5px);
+    flex: 0 0 50%;
+    max-width: 50%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    hyphens: auto;
+    &:last-child {
+      text-align: right;
+    };
   }
 
   @each $size, $length-map in $box-spacers {

@@ -1,0 +1,37 @@
+.transactions {
+	margin: 0 auto;
+	max-width: 906px;
+	font-size: 14px;
+	color: #2A2550;
+	counter-reset: section;
+	&__row {
+		padding: 25px 0;
+		display: flex;
+		align-items: center;
+		&:not(:last-child) {
+			border-bottom: 1px solid #E7E7E7;
+		}
+		&:first-child {
+			padding-top: 0;
+		}
+		&:last-child {
+			padding-bottom: 0;
+		}
+	}
+	&__name {
+		padding: 0 25px 0 50px;
+		width: 190px;
+		&:before {
+			counter-increment: section;                 /* Инкрементирует счетчик*/
+			content: counter(section) '. ';
+		}
+	}
+	&__control {
+		flex-grow: 1;
+	}
+	&__time {
+		padding: 0 25px;
+		width: 113px;
+		color: #9B9B9B;
+	}
+}

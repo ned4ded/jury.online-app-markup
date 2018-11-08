@@ -1,0 +1,154 @@
+.cd-horizontal-timeline {
+	margin: 0;
+	.timeline {
+		width: 100%;
+		max-width: 837px;
+		height: 134px;
+		border-radius: 18px;
+		border: 1px solid #E7E7E7;
+	}
+	.events-wrapper {
+		margin: 0 120px;
+		&:before,
+		&:after {
+			display: none;
+		}
+	}
+	.events {
+		top: 57px;
+		background-color: #EBEEF5;
+		ol {
+			list-style: none;
+		}
+		a {
+			padding-bottom: 12px;
+			&:hover {
+				text-decoration: none;
+			}
+			&:before {
+				content: '';
+				position: absolute;
+				left: 50%;
+				right: auto;
+				transform: translateX(-50%);
+				bottom: -9px;
+				height: 20px;
+				width: 20px;
+				border-radius: 50%;
+				border: 1px solid transparent;
+				transition: border-color .3s;
+			}
+			&:after {
+				width: 10px;
+				height: 10px;
+				bottom: -4px;
+				background-color: #EBEEF5;
+				border-color: #EBEEF5;
+			}
+			&.selected,
+			&.older-event {
+				&:after {
+					background-color: #FF7864;
+					border-color: #FF7864;
+				}
+			}
+			&.selected {
+				z-index: 3;
+				&:before {
+					border-color: #E7E7E7;
+				}
+				.events__date {
+					border-color: #FF7864;	
+				}
+			}
+		}
+		&__period {
+			color: #75A3BF;
+			font-size: 16px;
+			font-weight: 600;
+		}
+		&__date {
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			width: 90px;
+			margin-left: -45px;
+			margin-top: 18px;
+			padding: 5px 8px;
+			font-size: 14px;
+			font-weight: 600;
+			color: #2A2550;
+			white-space: nowrap;
+			border-radius: 7px;
+			border: 1px solid transparent;
+			transition: border-color .3s;
+			background-color: #FAFAFA;
+		}
+	}
+	.events-content {
+		margin: 66px 0 0;
+		ol {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			li {
+				padding: 0;
+				margin: 0;
+			}
+		}
+	}
+	.filling-line {
+		display: none;
+	}
+	li>.events-wrap {
+		padding-left: 178px;
+		width: 100%;
+		max-width: 100%;
+	}
+	.events-wrap {
+		&__group {
+			&:not(:last-child) {
+				margin-bottom: 60px;
+			}
+		}
+		&__text {
+			padding-left: 27px;
+		}
+		&__field {
+			padding-left: 27px;
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+
+.cd-timeline-navigation {
+	list-style: none;
+	a {
+		top: 58px;
+		width: 32px;
+		height: 32px;
+		transition: opacity .3s;
+		border: 1px solid #75A3BF;
+		&.prev {
+			left: 49px;
+		}
+		&.next {
+			right: 49px;
+		}
+		&.inactive {
+			opacity: 0.4;
+		}
+		.icon {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+		.icon--arrow-left {
+			transform: translate(-50%,-50%) rotate(180deg);
+		}
+	}
+}
+

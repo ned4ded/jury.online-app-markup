@@ -15,6 +15,26 @@
 	@include get-em-width(11, 6);
 }
 
+.icon--arrow-cycle {
+	font-size: 11.3px;
+	@include get-em-width(20, 11.3);
+}
+
+.icon--arrow-left {
+	font-size: 12px;
+	@include get-em-width(12, 12);
+}
+
+.icon--arrow-right {
+	font-size: 12px;
+	@include get-em-width(12, 12);
+}
+
+.icon--attach {
+	font-size: 17px;
+	@include get-em-width(16, 17);
+}
+
 .icon--bell {
 	font-size: 20px;
 	@include get-em-width(18.03, 20);
@@ -55,6 +75,16 @@
 	@include get-em-width(14, 9);
 }
 
+.icon--compare-left {
+	font-size: 25px;
+	@include get-em-width(25, 25);
+}
+
+.icon--compare-right {
+	font-size: 25px;
+	@include get-em-width(25, 25);
+}
+
 .icon--down {
 	font-size: 6px;
 	@include get-em-width(10, 6);
@@ -63,6 +93,11 @@
 .icon--duble {
 	font-size: 21px;
 	@include get-em-width(16, 21);
+}
+
+.icon--email {
+	font-size: 12px;
+	@include get-em-width(16, 12);
 }
 
 .icon--eye {
@@ -93,6 +128,11 @@
 .icon--gear {
 	font-size: 16px;
 	@include get-em-width(15.97, 16);
+}
+
+.icon--link {
+	font-size: 14px;
+	@include get-em-width(14, 14);
 }
 
 .icon--pdf {

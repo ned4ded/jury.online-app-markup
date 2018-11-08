@@ -1,0 +1,149 @@
+.sale {
+	&__head {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&__left {
+		padding-right: 38px;
+	}
+	&__center {
+
+	}
+	&__right {
+		padding-left: 38px;
+	}
+	&__body {
+		margin-top: 42px;
+		display: flex;
+		align-items: center;
+	}
+	&__compare {
+		width: 372px;
+	}
+	&__box {
+		width: calc((100% - 372px) / 2);
+	}
+}
+
+.user {
+	width: 200px;
+	vertical-align: top;
+	display: inline-block;
+	&--check-right {
+		margin-right: 68px;
+	}
+	&--check-left {
+		margin-left: 68px;
+	}
+	&__wrap {
+		
+	}
+	&__avatar {
+		position: relative;
+		margin: 0 auto;
+		height: 110px;
+		width: 110px;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	&__name {
+		margin-top: 18px;
+		font-size: rem(20px);
+		font-weight: 600;
+		text-align: center;
+		hyphens: auto;
+	}
+	&__status {
+		height: 8px;
+		width: 8px;
+		border-radius: 50px;
+		vertical-align: middle;
+		display: inline-block;
+		&.is-active {
+			background-color: #67DC8A;
+		}
+	}
+	&__check-line {
+		position: absolute;
+		top: 50px;
+		width: 17px;
+		height: 17px;
+		border-radius: 2px;
+		border: 1px solid #67DC8A;
+		&:before {
+			position: absolute;
+			content: "";
+			top: 50%;
+			margin-top: -1px;
+			width: 72px;
+			border-bottom: 1px dashed #979797;
+			.user--check-right & {
+				left: -84px;
+			} 
+			.user--check-left & {
+				right: -84px;
+			}
+		}
+		.icon {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 6px;
+		}
+		.user--check-right & {
+			right: -112px;
+		} 
+		.user--check-left & {
+			left: -112px;
+		}
+	}
+}
+
+.sale-card {
+	width: 372px;
+	border: 1px solid #E5E5E5;
+	overflow: hidden;
+	border-radius: 10px;
+	&__head {
+		padding: 14px 12px 12px;
+		font-size: rem(16px);
+		font-weight: 600;
+		color: #686678;
+		text-align: center;
+		text-transform: uppercase;
+		border-bottom: 1px solid #E5E5E5;
+		background-color: #F5F5F5;
+	}
+	&__wrap {
+		padding: 15px 15px 16px;
+		color: #2A2550;
+		font-size: rem(14px);
+		font-weight: 400;
+		text-align: center;
+	}
+	&__description {
+		font-size: rem(16px);
+		font-weight: 600;
+	}
+	&__summ {
+		font-size: rem(24px);
+		font-weight: 700;
+		text-transform: uppercase;
+		&:not(:first-child) {
+			margin-top: 10px;
+		}
+	}
+	&__bonus {
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	&__conversion {
+		text-transform: uppercase;
+		&:not(:first-child) {
+			margin-top: 15px;
+		}
+	}
+}
