@@ -1,4 +1,5 @@
 import 'jquery-ui/ui/widgets/slider';
+import { getElementsMinWidth } from './util.js';
 
 const Classes = {
   SLIDER: 'range-input__slider',
@@ -34,10 +35,24 @@ class Element {
 
   hide() {
     this._el.attr('hidden', true);
+
+    return this;
   }
 
   show() {
     this._el.removeAttr('hidden');
+
+    return this;
+  }
+
+  getElement() {
+    return this._el;
+  }
+
+  setCss(...args) {
+    this._el.css(...args);
+
+    return this;
   }
 }
 
@@ -121,6 +136,14 @@ class ValueHandler {
     return this._input.getCap();
   }
 
+  getSpan() {
+    return this._span.getElement();
+  }
+
+  setSpanCss(...args) {
+    return this._span.setCss(...args);
+  }
+
   _handler = (ev, value) => {
     this._span.text(value);
   }
@@ -145,6 +168,10 @@ class ValueHandlers {
 
   get(key) {
     return this._map.get(key);
+  }
+
+  forEach(fn) {
+    return this._map.forEach(fn);
   }
 
   _process(fn, filter = () => true) {
@@ -175,6 +202,28 @@ class ValueHandlers {
     };
 
     return this._process(inits());
+  }
+
+  getMax() {
+    const fn = () => {
+      let max;
+
+      return (end, type, handler) => {
+        if(end) {
+          return max;
+        }
+
+        max = Number(handler.getCap());
+
+        return;
+      };
+    };
+
+    const filter = (key, value) => {
+      return key === Values.MAX;
+    };
+
+    return this._process(fn());
   }
 
   getMinMax() {
@@ -251,6 +300,18 @@ class Slider {
       step: 0.01,
       values: Object.values(this._valueHandlers.getInit())
     }
+
+    const span = this._valueHandlers.get(Values.MAX).getSpan().get(0);
+
+    const text = document.createTextNode([Math.floor(this._valueHandlers.getMax()), '00'].join('.'));
+
+    const clone = span.cloneNode();
+
+    clone.appendChild(text);
+
+    const w = getElementsMinWidth(clone);
+
+    this._valueHandlers.forEach((handler) => handler.setSpanCss('min-width', w));
 
     this._container = $( container ).slider(opts).on( "slide", ( ev, ui ) => {
       const [ min, max ] = ui.values;
