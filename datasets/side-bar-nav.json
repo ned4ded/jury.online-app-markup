@@ -18,6 +18,12 @@
     "ref" : "#"
   },
   {
+    "id": "about",
+    "name": "About Us",
+    "icon": "information",
+    "ref" : "#"
+  },
+  {
     "id": "portfolio",
     "name": "Portfolio",
     "icon": "feed",

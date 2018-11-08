@@ -1,6 +1,7 @@
 .range-input {
     display: inline-flex;
     align-items: center;
+
     width: 325px;
     max-width: 325px;
 
@@ -19,6 +20,8 @@
     }
 
     &__amount {
+      display: inline-block;
+
       white-space: nowrap;
 
       color: theme-primary();
@@ -28,6 +31,10 @@
       &:after {
         content: ' ' attr(data-range-amount-postfix);
       }
+    }
+
+    &__value--min &__amount {
+      text-align: right;
     }
 
     &__slider {
@@ -60,6 +67,7 @@
     & &__handler {
       position: absolute;
       z-index: 1;
+      top: 50%;
 
       display: inline-block;
 
@@ -67,7 +75,6 @@
       height: 17px;
 
       transform: translateY(-50%);
-      top: 50%;
 
       border-radius: 100%;
       background-color: white;

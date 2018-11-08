@@ -130,6 +130,11 @@
 	@include get-em-width(15.97, 16);
 }
 
+.icon--information {
+	font-size: 437.6px;
+	@include get-em-width(437.6, 437.6);
+}
+
 .icon--link {
 	font-size: 14px;
 	@include get-em-width(14, 14);
