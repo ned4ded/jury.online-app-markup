@@ -1,55 +1,154 @@
 .rating {
+  $fz-md: 16px;
+  $fz-sm: 12px;
+
   display: inline-flex;
   align-items: center;
 
+  font-size: $fz-md;
+
   &--simple {
     padding: 6px 10px;
+
     border: 1px solid #e3e3e3;
     border-radius: 16px;
-    align-items: flex-start;
     background-color: #FFF;
+
+    font-size: $fz-sm;
   }
 
   &__icon {
+    position: relative;
+
     display: inline-block;
 
-    margin: 0 4px;
+    border: 4px solid transparent;
+    border-top: none;
+    border-bottom-width: 2px;
 
     &:first-child {
-      margin-left: 0;
+      padding-left: 0;
     }
 
-    &-last-child {
-      margin-right: 0;
+    &:last-child {
+      padding-right: 0;
     }
 
     svg {
-      font-size: 15px;
+      font-size: $fz-md;
 
       fill: gray('200');
-      .rating--simple & {
-        font-size: 12px;
-      }
     }
+
+    &--input {
+      cursor: pointer;
+    }
+
+    // &:hover svg {
+    //   fill: rgba(mix(gray('200'), #f2ca5d, 40%), .75);
+    //
+    // }
 
     &--active {
       svg {
         fill: #f2ca5d;
       }
     }
-    .rating--simple & {
-      margin: 1px 2px 0;
-      line-height: 1;
-      font-size: 0;
+
+    // &--hover {
+    //   svg {
+    //     fill: rgba(#f2ca5d, .5);
+    //     filter: url('../assets/sprite.svg#filter--star-glow');
+    //   }
+    // }
+
+    &--active#{&}--hover svg {
+      fill: #f2ca5d;
     }
   }
-  &__eval {
-    margin-left: 4px;
-    color: #4c4c4c;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.1;
-    vertical-align: middle;
+
+  &--simple &__icon {
+    border: 2px solid transparent;
+    border-top: none;
+
+    line-height: 1;
+
+    svg {
+      font-size: $fz-sm;
+    }
+  }
+
+  &__icons {
+    margin: 0;
+  }
+
+  &__icon-lining {
+    position: absolute;
+
     display: inline-block;
+
+    width: 0;
+
+    svg {
+      fill: gray('200');
+    }
+
+    &:hover svg {
+      filter: none;
+    }
+  }
+
+  &__container {
+    display: inline-block;
+    position: relative;
+  }
+
+  &__stars {
+    display: inline-block;
+
+    margin: 0;
+
+    &--active {
+      position: absolute;
+      z-index: 1;
+      left: 0;
+
+      display: inline-flex;
+      overflow: hidden;
+
+      width: 0;
+
+      svg {
+        fill: #f2ca5d;
+      }
+
+      .rating__icon--hover svg {
+        filter: url('../assets/sprite.svg#filter--star-glow');
+      }
+    }
+
+    &--inactive {
+      svg {
+        fill: gray('200');
+      }
+
+      .rating__icon--hover svg {
+        fill: rgba(#f2ca5d, .5);
+        filter: url('../assets/sprite.svg#filter--star-glow');
+      }
+    }
+  }
+
+  &__eval {
+    display: inline-block;
+
+    margin-left: 4px;
+
+    vertical-align: middle;
+
+    color: #4c4c4c;
+
+    font-weight: 400;
+    line-height: 1;
   }
 }

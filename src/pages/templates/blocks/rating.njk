@@ -1,15 +1,33 @@
 {% import "lib/helpers.njk" as helpers %}
 {% import "lib/icon.njk" as icon %}
 
-{% macro make(rating, classes = false, eval = false) %}
-  <div class="rating{{ helpers.parse(classes) }}">
+{% macro make(rating, classes = false, eval = false, input = false) %}
+  <div {% if input %} data-rating="data-rating" {% endif %} class="rating{{ helpers.parse(classes) }}">
+    {% set stars %}
     {% for item in range(5) %}
-    <span class="rating__icon{{ ' rating__icon--active' if rating >= loop.index }}">
+    <span {% if input %} data-rating-star hidden="hidden" {% endif %} class="rating__icon{{ ' rating__icon--active' if (rating >= (loop.index * 2)) and not input }}{{ ' rating__icon--input' if input}}">
       {{ icon.make('star') }}
     </span>
     {% endfor %}
-   {% if eval %}
-   <span class="rating__eval">{{ eval }}</span>
-   {% endif %}
+    {% endset %}
+
+    {% if input %}
+      <input name="rating" data-rating-input="data-rating-input" type="range" max="10" min="0" step="1" value="{{ rating }}">
+
+      <div class="rating__container">
+        <p data-rating-stars="active" class="rating__stars rating__stars--active">
+          {{ stars | safe }}
+        </p>
+        <p data-rating-stars="inactive" class="rating__stars rating__stars--inactive">
+          {{ stars | safe }}
+        </p>
+      </div>
+    {% else %}
+      {{ stars | safe }}
+    {% endif %}
+
+    {% if eval %}
+      <span class="rating__eval">{{ eval }}</span>
+    {% endif %}
   </div>
 {% endmacro %}

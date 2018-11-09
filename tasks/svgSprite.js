@@ -60,6 +60,24 @@ export function svgSprite() {
 
             svgTag.insertBefore(parsedStyles.getElementsByTagName('svg')[0].firstChild, svgTag.firstChild);
 
+            const filtersFiles = fs.readdirSync(config.paths.svgFilters);
+            const filters = filtersFiles.map(name => {
+              return { root: new DOMParser().parseFromString(fs.readFileSync(config.paths.svgFilters + name, 'utf-8'), "image/svg+xml"), name };
+            });
+
+            filters.forEach(({ root, name }) => {
+              const filters = Array.from(root.getElementsByTagName('filter'));
+
+              filters.forEach(filter => {
+                const id = filter.getAttribute('id');
+                const newId = id ? name.split('.').slice(0, -1).join('.') + '-' + id : name;
+
+                filter.setAttribute('id', newId);
+
+                svgTag.appendChild(filter);
+              });
+            });
+
             return s.serializeToString(parsedSvg);
           }
         ]
