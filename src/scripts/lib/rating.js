@@ -173,7 +173,7 @@ class Stars {
 
         const index = this._findIndex(star);
 
-        fn((index + 1) * this._weight - (width / 2 >= x ? 1 : 0));
+        fn((index + 1) * this._weight - (width / 2 >= x ? this._weight / 2 : 0));
 
         return;
       });
