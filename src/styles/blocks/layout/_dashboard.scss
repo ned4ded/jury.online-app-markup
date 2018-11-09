@@ -59,8 +59,15 @@
       display: block;
     }
 
-    &[data-state="closing"] {
+    &[data-desktop-state="opened"] {
       @include bp-up($navbar-collapse-bp) {
+        display: block;
+      }
+    }
+
+    &[data-desktop-state="closing"] {
+      @include bp-up($navbar-collapse-bp) {
+        display: block;
         overflow-x: hidden;
 
         width: $side-bar-w-closed;
@@ -68,8 +75,9 @@
       }
     }
 
-    &[data-state="opening"] {
+    &[data-desktop-state="opening"] {
       @include bp-up($navbar-collapse-bp) {
+        display: block;
         overflow-x: hidden;
         width: $side-bar-w;
         min-width: $side-bar-w;
@@ -78,6 +86,13 @@
 
     &[data-state="closed"] {
       display: none;
+
+      @include bp-up($navbar-collapse-bp) {
+        display: block;
+      }
+    }
+
+    &[data-desktop-state="closed"] {
 
       @include bp-up($navbar-collapse-bp) {
         display: block;

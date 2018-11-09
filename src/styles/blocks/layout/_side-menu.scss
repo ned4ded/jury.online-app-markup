@@ -28,7 +28,7 @@ $side-menu-divider: 1px solid theme-primary('400');
   background-image: linear-gradient(to top, theme-primary(), theme-primary('600'));
 
   @include bp-up($navbar-collapse-bp) {
-    &[data-state="closed"] {
+    &[data-desktop-state="closed"] {
       width: 100%;
       min-width: 0;
 
@@ -67,7 +67,7 @@ $side-menu-divider: 1px solid theme-primary('400');
   }
 
   @include bp-up($navbar-collapse-bp) {
-    &[data-state="closed"] &__block--profile {
+    &[data-desktop-state="closed"] &__block--profile {
       .tag__info {
         display: none;
       }
@@ -77,13 +77,13 @@ $side-menu-divider: 1px solid theme-primary('400');
       }
     }
 
-    &[data-state="closed"] &__block--logout {
+    &[data-desktop-state="closed"] &__block--logout {
       margin: 0 -$side-menu-p-x-closed;
     }
   }
 
   @include bp-up($navbar-collapse-bp) {
-    &[data-state="closed"] &__block--nav {
+    &[data-desktop-state="closed"] &__block--nav {
       margin-right: rem(-12px);
       margin-left: rem(-12px);
     }
@@ -110,7 +110,7 @@ $side-menu-divider: 1px solid theme-primary('400');
     }
   }
 
-  &[data-state="closed"] &__nav {
+  &[data-desktop-state="closed"] &__nav {
     @include bp-up($navbar-collapse-bp) {
       &:after {
         left: $side-menu-p-x-closed;
@@ -136,7 +136,7 @@ $side-menu-divider: 1px solid theme-primary('400');
 
   }
 
-  &[data-state="closed"] &__sub-nav {
+  &[data-desktop-state="closed"] &__sub-nav {
     @include bp-up($navbar-collapse-bp) {
       display: none;
     }
@@ -170,11 +170,11 @@ $side-menu-divider: 1px solid theme-primary('400');
   }
 
   @include bp-up($navbar-collapse-bp) {
-    &[data-state="closed"] &__btn--add {
+    &[data-desktop-state="closed"] &__btn--add {
       display: none;
     }
 
-    &[data-state="closed"] &__btn--logout {
+    &[data-desktop-state="closed"] &__btn--logout {
       width: 100%;
       padding-right: rem(2px);
       padding-left: rem(2px);
@@ -185,7 +185,7 @@ $side-menu-divider: 1px solid theme-primary('400');
       font-size: 0;
     }
 
-    &[data-state="closed"] &__btn-icon {
+    &[data-desktop-state="closed"] &__btn-icon {
       display: block;
     }
   }

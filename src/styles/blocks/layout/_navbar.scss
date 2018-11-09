@@ -144,21 +144,21 @@
     display: flex;
   }
 
-  &[data-state="closing"] &__block--brand {
+  &[data-desktop-state="closing"] &__block--brand {
     @include bp-up($navbar-collapse-bp) {
       min-width: $side-bar-w-closed;
       width: $side-bar-w-closed;
     }
   }
 
-  &[data-state="opening"] &__block--brand {
+  &[data-desktop-state="opening"] &__block--brand {
     @include bp-up($navbar-collapse-bp) {
       min-width: $side-bar-w;
       width: $side-bar-w;
     }
   }
 
-  &[data-state="closed"] &__block--brand {
+  &[data-desktop-state="closed"] &__block--brand {
     @include bp-up($navbar-collapse-bp) {
       min-width: $side-bar-w-closed;
       width: $side-bar-w-closed;
@@ -179,7 +179,7 @@
     }
   }
 
-  &[data-state="closing"] &__brand {
+  &[data-desktop-state="closing"] &__brand {
     @include bp-up($navbar-collapse-bp) {
       background-image: url('../assets/imgs/jo-logo-sm.png');
       background-repeat: no-repeat;
@@ -191,7 +191,7 @@
       }
     }
   }
-  &[data-state="opening"] &__brand {
+  &[data-desktop-state="opening"] &__brand {
     @include bp-up($navbar-collapse-bp) {
       background-image: url('../assets/imgs/jo-logo-sm.png');
       background-repeat: no-repeat;
@@ -203,7 +203,7 @@
       }
     }
   }
-  &[data-state="closed"] &__brand {
+  &[data-desktop-state="closed"] &__brand {
     @include bp-up($navbar-collapse-bp) {
       background-image: url('../assets/imgs/jo-logo-sm.png');
       background-repeat: no-repeat;

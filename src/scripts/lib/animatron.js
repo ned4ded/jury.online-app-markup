@@ -14,12 +14,14 @@ const DURATION = 500;
 const ATTR_NAME = 'state';
 
 class Element {
-  constructor(element) {
+  constructor(element, attr) {
     this.element = element;
+
+    this._attrName = attr;
   }
 
   notify(state) {
-    this.element.dataset[ATTR_NAME] = state;
+    this.element.dataset[this._attrName] = state;
 
     return;
   }
@@ -27,12 +29,12 @@ class Element {
 
 
 export class Animatron {
-  constructor({ state, duration, elements }) {
+  constructor({ state, duration, elements, attrName }) {
     if(!elements) throw new Error('Animatrong: constructor: elements were not passed');
 
     this._vacate();
 
-    this._elements = array(elements).map(v => new Element(v));
+    this._elements = array(elements).map(v => new Element(v, attrName || ATTR_NAME));
 
     this._setState(state || INITIAL_STATE)
 
