@@ -81,6 +81,24 @@ body {
 	}
 }
 
+.copy-link {
+	color: #75a3bf;
+	padding: .3125rem .9375rem;
+	border-radius: 6px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	transition: color .3s;
+	background-color: rgba(241,241,241,.7);
+	display: block;
+	&:hover {
+		text-decoration: none;
+	}
+	&__text	{
+		display: block;
+	}
+}
+
 // texts styles
 .text-ellipsis {
 	white-space: nowrap;

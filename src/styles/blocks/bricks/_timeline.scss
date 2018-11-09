@@ -9,6 +9,9 @@
 	}
 	.events-wrapper {
 		margin: 0 120px;
+		@include bp-down(md) {
+			margin: 0 50px;
+		}
 		&:before,
 		&:after {
 			display: none;
@@ -104,6 +107,10 @@
 		padding-left: 178px;
 		width: 100%;
 		max-width: 100%;
+		
+		@include bp-down(xl) {
+			padding-left: 0;
+		}
 	}
 	.events-wrap {
 		&__group {
@@ -113,9 +120,15 @@
 		}
 		&__text {
 			padding-left: 27px;
+			@include bp-down(md) {
+				padding-left: 0;
+			}
 		}
 		&__field {
 			padding-left: 27px;
+			@include bp-down(md) {
+				padding-left: 0;
+			}
 			&:not(:last-child) {
 				margin-bottom: 20px;
 			}
@@ -133,9 +146,15 @@
 		border: 1px solid #75A3BF;
 		&.prev {
 			left: 49px;
+			@include bp-down(md) {
+				left: 9px;
+			}
 		}
 		&.next {
 			right: 49px;
+			@include bp-down(md) {
+				right: 9px;
+			}
 		}
 		&.inactive {
 			opacity: 0.4;
