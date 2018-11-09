@@ -25,6 +25,10 @@
   &--uppercase {
   	text-transform: uppercase;
   }
+  &--xs {
+	padding: 5px;
+	font-size: 12px;
+  }
   &__flug {
   	margin-right: spacer(4);
   	vertical-align: top;
