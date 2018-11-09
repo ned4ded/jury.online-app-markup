@@ -279,15 +279,16 @@
     @return map-keys(map-remove($themes, 'default'));
   }
 
-  position: relative;
+    position: relative;
 
-  display: flex;
-  flex-flow: row wrap;
-  align-content: flex-start;
+    display: flex;
+    align-content: flex-start;
+    flex-flow: row wrap;
 
-  max-width: 375px;
-  min-width: 300px;
-  margin: 0 auto;
+    width: 100%;
+    min-width: 300px;
+    max-width: 375px;
+    margin: 0 auto;
 
   @include bp-up($navbar-collapse-bp) {
     border-radius: $bdrs-md;
