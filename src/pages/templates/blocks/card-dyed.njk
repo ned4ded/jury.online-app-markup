@@ -17,7 +17,8 @@
     mobile: false,
     desktop: false
   },
-  badge: false
+  badge: false,
+  id: ''
 } %}
 
 {% macro daysLeft(stage, left) %}
@@ -67,7 +68,7 @@
 
   </div>
 
-  <span class="card-dyed__img card-dyed__img--sm" {{ default.images.mobile | safe }}></span>
-  <span class="card-dyed__img card-dyed__img--lg" {{ default.images.desktop | safe }}></span>
+  <span class="card-dyed__img card-dyed__img--sm  card-dyed__img--sm--{{default.id}}"></span>
+  <span class="card-dyed__img card-dyed__img--lg card-dyed__img--lg--{{default.id}}"></span>
 </div>
 {% endmacro %}

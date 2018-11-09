@@ -77,10 +77,6 @@ class Star extends Element {
     super(el);
   }
 
-  _handler = (ev) => {
-    ev.preventDefault();
-  }
-
   click(fn) {
     this._el.click(fn);
 

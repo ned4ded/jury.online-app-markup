@@ -1,4 +1,130 @@
 .card-dyed {
+  $bgc: (
+    'brixby': (
+      'mobile': (
+        background-image: url('../assets/imgs/rec-card-car-bg.png'),
+        width: 175px,
+        height: 105px
+      ),
+      'desktop': (
+        background-image: url('../assets/imgs/rec-card-car-bg.png'),
+        width: 265px,
+        height: 100%,
+        max-height: 175px
+      )
+    ),
+    'gg-rocket': (
+      'mobile': (
+        background-image: url('../assets/imgs/premium-card-robot.png'),
+        width: 137px,
+        height: 133px
+      ),
+      'desktop': (
+        background-image: url('../assets/imgs/premium-card-robot.png'),
+        width: 199px,
+        height: 100%,
+        max-height: 197px
+      )
+    ),
+    'lancer-network': (
+      'mobile': (
+        background-image: url('../assets/imgs/premium-card-laptop.png'),
+        width: 165px,
+        height: 135px
+      ),
+      'desktop': (
+        background-image: url('../assets/imgs/premium-card-laptop.png'),
+        width: 239px,
+        height: 100%,
+        max-height: 195px,
+        right: -30px
+      )
+    ),
+    'dataeum': (
+      'mobile': (
+        background-image: url('../assets/imgs/premium-card-crowdsale.png'),
+        width: 145px,
+        height: 143px
+      ),
+      'desktop': (
+        background-image: url('../assets/imgs/premium-card-crowdsale.png'),
+        width: 183px,
+        height: 100%,
+        max-height: 180px,
+        bottom: auto,
+        transform: translateY(-50%),
+        top: 50%
+      )
+    ),
+    'richbit': (
+      'mobile': (
+        background-image: url('../assets/imgs/premium-card-hipsters.png'),
+        width: 125px,
+        height: 132px,
+        bottom: 0,
+        right: -10px
+      ),
+      'desktop': (
+        background-image: url('../assets/imgs/premium-card-hipsters.png'),
+        width: 171px,
+        height: 100%,
+        max-height: 180px,
+        bottom: 0,
+      )
+    ),
+    'kvantor': (
+      'mobile': (
+        background-image: url('../assets/imgs/premium-card-cubes.png'),
+        width: 160px,
+        height: 136px,
+      ),
+      'desktop': (
+        background-image: url('../assets/imgs/premium-card-cubes.png'),
+        width: 206px,
+        height: 100%,
+        max-height: 176px,
+        bottom: auto,
+        transform: translateY(-50%),
+        top: 50%
+      )
+    ),
+    'endo': (
+      'mobile': (
+        background-image: url('../assets/imgs/premium-card-cube.png'),
+        width: 135px,
+        height: 125px,
+        right: -10px
+      ),
+      'desktop': (
+        background-image: url('../assets/imgs/premium-card-cube.png'),
+        width: 188px,
+        height: 100%,
+        max-height: 174px,
+        bottom: auto,
+        transform: translateY(-50%),
+        top: 50%
+      )
+    ),
+  );
+
+  @mixin make-properties($map) {
+    @each $prop, $value in $map {
+      #{$prop}: $value;
+    }
+  }
+
+  @mixin make-mobile($name) {
+    $map: map-get($bgc, $name);
+
+    @include make-properties(map-get($map, 'mobile'));
+  }
+
+  @mixin make-desktop($name) {
+    $map: map-get($bgc, $name);
+
+    @include make-properties(map-get($map, 'desktop'));
+  }
+
   $p-x: spacer(4);
   $bdrs-sm: 5px;
   $bdrs-md: 10px;
@@ -277,6 +403,12 @@
       @include bp-up($navbar-collapse-bp) {
         display: none;
       }
+
+      @each $name in map-keys($bgc) {
+        &--#{$name} {
+          @include make-mobile($name);
+        }
+      }
     }
 
     &--lg {
@@ -285,6 +417,12 @@
       @include bp-up($navbar-collapse-bp) {
         display: block;
         background-size: contain;
+      }
+
+      @each $name in map-keys($bgc) {
+        &--#{$name} {
+          @include make-desktop($name);
+        }
       }
     }
 
