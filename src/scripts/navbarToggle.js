@@ -1,4 +1,5 @@
 import { Animatron } from './lib/animatron';
+import { WIN_WIDTH, NAVBAR_COLLAPSE_BP } from './constants';
 
 const Config = {
   DURATION: 500,
@@ -15,24 +16,31 @@ export default () => {
 
   const elements = [t, l, navbar, sidebar, sidemenu];
 
-  const animatron = new Animatron({ elements, duration: Config.DURATION });
+  const animatronMobile = new Animatron({ elements, duration: Config.DURATION });
+  const animatronDesktop = new Animatron({ elements, duration: Config.DURATION, attrName: 'desktopState', state: 'opened' });
 
   const toggleHandler = (ev) => {
     t.removeEventListener('click', toggleHandler);
 
-    animatron.toggle(() => {
-      t.addEventListener('click', toggleHandler);
-    });
+    if($(window).width() <= NAVBAR_COLLAPSE_BP) {
+      animatronMobile.toggle(() => {
+        t.addEventListener('click', toggleHandler);
+      });
+    } else {
+      animatronDesktop.toggle(() => {
+        t.addEventListener('click', toggleHandler);
+      });
+    }
 
     return;
   };
 
   const liningHandler = ev => {
-    if(animatron.isBusy()) return;
+    if(animatronMobile.isBusy()) return;
 
     l.removeEventListener('click', liningHandler);
 
-    animatron.end(() => {
+    animatronMobile.end(() => {
       l.addEventListener('click', liningHandler);
     });
 

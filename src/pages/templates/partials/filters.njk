@@ -15,7 +15,7 @@
   </ul>
 {% endmacro %}
 
-<form class="filters">
+<form id="filter" class="filters">
   <div class="filters__block filters__block--top">
     <div class="filters__options">
       <a href="#" class="filters__toggler">
@@ -49,7 +49,7 @@
       <span class="filters__sub-heading d-none d-lg-inline-block">Raiting</span>
 
       <div class="filters__section-content">
-        {{ rating.make(4, 'filters__rating') }}
+        {{ rating.make(7, 'filters__rating', false, true) }}
       </div>
     </div>
 

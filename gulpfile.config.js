@@ -21,6 +21,7 @@ export default {
     icons: path.join(__dirname, 'src/assets/icons/*.svg'),
     svgTemplate: path.join(__dirname, 'src/lib/svg-task-templates/svg-sprite.mustache'),
     svgAll: path.join(__dirname, 'src/assets/icons/*.svg'),
+    svgFilters: path.join(__dirname, 'src/assets/filters/'),
     svgLayoutTemplate: path.join(__dirname, 'src/lib/svg-task-templates/svg-sprite-layout.svg'),
     svgStylesTemplate: path.join(__dirname, 'src/lib/svg-task-templates/svg-sprite-styles.svg'),
     svgDefs: path.join(__dirname, 'src/assets/defs.svg'),

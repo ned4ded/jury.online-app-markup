@@ -6,6 +6,7 @@ import './lib/horizontal-timeline';
 import carousel from './lib/carousel';
 import slider from './lib/slider';
 import select from './lib/select';
+import rating from './lib/rating';
 
 import './tooltip';
 import './tags';
@@ -24,5 +25,6 @@ DOC.ready(function () {
   carousel();
   slider();
   select();
+  rating();
   initNavbarToggle();
 });

@@ -172,6 +172,10 @@
       }
     }
 
+    > * {
+      vertical-align: middle;
+    }
+
     &-content {
       padding-left: spacer(8);
 
