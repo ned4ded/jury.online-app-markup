@@ -15,3 +15,17 @@
     font-size: $font-size-lg;
   }
 }
+
+.large {
+  font-size: 115%;
+}
+
+.white-space {
+  &-pre {
+    white-space: pre;
+  }
+}
+
+.text-line-height-equal {
+  line-height: 1;
+}

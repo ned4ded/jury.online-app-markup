@@ -30,6 +30,37 @@
 
 {% set slides = [] %}
 
+{% set content %}
+<p class="mb-0 h2 font-weight-bolder text-primary">Your Project</p>
+<p class="mb-3 text-md text-primary">Create Easily</p>
+{% endset %}
+
+{% set stage %}
+<div class="pr-2 pl-2 d-flex flex-column align-items-start text-uppercase text-primary font-weight-bold text-lg text-center white-space-pre text-line-height-equal">
+  <div class="d-flex flex-column align-items-center">
+    <p class="mb-0">
+      Get <span class="text-azure large">Premium</span>
+    </p>
+    <p class="mb-0">
+      access for
+    </p>
+    <p class="mb-0">
+      <span class="text-orange large">free</span> now!
+    </p>
+  </div>
+</div>
+{% endset %}
+
+{{ slides | addToArray(cardDyed.make({
+  brand: { src: 'assets/imgs/icon-ico-project-your-project.png', content: content },
+  theme: 'silver',
+  content: {
+    stage: stage,
+    meta: false
+  },
+  id: 'your-project'
+})) }}
+
 {% for project in datasets.get('premium-ico-project.json') %}
 {% set content %}
 <p class="mb-0 h2 font-weight-bolder text-primary text-lg-white">{{ project.name }}</p>
@@ -39,11 +70,14 @@
 {% set options = {
   brand: { src: project.brand, content: content },
   images: project.images,
-  period: project.period,
   'stage-type': project['stage-type'],
   'days left': project['days left'],
   period: project.period,
   investment: project.investment,
+  content: {
+    stage: false,
+    meta: true
+  },
   theme: project.theme,
   badge: project.badge,
   id: project.id

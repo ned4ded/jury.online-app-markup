@@ -55,8 +55,10 @@ $colors: (
   "blue": map-get($theme-info-shades, '300'),
   "purple" : hsl(268, 100, 73), // jo-purple
   "green" : hsl(116, 100, 73), // jo-green
-  "orange" : hsl(27, 100, 73), // jo-orange
+  "karry" : hsl(27, 100, 73), // jo-orange
   "gray" : $gray-400,
+  "azure" : #0065ff,
+  "orange" : #ffab00,
 );
 
 // $jo-light-mint: hsl(127, 97, 86);
