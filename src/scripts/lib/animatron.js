@@ -4,7 +4,7 @@ const States = {
   START: 'closed',
   PROCESS_FORWARD: 'opening',
   PROCESS_REVERT: 'closing',
-  END: 'opened',
+  END: 'opened'
 }
 
 const INITIAL_STATE = States.START;

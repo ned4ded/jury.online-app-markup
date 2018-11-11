@@ -16,7 +16,6 @@ import './calendar';
 import initNavbarToggle from './navbarToggle';
 import './chart';
 
-
 DOC.ready(function () {
   const body = document.querySelector('body');
 
