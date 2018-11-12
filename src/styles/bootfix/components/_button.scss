@@ -3,6 +3,14 @@
 
   padding-top: $input-btn-padding-y + $offset;
   padding-bottom: $input-btn-padding-y - $offset;
+  &:hover {
+  	svg,
+  	svg path,
+  	svg g {
+  		fill: currentColor;
+  		stroke: currentColor;
+  	}
+  };
   &--md {
 	padding-top: spacer(2);
 	padding-bottom: spacer(2);
@@ -32,6 +40,11 @@
   &__flug {
   	margin-right: spacer(4);
   	vertical-align: top;
+  	display: inline-block;
+  }
+  &__icon-left {
+  	margin-right: 8px;
+  	vertical-align: text-top;
   	display: inline-block;
   }
 }
@@ -69,5 +82,29 @@
 	}
 	.form-stretch & {
 		margin-left: spacer(5);
+	}
+}
+
+.btn-email {
+	height: 38px;
+	width: 38px;
+	text-align: center;
+	line-height: 35px;
+	border: 1px solid rgba(#2A2550, .3);
+	vertical-align: top;
+	border-radius: 7px;
+	display: inline-block;
+	.icon {
+		vertical-align: middle;
+		display: inline-block;
+		line-height: 1;
+		color: #2A2550;
+		fill: #2A2550;
+		stroke: #2A2550;
+		g path,
+		path {
+			fill: #2A2550;
+			stroke: #2A2550;
+		};
 	}
 }

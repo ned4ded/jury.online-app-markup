@@ -15,6 +15,8 @@ import './projectAccordeon';
 import './calendar';
 import initNavbarToggle from './navbarToggle';
 import './chart';
+import './tabs';
+import './accordion';
 
 
 DOC.ready(function () {

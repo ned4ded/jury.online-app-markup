@@ -1,6 +1,6 @@
 {% macro make(props) %}
 <!-- begin breadcrumbs -->
-<ul class="breadcrumbs{% if props.class %}{{ props.class }}{% endif %}">
+<ul class="breadcrumbs{% if props.class %} {{ props.class }}{% endif %}">
 	{% for item in props.list %}
 		{% if loop.last %}
 		<li class="breadcrumbs__item">

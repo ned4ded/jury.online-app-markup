@@ -6,6 +6,15 @@
 	border-radius: 7px;
 	vertical-align: top;
 	display: inline-block;
+	&--fluid {
+		width: 100%;
+	}
+	&--blue {
+		background-color: #EBEEF5;
+		.progress__inner {
+			background-color: #A2B7D1;
+		}
+	}
 	&__inner {
 		height: 8px;
 		background-color: #e9beaf;

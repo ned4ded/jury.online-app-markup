@@ -140,6 +140,11 @@
 	@include get-em-width(14, 14);
 }
 
+.icon--linkedin {
+	font-size: 20px;
+	@include get-em-width(20, 20);
+}
+
 .icon--pdf {
 	font-size: 15px;
 	@include get-em-width(15, 15);
@@ -155,6 +160,11 @@
 	@include get-em-width(15.94, 17);
 }
 
+.icon--sale {
+	font-size: 18px;
+	@include get-em-width(15, 18);
+}
+
 .icon--search {
 	font-size: 17px;
 	@include get-em-width(17, 17);
@@ -168,5 +178,10 @@
 .icon--star {
 	font-size: 45.09px;
 	@include get-em-width(47.41, 45.09);
+}
+
+.icon--star-outline {
+	font-size: 22px;
+	@include get-em-width(22, 22);
 }
 

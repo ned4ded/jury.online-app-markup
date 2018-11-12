@@ -15,3 +15,18 @@
     font-size: $font-size-lg;
   }
 }
+
+.title-bord {
+  position: relative;
+  padding-bottom: 17px;
+  &:before { 
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 58px;
+    height: 2px;
+    background-color: #FF7864;
+    box-shadow: 1px 1px 4px rgba(#FF7864, .5);
+  }
+}

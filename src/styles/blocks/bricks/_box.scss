@@ -23,6 +23,7 @@ $box-spacers: (
 );
 
 .box {
+  position: relative;
   @mixin make-content-fluid($value) {
     max-width: calc(100% + #{$value * 2};
     margin-right: -#{$value};
@@ -149,6 +150,48 @@ $box-spacers: (
     }
     &--sm {
       padding: spacer(6) spacer(5) spacer(2);
+    }
+  }
+
+
+  &__project-inner {
+    margin-top: -92px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include bp-down(xl) {
+      flex-direction: column;
+    }
+  }
+
+  &__project-left {
+    padding-left: 39px;
+    max-width: 60%;
+    flex: 0 0 60%;
+    @include bp-down(xl) {
+      padding-left: 0;
+      max-width: 100%;
+      flex: 0 0 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  &__project-right {
+    padding-left: 15px;
+    max-width: 40%;
+    flex: 0 0 40%;
+    align-self: flex-end;
+    align-items: center;
+    justify-content: flex-end;
+    display: flex;
+    @include bp-down(xl) {
+      margin-top: 15px;
+      padding-left: 0;
+      max-width: 100%;
+      flex: 0 0 100%;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-self: initial;
     }
   }
 

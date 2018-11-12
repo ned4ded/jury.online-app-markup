@@ -1,8 +1,13 @@
 .breadcrumbs {
-	margin: rem(28px) 0 rem(25px);
-	padding: 0;
+	padding: rem(28px) 0 rem(25px);
+	margin: 0;
 	font-weight: 600;
 	font-size: rem(14px);
+	&.breadcrumbs_white {
+		a, span {
+			color: #FFF;
+		}
+	}
 	&__item {
 		vertical-align: top;
 		display: inline-block;
@@ -16,6 +21,9 @@
 				right: 15px;
 				line-height: 1;
 				color: #9B9B9B;
+				.breadcrumbs_white & {
+					color: #fff;
+				}
 			}
 		}
 	}
