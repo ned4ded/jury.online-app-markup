@@ -14,7 +14,7 @@ export const once = fn => {
 
 export const getElementsMinWidth = (elementClone) => {
   const body = document.querySelector('body');
-  
+
   elementClone.removeAttribute('style');
 
   elementClone.setAttribute('style', 'position: absolute; visibility: hidden; left: -9999px;');

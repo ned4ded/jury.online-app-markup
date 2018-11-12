@@ -1,6 +1,74 @@
 .dashboard {
+  position: relative;
   display: flex;
   flex-flow: column nowrap;
+
+  &:after {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    content: '';
+    transition: background-color 0.3s ease-in;
+
+    opacity: 0;
+    background-color: rgba(#ebeef5, .8);
+    background-image: linear-gradient(to bottom, rgba(#d2eaff, .4), rgba(#8fa8b7, .4));
+  }
+
+  &[data-modal-state="closed"] {
+    filter: blur(0);
+
+    &:after {
+      opacity: 0;
+    }
+  }
+
+  &[data-modal-state="opening"] {
+    transition: filter 0.3s ease-in;
+
+    filter: blur(3px);
+
+    &:after {
+      z-index: $zindex-navbar + 10;
+
+      opacity: 1;
+
+      transition: opacity 0.3s ease-in;
+    }
+  }
+
+  &[data-modal-state="opened"] {
+    filter: blur(3px);
+
+    &:after {
+      z-index: $zindex-navbar + 10;
+
+      transition: none;
+
+      opacity: 1;
+    }
+  }
+
+  &[data-modal-state="closing"] {
+    transition: filter 0.2s ease-in;
+
+    filter: blur(0);
+
+    &:after {
+      z-index: $zindex-navbar + 10;
+
+      transition: opacity 0.3s ease-in;
+
+      opacity: 0;
+    }
+  }
 
   &__navbar {
     position: sticky;

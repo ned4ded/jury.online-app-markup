@@ -105,6 +105,26 @@
         top: 50%
       )
     ),
+    'your-project': (
+      'mobile': (
+        background-image: url('../assets/imgs/premium-card-window.png'),
+        width: 182px,
+        height: 119px,
+        right: -24px,
+        bottom: 0
+      ),
+      'desktop': (
+        background-image: url('../assets/imgs/premium-card-window.png'),
+        width: 240px,
+        height: 100%,
+        max-height: 200px,
+        bottom: auto,
+        transform: translateY(-50%),
+        top: 57%,
+        right: -25px,
+
+      )
+    ),
   );
 
   @mixin make-properties($map) {
@@ -248,6 +268,22 @@
     )
   );
 
+  $silver: (
+    "emphasis" : (
+      background-color: rgba(#444760, .07)
+    ),
+    "flat" : (
+      background-color: #eaebee,
+      box-shadow: 0px 0px 0px 2px #cbd0dd,
+    ),
+    "gradient" : (
+      background-image: (linear-gradient(to top, rgba(#b4b4b4, .175), transparent 30%), linear-gradient(180deg, #ffffff, #e1e1e4)),
+      box-shadow: 0px 0px 0px 2px #cbd0dd,
+    ),
+    "stage" : (
+    )
+  );
+
   $themes: (
     'ziggurat' : $ziggurat,
     'east-side' : $east-side,
@@ -256,6 +292,7 @@
     'purple' : $purple,
     'danube' : $danube,
     'default' : $ziggurat,
+    'silver' : $silver,
     'shakespeare' : $shakespeare
   );
 

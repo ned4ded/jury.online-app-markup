@@ -30,3 +30,16 @@
     box-shadow: 1px 1px 4px rgba(#FF7864, .5);
   }
 }
+.large {
+  font-size: 115%;
+}
+
+.white-space {
+  &-pre {
+    white-space: pre;
+  }
+}
+
+.text-line-height-equal {
+  line-height: 1;
+}

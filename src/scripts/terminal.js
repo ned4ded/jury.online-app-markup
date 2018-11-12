@@ -7,6 +7,7 @@ import carousel from './lib/carousel';
 import slider from './lib/slider';
 import select from './lib/select';
 import rating from './lib/rating';
+import modal from './lib/modal';
 
 import './tooltip';
 import './tags';
@@ -18,7 +19,6 @@ import './chart';
 import './tabs';
 import './accordion';
 
-
 DOC.ready(function () {
   const body = document.querySelector('body');
 
@@ -29,4 +29,5 @@ DOC.ready(function () {
   select();
   rating();
   initNavbarToggle();
+  modal();
 });

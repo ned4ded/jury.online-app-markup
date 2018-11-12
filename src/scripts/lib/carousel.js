@@ -7,7 +7,7 @@ export default function() {
       loop: false,
       slidesPerView: 'auto',
       centeredSlides: true,
-      initialSlide: 1,
+      initialSlide: 2,
       navigation: {
         prevEl: '.swiper-button-prev',
         nextEl: '.swiper-button-next',

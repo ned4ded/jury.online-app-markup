@@ -49,14 +49,17 @@ $theme-info-shades: (
   "300" : hsl(208, 100, 72),
   "400" : hsl(208, 53, 68),
   "500" : $info,
+  "600" : hsl(208, 16, 71),
 );
 
 $colors: (
   "blue": map-get($theme-info-shades, '300'),
   "purple" : hsl(268, 100, 73), // jo-purple
   "green" : hsl(116, 100, 73), // jo-green
-  "orange" : hsl(27, 100, 73), // jo-orange
+  "karry" : hsl(27, 100, 73), // jo-orange
   "gray" : $gray-400,
+  "azure" : #0065ff,
+  "orange" : #ffab00,
 );
 
 // $jo-light-mint: hsl(127, 97, 86);
@@ -758,7 +761,7 @@ $modal-inner-padding:               2rem;
 // $modal-header-padding:              $modal-header-padding-y $modal-header-padding-x; // Keep this for backwards compatibility
 
 // $modal-xl:                          1140px;
-// $modal-lg:                          800px;
+$modal-lg:                          865px;
 // $modal-md:                          500px;
 // $modal-sm:                          300px;
 

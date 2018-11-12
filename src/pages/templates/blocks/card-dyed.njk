@@ -13,6 +13,10 @@
   'stage-type': 'soon',
   period: '5 sep - 5 oct',
   investment: '10 ETH',
+  content: {
+    stage: false,
+    meta: true
+  },
   images: {
     mobile: false,
     desktop: false
@@ -48,13 +52,19 @@
 
   <div class="card-dyed__wrapper">
     <div class="card-dyed__block card-dyed__block--stage">
+      {% if default.content.stage === false %}
       <p class="card-dyed__stage">{{ stage(default['stage-type'], default['days left']) }}</p>
+      {% else %}
+      {{ default.content.stage | safe }}
+      {% endif %}
     </div>
 
+    {% if default.content.meta === true %}
     <div class="card-dyed__block card-dyed__block--meta">
       <p class="card-dyed__meta"><strong>{{ default.period }}</strong></p>
       <p class="card-dyed__meta">MIN Invest: <strong>{{ default.investment }}</strong></p>
     </div>
+    {% endif %}
 
     {% if (default.badge) %}
     <div class="card-dyed__block card-dyed__block--about">

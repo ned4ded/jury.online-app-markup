@@ -1,0 +1,109 @@
+.entry {
+  $p-x: 32px;
+
+  @include box;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+
+  padding: 25px $p-x;
+
+  border-radius: 5px;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.1);
+
+  &--jo-modal {
+    padding-top: 95px;
+  }
+
+  &__block {
+    &--heading {
+      text-align: center;
+      margin: 0;
+      text-transform: uppercase;
+
+      color: theme-primary('700');
+
+      font-size: rem(30px);
+    }
+
+    &--inputs {
+      margin-right: -$p-x;
+      padding-left: $p-x;
+    }
+  }
+
+  &__submit {
+    width: 100%;
+
+    text-transform: uppercase;
+
+    background-image: linear-gradient(to left, rgba(#699fcd, .75), rgba(#86badb, .75));
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.07);
+
+    font-size: rem(20px);
+    font-weight: $font-weight-bold;
+  }
+
+  &__links {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    display: flex;
+
+  }
+
+  &__link {
+    font-size: 0;
+    margin: 0 spacer(1);
+
+    &-icon {
+      padding: 0 spacer(1);
+      
+      svg {
+        font-size: rem(20px);
+      }
+    }
+  }
+
+  &__input {
+    text-transform: uppercase;
+
+    border: 0;
+
+    font-size: $font-size-base;
+    font-weight: $font-weight-bold;
+
+    padding-right: $p-x;
+
+    border-bottom: 2px solid theme-info('500');
+
+    margin-bottom: spacer(2);
+
+    &::placeholder {
+      color: theme-info('600');
+
+      font-weight: $font-weight-bold;
+    }
+
+    &:focus {
+      border-bottom-color: theme-primary();
+    }
+
+    &:invalid {
+      outline: none;
+      box-shadow: none;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &[type="password"] {
+      font: small-caption;
+      font-size: 14px;
+    }
+  }
+}
