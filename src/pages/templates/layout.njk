@@ -1,5 +1,6 @@
 {% set meta = datasets.get('meta.json') %}
-{% import "./lib/icon.njk" as icon %}
+{% import "lib/icon.njk" as icon %}
+{% import "lib/modal.njk" as modal %}
 {% import "blocks/breadcrumbs.njx" as breadcrumbs %}
 
 <!doctype html>
@@ -20,7 +21,9 @@
   <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
-  <div class="dashboard">
+  {% set modals = [] %}
+
+  <div data-modal-state class="dashboard">
     <div class="dashboard__navbar">
       {% include "partials/navbar.njk" %}
     </div>
@@ -36,6 +39,10 @@
 
     <div class="lining" id="lining" data-state="closed"></div>
   </div>
+
+  {% for m in modals %}
+    {{ modal.make(m.id, m.content, m.animations or 'fade', m.dialog or 'modal-dialog-centered modal-lg', m.classes) }}
+  {% endfor %}
 
   {# <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

@@ -11,7 +11,7 @@ const INITIAL_STATE = States.START;
 
 const DURATION = 500;
 
-const ATTR_NAME = 'state';
+const ATTR_NAME = 'data-state';
 
 class Element {
   constructor(element, attr) {
@@ -21,7 +21,7 @@ class Element {
   }
 
   notify(state) {
-    this.element.dataset[this._attrName] = state;
+    this.element.setAttribute(this._attrName, state);
 
     return;
   }
@@ -30,7 +30,7 @@ class Element {
 
 export class Animatron {
   constructor({ state, duration, elements, attrName }) {
-    if(!elements) throw new Error('Animatrong: constructor: elements were not passed');
+    if(!elements) throw new Error('Animatron: constructor: elements were not passed');
 
     this._vacate();
 

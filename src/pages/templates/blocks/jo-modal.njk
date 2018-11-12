@@ -1,0 +1,19 @@
+{% import "lib/helpers.njk" as helpers %}
+{% import "blocks/brand.njk" as brand %}
+
+{% macro make(content, classes) %}
+  <div class="jo-modal{{ helpers.parse(classes) }}">
+    <div class="jo-modal__content">
+      {{ brand.make('jo-modal__brand') }}
+
+      <p class="mb-0 text-white font-weight-bold">Unique platform for secure investment in responsible ICOs.Try now and make it sure.</p>
+    </div>
+    <div class="jo-modal__form">
+      {{ content | safe }}
+    </div>
+
+    {# <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button> #}
+  </div>
+{% endmacro %}

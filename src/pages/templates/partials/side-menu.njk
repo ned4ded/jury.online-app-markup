@@ -1,6 +1,8 @@
 {% import "lib/icon.njk" as icon %}
 {% import "blocks/tag.njk" as tag %}
 {% import "blocks/side-nav.njk" as nav %}
+{% import "blocks/jo-modal.njk" as joModal %}
+
 
 {% set navList = datasets.get('side-bar-nav.json') %}
 {% set subnavList = datasets.get('side-bar-sub-nav.json') %}
@@ -19,7 +21,50 @@
   </div>
 
   <div class="side-menu__block side-menu__block--logout">
-    <a href="#" class="btn side-menu__btn side-menu__btn--logout"><span class="side-menu__btn-icon">{{ icon.make('sign-out')}}</span>Sign Out</a>
+    <a href="#" data-toggle="modal" data-target="#modal" class="btn side-menu__btn side-menu__btn--logout"><span class="side-menu__btn-icon">{{ icon.make('sign-out')}}</span>Sign Out</a>
     {# <a href="#" class="btn side-menu__btn side-menu__btn--logout">Sign Out</a> #}
   </div>
 </div>
+
+{% set modalFormContent %}
+<form class="entry entry--jo-modal h-100" action="POST">
+  <p class="entry__block entry__block--heading">Sign up</p>
+  <div class="entry__block entry__block--inputs">
+    <input class="entry__input form-control" type="email" name="email" value="" placeholder="email" required>
+    <input class="entry__input form-control" type="password" name="email" value="" placeholder="password" required>
+  </div>
+
+  {# <ul class="entry__block entry__block--links entry__links">
+    {% set links = [
+      { name: 'Google', icon: 'ggl', ref: '#' },
+      { name: 'Facebook', icon: 'fb', ref: '#' }
+    ] %}
+
+    {% for link in links %}
+    <li class="entry__links-item">
+      <a href="{{ link.ref }}" class="entry__link">
+        {{ link.name }}
+        <span class="entry__link-icon">
+          {{ icon.make(link.icon) }}
+        </span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul> #}
+
+  <p class="entry__block entry__block--button">
+    <button type="submit" class="btn btn-info entry__submit">Submit</button>
+  </p>
+</form>
+{% endset %}
+
+{% set modalContent %}
+  {{ joModal.make(modalFormContent) }}
+{% endset %}
+
+{% set modal = {
+  id: 'modal',
+  content: modalContent
+} %}
+
+{{ modals | addToArray(modal) }}

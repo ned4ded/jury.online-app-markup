@@ -1,0 +1,11 @@
+.modal {
+  &-backdrop {
+    background-color: transparent;
+  }
+
+  &-content-transparent {
+    border: none;
+    border-radius: none;
+    background-color: transparent;
+  }
+}

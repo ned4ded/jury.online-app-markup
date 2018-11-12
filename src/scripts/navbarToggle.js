@@ -17,7 +17,7 @@ export default () => {
   const elements = [t, l, navbar, sidebar, sidemenu];
 
   const animatronMobile = new Animatron({ elements, duration: Config.DURATION });
-  const animatronDesktop = new Animatron({ elements, duration: Config.DURATION, attrName: 'desktopState', state: 'opened' });
+  const animatronDesktop = new Animatron({ elements, duration: Config.DURATION, attrName: 'data-desktop-state', state: 'opened' });
 
   const toggleHandler = (ev) => {
     t.removeEventListener('click', toggleHandler);

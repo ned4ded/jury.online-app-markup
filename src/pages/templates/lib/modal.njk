@@ -1,0 +1,11 @@
+{% import "lib/helpers.njk" as helpers %}
+
+{% macro make(id, content, animations, dialog, classes) %}
+<div class="modal{{ helpers.parse(animations) }}{{ helpers.parse(classes) }}" id="{{ id }}" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog{{ helpers.parse(dialog) }}" role="document">
+    <div class="modal-content modal-content-transparent">
+      {{ content | safe }}
+    </div>
+  </div>
+</div>
+{% endmacro %}
