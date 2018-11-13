@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>icon--linkedin</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon--linkedin">
+            <path d="M14.4,13.6 L12.64,13.6 L12.64,10.52044 C12.64,9.67564 12.26732,9.2044 11.59896,9.2044 C10.87164,9.2044 10.44,9.69544 10.44,10.52044 L10.44,13.6 L8.68,13.6 L8.68,7.88 L10.44,7.88 L10.44,8.52328 C10.44,8.52328 10.9922,7.5544 12.23652,7.5544 C13.48128,7.5544 14.4,8.31384 14.4,9.88552 L14.4,13.6 Z M6.67448,6.96524 C6.08092,6.96524 5.6,6.48036 5.6,5.8824 C5.6,5.28488 6.08092,4.8 6.67448,4.8 C7.2676,4.8 7.74852,5.28488 7.74852,5.8824 C7.74896,6.48036 7.2676,6.96524 6.67448,6.96524 Z M5.6,13.6 L7.8,13.6 L7.8,7.88 L5.6,7.88 L5.6,13.6 Z" id="linkedin-[#161]" fill="#2A2550" fill-rule="nonzero"></path>
+            <rect id="Rectangle-5" stroke="#2A2550" x="0.5" y="0.5" width="19" height="19" rx="5"></rect>
+        </g>
+    </g>
+</svg>

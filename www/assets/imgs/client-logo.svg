@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="126px" height="139px" viewBox="0 0 126 139" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="121.691895%" y1="111.369629%" x2="-4.56542969%" y2="8.7109375%" id="linearGradient-1">
+            <stop stop-color="#2373AE" offset="0%"></stop>
+            <stop stop-color="#C0E1E7" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Project-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Project-Page-/-Main" transform="translate(-540.000000, -257.000000)">
+            <g id="Block-#1-(-Head-)" transform="translate(453.000000, 257.000000)">
+                <g id="Head" transform="translate(87.000000, 0.000000)">
+                    <g id="Logo">
+                        <path d="M8,0 L118,0 C122.418278,-8.11624501e-16 126,3.581722 126,8 L126,118 C126,122.418278 122.418278,126 118,126 L8,126 C3.581722,126 5.41083001e-16,122.418278 0,118 L0,8 C-5.41083001e-16,3.581722 3.581722,8.11624501e-16 8,0 Z" fill="url(#linearGradient-1)"></path>
+                        <path d="M41.65625,46.5703125 L46.3203125,46.5703125 L46.3203125,76.8984375 L63.7578125,76.8984375 L63.7578125,81 L41.65625,81 L41.65625,46.5703125 Z M41.65625,104.570312 L47.1640625,104.570312 L64.5546875,132.460938 L64.5546875,104.570312 L68.984375,104.570312 L68.984375,139 L63.7578125,139 L46.109375,111.132812 L46.109375,139 L41.65625,139 L41.65625,104.570312 Z" id="LN" fill="#FFFFFF"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

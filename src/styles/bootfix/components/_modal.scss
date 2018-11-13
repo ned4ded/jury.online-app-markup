@@ -9,3 +9,154 @@
     background-color: transparent;
   }
 }
+
+.token-modal {
+	margin: 50px auto 0;
+	padding: 28px 36px 36px;
+	width: 470px;
+	background-color: white;
+	border-radius: 3px;
+	box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+	.token-modal__client {
+		margin-top: -77px;
+	}
+	&__sale {
+		margin-top: 24px;
+		margin-bottom: 30px;
+	}
+	&__row {
+		padding-top: 16px;
+		padding-bottom: 2px;
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		&:not(:first-child) {
+			margin-top: 10px;
+		}
+		&--bord {
+			border-bottom: 1px solid #DBDDDF;
+		}
+		&--bord-slim {
+			border-bottom: 1px solid rgba(#DBDDDF, .2);
+		}
+		&--disable {
+			.token-modal__left,
+			.token-modal__right {
+				opacity: 0.2;
+			}
+		}
+	}
+	&__left {
+		width: 120px;
+	}
+	&__right {
+		flex-grow: 1;
+	}
+	&__label {
+		color: #333544;
+		font-size: 15px;
+		font-weight: 600;
+	}
+	&__summ-wrap {
+		&--bord {
+			border-bottom: 1px solid #dbdddf;
+		}
+		&--disable {
+			opacity: 0.8;
+		}
+	}
+	&__summ {
+		color: #34364d;
+		font-size: 22px;
+		font-weight: 600;
+		&--blue {
+			color: #476cbf;
+		}
+	}
+	&__summ--sm {
+		color: #414250;
+		font-size: 11px;
+	}
+	.modal__summ--blue.modal__summ--sm {
+		color: #476cbf;
+	}
+	&__buy {
+		margin-top: 36px;
+	}
+	&__footer {
+		margin-top: 38px;
+		color: #555769;
+		font-size: 14px;
+		font-weight: 300;
+		a {
+			color: #555769;
+			text-decoration: underline;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
+.token-sale {
+	padding: 11px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(129, 129, 129, 0.05);
+	border-radius: 5px;
+	&__wrap {
+		color: #7697b6;
+		font-size: 14px;
+	}
+	&__head {
+		text-transform: uppercase;
+		color: #53799b;
+		font-size: 17px;
+		font-weight: 600;
+	}
+	&__date	{
+		margin-top: 6px;
+		padding-top: 6px;
+		border-top: 1px solid rgb(198, 209, 219);
+	}
+}
+
+.interest-rate {
+	position: relative;
+	padding: 7px;
+	width: 92px;
+	display: inline-flex;
+	color: #333544;
+	border: 1px solid #333544;
+	border-radius: 5px;
+	line-height: 1;
+	align-items: center;
+	&:before {
+		position: absolute;
+		content: "";
+		top: 12px;
+		bottom: 12px;
+		left: 50%;
+		width: 1px;
+		background-color: #333544;
+	}
+	&__text {
+		font-size: 14px;
+		font-weight: 700;
+		flex: 0 0 50%;
+		max-width: 50%;
+		text-align: center;
+	}
+	&__text-sm {
+		font-size: 13px;
+		font-weight: 600;
+	}
+	&__parcent {
+		padding-left: 1px;
+		font-size: 17px;
+		font-weight: 600;
+		flex: 0 0 50%;
+		max-width: 50%;
+		text-align: center;
+	}
+}

@@ -48,17 +48,19 @@
 				background-color: #EBEEF5;
 				border-color: #EBEEF5;
 			}
-			&.selected,
 			&.older-event {
 				&:after {
-					background-color: #FF7864;
-					border-color: #FF7864;
+					border-color: #EBEEF5;
 				}
 			}
 			&.selected {
 				z-index: 3;
 				&:before {
 					border-color: #E7E7E7;
+				}
+				&:after {
+					background-color: #FF7864;
+					border-color: #FF7864;
 				}
 				.events__date {
 					border-color: #FF7864;	

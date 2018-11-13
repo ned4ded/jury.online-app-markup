@@ -57,4 +57,30 @@ $badges-colors: (
     padding-bottom: $badge-padding-y / 2 - $offset;
     padding-left: $badge-padding-x / 2;
   }
+  &-md {
+    $offset: 0.15em;
+    
+    font-size: 14px;
+
+    padding-top: $badge-padding-y + $offset;
+    padding-right: $badge-padding-x;
+    padding-bottom: $badge-padding-y - $offset / 5;
+    padding-left: $badge-padding-x;
+  }
+  &-lg {
+    $offset: 0.32em;
+    
+    font-size: 14px;
+
+    padding-top: $badge-padding-y + $offset;
+    padding-right: $badge-padding-x;
+    padding-bottom: $badge-padding-y + $offset;
+    padding-left: $badge-padding-x;
+    border-radius: 7px;
+  }
+  &__icon-left {
+    margin-right: 8px;
+    vertical-align: text-top;
+    display: inline-block;
+  }
 }

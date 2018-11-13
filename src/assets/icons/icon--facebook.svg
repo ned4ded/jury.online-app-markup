@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Facebook</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Project-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Project-Page-/-Main" transform="translate(-980.000000, -726.000000)">
+            <g id="Block-#1-(-Head-)" transform="translate(453.000000, 257.000000)">
+                <g id="Left-Block" transform="translate(48.000000, 173.000000)">
+                    <g id="Info-&amp;-Social" transform="translate(0.000000, 270.000000)">
+                        <g id="Social" transform="translate(2.000000, 24.000000)">
+                            <g id="Facebook" transform="translate(477.000000, 2.000000)">
+                                <path d="M13.0927694,18 L13.0927694,13.05 L14.7322159,13.05 L15,10.85 L13.0927694,10.85 L13.0927694,9.7786 C13.0927694,9.2121 13.1085558,8.65 13.9721302,8.65 L14.8468135,8.65 L14.8468135,7.077 C14.8468135,7.05335 14.095498,7 13.3354122,7 C11.7480023,7 10.754044,7.91135 10.754044,9.585 L10.754044,10.85 L9,10.85 L9,13.05 L10.754044,13.05 L10.754044,18 L13.0927694,18 Z" id="facebook-[#176]" fill="#686678"></path>
+                                <path d="M7,0.5 C3.41014913,0.5 0.5,3.41014913 0.5,7 L0.5,18 C0.5,21.5898509 3.41014913,24.5 7,24.5 L18,24.5 C21.5898509,24.5 24.5,21.5898509 24.5,18 L24.5,7 C24.5,3.41014913 21.5898509,0.5 18,0.5 L7,0.5 Z" id="Rectangle-5-Copy" stroke="#686678"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

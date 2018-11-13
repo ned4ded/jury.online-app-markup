@@ -10,7 +10,6 @@ containers.forEach( el => {
 	const size = that.data('size');
 	const trackColor = that.data('track-color') || '#F6F6F6';
 	const barColor = that.data('bar-color') || '#75A3BF';
-	console.log(that.data('bar-color')+'-fff', barColor);
 	new EasyPieChart(el, {
 		animate: 2000,
 		lineWidth: lineWidth,

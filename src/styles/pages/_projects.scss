@@ -1,0 +1,27 @@
+.projects {
+	padding-bottom: 55px;
+	&__top-box {
+		margin-top: -67px;	
+	}
+}
+
+.projects-video {
+	video,
+	iframe {
+		height: 319px !important;
+		width: 100% !important;
+		@include bp-down(sm) {
+		  height: 200px !important;
+		}
+	}
+}
+
+.projects-control {
+	margin-top: 5px;
+	vertical-align: top;
+	display: inline-block;
+	&:not(:first-child) {
+		margin-left: 25px;
+	}
+}
+
