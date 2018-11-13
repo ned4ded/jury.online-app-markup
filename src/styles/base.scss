@@ -21,6 +21,12 @@ body {
 		border-color: currentColor;
 		text-decoration: none;
 	}
+	&--border {
+		border-bottom: 1px solid currentColor;
+		&:hover {
+			border-color: transparent;
+		}
+	}
 }
 .source-link {
 	font-size: 14px;
@@ -54,7 +60,7 @@ body {
 	.icon {
 		position: absolute;
 		left: 0;
-		top: 3px;
+		top: 2px;
 		vertical-align: top;
 		display: inline-block;
 	}

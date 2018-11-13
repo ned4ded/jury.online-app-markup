@@ -70,5 +70,21 @@
 	}
 	&__container {
 		padding-top: 22px;
-	}	
+	}
+	&__footer {
+		margin-top: 25px;
+		padding-top: 25px;
+		border-top: 1px solid #F1F1F1;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__link,
+	&__soc {
+		@include bp-down(sm) {
+		  width: 100%;
+		  text-align: center;
+		}
+	}
 }

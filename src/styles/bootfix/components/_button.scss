@@ -89,22 +89,21 @@
 	height: 38px;
 	width: 38px;
 	text-align: center;
-	line-height: 35px;
+	line-height: 33px;
 	border: 1px solid rgba(#2A2550, .3);
 	vertical-align: top;
 	border-radius: 7px;
+	color: #2A2550;
+	transition: background-color .3s, border-color .3s, color .3s;
 	display: inline-block;
+	&:hover {
+		color: #fff;
+		background-color: #83a3be;
+		border-color: #83a3be;
+	}
 	.icon {
 		vertical-align: middle;
 		display: inline-block;
 		line-height: 1;
-		color: #2A2550;
-		fill: #2A2550;
-		stroke: #2A2550;
-		g path,
-		path {
-			fill: #2A2550;
-			stroke: #2A2550;
-		};
 	}
 }

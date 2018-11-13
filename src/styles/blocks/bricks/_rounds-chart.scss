@@ -37,16 +37,32 @@
 		color: #75A3BF;
 		position: relative;
 		border-radius: 18px;
-		border: 2px solid;
+		border: 2px solid #75A3BF;
 		text-align: center;
 		background-color: #fff;
 		vertical-align: top;
+		transition: color .3s, background-color .3s;
 		display: inline-block;
+		&:hover {
+			color: #fff;
+			background-color: #75A3BF;
+			&__bonus-text {
+				color: #fff;
+			}
+		}
 		&--green {
 			color: #B8D29D;
+			border-color: #B8D29D;
+			&:hover {
+				background-color: #B8D29D;
+			}
 		}
 		&--orange {
 			color: #F7C181;
+			border-color: #F7C181;
+			&:hover {
+				background-color: #F7C181;
+			}
 		}
 	}
 	&__bonus-text {

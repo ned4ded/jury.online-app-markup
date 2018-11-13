@@ -96,13 +96,18 @@
 }
 
 .icon--email {
-	font-size: 12px;
-	@include get-em-width(16, 12);
+	font-size: 13px;
+	@include get-em-width(16, 13);
 }
 
 .icon--eye {
 	font-size: 10px;
 	@include get-em-width(16, 10);
+}
+
+.icon--facebook {
+	font-size: 25px;
+	@include get-em-width(25, 25);
 }
 
 .icon--fb {
@@ -155,6 +160,11 @@
 	@include get-em-width(20, 20);
 }
 
+.icon--linkedin-md {
+	font-size: 25px;
+	@include get-em-width(25, 25);
+}
+
 .icon--pdf {
 	font-size: 15px;
 	@include get-em-width(15, 15);
@@ -193,5 +203,10 @@
 .icon--star-outline {
 	font-size: 22px;
 	@include get-em-width(22, 22);
+}
+
+.icon--twitter {
+	font-size: 25px;
+	@include get-em-width(25, 25);
 }
 

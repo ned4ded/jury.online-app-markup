@@ -39,7 +39,7 @@
           <div class="box__project-right text-right">
             <div class="projects-control">01.01 - 02.02.2019</div>
             <div class="projects-control">
-              <a href="#" class="btn btn--md btn-outline-info">{{ icon.make('sale', 'btn__icon-left') }}PRIVATE SALE</a>
+              <span class="badge badge-lg badge-outline-info">{{ icon.make('sale', 'badge__icon-left') }}PRIVATE SALE</span>
             </div>
           </div>
         </div>
@@ -79,6 +79,22 @@
                 <div class="tabs__container" data-tabs-container="{{ item.id }}">
                   <p>{{ loop.index }}Lancer Network is a decentralized freelance site for the advertising and romotion of crowdsale and blockchain projects. Our members are comprised of those that want to earn cryptocurrency and the businesses that have the budget to pay for SMM and marketing services. Lancer Network is a decentralized freelance site for the advertising and promotion of crowdsale and blockchain projects.</p>
                   <p>Our members are comprised of those that want to earn cryptocurrency and the businesses that have the budget to pay for SMM and marketing.</p>
+                  <div class="tabs__footer">
+                    <div class="tabs__link">
+                      <a href="#" class="link link--border">http://lancer.networ</a>
+                    </div>
+                    <ul class="tabs__soc soc">
+                      <li class="soc__item"><a href="#">
+                        {{ icon.make('linkedin-md') }}
+                      </a></li>
+                      <li class="soc__item"><a href="#">
+                        {{ icon.make('facebook') }}
+                      </a></li>
+                      <li class="soc__item"><a href="#">
+                        {{ icon.make('twitter') }}
+                      </a></li>
+                    </ul>
+                  </div>
                 </div>
                 {% endfor %}
               </div>
@@ -97,7 +113,7 @@
         <div class="col-xxl-5 mt-9">
           <!-- begin box -->
           <div class="box box--p--lg">
-            <h5 class="title-bord mb-6">Token Info</h5>
+            <h4 class="title-bord mb-6">Token Info</h4>
             <!-- begin project-tokens -->
             <div class="project-tokens">
               <!-- begin project-token -->
@@ -153,7 +169,7 @@
         <div class="col-xxl-7 mt-9">
           <!-- begin box -->
           <div class="box box--p--lg">
-            <h5 class="title-bord">Attachments</h5>
+            <h4 class="title-bord">Attachments</h4>
             <!-- begin attachments -->
             <div class="attachments">
               <a href="#" class="attach-card mt-6">
@@ -185,7 +201,7 @@
       </div>
       <!-- begin box -->
       <div class="box box--p--lg mt-9">
-        <h5 class="title-bord mb-8">Invest Rounds</h5>
+        <h4 class="title-bord mb-8">Invest Rounds</h4>
         <!-- begin rounds-chart -->
         <div class="rounds-chart-wrap">
           <div class="rounds-chart">
@@ -289,7 +305,7 @@
       <!-- end box -->
       <!-- begin box -->
       <div class="box box--p--lg mt-9">
-        <h5 class="title-bord">Team</h5>
+        <h4 class="title-bord">Team</h4>
         <div class="row">
           {% for i in range(0,8) %}
           <div class="col-xxl-3 col-xl-4 col-md-6 col-sm-6 col-xs-6 mt-8">
@@ -314,7 +330,7 @@
       <!-- end box -->
       <!-- begin box -->
       <div class="box box--p--lg mt-9">
-        <h5 class="title-bord">Advisers</h5>
+        <h4 class="title-bord">Advisers</h4>
         <div class="row">
           {% for i in range(0,4) %}
           <div class="col-xxl-3 col-xl-4 col-md-6 col-sm-6 col-xs-6 mt-8">
@@ -339,7 +355,7 @@
       <!-- end box -->
       <!-- begin box -->
       <div class="box box--p--lg mt-9">
-        <h5 class="title-bord">RoadMap</h5>
+        <h4 class="title-bord">RoadMap</h4>
         <!-- begin roadmap -->
         <div class="roadmap mt-8">
           <div class="roadmap__inner mb-8">
@@ -842,6 +858,10 @@
             </div>
           </div>
           <!-- end cd-horizontal-timeline -->
+          <hr class="mt-9 mb-8">
+          <div class="roadmap__button text-center">
+            <a class="client__btn btn btn-success" href="#">BUY TOKENS</a>
+          </div>
         </div>
         <!-- end roadmap -->
       </div>
