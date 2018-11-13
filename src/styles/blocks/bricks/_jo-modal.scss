@@ -1,14 +1,17 @@
 .jo-modal {
   $p-y-top: 60px;
   $p-y-bottom: 70px;
+  $p-x: 60px;
   $overhang: 40px;
+  
+  position: relative;
 
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
 
   min-height: 380px;
-  padding: $p-y-top 60px $p-y-bottom;
+  padding: $p-y-top $p-x $p-y-bottom;
 
   border-radius: 6px;
   background-image: linear-gradient(143deg, theme-primary(), theme-primary('700'));
@@ -32,5 +35,23 @@
 
   &__brand {
     margin-bottom: spacer(2);
+  }
+
+  &__close {
+    position: absolute;
+    top: -$p-y-top / 3;
+    right: $p-x / 2;
+
+    transform: translate(50%, -50%);
+
+    opacity: 1;
+
+    font-size: 15px;
+
+    svg {
+      font-size: 15px;
+
+      fill: theme-info('600');
+    }
   }
 }

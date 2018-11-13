@@ -1,0 +1,10 @@
+{% import "lib/helpers.njk" as helpers %}
+{% import "lib/icon.njk" as icon %}
+
+{% macro make(classes) %}
+<button type="button" class="close{{ helpers.parse(classes) }}" data-dismiss="modal" aria-label="Close">
+  <span aria-hidden="true">
+    {{ icon.make('cancel') }}
+  </span>
+</button>
+{% endmacro %}

@@ -81,8 +81,6 @@ class Modal {
 
     return this;
   }
-
-
 }
 
 export default function() {

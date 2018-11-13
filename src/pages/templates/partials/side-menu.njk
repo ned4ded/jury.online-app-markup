@@ -3,7 +3,6 @@
 {% import "blocks/side-nav.njk" as nav %}
 {% import "blocks/jo-modal.njk" as joModal %}
 
-
 {% set navList = datasets.get('side-bar-nav.json') %}
 {% set subnavList = datasets.get('side-bar-sub-nav.json') %}
 
@@ -27,14 +26,29 @@
 </div>
 
 {% set modalFormContent %}
-<form class="entry entry--jo-modal h-100" action="POST">
-  <p class="entry__block entry__block--heading">Sign up</p>
-  <div class="entry__block entry__block--inputs">
+<div class="entry entry--jo-modal h-100" action="POST">
+  <input id="sign-in-check" type="radio" name="entry" value="sign-in" hidden checked>
+  <input id="sign-up-check" type="radio" name="entry" value="sign-up" hidden>
+
+  <p class="entry__block entry__block--heading">
+    <span data-entry-checked="sign-in">Sign in</span>
+    <span data-entry-checked="sign-up">Sign up</span>
+  </p>
+
+  <form id="sign-up-form" data-entry-checked="sign-up" class="entry__block entry__block--inputs">
     <input class="entry__input form-control" type="email" name="email" value="" placeholder="email" required>
     <input class="entry__input form-control" type="password" name="email" value="" placeholder="password" required>
-  </div>
 
-  {# <ul class="entry__block entry__block--links entry__links">
+    <label for="sign-in-check" class="entry__label">Don't have an account yet?</label>
+  </form>
+
+  <form id="sign-in-form" data-entry-checked="sign-in" class="entry__block entry__block--inputs">
+    <input class="entry__input form-control" type="email" name="email" value="" placeholder="email" required>
+
+    <label for="sign-up-check" class="entry__label">Already have an account?</label>
+  </form>
+
+  <ul class="entry__block entry__block--links entry__links">
     {% set links = [
       { name: 'Google', icon: 'ggl', ref: '#' },
       { name: 'Facebook', icon: 'fb', ref: '#' }
@@ -43,19 +57,21 @@
     {% for link in links %}
     <li class="entry__links-item">
       <a href="{{ link.ref }}" class="entry__link">
+        <span class="entry__link-name">
         {{ link.name }}
-        <span class="entry__link-icon">
-          {{ icon.make(link.icon) }}
         </span>
+
+        {{ icon.make(link.icon) }}
       </a>
     </li>
     {% endfor %}
-  </ul> #}
+  </ul>
 
   <p class="entry__block entry__block--button">
-    <button type="submit" class="btn btn-info entry__submit">Submit</button>
+    <button form="sign-up-form" data-entry-checked="sign-up" type="submit" class="btn btn-info entry__submit">Submit</button>
+    <button form="sign-in-form" data-entry-checked="sign-in" type="submit" class="btn btn-info entry__submit">Submit</button>
   </p>
-</form>
+</div>
 {% endset %}
 
 {% set modalContent %}

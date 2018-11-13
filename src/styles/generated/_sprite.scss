@@ -60,6 +60,11 @@
 	@include get-em-width(32, 32);
 }
 
+.icon--cancel {
+	font-size: 24px;
+	@include get-em-width(24, 24);
+}
+
 .icon--check {
 	font-size: 7px;
 	@include get-em-width(9, 7);
@@ -136,8 +141,8 @@
 }
 
 .icon--ggl {
-	font-size: 50px;
-	@include get-em-width(50, 50);
+	font-size: 28.2px;
+	@include get-em-width(43.75, 28.2);
 }
 
 .icon--information {
