@@ -29,7 +29,7 @@
                   <div class="client__star">{{ icon.make('star-outline') }}</div>
                 </div>
                 <div class="client__row">
-                  <button class="client__btn btn btn-success" type="button">BUY TOKENS</button>
+                  <button class="client__btn btn btn-success" type="button" data-toggle="modal" data-target="#tokens">BUY TOKENS</button>
                   <a href="#" class="client__btn-email btn-email">{{ icon.make('email') }}</a>
                 </div>
               </div>
@@ -860,7 +860,7 @@
           <!-- end cd-horizontal-timeline -->
           <hr class="mt-9 mb-8">
           <div class="roadmap__button text-center">
-            <a class="client__btn btn btn-success" href="#">BUY TOKENS</a>
+            <a class="client__btn btn btn-success" href="#" data-toggle="modal" data-target="#tokens">BUY TOKENS</a>
           </div>
         </div>
         <!-- end roadmap -->
@@ -869,5 +869,79 @@
     </div>
   </div>
   <!-- end projects -->
+  {% set tokensModalContent %}
+    <div class="token-modal-wrap">
+      <!-- begin token-modal -->
+      <div class="token-modal">
+        <!-- begin client -->
+        <div class="token-modal__client client client--sm client--vertical">
+          <div class="client__img client__img--border" style="background-image: url(./assets/imgs/client-logo-l.jpg);"></div>
+          <div class="client__wrap">
+            <div class="client__row text-center mt-3">
+              <a href="#" class="client__name client__name--blue">LancerNetwork</a>
+              <div class="client__description mt-1">E-commerce </div>
+            </div>
+          </div>
+        </div>
+        <!-- end client -->
+        <div class="token-modal__sale token-sale">
+          <div class="token-sale__wrap">
+            <div class="token-sale__head">PriVATE SALE <span class="badge badge-sm badge-outline-primary ml-1">+20% BONUS</span></div>
+            <div class="token-sale__date text-center">01.01 - 02.02.2019 </div>
+          </div>
+        </div>
+        <div class="token-modal__row">
+          <div class="token-modal__left">
+            <div class="token-modal__label">Investment Amount:</div>
+          </div>
+          <div class="token-modal__right token-modal__right--bord">
+            <div class="token-modal__summ-wrap token-modal__summ-wrap--bord text-right">
+              <div class="token-modal__summ token-modal__summ--sm">5 367 383 ,00 USD</div>
+              <div class="token-modal__summ">1 250,00 ETH</div>
+            </div>
+          </div>
+        </div>
+        <div class="token-modal__row token-modal__row--bord token-modal__row--disable pb-4">
+          <div class="token-modal__left">
+            <div class="interest-rate">
+              <div class="interest-rate__text">ETH <span class="interest-rate__text-sm"></span>fee</div>
+              <div class="interest-rate__parcent">1%</div>
+            </div>
+          </div>
+          <div class="token-modal__right">
+            <div class="token-modal__summ-wrap text-right">
+              <div class="token-modal__summ token-modal__summ--sm">367 ,00 USD</div>
+              <div class="token-modal__summ">50,00 ETH</div>
+            </div>
+          </div>
+        </div>
+        <div class="token-modal__row token-modal__row--bord-slim">
+          <div class="token-modal__left">
+            <div class="token-modal__label">Total Token Amount:</div>
+          </div>
+          <div class="token-modal__right">
+            <div class="token-modal__summ-wrap text-right">
+              <div class="token-modal__summ token-modal__summ--blue token-modal__summ--sm">+ 1 356,00 LNT BONUS</div>
+              <div class="token-modal__summ token-modal__summ--blue">120 000,00 LNT</div>
+            </div>
+          </div>
+        </div>
+        <div class="token-modal__buy text-center">
+          <a href="#" class="btn btn-success text-uppercase">{{ icon.make('lock', 'btn__icon-left') }}Buy TOKENS</a>
+        </div>
+        <div class="token-modal__footer text-center">
+          By clicking I agree with Lancer Network <a href="#">Terms&Conditions</a>
+        </div>
+      </div>
+      <!-- end token-modal -->
+    </div>
+  {% endset %}
+  {% set tokenModal = {
+    id: 'tokens',
+    content: tokensModalContent,
+    dialog: 'modal-dialog-centered'
+  } %}
+
+  {{ modals | addToArray(tokenModal) }}
 
 {% endblock %}

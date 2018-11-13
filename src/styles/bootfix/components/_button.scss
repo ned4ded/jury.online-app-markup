@@ -44,8 +44,10 @@
   }
   &__icon-left {
   	margin-right: 8px;
-  	vertical-align: text-top;
+  	vertical-align: baseline;
   	display: inline-block;
+  	fill: currentColor !important;
+  	color: currentColor !important;
   }
 }
 

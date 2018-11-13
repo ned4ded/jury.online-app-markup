@@ -86,5 +86,9 @@ class Modal {
 }
 
 export default function() {
-  const modal = new Modal( $('#modal') );
+  const modals = $('.modal');
+  modals.each((i,el) => {
+    const id = $(el).attr('id');
+    new Modal( $(`#${id}`) );
+  });
 }

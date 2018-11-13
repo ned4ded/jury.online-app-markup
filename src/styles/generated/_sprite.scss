@@ -165,6 +165,11 @@
 	@include get-em-width(25, 25);
 }
 
+.icon--lock {
+	font-size: 12px;
+	@include get-em-width(9, 12);
+}
+
 .icon--pdf {
 	font-size: 15px;
 	@include get-em-width(15, 15);
