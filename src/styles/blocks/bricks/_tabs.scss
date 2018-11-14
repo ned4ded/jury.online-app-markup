@@ -83,8 +83,12 @@
 	&__link,
 	&__soc {
 		@include bp-down(sm) {
+			padding-left: 0;
 		  width: 100%;
 		  text-align: center;
+		  &:not(:first-child) {
+		  	margin-top: 10px;
+		  }
 		}
 	}
 }

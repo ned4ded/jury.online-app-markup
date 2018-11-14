@@ -9,6 +9,12 @@
     width: auto;
   }
 
+  &--gray {
+    &.select.chosen-container-single .chosen-single {
+      border-bottom: 1px solid #dadada;
+    }
+  }
+
   &.chosen {
     &-container {
       &-single {

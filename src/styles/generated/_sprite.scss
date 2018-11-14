@@ -10,6 +10,11 @@
 	width: ($width / $height)+em;
 }
 
+.icon--arr-right {
+	font-size: 10px;
+	@include get-em-width(6, 10);
+}
+
 .icon--arrow {
 	font-size: 6px;
 	@include get-em-width(11, 6);
