@@ -129,6 +129,17 @@ body {
 .hide {
 	display: none;
 }
+.md-hide {
+	@include bp-down(md) {
+	  display: none !important;
+	}
+}
+
+.xl-hide {
+	@include bp-down(xl) {
+	  display: none !important;
+	}
+}
 
 
 
