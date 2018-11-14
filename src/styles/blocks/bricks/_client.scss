@@ -28,7 +28,7 @@
 	}
 	&__wrap {
 		flex-grow: 1;
-		padding-left: 28px;
+		padding-left: 17px;
 		color: #FFF;
 		@include bp-down(sm) {
 			padding: 0;
@@ -41,6 +41,7 @@
 		}
 	}
 	&__row {
+		font-size: 0;
 		@include bp-down(sm) {
 		  text-align: center;
 		}
@@ -91,7 +92,6 @@
 		}
 	}
 	&__btn {
-		min-width: 256px;
 		@include bp-down(sm) {
 		  min-width: 100%;
 		}
