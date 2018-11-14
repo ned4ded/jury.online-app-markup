@@ -252,3 +252,11 @@ textarea.form-control {
     outline: 1px solid #CDD5DF;
   }
 }
+
+.add-field {
+  font-size: 14px;
+  color: #9B9B9B;
+  &__btn {
+    margin-right: 15px;
+  }
+}
