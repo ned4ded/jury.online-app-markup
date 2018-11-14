@@ -95,9 +95,19 @@
 	@include get-em-width(16, 21);
 }
 
+.icon--edit {
+	font-size: 401px;
+	@include get-em-width(401.52, 401);
+}
+
 .icon--email {
 	font-size: 13px;
 	@include get-em-width(16, 13);
+}
+
+.icon--ethereum {
+	font-size: 512px;
+	@include get-em-width(512, 512);
 }
 
 .icon--eye {
@@ -148,6 +158,16 @@
 .icon--information {
 	font-size: 437.6px;
 	@include get-em-width(437.6, 437.6);
+}
+
+.icon--like {
+	font-size: 456.81px;
+	@include get-em-width(456.81, 456.81);
+}
+
+.icon--like-outline {
+	font-size: 478.2px;
+	@include get-em-width(478.2, 478.2);
 }
 
 .icon--link {

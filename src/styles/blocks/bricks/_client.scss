@@ -93,10 +93,16 @@
 	&__btn {
 		min-width: 256px;
 		@include bp-down(sm) {
-		  min-width: 0;
+		  min-width: 100%;
 		}
 	}
-	&__btn-email {
-		margin: 1px 0 0 15px;
+	&__btn-icon {
+		margin: 1px 0 0 10px;
+		@include bp-down(md) {
+		  margin-left: 5px;
+		}
+		@include bp-down(sm) {
+		  margin-top: 10px;
+		}
 	}
 }
