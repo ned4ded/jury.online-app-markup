@@ -28,6 +28,7 @@
     }
 
     &--inputs {
+      min-height: 120px;
       margin-right: -$p-x;
       padding-left: $p-x;
     }
@@ -52,19 +53,36 @@
     list-style: none;
 
     display: flex;
-
+    justify-content: center;
   }
 
   &__link {
-    font-size: 0;
     margin: 0 spacer(1);
 
-    &-icon {
-      padding: 0 spacer(1);
-      
-      svg {
-        font-size: rem(20px);
-      }
+    line-height: 1;
+
+    svg {
+      transition: fill .3s ease-in;
+
+      font-size: rem(20px);
+
+      fill: theme-info();
+    }
+
+    &:hover svg {
+      transition: fill .05s ease-in;
+
+      fill: darken(theme-info(), 7.5%)
+    }
+
+    &:active svg {
+      transition: fill .0s ease-in;
+
+      fill: darken(theme-info(), 10%)
+    }
+
+    &-name {
+      font-size: 0;
     }
   }
 
@@ -105,5 +123,40 @@
       font: small-caption;
       font-size: 14px;
     }
+  }
+
+  &__label {
+    display: inline-block;
+
+    width: 100%;
+    min-height: 34px;
+    margin-bottom: 0;
+    padding-right: $p-x;
+
+    cursor: pointer;
+    text-align: right;
+
+    color: theme-info();
+
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  & *[data-entry-checked] {
+    display: none;
+  }
+
+  & input[value="sign-in"]:checked ~ * > *[data-entry-checked="sign-in"],
+  & input[value="sign-in"]:checked ~ [data-entry-checked="sign-in"] {
+    display: block;
+  }
+
+  & input[value="sign-up"]:checked ~ * > *[data-entry-checked="sign-up"],
+  & input[value="sign-up"]:checked ~ [data-entry-checked="sign-up"] {
+    display: block;
   }
 }

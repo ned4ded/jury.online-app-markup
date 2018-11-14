@@ -1,8 +1,11 @@
 {% import "lib/helpers.njk" as helpers %}
 {% import "blocks/brand.njk" as brand %}
+{% import "blocks/close-modal.njk" as close %}
 
 {% macro make(content, classes) %}
   <div class="jo-modal{{ helpers.parse(classes) }}">
+    {{ close.make('jo-modal__close') }}
+
     <div class="jo-modal__content">
       {{ brand.make('jo-modal__brand') }}
 
