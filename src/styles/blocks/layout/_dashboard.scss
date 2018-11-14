@@ -99,7 +99,7 @@
 
   &__content {
     @include bp-up($navbar-collapse-bp) {
-      overflow-y: auto;
+      overflow-y: scroll;
       flex-grow: 1;
     }
   }
