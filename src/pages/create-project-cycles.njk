@@ -1,0 +1,154 @@
+{% import "lib/swiper.njk" as swiper %}
+{% import "lib/icon.njk" as icon %}
+
+{% extends "layout.njk" %}
+
+{% block content %}
+
+  <form data-create-project class="create" action="/" method="post">
+    <div class="create__container container-lg container-fluid">
+      <div class="box box--p--xxl">
+        <div class="row">
+          <div class="col-xxl-3">
+            <h2 class="h4 mb-8 mb-xxl-12">Cycles</h2>
+
+            <div class="help-inf xl-hide mt-4">
+              <p class="help-inf__text">Upload your project logo, name &amp; category to to personalize</p>
+              <div class="help-inf__icon">{{ icon.make('arr-right') }}</div>
+            </div>
+          </div>
+
+          <div class="col-xxl-9 create__cycles">
+            <ul data-create-project-cycle="list" class="create__cycles-list">
+
+              <li data-create-project-cycle="container" class="create__cycle">
+                  <h3 class="text-lg font-weight-normal mb-5"><span data-create-project-cycle="index">1</span> Cycle</h3>
+
+                  <div data-create-project-cycle="pie-chart" class="mb-5 chart chart--md chart--input" data-percent="20">
+                    <div class="chart__inner">
+                      <input data-create-project-cycle="percentage" data-pie-chart-value type="number" class="chart__input" value="20" min="0" max="100" name="project[cycles_attributes][1][percentage]"><span class="chart__parcent">%</span>
+                    </div>
+                  </div>
+
+                  <label class="create__cycle-label mb-5">
+                    <input data-create-project-cycle="date" type='text' data-range="true" data-date-format="dd.mm.yyyy" data-multiple-dates-separator=" - " class="form-control create__cycle-datepicker" data-language="en" placeholder="__.__.____ - __.__.____" name="project[cycles_attributes][1][date]"/>
+                  </label>
+
+                  <p class="m-0 d-flex flex-column align-items-center text-muted text-sm">
+                    <span>260 000</span>
+                    <span>PHT</span>
+                    <span>(<span>9 500</span> ETH)</span>
+                    <span>totally</span>
+                  </p>
+              </li>
+
+            </ul>
+            <span class="create__cycles-control">
+              <button data-create-project-cycle="add" class="create__cycles-add btn-plus" type="button" name="button">Add</button>
+            </span>
+          </div>
+        </div>
+
+        <hr class="box__hr box__content box__content--fluid mt-5 mb-5">
+
+        <div class="row">
+          <div class="col-xxl-3">
+            <h2 class="h4 mb-8 mb-xxl-12">Milestones</h2>
+          </div>
+          <div class="col-xxl-9">
+            <ul data-project-creator-tab="list" class="create__tabs nav mb-3">
+              <li data-project-creator-tab="container" class="nav-item create__tab">
+                <a class="nav-link active" data-project-creator-tab="link" href="#tabs-1">Cycle 1</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xxl-3">
+            <div class="help-inf xl-hide mt-4">
+              <p class="help-inf__text">A brief description will help investors pay attention to you</p>
+              <div class="help-inf__icon">{{ icon.make('arr-right') }}</div>
+            </div>
+            <div class="help-inf xl-hide mt-4">
+              <p class="help-inf__text">Better more contact information. People can reach you conveniently</p>
+              <div class="help-inf__icon">{{ icon.make('arr-right') }}</div>
+            </div>
+          </div>
+          <div class="col-xxl-9">
+            <div data-project-creator-tab="content" class="tab-content">
+              <div class="tab-pane active fade show" id="tabs-1">
+                <div class="row">
+                  <div class="col-12">
+
+                  </div>
+                  <div class="col-xxl-6">
+                    <h2 class="h5 font-weight-normal mb-9">Resource allocation</h2>
+
+                    <div data-pie-chart class="mb-5 chart chart--md chart--input" data-percent="20">
+                      <div class="chart__inner">
+                        <input data-create-project-cycle="percentage" data-pie-chart-value type="number" class="chart__input" value="20" min="0" max="100" name="project[cycles_attributes][1][percentage]"><span class="chart__parcent">%</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-xxl-6">
+                    <h2 class="h5 font-weight-normal mb-9">Milestone settings</h2>
+                    <p>
+                      <span class="badge badge-outline-info">IPFS</span>
+                      <span class="info-block" data-toggle="tooltip" title="Disabled tooltip">?</span>
+                    </p>
+                    <p class="form-check-inline">
+                      <label class="mr-5">
+                        <input type="radio" name="project[cycles_attributes][1][ipfs]" checked> Yes
+                      </label>
+
+                      <label class="">
+                        <input type="radio" name="project[cycles_attributes][1][ipfs]"> No
+                      </label>
+                    </p>
+                  </div>
+
+                  <div class="col-12 mt-11">
+                    <h2 class="h5 font-weight-normal mb-5">Dates</h2>
+
+                    <p class="pl-xxl-12">
+                      <label class="create__cycle-label mb-5 mr-4 w-auto">
+                        <input data-datepicker type='text' data-date-format="dd.mm.yyyy"  class="form-control create__cycle-datepicker" data-language="en" placeholder="__.__.____" />
+                      </label>
+
+                      <label class="create__cycle-label mb-5 w-auto">
+                        <input data-datepicker type='text' data-date-format="dd.mm.yyyy" class="form-control create__cycle-datepicker" data-language="en" placeholder="__.__.____" />
+                      </label>
+                    </p>
+                  </div>
+
+                  <div class="col-12 mt-11">
+                    <h2 class="h5 font-weight-normal mb-5">Description</h2>
+
+                    <textarea name="name" rows="8" cols="80" class="ml-xxl-12">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</textarea>
+
+                  </div>
+
+                  <div class="col-12 mt-11">
+                    <h2 class="h5 font-weight-normal mb-5">Definition of Done</h2>
+
+                    <textarea name="name" rows="8" cols="80" class="ml-xxl-12">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</textarea>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="box__hr box__content box__content--fluid mt-7 mb-7">
+
+        <p class="mb-0 text-center">
+          <button type="submit" class="btn btn-success">Complete registration</button>
+        </p>
+      </div>
+    </div>
+  </form>
+
+{% endblock %}

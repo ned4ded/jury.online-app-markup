@@ -20,10 +20,13 @@
 			transform: translate(-50%,-50%);
 		}
 	}
+
 	&__inner {
 		vertical-align: middle;
 		line-height: 1.4;
 		display: inline-block;
+		z-index: 1;
+		position: relative;
 	}
 	&__value {
 		font-weight: 400;
@@ -35,5 +38,32 @@
 		font-size: rem(18px);
 		color: #75A3BF;
 		display: inline;
+	}
+
+	&--input &__parcent {
+		margin-left: 0;
+
+		font-size: rem(16px);
+	}
+
+	&__input {
+		width: 35px;
+		padding-bottom: spacer(1);
+
+		text-align: center;
+
+		color: theme-color('700');
+		border: none;
+		border-bottom: 1px solid gray('100');
+		background-color: transparent;
+
+		font-size: rem(20px);
+		line-height: 1;
+
+    -moz-appearance:textfield;
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button {
+		    -webkit-appearance: none;
+		}
 	}
 }
