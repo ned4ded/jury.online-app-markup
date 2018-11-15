@@ -1,3 +1,157 @@
 .create {
+	$cycle-p-x: 47px;
+
 	padding: 30px 0 60px;
+
+	&__cycles {
+		display: flex;
+		flex-flow: row nowrap;
+
+		&-control {
+			flex-basis: 105px;
+			position: relative;
+
+			svg {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+
+				transform: translate(-50%, -50%);
+
+				font-size: 10px;
+
+				fill: #2a2550;
+			}
+		}
+
+		&-add {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+
+			width: 24px;
+			height: 24px;
+			padding: 0;
+
+			cursor: pointer;
+			transform: translate(-50%, -50%);
+
+			&:before {
+				height: 10px;
+			}
+
+			&:after {
+				width: 10px;
+			}
+		}
+
+		&-list {
+			position: relative;
+
+			display: flex;
+			overflow-x: auto;
+
+			margin: 0;
+			padding: 0;
+
+			list-style: none;
+
+			margin: 0;
+		}
+	}
+
+	&__cycle {
+		$w: 200px;
+
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+
+		width: $w;
+		min-width: $w;
+		padding: 0 $cycle-p-x;
+
+		box-sizing: content-box;
+
+		&:last-child {
+			margin-right: 0;
+			padding-right: 0;
+		}
+
+		&:first-child {
+			padding-left: 0;
+		}
+
+		&:not(:first-child) {
+			.chart {
+				position: relative;
+
+				width: 130px;
+
+				&:before {
+					position: absolute;
+					top: 50%;
+					right: 100%;
+
+					width: $cycle-p-x * 2 + 64px;
+					height: 0;
+
+					content: '';
+
+					border-top: 1px dashed #75a3bf;
+				}
+			}
+		}
+
+		&-label {
+			width: 100%;
+
+			border: 2px solid #b9cde5;
+			border-radius: 7px;
+		}
+
+		&-datepicker {
+			width: 100%;
+			padding: 0;
+
+			text-align: center;
+
+			border: 0;
+			border-radius: 7px;
+
+			line-height: 36px;
+		}
+	}
+
+	&__tab {
+		& .nav-link {
+			margin: 0 27px;
+			padding-right: 0;
+			padding-left: 0;
+
+			opacity: 0.3;
+			color: #2a2550;
+
+			font-size: 18px;
+		}
+
+		&:first-child .nav-link {
+			margin-left: 0;
+		}
+
+		&:last-child .nav-link {
+			margin-right: 0;
+		}
+
+		& .active {
+			margin-bottom: -1px;
+
+			opacity: 1;
+			border-bottom: 1px solid #2a2550;
+		}
+	}
+
+	&__tabs {
+		border-bottom: solid 1px #dadada;
+	}
 }

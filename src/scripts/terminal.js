@@ -8,6 +8,9 @@ import slider from './lib/slider';
 import select from './lib/select';
 import rating from './lib/rating';
 import modal from './lib/modal';
+import piechart from './lib/pie-chart';
+import datepicker from './lib/datepicker';
+import projectCreator from './lib/project-creator';
 
 import './tooltip';
 import './tags';
@@ -32,4 +35,7 @@ DOC.ready(function () {
   rating();
   initNavbarToggle();
   modal();
+  piechart();
+  datepicker();
+  projectCreator();
 });

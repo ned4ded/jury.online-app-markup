@@ -4,13 +4,14 @@
 	max-width: 172px;
 	font-size: 14px;
 	&__text {
+		margin: 0;
 		color: #75A3BF;
 	}
 	&__icon	{
 		position: absolute;
 		top: 50%;
 		right: 0;
-		line-height: 1;
 		margin-top: -7px;
+		line-height: 1;
 	}
 }

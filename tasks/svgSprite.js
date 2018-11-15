@@ -41,9 +41,9 @@ export function svgSprite() {
               template: config.paths.svgTemplate,
             },
           },
-          // example: {
-          //   // dest: path.join(config.server.dest, 'example.html'),
-          // },
+          example: {
+            dest: path.join(config.server.dest, 'example.html'),
+          },
         },
       },
       svg: {

@@ -220,6 +220,11 @@
 	@include get-em-width(14, 13);
 }
 
+.icon--plus {
+	font-size: 24px;
+	@include get-em-width(24, 24);
+}
+
 .icon--profile {
 	font-size: 17px;
 	@include get-em-width(15.94, 17);
