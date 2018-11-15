@@ -20,11 +20,27 @@
           class: 'mt-5 mb-10',
           active: 2
         }) }}
+        <div class="head-zone">
+          <label for="upload-bg" class="head-zone__bg" style="background-image: url(./assets/imgs/mesh.png);"></label>
+          <input type="file" class="head-zone__input" id="upload-bg">
+          <div class="user-block">
+            <div class="user-block__img upload-img">
+              <div class="upload-img__wrap">
+                <span class="upload-img__img" style="background-image: url(./assets/imgs/upload-img.png);"></span>
+              </div>
+            </div>
+            <div class="user-block__wrap">
+              <div class="user-block__title">Pulse Health</div>
+              <a href="#" class="user-block__link link link--border">Medicine</a>
+            </div>
+          </div>
+          <label for="upload-bg" class="head-zone__info">Upload cover image here to make your design better (size*)</label>
+        </div>
         <!-- begin row -->
         <div class="row mt-5">
           <div class="col-xxl-2 col-xl-3 mt-4">
             <h4>Extended project description</h4>
-            <div class="help-inf xl-hide mt-10">
+            <div class="help-inf xl-hide mt-15">
               <div class="help-inf__text">A brief description will help investors pay attention to you</div>
               <div class="help-inf__icon">{{ icon.make('arr-right') }}</div>
             </div>
@@ -37,9 +53,184 @@
             <!-- end editor -->
           </div>
         </div>
+        <!-- end row -->
+        <hr class="box__hr mt-8">
+        <!-- begin row -->
+        <div class="row mt-5">
+          <div class="col-xxl-2 col-xl-3 mt-4">
+            <h4>Your project's video</h4>
+          </div>
+          <div class="col-xxl-8 col-xl-9 mt-4">
+           <p class="text-center text-gray mb-5">You can insert a link to a video or upload video file</p>
+           <div class="link-uploader">
+             <input type="text" class="link-uploader__input form-control" value="http://youtube.com/?link_out=health_sep_showreel">
+             <button class="link-uploader__btn" type="button">{{ icon.make('download') }}</button>
+           </div>
+          </div>
+        </div>
+        <!-- end row -->
+        <hr class="box__hr mt-8">
+        <!-- begin row -->
+        <div class="row mt-5">
+          <div class="col-xxl-2 col-xl-3 mt-4">
+            <h4>Disclaimer</h4>
+            <div class="help-inf xl-hide mt-9">
+              <div class="help-inf__text">Better more contact information. People can reach you conveniently</div>
+              <div class="help-inf__icon">{{ icon.make('arr-right') }}</div>
+            </div>
+          </div>
+          <div class="col-xxl-8 col-xl-9 mt-4">
+            <!-- begin editor -->
+            <div class="editor editor--sm js-editor">
+              <div class="js-editor-container"></div>
+            </div>
+            <!-- end editor -->
+          </div>
+        </div>
+        <!-- end row -->
+        <hr class="box__hr mt-8">
+        <!-- begin row -->
+        <div class="row mt-5">
+          <div class="col-xxl-2 col-xl-3 mt-4">
+            <h4>Social contacts</h4>
+          </div>
+          <div class="col-xxl-8 col-xl-9 mt-4">
+            <div class="row">
+              <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <!-- begin soc-input -->
+                <label class="soc-input js-soc-control-parent is-filled">
+                  <span class="soc-input__icon">{{ icon.make('linkedin-md') }}</span>
+                  <span class="soc-input__wrap">
+                    <input type="text" value="@health_by" class="soc-input__control form-control js-soc-control" placeholder="input here">
+                  </span>
+                </label>
+                <!-- end soc-input -->
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <!-- begin soc-input -->
+                <label class="soc-input js-soc-control-parent">
+                  <span class="soc-input__icon">{{ icon.make('facebook') }}</span>
+                  <span class="soc-input__wrap">
+                    <input type="text" class="soc-input__control form-control js-soc-control" placeholder="input here">
+                  </span>
+                </label>
+                <!-- end soc-input -->
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <!-- begin soc-input -->
+                <label class="soc-input js-soc-control-parent">
+                  <span class="soc-input__icon">{{ icon.make('g-plus') }}</span>
+                  <span class="soc-input__wrap">
+                    <input type="text" class="soc-input__control form-control js-soc-control" placeholder="input here">
+                  </span>
+                </label>
+                <!-- end soc-input -->
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <!-- begin soc-input -->
+                <label class="soc-input js-soc-control-parent">
+                  <span class="soc-input__icon">{{ icon.make('twitter') }}</span>
+                  <span class="soc-input__wrap">
+                    <input type="text" class="soc-input__control form-control js-soc-control" placeholder="input here">
+                  </span>
+                </label>
+                <!-- end soc-input -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end row -->
+        <hr class="box__hr mt-4">
+        <!-- begin row -->
+        <div class="row mt-5">
+          <div class="col-xxl-2 col-xl-3 mt-4">
+            <h4>Attachments</h4>
+            <div class="help-inf xl-hide mt-9">
+              <div class="help-inf__text">Better more contact information. People can reach you conveniently</div>
+              <div class="help-inf__icon">{{ icon.make('arr-right') }}</div>
+            </div>
+          </div>
+          <div class="col-xxl-8 col-xl-9 mt-4">
+            <!-- begin attachments -->
+            <div class="attachments attachments--simple">
+              <div class="attachments__row">
+                <a href="#" class="attach-card mb-4">
+                  <div class="attach-card__date">10.02.2018</div>
+                  <div class="attach-card__wrap">
+                    <div class="attach-card__title">WP</div>
+                    <div class="attach-card__description">White Paper</div>
+                  </div>
+                </a>
+                <a href="#" class="attach-card attach-card--orange mb-4">
+                  <div class="attach-card__date">10.02.2018</div>
+                  <div class="attach-card__wrap">
+                    <div class="attach-card__title">T&C</div>
+                    <div class="attach-card__description">Terms & Conditions</div>
+                  </div>
+                </a>
+                <a href="#" class="attach-card attach-card--add mb-4" data-toggle="modal" data-target="#attach-modal">
+                  <span class="attach-card__inner">
+                    <span class="btn-plus"></span>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <!-- end attachments -->
+          </div>
+        </div>
+        <!-- end row -->
+        <hr class="box__hr mt-8">
+        <div class="text-center mt-8 mb-5">
+          <div class="text-gray mb-4">Your project is saved in Drafts.<br>You can go to the next step or fill the information later.</div>
+          <button class="btn btn-outline-info mt-3 ml-2 mr-2" type="button">SAVE</button>
+          <button class="btn btn-success mt-3 ml-2 mr-2" type="button" data-toggle="modal" data-target="#modal-success">NEXT STEP</button>
+        </div>
       </div>
     </div>
   </div>
   <!-- end create -->
+  {% set addModalContent %}
+    <div class="add-modal">
+     <div class="add-modal__head">Add contact</div>
+     <div class="add-modal__wrap">
+       <!-- begin soc-tabs -->
+       <div class="soc-tabs" data-tabs>
+         <div class="soc-tabs__wrap" data-tabs-wrapper>
+          <div class="form-group">
+           <label class="form-label" for="project-category">Abbreviation</label>
+            <input type="text" class="form-control" value="WP">
+          </div>
+          <div class="form-group">
+           <label class="form-label" for="project-category">Name</label>
+            <input type="text" class="form-control" value="White Paper">
+          </div>
+          <div class="form-group">
+            <!-- begin upload-attach -->
+            <label class="upload-attach">
+              <input type="file" class="upload-attach__input">
+              <span class="upload-attach__inner">
+                <span class="upload-attach__text">Upload attachment</span>
+                {{ icon.make('download', 'upload-attach__icon') }}
+              </span>
+            </label>
+            <!-- end upload-attach -->
+          </div>
+          <div class="form-footer text-center">
+            <a href="#" class="btn btn-outline-info">+ Add</a>
+          </div>
+         </div>
+       </div>
+       <!-- end soc-tabs -->
+     </div>
+    </div>
+  {% endset %}
+
+  {% set attachModal = {
+    id: 'attach-modal',
+    content: addModalContent,
+    dialog: 'modal-dialog-centered'
+  } %}
+
+  {{ modals | addToArray(attachModal) }}
 
 {% endblock %}

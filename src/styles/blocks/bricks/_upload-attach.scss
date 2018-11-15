@@ -1,0 +1,31 @@
+.upload-attach {
+	position: relative;
+	padding: 12px;
+	text-align: center;
+	border-radius: 8px;
+	background-color: #F6F6F6;
+	display: block;
+	&__input {
+		position: absolute;
+		top: 0;
+		opacity: 0;
+		visibility: hidden;
+	}
+	&__inner {
+		vertical-align: top;
+		display: inline-block;
+	}
+	&__text {
+		font-size: 20px;
+		font-weight: 300;
+		color: #75A3BF;
+		border-bottom: 1px solid;
+	}
+	&__icon {
+		margin-left: 12px;
+		display: inline-block;
+		.icon {
+			font-size: 17px;
+		}
+	}
+}

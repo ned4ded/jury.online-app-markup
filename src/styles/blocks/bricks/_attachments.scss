@@ -3,12 +3,21 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	&--simple {
+		margin: 0;
+	}
+	&__row {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+	}
 }
 
 .attach-card {
 	padding: 15px 20px;
 	color: #FFF;
 	width: 139px;
+	min-height: 183px;
 	font-weight: 300;
 	font-size: 14px;
 	background-image: linear-gradient(-45deg, #8B85C2 0%, #B695BB 100%);
@@ -21,12 +30,22 @@
 	&--blue {
 		background-image: linear-gradient(134deg, #99DEED 0%, #6D88D7 100%);
 	}
+	&--add {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 1px solid #6F7182;
+		background: #FFF;
+	}
 	&:hover {
 		text-decoration: none;
 		color: #FFF;
 	}
 	.attachments & {
 		margin: 0 20px;
+	}
+	.attachments__row & {
+		margin: 0 50px 0 0;
 	}
 	&__wrap {
 		margin-top: 40px;

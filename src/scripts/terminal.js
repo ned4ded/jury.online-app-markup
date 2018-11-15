@@ -19,6 +19,7 @@ import './chart';
 import './tabs';
 import './accordion';
 import './editior';
+import './checkSocInput';
 
 DOC.ready(function () {
   const body = document.querySelector('body');
