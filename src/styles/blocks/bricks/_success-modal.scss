@@ -1,0 +1,48 @@
+.success-modal {
+	padding: 80px 155px 60px;
+	width: 750px;
+	text-align: center;
+	font-size: 14px;
+	color: #6F7182;
+	box-shadow: 0 0 40px 0 rgba(103,220,138,0.51);
+	border: 2px solid rgba(103,220,138,0.50);
+	border-radius: 12px;
+	background-color: #FFF;
+	background-image: url(../assets/imgs/pattern.png);
+	@include bp-down(md) {
+		margin: auto;
+	  padding: 20px 30px;
+	  width: 450px;
+	}
+	@include bp-down(md) {
+		padding: 10px 15px;
+		width: 360px;
+	}
+	&__head {
+		font-size: 18px;
+		color: #2A2550;
+		padding-bottom: 20px;
+		border-bottom: 2px solid #EBEEF5;
+	}
+	&__title {
+		color: #67DC8A;
+		font-size: 24px;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+	&__description {
+		margin-top: 16px;
+	}
+	&__buttons {
+		margin-top: 42px;
+		&:not(:last-child) {
+			margin-bottom: 27px;
+		}
+		.btn + .btn {
+			margin-left: 25px;
+			@include bp-down(md) {
+			  margin-left: 5px;
+			}
+		}
+	}
+}
