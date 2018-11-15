@@ -245,6 +245,11 @@
 	@include get-em-width(22, 22);
 }
 
+.icon--telegram {
+	font-size: 37px;
+	@include get-em-width(34, 37);
+}
+
 .icon--twitter {
 	font-size: 25px;
 	@include get-em-width(25, 25);

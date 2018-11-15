@@ -7,6 +7,20 @@
     <!-- end hero -->
     <div class="create__container container-lg container-fluid">
       <div class="box box--p--lg">
+        <div class="simple-head">
+          <div class="simple-head__center text-center">
+            <h2>Hello! This is a project creation page</h2>
+            <h2 class="text-blue">step #1</h2>
+          </div>
+          <div class="simple-head__right">
+            last autosave in <span class="text-blue">Drafts</span> 10 october 19:03
+          </div>
+        </div>
+        {{ steps.make({
+          class: 'mt-5 mb-10',
+          prevBtnDisabled: true,
+          active: 1
+        }) }}
         <!-- begin row -->
         <div class="row mt-5">
           <div class="col-xxl-3 mt-4">
@@ -77,14 +91,14 @@
         <hr class="box__hr mt-8">
         <!-- begin row -->
         <div class="row mt-5">
-          <div class="col-xxl-3 col-xl-3 mt-4">
+          <div class="col-xxl-2 col-xl-3 mt-4">
             <h4>Contact</h4>
             <div class="help-inf xl-hide mt-8">
               <div class="help-inf__text">Better more contact information. People can reach you conveniently</div>
               <div class="help-inf__icon">{{ icon.make('arr-right') }}</div>
             </div>
           </div>
-          <div class="col-xxl-7 col-xl-9 mt-4">
+          <div class="col-xxl-8 col-xl-9 mt-4">
             <!-- begin row -->
             <div class="row">
               <div class="col-md-6">
@@ -111,7 +125,7 @@
               <div class="col-md-6">
                 <div class="mt-8 md-hide"></div>
                 <div class="add-field">
-                  <button class="add-field__btn btn-plus" type="button"></button>
+                  <button class="add-field__btn btn-plus" data-toggle="modal" data-target="#add-field" type="button"></button>
                   You can also add another contact
                 </div>
               </div>
@@ -123,11 +137,144 @@
         <hr class="box__hr mt-8">
         <div class="text-center mt-8 mb-5">
           <div class="text-gray">Create the project and start you own ICO now!</div>
-          <a href="#" class="btn btn-success mt-3">CREATE PROJECT</a>
+          <button class="btn btn-success mt-3" type="button" data-toggle="modal" data-target="#modal-success">CREATE PROJECT</button>
         </div>
       </div>
     </div>
   </div>
   <!-- end create -->
+
+  {% set addModalContent %}
+    <div class="add-modal">
+     <div class="add-modal__head">Add contact</div>
+     <div class="add-modal__wrap">
+       <!-- begin soc-tabs -->
+       <div class="soc-tabs" data-tabs>
+         <div class="soc-tabs__out">
+          <div class="soc-tabs__head">
+            <div class="soc-tabs__head__wrap">
+              <div class="form-label">Social</div>
+              <ul class="soc-tabs__list">
+                <li class="soc-tabs__item" data-tabs-control="in">
+                  {{icon.make('linkedin-md')}}
+                </li>
+                <li class="soc-tabs__item" data-tabs-control="fb">
+                  {{icon.make('facebook')}}
+                </li>
+                <li class="soc-tabs__item" data-tabs-control="telegram">
+                  {{icon.make('telegram')}}
+                </li>
+                <li class="soc-tabs__item" data-tabs-control="twitter">
+                  {{icon.make('twitter')}}
+                </li>
+                <li class="soc-tabs__item" data-tabs-control="plus">
+                  <span class="btn-plus"></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+         </div>
+         <div class="soc-tabs__wrap" data-tabs-wrapper>
+          <div class="soc-tabs__container text-center" data-tabs-container="in">
+            <div class="soc-tabs__acc">
+              <div class="form-group">
+                <label class="form-label">LinkedId account</label>
+                <input type="text" class="form-control text-center" value="@health_by" placeholder="Soc">
+              </div>
+            </div>
+            <div class="form-footer mt-10">
+              <a href="#" class="btn btn-outline-info">+ Add</a>
+            </div>
+          </div>
+          <div class="soc-tabs__container text-center" data-tabs-container="fb">
+            <div class="soc-tabs__acc">
+              <div class="form-group">
+                <label class="form-label">facebook account</label>
+                <input type="text" class="form-control text-center" value="@health_by" placeholder="Soc">
+              </div>
+            </div>
+            <div class="form-footer mt-10">
+              <a href="#" class="btn btn-outline-info">+ Add</a>
+            </div>
+          </div>
+          <div class="soc-tabs__container text-center" data-tabs-container="telegram">
+            <div class="soc-tabs__acc">
+              <div class="form-group">
+                <label class="form-label">Telegram account</label>
+                <input type="text" class="form-control text-center" value="@health_by" placeholder="Soc">
+              </div>
+            </div>
+            <div class="form-footer mt-10">
+              <a href="#" class="btn btn-outline-info">+ Add</a>
+            </div>
+          </div>
+          <div class="soc-tabs__container text-center" data-tabs-container="twitter">
+            <div class="soc-tabs__acc">
+              <div class="form-group text-center">
+                <label class="form-label">Twitter account</label>
+                <input type="text" class="form-control text-center" value="@health_by" placeholder="Soc">
+              </div>
+            </div>
+            <div class="form-footer mt-10">
+              <a href="#" class="btn btn-outline-info">+ Add</a>
+            </div>
+          </div>
+          <div class="soc-tabs__container" data-tabs-container="plus">
+            <div class="form-group">
+             <label class="form-label" for="project-category">Source Name</label>
+             <select data-select name="select" class="select select--gray" id="project-category">
+               <option>Skype</option>
+               <option>Vanilla</option>
+               <option>Strawberry</option>
+               <option>Chocolate</option>
+             </select>
+            </div>
+            <div class="form-group">
+             <label class="form-label" for="project-category">Contact</label>
+             <select data-select name="select" class="select select--gray" id="project-category">
+               <option>1234526</option>
+               <option>Vanilla</option>
+               <option>Strawberry</option>
+               <option>Chocolate</option>
+             </select>
+            </div>
+            <div class="form-footer text-center">
+              <a href="#" class="btn btn-outline-info">+ Add</a>
+            </div>
+          </div>
+         </div>
+       </div>
+       <!-- end soc-tabs -->
+     </div>
+    </div>
+  {% endset %}
+  {% set addModal = {
+    id: 'add-field',
+    content: addModalContent,
+    dialog: 'modal-dialog-centered'
+  } %}
+
+  {{ modals | addToArray(addModal) }}
+
+  {% set modalSuccess %}
+    <div class="success-modal">
+      <div class="success-modal__head">
+        <div class="success-modal__title">Congratulations!</div>
+        <div class="success-modal__description">Your project has created & saved in <span class="text-blue">Drafts</span></div>
+      </div>
+      <div class="success-modal__buttons">
+        <a href="#" class="btn btn-outline-info">FILL LATER</a>
+        <a href="#" class="btn btn-success">NEXT STEP</a>
+      </div>
+      <p>You can go to the next step or fill the information later.</p>
+    </div>
+  {% endset %}
+  {% set successModal = {
+    id: 'modal-success',
+    content: modalSuccess,
+    dialog: 'modal-dialog-centered'
+  } %}
+
+  {{ modals | addToArray(successModal) }}
 
 {% endblock %}

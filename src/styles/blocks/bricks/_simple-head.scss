@@ -1,0 +1,19 @@
+.simple-head {
+	display: flex;
+	justify-content: space-between;
+	&__center {
+		padding-left: 170px;
+		padding-right: 15px;
+		flex-grow: 1;
+	}
+	&__right {
+		width: 170px;
+		color: #9F9F9F;
+		font-size: 16px;
+	}
+	&__left {
+		& + .simple-head__center {
+			padding: 0 15px;
+		}
+	}
+}

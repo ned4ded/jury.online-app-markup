@@ -21,6 +21,7 @@ import initNavbarToggle from './navbarToggle';
 import './chart';
 import './tabs';
 import './accordion';
+import './editior';
 
 DOC.ready(function () {
   const body = document.querySelector('body');

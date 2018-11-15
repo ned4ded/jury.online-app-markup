@@ -360,7 +360,7 @@
       <div class="box box--p--lg mt-9">
         <h4 class="title-bord">RoadMap</h4>
         <!-- begin roadmap -->
-        <div class="roadmap mt-8">
+        <div class="roadmap mt-8" data-tabs>
           <div class="roadmap__inner mb-8">
             <h6>Cycles <span class="small text-blue">( resource : 12 000 000 LNT / 75 000 ETH / 35 000 000 USD )</span></h6>
             <!-- begin cycles -->
@@ -387,7 +387,7 @@
                   date: '25.10.2018 / 10.02.2019'
                 }
               ] %}
-              <li class="cycles__item{% if item.class %} is-active{% endif %}">
+              <li class="cycles__item{% if item.class %} is-active{% endif %}" data-tabs-control="{{loop.index}}">
                 <a href="#" class="cycle">
                   <div class="cycle__diagram">
                     <div class="chart chart--sm js-chart" data-line-width="6" data-size="52" data-bar-color="{{ item.diagramColor }}" data-track-color="#EBEEF5" data-percent="{{ item.percent }}"></div>
@@ -405,462 +405,469 @@
             </ul>
             <!-- end cycles -->
           </div>
-          <!-- begin cd-horizontal-timeline -->
-          <div class="cd-horizontal-timeline roadmap__timeline">
-            <div class="roadmap__inner">
-            <h6>Milestones</h6>
-              <div class="timeline mt-6">
-                <div class="events-wrapper">
-                  <div class="events">
-                    <ol>
-                      <li>
-                        <a href="#0" data-date="16/09/2017" class="selected">
-                          <span class="events__period">I</span>
-                          <span class="events__date">25.10 - 10.11</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#0" data-date="08/11/2017">
-                          <span class="events__period">II</span>
-                          <span class="events__date">25.10 - 27.11</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#0" data-date="09/01/2018">
-                          <span class="events__period">III</span>
-                          <span class="events__date">25.10 - 10.11</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#0" data-date="12/03/2018">
-                          <span class="events__period">V</span>
-                          <span class="events__date">25.11 - 10.12</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#0" data-date="1/04/2018">
-                          <span class="events__period">VI</span>
-                          <span class="events__date">25.11 - 10.12</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#0" data-date="18/07/2018">
-                          <span class="events__period">VII</span>
-                          <span class="events__date">25.11 - 10.12</span>
-                        </a>
-                      </li>
-                    </ol>
+          <div data-tabs-wrapper>
+            {% for i in range(1,4) %}
+            <div data-tabs-container="{{ i }}">
+              <!-- begin cd-horizontal-timeline -->
+              <div class="cd-horizontal-timeline roadmap__timeline">
+                <div class="roadmap__inner">
+                <h6>Milestones{{ i }}</h6>
+                  <div class="timeline mt-6">
+                    <div class="events-wrapper">
+                      <div class="events">
+                        <ol>
+                          <li>
+                            <a href="#0" data-date="16/09/2017" class="selected">
+                              <span class="events__period">I</span>
+                              <span class="events__date">25.10 - 10.11</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#0" data-date="08/11/2017">
+                              <span class="events__period">II</span>
+                              <span class="events__date">25.10 - 27.11</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#0" data-date="09/01/2018">
+                              <span class="events__period">III</span>
+                              <span class="events__date">25.10 - 10.11</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#0" data-date="12/03/2018">
+                              <span class="events__period">V</span>
+                              <span class="events__date">25.11 - 10.12</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#0" data-date="1/04/2018">
+                              <span class="events__period">VI</span>
+                              <span class="events__date">25.11 - 10.12</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#0" data-date="18/07/2018">
+                              <span class="events__period">VII</span>
+                              <span class="events__date">25.11 - 10.12</span>
+                            </a>
+                          </li>
+                        </ol>
 
-                    <span class="filling-line" aria-hidden="true"></span>
-                  </div> <!-- .events -->
+                        <span class="filling-line" aria-hidden="true"></span>
+                      </div> <!-- .events -->
+                    </div>
+                    <ul class="cd-timeline-navigation">
+                      <li><a href="#0" class="prev inactive">{{ icon.make('arrow-left') }}Prev</a></li>
+                      <li><a href="#0" class="next">{{ icon.make('arrow-right') }}Next</a></li>
+                    </ul>
+                  </div>
                 </div>
-                <ul class="cd-timeline-navigation">
-                  <li><a href="#0" class="prev inactive">{{ icon.make('arrow-left') }}Prev</a></li>
-                  <li><a href="#0" class="next">{{ icon.make('arrow-right') }}Next</a></li>
-                </ul>
+                <div class="events-content">
+                  <ol>
+                    <li class="selected" data-date="16/09/2017">
+                      <div class="events-wrap">
+                        <!-- begin milestone -->
+                        <div class="milestone">
+                          <div class="milestone__chart">
+                            <div class="chart chart--md js-chart" data-line-width="6" data-size="118" data-track-color="#F6F6F6" data-percent="20">
+                              <div class="chart__inner">
+                                <div class="chart__value js-chart-value">20</div>
+                                <div class="chart__parcent">%</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="milestone__wrap">
+                            <div class="milestone__title">
+                              SECOND MILESTONE <span class="milestone__badge badge badge-sm badge-outline-info">IPFS</span>
+                            </div>
+                            <div class="milestone__date">25 OCT - 27 NOV</div>
+                            <div class="milestone__text">totally spent in this milestone</div>
+                            <div class="milestone__price">260 000 LNT ( 19 500k USD )</div>
+                          </div>
+                        </div>
+                        <!-- end milestone -->
+                        <div class="events-wrap__row row">
+                          <div class="events-wrap__col col-md-8">
+                            <hr class="mt-8 mb-8">
+                            <div class="events-wrap__group">
+                              <h6>Description</h6>
+                              <div class="events-wrap__text mt-6">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                            </div>
+                            <div class="events-wrap__group">
+                              <h6>Definition of Done</h6>
+                              <div class="events-wrap__text mt-6">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                            </div>
+                          </div>
+                          <div class="events-wrap__col col-md-4">
+                            <div class="pt-8 pb-8"></div>
+                            <h6>Attachments</h6>
+                            <div class="events-wrap__field mt-6">
+                              <a href="#" class="link-attach">
+                                 <span class="link-attach__icon">
+                                  {{ icon.make('attach') }}
+                                 </span>
+                                 <span class="link-attach__text">Terms & Conditions</span>
+                               </a>
+                            </div>
+                            <div class="events-wrap__field">
+                              <a href="#" class="link-attach">
+                                 <span class="link-attach__icon">
+                                  {{ icon.make('attach') }}
+                                 </span>
+                                 <span class="link-attach__text">Aldus PageMaker</span>
+                               </a>
+                            </div>
+                            <div class="events-wrap__field">
+                              <a href="#" class="link-attach">
+                                 <span class="link-attach__icon">
+                                  {{ icon.make('attach') }}
+                                 </span>
+                                 <span class="link-attach__text">Letraset sheets</span>
+                               </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li data-date="08/11/2017">
+                      <div class="events-wrap">
+                        <!-- begin milestone -->
+                        <div class="milestone">
+                          <div class="milestone__chart">
+                            <div class="chart chart--md js-chart" data-line-width="6" data-size="118" data-track-color="#F6F6F6" data-percent="20">
+                              <div class="chart__inner">
+                                <div class="chart__value js-chart-value">20</div>
+                                <div class="chart__parcent">%</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="milestone__wrap">
+                            <div class="milestone__title">
+                              SECOND MILESTONE <span class="milestone__badge badge badge-sm badge-outline-info">IPFS</span>
+                            </div>
+                            <div class="milestone__date">25 OCT - 27 NOV</div>
+                            <div class="milestone__text">totally spent in this milestone</div>
+                            <div class="milestone__price">260 000 LNT ( 19 500k USD )</div>
+                          </div>
+                        </div>
+                        <!-- end milestone -->
+                        <div class="events-wrap__row row">
+                          <div class="events-wrap__col col-md-8">
+                            <hr class="mt-8 mb-8">
+                            <div class="events-wrap__group">
+                              <h6>Description</h6>
+                              <div class="events-wrap__text mt-6">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                            </div>
+                            <div class="events-wrap__group">
+                              <h6>Definition of Done</h6>
+                              <div class="events-wrap__text mt-6">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                            </div>
+                          </div>
+                          <div class="events-wrap__col col-md-4">
+                            <div class="pt-8 pb-8"></div>
+                            <h6>Attachments</h6>
+                            <div class="events-wrap__field mt-6">
+                              <a href="#" class="link-attach">
+                                 <span class="link-attach__icon">
+                                  {{ icon.make('attach') }}
+                                 </span>
+                                 <span class="link-attach__text">Terms & Conditions</span>
+                               </a>
+                            </div>
+                            <div class="events-wrap__field">
+                              <a href="#" class="link-attach">
+                                 <span class="link-attach__icon">
+                                  {{ icon.make('attach') }}
+                                 </span>
+                                 <span class="link-attach__text">Aldus PageMaker</span>
+                               </a>
+                            </div>
+                            <div class="events-wrap__field">
+                              <a href="#" class="link-attach">
+                                 <span class="link-attach__icon">
+                                  {{ icon.make('attach') }}
+                                 </span>
+                                 <span class="link-attach__text">Letraset sheets</span>
+                               </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li data-date="09/01/2018">
+                      <div class="events-wrap">
+                        <!-- begin milestone -->
+                        <div class="milestone">
+                          <div class="milestone__chart">
+                            <div class="chart chart--md js-chart" data-line-width="6" data-size="118" data-track-color="#F6F6F6" data-percent="20">
+                              <div class="chart__inner">
+                                <div class="chart__value js-chart-value">20</div>
+                                <div class="chart__parcent">%</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="milestone__wrap">
+                            <div class="milestone__title">
+                              SECOND MILESTONE <span class="milestone__badge badge badge-sm badge-outline-info">IPFS</span>
+                            </div>
+                            <div class="milestone__date">25 OCT - 27 NOV</div>
+                            <div class="milestone__text">totally spent in this milestone</div>
+                            <div class="milestone__price">260 000 LNT ( 19 500k USD )</div>
+                          </div>
+                        </div>
+                        <!-- end milestone -->
+                        <div class="events-wrap__row row">
+                          <div class="events-wrap__col col-md-8">
+                            <hr class="mt-8 mb-8">
+                            <div class="events-wrap__group">
+                              <h6>Description</h6>
+                              <div class="events-wrap__text mt-6">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                            </div>
+                            <div class="events-wrap__group">
+                              <h6>Definition of Done</h6>
+                              <div class="events-wrap__text mt-6">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                            </div>
+                          </div>
+                          <div class="events-wrap__col col-md-4">
+                            <div class="pt-8 pb-8"></div>
+                            <h6>Attachments</h6>
+                            <div class="events-wrap__field mt-6">
+                              <a href="#" class="link-attach">
+                                 <span class="link-attach__icon">
+                                  {{ icon.make('attach') }}
+                                 </span>
+                                 <span class="link-attach__text">Terms & Conditions</span>
+                               </a>
+                            </div>
+                            <div class="events-wrap__field">
+                              <a href="#" class="link-attach">
+                                 <span class="link-attach__icon">
+                                  {{ icon.make('attach') }}
+                                 </span>
+                                 <span class="link-attach__text">Aldus PageMaker</span>
+                               </a>
+                            </div>
+                            <div class="events-wrap__field">
+                              <a href="#" class="link-attach">
+                                 <span class="link-attach__icon">
+                                  {{ icon.make('attach') }}
+                                 </span>
+                                 <span class="link-attach__text">Letraset sheets</span>
+                               </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li data-date="12/03/2018">
+                      <div class="events-wrap">
+                        <!-- begin milestone -->
+                        <div class="milestone">
+                          <div class="milestone__chart">
+                            <div class="chart chart--md js-chart" data-line-width="6" data-size="118" data-track-color="#F6F6F6" data-percent="20">
+                              <div class="chart__inner">
+                                <div class="chart__value js-chart-value">20</div>
+                                <div class="chart__parcent">%</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="milestone__wrap">
+                            <div class="milestone__title">
+                              SECOND MILESTONE <span class="milestone__badge badge badge-sm badge-outline-info">IPFS</span>
+                            </div>
+                            <div class="milestone__date">25 OCT - 27 NOV</div>
+                            <div class="milestone__text">totally spent in this milestone</div>
+                            <div class="milestone__price">260 000 LNT ( 19 500k USD )</div>
+                          </div>
+                        </div>
+                        <!-- end milestone -->
+                        <div class="events-wrap__row row">
+                          <div class="events-wrap__col col-md-8">
+                            <hr class="mt-8 mb-8">
+                            <div class="events-wrap__group">
+                              <h6>Description</h6>
+                              <div class="events-wrap__text mt-6">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                            </div>
+                            <div class="events-wrap__group">
+                              <h6>Definition of Done</h6>
+                              <div class="events-wrap__text mt-6">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                            </div>
+                          </div>
+                          <div class="events-wrap__col col-md-4">
+                            <div class="pt-8 pb-8"></div>
+                            <h6>Attachments</h6>
+                            <div class="events-wrap__field mt-6">
+                              <a href="#" class="link-attach">
+                                 <span class="link-attach__icon">
+                                  {{ icon.make('attach') }}
+                                 </span>
+                                 <span class="link-attach__text">Terms & Conditions</span>
+                               </a>
+                            </div>
+                            <div class="events-wrap__field">
+                              <a href="#" class="link-attach">
+                                 <span class="link-attach__icon">
+                                  {{ icon.make('attach') }}
+                                 </span>
+                                 <span class="link-attach__text">Aldus PageMaker</span>
+                               </a>
+                            </div>
+                            <div class="events-wrap__field">
+                              <a href="#" class="link-attach">
+                                 <span class="link-attach__icon">
+                                  {{ icon.make('attach') }}
+                                 </span>
+                                 <span class="link-attach__text">Letraset sheets</span>
+                               </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li data-date="1/04/2018">
+                      <div class="events-wrap">
+                        <!-- begin milestone -->
+                        <div class="milestone">
+                          <div class="milestone__chart">
+                            <div class="chart chart--md js-chart" data-line-width="6" data-size="118" data-track-color="#F6F6F6" data-percent="20">
+                              <div class="chart__inner">
+                                <div class="chart__value js-chart-value">20</div>
+                                <div class="chart__parcent">%</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="milestone__wrap">
+                            <div class="milestone__title">
+                              SECOND MILESTONE <span class="milestone__badge badge badge-sm badge-outline-info">IPFS</span>
+                            </div>
+                            <div class="milestone__date">25 OCT - 27 NOV</div>
+                            <div class="milestone__text">totally spent in this milestone</div>
+                            <div class="milestone__price">260 000 LNT ( 19 500k USD )</div>
+                          </div>
+                        </div>
+                        <!-- end milestone -->
+                        <div class="events-wrap__row row">
+                          <div class="events-wrap__col col-md-8">
+                            <hr class="mt-8 mb-8">
+                            <div class="events-wrap__group">
+                              <h6>Description</h6>
+                              <div class="events-wrap__text mt-6">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                            </div>
+                            <div class="events-wrap__group">
+                              <h6>Definition of Done</h6>
+                              <div class="events-wrap__text mt-6">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                            </div>
+                          </div>
+                          <div class="events-wrap__col col-md-4">
+                            <div class="pt-8 pb-8"></div>
+                            <h6>Attachments</h6>
+                            <div class="events-wrap__field mt-6">
+                              <a href="#" class="link-attach">
+                                 <span class="link-attach__icon">
+                                  {{ icon.make('attach') }}
+                                 </span>
+                                 <span class="link-attach__text">Terms & Conditions</span>
+                               </a>
+                            </div>
+                            <div class="events-wrap__field">
+                              <a href="#" class="link-attach">
+                                 <span class="link-attach__icon">
+                                  {{ icon.make('attach') }}
+                                 </span>
+                                 <span class="link-attach__text">Aldus PageMaker</span>
+                               </a>
+                            </div>
+                            <div class="events-wrap__field">
+                              <a href="#" class="link-attach">
+                                 <span class="link-attach__icon">
+                                  {{ icon.make('attach') }}
+                                 </span>
+                                 <span class="link-attach__text">Letraset sheets</span>
+                               </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li data-date="18/07/2018">
+                      <div class="events-wrap">
+                        <!-- begin milestone -->
+                        <div class="milestone">
+                          <div class="milestone__chart">
+                            <div class="chart chart--md js-chart" data-line-width="6" data-size="118" data-track-color="#F6F6F6" data-percent="20">
+                              <div class="chart__inner">
+                                <div class="chart__value js-chart-value">20</div>
+                                <div class="chart__parcent">%</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="milestone__wrap">
+                            <div class="milestone__title">
+                              SECOND MILESTONE <span class="milestone__badge badge badge-sm badge-outline-info">IPFS</span>
+                            </div>
+                            <div class="milestone__date">25 OCT - 27 NOV</div>
+                            <div class="milestone__text">totally spent in this milestone</div>
+                            <div class="milestone__price">260 000 LNT ( 19 500k USD )</div>
+                          </div>
+                        </div>
+                        <!-- end milestone -->
+                        <div class="events-wrap__row row">
+                          <div class="events-wrap__col col-md-8">
+                            <hr class="mt-8 mb-8">
+                            <div class="events-wrap__group">
+                              <h6>Description</h6>
+                              <div class="events-wrap__text mt-6">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                            </div>
+                            <div class="events-wrap__group">
+                              <h6>Definition of Done</h6>
+                              <div class="events-wrap__text mt-6">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                            </div>
+                          </div>
+                          <div class="events-wrap__col col-md-4">
+                            <div class="pt-8 pb-8"></div>
+                            <h6>Attachments</h6>
+                            <div class="events-wrap__field mt-6">
+                              <a href="#" class="link-attach">
+                                 <span class="link-attach__icon">
+                                  {{ icon.make('attach') }}
+                                 </span>
+                                 <span class="link-attach__text">Terms & Conditions</span>
+                               </a>
+                            </div>
+                            <div class="events-wrap__field">
+                              <a href="#" class="link-attach">
+                                 <span class="link-attach__icon">
+                                  {{ icon.make('attach') }}
+                                 </span>
+                                 <span class="link-attach__text">Aldus PageMaker</span>
+                               </a>
+                            </div>
+                            <div class="events-wrap__field">
+                              <a href="#" class="link-attach">
+                                 <span class="link-attach__icon">
+                                  {{ icon.make('attach') }}
+                                 </span>
+                                 <span class="link-attach__text">Letraset sheets</span>
+                               </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                  </ol>
+                </div>
               </div>
+              <!-- end cd-horizontal-timeline -->
             </div>
-            <div class="events-content">
-              <ol>
-                <li class="selected" data-date="16/09/2017">
-                  <div class="events-wrap">
-                    <!-- begin milestone -->
-                    <div class="milestone">
-                      <div class="milestone__chart">
-                        <div class="chart chart--md js-chart" data-line-width="6" data-size="118" data-track-color="#F6F6F6" data-percent="20">
-                          <div class="chart__inner">
-                            <div class="chart__value js-chart-value">20</div>
-                            <div class="chart__parcent">%</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="milestone__wrap">
-                        <div class="milestone__title">
-                          SECOND MILESTONE <span class="milestone__badge badge badge-sm badge-outline-info">IPFS</span>
-                        </div>
-                        <div class="milestone__date">25 OCT - 27 NOV</div>
-                        <div class="milestone__text">totally spent in this milestone</div>
-                        <div class="milestone__price">260 000 LNT ( 19 500k USD )</div>
-                      </div>
-                    </div>
-                    <!-- end milestone -->
-                    <div class="events-wrap__row row">
-                      <div class="events-wrap__col col-md-8">
-                        <hr class="mt-8 mb-8">
-                        <div class="events-wrap__group">
-                          <h6>Description</h6>
-                          <div class="events-wrap__text mt-6">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-                        </div>
-                        <div class="events-wrap__group">
-                          <h6>Definition of Done</h6>
-                          <div class="events-wrap__text mt-6">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-                        </div>
-                      </div>
-                      <div class="events-wrap__col col-md-4">
-                        <div class="pt-8 pb-8"></div>
-                        <h6>Attachments</h6>
-                        <div class="events-wrap__field mt-6">
-                          <a href="#" class="link-attach">
-                             <span class="link-attach__icon">
-                              {{ icon.make('attach') }}
-                             </span>
-                             <span class="link-attach__text">Terms & Conditions</span>
-                           </a>
-                        </div>
-                        <div class="events-wrap__field">
-                          <a href="#" class="link-attach">
-                             <span class="link-attach__icon">
-                              {{ icon.make('attach') }}
-                             </span>
-                             <span class="link-attach__text">Aldus PageMaker</span>
-                           </a>
-                        </div>
-                        <div class="events-wrap__field">
-                          <a href="#" class="link-attach">
-                             <span class="link-attach__icon">
-                              {{ icon.make('attach') }}
-                             </span>
-                             <span class="link-attach__text">Letraset sheets</span>
-                           </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-                <li data-date="08/11/2017">
-                  <div class="events-wrap">
-                    <!-- begin milestone -->
-                    <div class="milestone">
-                      <div class="milestone__chart">
-                        <div class="chart chart--md js-chart" data-line-width="6" data-size="118" data-track-color="#F6F6F6" data-percent="20">
-                          <div class="chart__inner">
-                            <div class="chart__value js-chart-value">20</div>
-                            <div class="chart__parcent">%</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="milestone__wrap">
-                        <div class="milestone__title">
-                          SECOND MILESTONE <span class="milestone__badge badge badge-sm badge-outline-info">IPFS</span>
-                        </div>
-                        <div class="milestone__date">25 OCT - 27 NOV</div>
-                        <div class="milestone__text">totally spent in this milestone</div>
-                        <div class="milestone__price">260 000 LNT ( 19 500k USD )</div>
-                      </div>
-                    </div>
-                    <!-- end milestone -->
-                    <div class="events-wrap__row row">
-                      <div class="events-wrap__col col-md-8">
-                        <hr class="mt-8 mb-8">
-                        <div class="events-wrap__group">
-                          <h6>Description</h6>
-                          <div class="events-wrap__text mt-6">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-                        </div>
-                        <div class="events-wrap__group">
-                          <h6>Definition of Done</h6>
-                          <div class="events-wrap__text mt-6">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-                        </div>
-                      </div>
-                      <div class="events-wrap__col col-md-4">
-                        <div class="pt-8 pb-8"></div>
-                        <h6>Attachments</h6>
-                        <div class="events-wrap__field mt-6">
-                          <a href="#" class="link-attach">
-                             <span class="link-attach__icon">
-                              {{ icon.make('attach') }}
-                             </span>
-                             <span class="link-attach__text">Terms & Conditions</span>
-                           </a>
-                        </div>
-                        <div class="events-wrap__field">
-                          <a href="#" class="link-attach">
-                             <span class="link-attach__icon">
-                              {{ icon.make('attach') }}
-                             </span>
-                             <span class="link-attach__text">Aldus PageMaker</span>
-                           </a>
-                        </div>
-                        <div class="events-wrap__field">
-                          <a href="#" class="link-attach">
-                             <span class="link-attach__icon">
-                              {{ icon.make('attach') }}
-                             </span>
-                             <span class="link-attach__text">Letraset sheets</span>
-                           </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-                <li data-date="09/01/2018">
-                  <div class="events-wrap">
-                    <!-- begin milestone -->
-                    <div class="milestone">
-                      <div class="milestone__chart">
-                        <div class="chart chart--md js-chart" data-line-width="6" data-size="118" data-track-color="#F6F6F6" data-percent="20">
-                          <div class="chart__inner">
-                            <div class="chart__value js-chart-value">20</div>
-                            <div class="chart__parcent">%</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="milestone__wrap">
-                        <div class="milestone__title">
-                          SECOND MILESTONE <span class="milestone__badge badge badge-sm badge-outline-info">IPFS</span>
-                        </div>
-                        <div class="milestone__date">25 OCT - 27 NOV</div>
-                        <div class="milestone__text">totally spent in this milestone</div>
-                        <div class="milestone__price">260 000 LNT ( 19 500k USD )</div>
-                      </div>
-                    </div>
-                    <!-- end milestone -->
-                    <div class="events-wrap__row row">
-                      <div class="events-wrap__col col-md-8">
-                        <hr class="mt-8 mb-8">
-                        <div class="events-wrap__group">
-                          <h6>Description</h6>
-                          <div class="events-wrap__text mt-6">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-                        </div>
-                        <div class="events-wrap__group">
-                          <h6>Definition of Done</h6>
-                          <div class="events-wrap__text mt-6">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-                        </div>
-                      </div>
-                      <div class="events-wrap__col col-md-4">
-                        <div class="pt-8 pb-8"></div>
-                        <h6>Attachments</h6>
-                        <div class="events-wrap__field mt-6">
-                          <a href="#" class="link-attach">
-                             <span class="link-attach__icon">
-                              {{ icon.make('attach') }}
-                             </span>
-                             <span class="link-attach__text">Terms & Conditions</span>
-                           </a>
-                        </div>
-                        <div class="events-wrap__field">
-                          <a href="#" class="link-attach">
-                             <span class="link-attach__icon">
-                              {{ icon.make('attach') }}
-                             </span>
-                             <span class="link-attach__text">Aldus PageMaker</span>
-                           </a>
-                        </div>
-                        <div class="events-wrap__field">
-                          <a href="#" class="link-attach">
-                             <span class="link-attach__icon">
-                              {{ icon.make('attach') }}
-                             </span>
-                             <span class="link-attach__text">Letraset sheets</span>
-                           </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-                <li data-date="12/03/2018">
-                  <div class="events-wrap">
-                    <!-- begin milestone -->
-                    <div class="milestone">
-                      <div class="milestone__chart">
-                        <div class="chart chart--md js-chart" data-line-width="6" data-size="118" data-track-color="#F6F6F6" data-percent="20">
-                          <div class="chart__inner">
-                            <div class="chart__value js-chart-value">20</div>
-                            <div class="chart__parcent">%</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="milestone__wrap">
-                        <div class="milestone__title">
-                          SECOND MILESTONE <span class="milestone__badge badge badge-sm badge-outline-info">IPFS</span>
-                        </div>
-                        <div class="milestone__date">25 OCT - 27 NOV</div>
-                        <div class="milestone__text">totally spent in this milestone</div>
-                        <div class="milestone__price">260 000 LNT ( 19 500k USD )</div>
-                      </div>
-                    </div>
-                    <!-- end milestone -->
-                    <div class="events-wrap__row row">
-                      <div class="events-wrap__col col-md-8">
-                        <hr class="mt-8 mb-8">
-                        <div class="events-wrap__group">
-                          <h6>Description</h6>
-                          <div class="events-wrap__text mt-6">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-                        </div>
-                        <div class="events-wrap__group">
-                          <h6>Definition of Done</h6>
-                          <div class="events-wrap__text mt-6">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-                        </div>
-                      </div>
-                      <div class="events-wrap__col col-md-4">
-                        <div class="pt-8 pb-8"></div>
-                        <h6>Attachments</h6>
-                        <div class="events-wrap__field mt-6">
-                          <a href="#" class="link-attach">
-                             <span class="link-attach__icon">
-                              {{ icon.make('attach') }}
-                             </span>
-                             <span class="link-attach__text">Terms & Conditions</span>
-                           </a>
-                        </div>
-                        <div class="events-wrap__field">
-                          <a href="#" class="link-attach">
-                             <span class="link-attach__icon">
-                              {{ icon.make('attach') }}
-                             </span>
-                             <span class="link-attach__text">Aldus PageMaker</span>
-                           </a>
-                        </div>
-                        <div class="events-wrap__field">
-                          <a href="#" class="link-attach">
-                             <span class="link-attach__icon">
-                              {{ icon.make('attach') }}
-                             </span>
-                             <span class="link-attach__text">Letraset sheets</span>
-                           </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-                <li data-date="1/04/2018">
-                  <div class="events-wrap">
-                    <!-- begin milestone -->
-                    <div class="milestone">
-                      <div class="milestone__chart">
-                        <div class="chart chart--md js-chart" data-line-width="6" data-size="118" data-track-color="#F6F6F6" data-percent="20">
-                          <div class="chart__inner">
-                            <div class="chart__value js-chart-value">20</div>
-                            <div class="chart__parcent">%</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="milestone__wrap">
-                        <div class="milestone__title">
-                          SECOND MILESTONE <span class="milestone__badge badge badge-sm badge-outline-info">IPFS</span>
-                        </div>
-                        <div class="milestone__date">25 OCT - 27 NOV</div>
-                        <div class="milestone__text">totally spent in this milestone</div>
-                        <div class="milestone__price">260 000 LNT ( 19 500k USD )</div>
-                      </div>
-                    </div>
-                    <!-- end milestone -->
-                    <div class="events-wrap__row row">
-                      <div class="events-wrap__col col-md-8">
-                        <hr class="mt-8 mb-8">
-                        <div class="events-wrap__group">
-                          <h6>Description</h6>
-                          <div class="events-wrap__text mt-6">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-                        </div>
-                        <div class="events-wrap__group">
-                          <h6>Definition of Done</h6>
-                          <div class="events-wrap__text mt-6">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-                        </div>
-                      </div>
-                      <div class="events-wrap__col col-md-4">
-                        <div class="pt-8 pb-8"></div>
-                        <h6>Attachments</h6>
-                        <div class="events-wrap__field mt-6">
-                          <a href="#" class="link-attach">
-                             <span class="link-attach__icon">
-                              {{ icon.make('attach') }}
-                             </span>
-                             <span class="link-attach__text">Terms & Conditions</span>
-                           </a>
-                        </div>
-                        <div class="events-wrap__field">
-                          <a href="#" class="link-attach">
-                             <span class="link-attach__icon">
-                              {{ icon.make('attach') }}
-                             </span>
-                             <span class="link-attach__text">Aldus PageMaker</span>
-                           </a>
-                        </div>
-                        <div class="events-wrap__field">
-                          <a href="#" class="link-attach">
-                             <span class="link-attach__icon">
-                              {{ icon.make('attach') }}
-                             </span>
-                             <span class="link-attach__text">Letraset sheets</span>
-                           </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li data-date="18/07/2018">
-                  <div class="events-wrap">
-                    <!-- begin milestone -->
-                    <div class="milestone">
-                      <div class="milestone__chart">
-                        <div class="chart chart--md js-chart" data-line-width="6" data-size="118" data-track-color="#F6F6F6" data-percent="20">
-                          <div class="chart__inner">
-                            <div class="chart__value js-chart-value">20</div>
-                            <div class="chart__parcent">%</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="milestone__wrap">
-                        <div class="milestone__title">
-                          SECOND MILESTONE <span class="milestone__badge badge badge-sm badge-outline-info">IPFS</span>
-                        </div>
-                        <div class="milestone__date">25 OCT - 27 NOV</div>
-                        <div class="milestone__text">totally spent in this milestone</div>
-                        <div class="milestone__price">260 000 LNT ( 19 500k USD )</div>
-                      </div>
-                    </div>
-                    <!-- end milestone -->
-                    <div class="events-wrap__row row">
-                      <div class="events-wrap__col col-md-8">
-                        <hr class="mt-8 mb-8">
-                        <div class="events-wrap__group">
-                          <h6>Description</h6>
-                          <div class="events-wrap__text mt-6">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-                        </div>
-                        <div class="events-wrap__group">
-                          <h6>Definition of Done</h6>
-                          <div class="events-wrap__text mt-6">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-                        </div>
-                      </div>
-                      <div class="events-wrap__col col-md-4">
-                        <div class="pt-8 pb-8"></div>
-                        <h6>Attachments</h6>
-                        <div class="events-wrap__field mt-6">
-                          <a href="#" class="link-attach">
-                             <span class="link-attach__icon">
-                              {{ icon.make('attach') }}
-                             </span>
-                             <span class="link-attach__text">Terms & Conditions</span>
-                           </a>
-                        </div>
-                        <div class="events-wrap__field">
-                          <a href="#" class="link-attach">
-                             <span class="link-attach__icon">
-                              {{ icon.make('attach') }}
-                             </span>
-                             <span class="link-attach__text">Aldus PageMaker</span>
-                           </a>
-                        </div>
-                        <div class="events-wrap__field">
-                          <a href="#" class="link-attach">
-                             <span class="link-attach__icon">
-                              {{ icon.make('attach') }}
-                             </span>
-                             <span class="link-attach__text">Letraset sheets</span>
-                           </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-              </ol>
-            </div>
+            {% endfor %}
           </div>
-          <!-- end cd-horizontal-timeline -->
+         
           <hr class="mt-9 mb-8">
           <div class="roadmap__button text-center">
             <a class="client__btn btn btn-success" href="#" data-toggle="modal" data-target="#tokens">BUY TOKENS</a>

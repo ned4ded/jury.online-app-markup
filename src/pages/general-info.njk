@@ -1,0 +1,45 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+  <!-- begin create -->
+  <div class="create">
+    <!-- end hero -->
+    <div class="create__container container-lg container-fluid">
+      <div class="box box--p--lg"> 
+        <div class="simple-head">
+          <div class="simple-head__center text-center">
+            <h2>Hello! This is a project creation page</h2>
+            <h2 class="text-blue">step #1</h2>
+          </div>
+          <div class="simple-head__right">
+            last autosave in <span class="text-blue">Drafts</span> 10 october 19:03
+          </div>
+        </div>
+        {{ steps.make({
+          class: 'mt-5 mb-10',
+          active: 2
+        }) }}
+        <!-- begin row -->
+        <div class="row mt-5">
+          <div class="col-xxl-2 col-xl-3 mt-4">
+            <h4>Extended project description</h4>
+            <div class="help-inf xl-hide mt-10">
+              <div class="help-inf__text">A brief description will help investors pay attention to you</div>
+              <div class="help-inf__icon">{{ icon.make('arr-right') }}</div>
+            </div>
+          </div>
+          <div class="col-xxl-8 col-xl-9 mt-4">
+            <!-- begin editor -->
+            <div class="editor js-editor">
+              <div class="js-editor-container"></div>
+            </div>
+            <!-- end editor -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end create -->
+
+{% endblock %}
