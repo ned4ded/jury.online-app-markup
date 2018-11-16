@@ -206,5 +206,5 @@ class ProjectCreator {
 export default () => {
   const pc = Array.from( $(Selector.FORM) ).map(e => new ProjectCreator(e));
 
-  console.log(pc[0]._cycles);
+  // console.log(pc[0]._cycles);
 }
