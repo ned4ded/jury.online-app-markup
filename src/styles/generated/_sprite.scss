@@ -100,6 +100,11 @@
 	@include get-em-width(10, 6);
 }
 
+.icon--download {
+	font-size: 14px;
+	@include get-em-width(14, 14);
+}
+
 .icon--duble {
 	font-size: 21px;
 	@include get-em-width(16, 21);
@@ -153,6 +158,11 @@
 .icon--fox-head {
 	font-size: 45px;
 	@include get-em-width(43, 45);
+}
+
+.icon--g-plus {
+	font-size: 34px;
+	@include get-em-width(35, 34);
 }
 
 .icon--gear {

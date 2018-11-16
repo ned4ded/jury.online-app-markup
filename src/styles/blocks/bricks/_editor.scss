@@ -1,4 +1,9 @@
 .editor {
+	&.editor--sm {
+		.ql-container.ql-snow {
+			height: 118px;
+		}
+	}
 	.ql-toolbar.ql-snow {
 		padding: 17px 34px;
 		border-color: #EBEEF5;
