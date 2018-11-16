@@ -1,0 +1,26 @@
+.calculator {
+	padding: 9px 25px;
+	border-radius: 16px;
+	background: #FAFAFA;
+	&__row {
+		margin: 0 -15px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__col {
+		padding: 0 15px; 
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+	&__title {
+		margin-bottom: 6px;
+		font-size: 16px;
+		font-weight: 600;
+		color: #9F9F9F;
+	}
+	&__summ	{
+		font-size: 16px;
+		color: #75A3BF;
+		text-transform: uppercase;
+	}
+}
