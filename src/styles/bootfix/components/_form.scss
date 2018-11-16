@@ -186,7 +186,7 @@
   &--inline-block {
     display: inline-block !important;
   }
-  .form-check-input ~ .form-check-label {
+  .form-check-input[type="radio"] ~ .form-check-label {
     font-size: 16px;
     color: #2A2550;
     &:before {
@@ -209,7 +209,7 @@
       transition: opacity .3s;
     }
   }
-  .form-check-input:checked ~.form-check-label:after {
+  .form-check-input[type="radio"]:checked ~.form-check-label:after {
     opacity: 1;
   }
 }

@@ -24,6 +24,7 @@
 		min-width: rem(72px);
 		position: relative;
 		vertical-align: top;
+		cursor: pointer;
 		display: inline-block;
 		&:before {
 			position: absolute;
@@ -40,6 +41,11 @@
 		&:not(:last-child) {
 			margin-right: rem(40px);
 		}
+		&.is-active {
+			&:before {
+				background-color: #101541;
+			}
+		}
 	}
 	&__link	{
 		color: #909090;
@@ -51,6 +57,9 @@
 			color: darken(#909090, 20%);
 			border-color: darken(#909090, 20%);
 			text-decoration: none;
+		}
+		.is-active & {
+			color: #101541;
 		}
 	}
 }
