@@ -3,6 +3,10 @@
 	position: relative;
 	display: flex;
 	align-items: center;
+	@include bp-down(xl) {
+		flex-direction: column;
+		align-items: flex-start;
+	}
 	&__bg {
 		position: absolute;
 		top: 0;
@@ -20,7 +24,8 @@
 		position: relative;
 		z-index: 1;
 		padding: 13px 45px;
-		width: 332px;
+		max-width: 332px;
+		width: 100%;
 		background: #75A3BF;
 		box-shadow: 0 0 34px 0 rgba(0,0,0,0.23);
 		font-size: 16px;
@@ -28,5 +33,9 @@
 		color: #FFFFFF;
 		border-radius: 9px;
 		text-align: center;
+		@include bp-down(xl) {
+			margin-top: 30px;
+			align-self: center;
+		}
 	}
 }

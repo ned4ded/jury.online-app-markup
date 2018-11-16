@@ -32,7 +32,7 @@
           <div class="col-xxl-9 mt-5">
             <h6 class="mb-5">Round Type, Date, Description</h6>
             <div class="row">
-              <div class="col-xxl-7 col-2xl-4 mt-5">
+              <div class="col-2xl-4 col-md-6 mt-5">
                 <div class="form-group mb-0">
                   <label class="form-label" for="">Round Type</label>
                   <select data-select='{"disable_search":true}' name="select" class="select select--md select-outline-info">
@@ -42,60 +42,64 @@
                   </select>
                 </div>
               </div>
-              <div class="col-xxl-6 col-2xl-4 mt-5">
-                <label class="form-label" for="">Start of Round</label>
-                <div class="select-group mb-0">
-                  <div class="select-group__row">
-                    <div class="select-group__day">
-                      <select name="select" data-select='{"disable_search":true}' class="select select--gray" id="project-category">
-                        {% for i in range(1,10) %}<option>{{ i }}</option>{% endfor %}
-                      </select>
-                    </div>
-                    <div class="select-group__month">
-                      <select name="select" data-select='{"disable_search":true}' class="select select--gray" id="project-category">
-                        <option>October</option>
-                        <option>August</option>
-                        <option>June</option>
-                      </select>
-                    </div>
-                    <div class="select-group__year">
-                      <select name="select" data-select='{"disable_search":true}' class="select select--gray" id="project-category">
-                        <option>2016</option>
-                        <option>2017</option>
-                        <option>2018</option>
-                        <option>2019</option>
-                        <option>2020</option>
-                        <option>2021</option>
-                      </select>
+              <div class="col-2xl-8">
+                <div class="row">
+                  <div class="col-md-6 mt-5">
+                    <label class="form-label" for="">Start of Round</label>
+                    <div class="select-group mb-0">
+                      <div class="select-group__row">
+                        <div class="select-group__day">
+                          <select name="select" data-select='{"disable_search":true}' class="select select--gray" id="project-category">
+                            {% for i in range(1,10) %}<option>{{ i }}</option>{% endfor %}
+                          </select>
+                        </div>
+                        <div class="select-group__month">
+                          <select name="select" data-select='{"disable_search":true}' class="select select--gray" id="project-category">
+                            <option>October</option>
+                            <option>August</option>
+                            <option>June</option>
+                          </select>
+                        </div>
+                        <div class="select-group__year">
+                          <select name="select" data-select='{"disable_search":true}' class="select select--gray" id="project-category">
+                            <option>2016</option>
+                            <option>2017</option>
+                            <option>2018</option>
+                            <option>2019</option>
+                            <option>2020</option>
+                            <option>2021</option>
+                          </select>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div class="col-xxl-6 col-2xl-4 mt-5">
-                <label class="form-label" for="">End of Round</label>
-                <div class="select-group">
-                  <div class="select-group__row">
-                    <div class="select-group__day">
-                      <select name="select" data-select='{"disable_search":true}' class="select select--gray" id="project-category">
-                        {% for i in range(1,10) %}<option>{{ i }}</option>{% endfor %}
-                      </select>
-                    </div>
-                    <div class="select-group__month">
-                      <select name="select" data-select='{"disable_search":true}' class="select select--gray" id="project-category">
-                        <option>October</option>
-                        <option>August</option>
-                        <option>June</option>
-                      </select>
-                    </div>
-                    <div class="select-group__year">
-                      <select name="select" data-select='{"disable_search":true}' class="select select--gray" id="project-category">
-                        <option>2016</option>
-                        <option>2017</option>
-                        <option>2018</option>
-                        <option>2019</option>
-                        <option>2020</option>
-                        <option>2021</option>
-                      </select>
+                  <div class="col-md-6 mt-5">
+                    <label class="form-label" for="">End of Round</label>
+                    <div class="select-group">
+                      <div class="select-group__row">
+                        <div class="select-group__day">
+                          <select name="select" data-select='{"disable_search":true}' class="select select--gray" id="project-category">
+                            {% for i in range(1,10) %}<option>{{ i }}</option>{% endfor %}
+                          </select>
+                        </div>
+                        <div class="select-group__month">
+                          <select name="select" data-select='{"disable_search":true}' class="select select--gray" id="project-category">
+                            <option>October</option>
+                            <option>August</option>
+                            <option>June</option>
+                          </select>
+                        </div>
+                        <div class="select-group__year">
+                          <select name="select" data-select='{"disable_search":true}' class="select select--gray" id="project-category">
+                            <option>2016</option>
+                            <option>2017</option>
+                            <option>2018</option>
+                            <option>2019</option>
+                            <option>2020</option>
+                            <option>2021</option>
+                          </select>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -128,19 +132,19 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-2xl-3 mb-7">
+              <div class="col-2xl-3 col-md-4 mb-7">
                 <div class="form-group mb-0">
                   <label class="form-label" for="">Token Price</label>
                   <input type="text" class="form-control">
                 </div>
               </div>
-              <div class="col-2xl-3 mb-7">
+              <div class="col-2xl-3 col-md-4 mb-7">
                 <div class="form-group mb-0">
                   <label class="form-label" for="">Min. Investment</label>
                   <input type="text" class="form-control">
                 </div>
               </div>
-              <div class="col-2xl-3">
+              <div class="col-2xl-3 col-md-4">
                 <div class="form-label" >Сurrency</div>
                 <div class="form-check form-check--inline-block mb-2 mr-5">
                   <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked="">
@@ -168,19 +172,19 @@
           </div>
           <div class="col-xxl-9 mt-4">
             <div class="row">
-              <div class="col-xxl-5">
+              <div class="col-md-5">
                 <div class="form-group">
                   <label class="form-label" for="">Project wallet</label>
                   <input type="text" class="form-control">
                 </div>
               </div>
-              <div class="col-xxl-5">
+              <div class="col-md-5">
                 <div class="form-group">
                   <label class="form-label" for="">Operator Address</label>
                   <input type="text" class="form-control">
                 </div>
               </div>
-              <div class="col-xxl-5">
+              <div class="col-md-5">
                 <div class="form-group">
                   <label class="form-label" for="">Token contract address</label>
                   <input type="text" class="form-control">
