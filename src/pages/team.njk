@@ -1,0 +1,158 @@
+{% import "lib/swiper.njk" as swiper %}
+{% import "lib/icon.njk" as icon %}
+
+{% extends "layout.njk" %}
+
+{% block content %}
+
+  <form data-create-project class="create" action="/" method="post">
+    <div class="create__container container-lg container-fluid">
+      <div class="box box--p--xxl">
+        <div class="simple-head">
+          <div class="simple-head__center text-center">
+            <h2>This is a <span class="text-blue">PULSE HEALTH</span> creation page</h2>
+            <h2 class="text-blue">step #4</h2>
+          </div>
+          <div class="simple-head__right">
+            last autosave in <span class="text-blue">Drafts</span> 10 october 19:03
+          </div>
+        </div>
+        {{ steps.make({
+          class: 'mt-5 mb-10',
+          active: 4
+        }) }}
+        <!-- begin row -->
+        <div class="row mt-5">
+          <div class="col-xxl-3 mt-5">
+            <h4 class="mb-5">Team</h4>
+            <div class="help-inf xl-hide mt-11">
+              <div class="help-inf__text">A brief description will help investors pay attention to you</div>
+              <div class="help-inf__icon">{{ icon.make('arr-right') }}</div>
+            </div>
+          </div>
+          <div class="col-xxl-9 mt-5">
+            <!-- begin row -->
+            <div class="row">
+              <div class="col-xxl-4">
+                <h6 class="mb-5">Search and Add new member</h6>
+              </div>
+              <div class="col-xxl-3">
+                <div class="form-group">
+                  <label class="form-label" for="">Input Name</label>
+                  <input type="text" class="form-control" label="Roe Jones">
+                </div>
+              </div>
+              <div class="col-xxl-2">
+                <div class="form-group">
+                  <label class="form-label" for="">Set a Role</label>
+                  <input type="text" class="form-control" value="CTO">
+                </div>
+              </div>
+              <div class="col-xxl-3 mt-5 text-right">
+                <button class="btn btn-outline-primary" type="button">+ ADD</button>
+              </div>
+            </div>
+            <!-- end row -->
+            <!-- begin row -->
+            <div class="row">
+              {% for i in range(1,6) %}
+              {% if loop.first %}
+              <div class="col-xl-3 mt-4">
+                <!-- begin member -->
+                <div class="member mt-4 is-check">
+                  <div class="member__img" style="background-image: url(./assets/imgs/member.png);">
+                    <div class="member__icon">{{ icon.make('checked') }}</div>
+                  </div>
+                  <a href="#" class="member__name">Adam Mason</a>
+                </div>
+                <!-- end member -->
+              </div>
+              {% elseif loop.last %}
+              <div class="col-xl-3 mt-4">
+                <!-- begin member -->
+                <div class="member mt-4 is-disabled">
+                  <div class="member__img" style="background-image: url(./assets/imgs/member.png);">
+                    <div class="member__icon">{{ icon.make('checked') }}</div>
+                  </div>
+                  <a href="#" class="member__name">Austin Pearson</a>
+                </div>
+                <!-- end member -->
+              </div>
+              {% else %}
+              <div class="col-xl-3 mt-4">
+                <!-- begin member -->
+                <div class="member mt-4 is-black">
+                  <div class="member__img" style="background-image: url(./assets/imgs/member.png);">
+                    <div class="member__icon">{{ icon.make('checked') }}</div>
+                  </div>
+                  <a href="#" class="member__name">Austin Pearson</a>
+                </div>
+                <!-- end member -->
+              </div>
+              {% endif %}
+              {% endfor %}
+            </div>
+            <!-- end row -->
+            <hr class="box__hr mt-8">
+            <h4 class="mt-8 mb-5">My Team</h4>
+            <!-- begin row -->
+            <div class="row">
+              <div class="col-xl-3 mt-4">
+                <!-- begin member -->
+                <div class="member mt-4">
+                  <div class="member__img" style="background-image: url(./assets/imgs/member.png);">
+                    <div class="member__icon">{{ icon.make('checked') }}</div>
+                  </div>
+                  <a href="#" class="member__name">Adam Mason</a>
+                  <div class="member__position">Team Leader</div>
+                  <a href="tel:41704407798" class="member__link">
+                    <span class="member__link__icon">{{ icon.make('url') }}</span>
+                    <span class="member__link-text">4-(170)440-7798</span>
+                  </a>
+                </div>
+                <!-- end member -->
+              </div>
+              <div class="col-xl-3 mt-4">
+                <!-- begin member -->
+                <div class="member mt-4">
+                  <div class="member__img" style="background-image: url(./assets/imgs/member.png);">
+                    <div class="member__icon">{{ icon.make('checked') }}</div>
+                  </div>
+                  <a href="#" class="member__name">Adam Mason</a>
+                  <div class="member__position">PR</div>
+                  <a href="tel:41704407798" class="member__link">
+                    <span class="member__link__icon">{{ icon.make('url') }}</span>
+                    <span class="member__link-text">4-(170)440-7798</span>
+                  </a>
+                </div>
+                <!-- end member -->
+              </div>
+            </div>
+            <!-- end row -->
+            <hr class="box__hr mt-8">
+            <h6 class="mt-9 text-center text-blue">Havn’t find your team member? Just invite a New one</h6>
+            <!-- begin subscribe -->
+            <div class="subscribe mt-8">
+              <div class="subscribe__input">
+                <label class="form-label" for="">E-mail</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="subscribe__button">
+                <button class="btn btn-outline-info" type="button">INVITE</button>
+              </div>
+            </div>
+            <!-- end subscribe -->
+          </div>
+        </div>
+        <!-- end row -->
+        <hr class="box__hr mt-8">
+        <div class="text-center mt-8 mb-5">
+          <div class="text-gray mb-4 hide">Your project is saved in Drafts.<br>You can go to the next step or fill the information later.</div>
+          <button class="btn btn-outline-info mt-3 ml-2 mr-2" type="button">SAVE</button>
+          <button class="btn btn-success mt-3 ml-2 mr-2" type="button" data-toggle="modal" data-target="#modal-success">NEXT STEP</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+{% endblock %}

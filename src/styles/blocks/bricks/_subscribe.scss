@@ -1,0 +1,13 @@
+.subscribe {
+	margin: 0 auto;
+	max-width: 530px;
+	display: flex;
+	&__input {
+		flex-grow: 1;
+	}
+	&__button {
+		text-align: right;
+		width: 211px;
+		 align-self: flex-end;
+	}
+}

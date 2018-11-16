@@ -85,6 +85,11 @@
 	@include get-em-width(14, 9);
 }
 
+.icon--checked {
+	font-size: 21px;
+	@include get-em-width(21, 21);
+}
+
 .icon--compare-left {
 	font-size: 25px;
 	@include get-em-width(25, 25);
@@ -263,5 +268,10 @@
 .icon--twitter {
 	font-size: 25px;
 	@include get-em-width(25, 25);
+}
+
+.icon--url {
+	font-size: 15px;
+	@include get-em-width(15, 15);
 }
 
