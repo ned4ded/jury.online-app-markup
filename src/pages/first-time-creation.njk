@@ -1,0 +1,209 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+  <!-- begin create -->
+  <div class="create">
+    <!-- end hero -->
+    <div class="create__container container-lg container-fluid">
+      <div class="box box--p--lg">
+        <div class="simple-head">
+          <div class="simple-head__center text-center">
+            <h2>This is a <span class="text-blue">PULSE HEALTH</span> creation page</h2>
+            <h2 class="text-blue">step #3</h2>
+          </div>
+          <div class="simple-head__right">
+            last autosave in <span class="text-blue">Drafts</span> 10 october 19:03
+          </div>
+        </div>
+        {{ steps.make({
+          class: 'mt-5 mb-10',
+          active: 3
+        }) }}
+        <!-- begin row -->
+        <div class="row mt-5">
+          <div class="col-xxl-3 mt-5">
+            <h4 class="mb-5">Round Setting</h4>
+            <div class="help-inf xl-hide mt-11">
+              <div class="help-inf__text">Upload your project logo, name & category to to personalize</div>
+              <div class="help-inf__icon">{{ icon.make('arr-right') }}</div>
+            </div>
+          </div>
+          <div class="col-xxl-9 mt-5">
+            <h6 class="mb-5">Round Type, Date, Description</h6>
+            <div class="row">
+              <div class="col-2xl-4 col-md-6 mt-5">
+                <div class="form-group mb-0">
+                  <label class="form-label" for="">Round Type</label>
+                  <select data-select='{"disable_search":true}' name="select" class="select select--md select-outline-info">
+                    <option value="PRIVATE">PRIVATE</option>
+                    <option value="PRE ICO">PRE ICO</option>
+                    <option value="ICO">ICO</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-2xl-8">
+                <div class="row">
+                  <div class="col-md-6 mt-5">
+                    <label class="form-label" for="">Start of Round</label>
+                    <div class="select-group mb-0">
+                      <div class="select-group__row">
+                        <div class="select-group__day">
+                          <select name="select" data-select='{"disable_search":true}' class="select select--gray" id="project-category">
+                            {% for i in range(1,10) %}<option>{{ i }}</option>{% endfor %}
+                          </select>
+                        </div>
+                        <div class="select-group__month">
+                          <select name="select" data-select='{"disable_search":true}' class="select select--gray" id="project-category">
+                            <option>October</option>
+                            <option>August</option>
+                            <option>June</option>
+                          </select>
+                        </div>
+                        <div class="select-group__year">
+                          <select name="select" data-select='{"disable_search":true}' class="select select--gray" id="project-category">
+                            <option>2016</option>
+                            <option>2017</option>
+                            <option>2018</option>
+                            <option>2019</option>
+                            <option>2020</option>
+                            <option>2021</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mt-5">
+                    <label class="form-label" for="">End of Round</label>
+                    <div class="select-group">
+                      <div class="select-group__row">
+                        <div class="select-group__day">
+                          <select name="select" data-select='{"disable_search":true}' class="select select--gray" id="project-category">
+                            {% for i in range(1,10) %}<option>{{ i }}</option>{% endfor %}
+                          </select>
+                        </div>
+                        <div class="select-group__month">
+                          <select name="select" data-select='{"disable_search":true}' class="select select--gray" id="project-category">
+                            <option>October</option>
+                            <option>August</option>
+                            <option>June</option>
+                          </select>
+                        </div>
+                        <div class="select-group__year">
+                          <select name="select" data-select='{"disable_search":true}' class="select select--gray" id="project-category">
+                            <option>2016</option>
+                            <option>2017</option>
+                            <option>2018</option>
+                            <option>2019</option>
+                            <option>2020</option>
+                            <option>2021</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group mb-11 mt-7"><textarea class="form-control"></textarea></div>
+            <h6 class="mb-9">Tokens of Round</h6>
+            <div class="row">
+              <div class="col-2xl-3 col-xl-4 mb-7">
+                <div class="form-group mb-0">
+                  <label class="form-label" for="">Round Tokens</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="col-2xl-5 col-xl-6 mb-7">
+                <!-- begin calculator -->
+                <div class="calculator">
+                  <div class="calculator__row">
+                    <div class="calculator__col">
+                      <div class="calculator__title">ETH Calculation*</div>
+                      <div class="calculator__summ">9 850  ETH</div>
+                    </div>
+                    <div class="calculator__col">
+                      <div class="calculator__title">USD Calculation*</div>
+                      <div class="calculator__summ">99 850  USD</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end calculator -->
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-2xl-3 col-md-4 mb-7">
+                <div class="form-group mb-0">
+                  <label class="form-label" for="">Token Price</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="col-2xl-3 col-md-4 mb-7">
+                <div class="form-group mb-0">
+                  <label class="form-label" for="">Min. Investment</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="col-2xl-3 col-md-4">
+                <div class="form-label" >Сurrency</div>
+                <div class="form-check form-check--inline-block mb-2 mr-5">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked="">
+                  <label class="form-check-label" for="exampleRadios1">
+                    ETH
+                  </label>
+                </div>
+                <div class="form-check form-check--inline-block mb-2">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                  <label class="form-check-label" for="exampleRadios2">
+                    ETH     USD*  
+                  </label>
+                </div>
+                <p class="text-gray">*Approximate calculation</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end row -->
+        <hr class="box__hr mt-8">
+        <!-- begin row -->
+        <div class="row mt-5">
+          <div class="col-xxl-3 mt-5">
+            <h4 class="mb-5">Token Info</h4>
+          </div>
+          <div class="col-xxl-9 mt-4">
+            <div class="row">
+              <div class="col-md-5">
+                <div class="form-group">
+                  <label class="form-label" for="">Project wallet</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="form-group">
+                  <label class="form-label" for="">Operator Address</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="form-group">
+                  <label class="form-label" for="">Token contract address</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end row -->
+        <hr class="box__hr mt-8">
+        <div class="text-center mt-8 mb-5">
+          <div class="text-gray mb-4 hide">Your project is saved in Drafts.<br>You can go to the next step or fill the information later.</div>
+          <button class="btn btn-outline-info mt-3 ml-2 mr-2" type="button">SAVE</button>
+          <button class="btn btn-success mt-3 ml-2 mr-2" type="button" data-toggle="modal" data-target="#modal-success">NEXT STEP</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end create -->
+
+
+{% endblock %}

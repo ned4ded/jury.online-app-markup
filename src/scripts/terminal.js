@@ -37,5 +37,5 @@ DOC.ready(function () {
   modal();
   piechart();
   datepicker();
-  projectCreator();
+  // projectCreator();
 });

@@ -1,0 +1,23 @@
+.select-group {
+	padding: 9px;
+	border-radius: 7px;
+	border: 1px solid #83a3be;
+	&__row {
+		margin: 0 -13px;
+		display: flex;
+	}
+	&__day {
+		padding: 0 13px;
+		flex: 0 0 42px;
+		max-width: 68px;
+	}
+	&__month {
+		padding: 0 13px;
+		flex-grow: 1;
+	}
+	&__year {
+		padding: 0 13px;
+		flex: 0 0 92px;
+		max-width: 92px;
+	}
+}

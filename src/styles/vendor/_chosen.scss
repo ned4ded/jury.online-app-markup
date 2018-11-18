@@ -1,5 +1,7 @@
 @import 'vendor/lib/chosen.min.css';
-
+select.select {
+  opacity: 0;
+}
 .select {
   width: 100%;
 
@@ -7,6 +9,13 @@
 
   &-w-auto {
     width: auto;
+  }
+
+  &--md {
+    &.select.chosen-container-single .chosen-single {
+      padding-top: rem(16px);
+      padding-bottom: rem(16px);
+    }
   }
 
   &--gray {

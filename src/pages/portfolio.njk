@@ -14,7 +14,7 @@
           <!-- begin sort-list -->
           <ul class="portfolio__sort-list sort-list">
             {% for text in ['Active', 'Pending', 'Disputes', 'Draft', 'Closed'] %}
-            <li class="sort-list__item"><a href="#" class="sort-list__link">{{ text }}</a></li>
+            <li class="sort-list__item{% if loop.first %} is-active{% endif %}"><a href="#" class="sort-list__link">{{ text }}</a></li>
             {% endfor %}
           </ul>
           <!-- end sort-list -->
