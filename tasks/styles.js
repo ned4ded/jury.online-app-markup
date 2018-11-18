@@ -14,7 +14,12 @@ import cssImport from 'postcss-import';
 export function styles() {
   return gulp.src(config.paths.stylesBase)
     .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({
+      functions: {
+        'test-func($v)' : function(v) {
+        }
+      }
+    }).on('error', sass.logError))
     .pipe(postcss([
       cssImport(),
       presetEnv({
