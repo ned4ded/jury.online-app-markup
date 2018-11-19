@@ -75,7 +75,15 @@ export class PieChart {
   }
 
   update(v) {
+    this.updateNoTrigger(v);
+
     $( this.element ).trigger(Event.UPDATE, v);
+
+    return this;
+  }
+
+  updateNoTrigger(v) {
+    $( this.valueElement ).val(v);
 
     this.value = v;
 
