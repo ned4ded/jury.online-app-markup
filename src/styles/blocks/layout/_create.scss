@@ -190,6 +190,7 @@
 
 	&__milestones {
 		position: relative;
+		overflow-x: auto;
 
 		display: flex;
 		flex-flow: row nowrap;
@@ -215,6 +216,7 @@
 
 		&-control {
 			flex-basis: 105px;
+			min-width: 105px;
 			position: relative;
 
 			svg {
@@ -268,7 +270,6 @@
 			position: relative;
 
 			display: flex;
-			overflow-x: auto;
 
 			margin: 0;
 			padding: 0;
@@ -285,6 +286,7 @@
 		align-items: center;
 		padding: 0 $milestone-p-x;
 		width: $milestone-w + $milestone-p-x * 2;
+		min-width: $milestone-w + $milestone-p-x * 2;
 
 		&:hover &-number {
 			color: #ff7864;
