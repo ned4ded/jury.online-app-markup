@@ -49,8 +49,6 @@
 		}
 
 		&-list {
-			position: relative;
-
 			display: flex;
 			overflow-x: auto;
 
@@ -60,6 +58,28 @@
 			list-style: none;
 
 			margin: 0;
+		}
+
+		&-details {
+			position: relative;
+
+			padding-top: 50px;
+
+			&:after {
+				position: absolute;
+				top: 0;
+				left: 50%;
+
+				display: block;
+
+				width: calc(100% - #{$grid-gutter-width});
+				height: 1px;
+
+				content: '';
+				transform: translateX(-50%);
+
+				background-color: #dadada;
+			}
 		}
 	}
 
@@ -116,6 +136,27 @@
 				&--fixed {
 					width: 300px;
 				}
+			}
+
+			& .datepicker-inline {
+				display: none;
+				position: absolute;
+				z-index: 2;
+				transform: translateY(15px);
+
+				width: 250px;
+
+				border: 1px solid rgb(219, 219, 219);
+				border-radius: 4px;
+				box-shadow: 0 4px 12px rgba(0,0,0,.15);
+			}
+
+			& input:focus ~ .datepicker-inline {
+				display: block;
+			}
+
+			.datepicker-inline:hover {
+				display: block;
 			}
 		}
 
@@ -189,30 +230,13 @@
 	}
 
 	&__milestones {
-		position: relative;
-		overflow-x: auto;
+		position: static;
 
 		display: flex;
+		overflow-x: auto;
 		flex-flow: row nowrap;
 
 		padding-bottom: 50px;
-		margin-bottom: 50px;
-
-		&:after {
-			position: absolute;
-			bottom: 0;
-			left: 50%;
-
-			display: block;
-
-			width: calc(100% - #{$grid-gutter-width});
-			height: 1px;
-
-			content: '';
-			transform: translateX(-50%);
-
-			background-color: #dadada;
-		}
 
 		&-control {
 			flex-basis: 105px;
@@ -267,8 +291,6 @@
 		}
 
 		&-list {
-			position: relative;
-
 			display: flex;
 
 			margin: 0;

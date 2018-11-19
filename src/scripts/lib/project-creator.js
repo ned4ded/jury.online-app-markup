@@ -329,6 +329,7 @@ class Attach {
 
     this._add = this._form.find(Selector.ATTACH_ADD);
     this._input = this._form.find(Selector.ATTACH_INPUT);
+
     this._list = this._form.find(Selector.ATTACH_LIST);
     this._count = this._form.find(Selector.ATTACH_COUNT);
     this._placeholder = this._list.find(Selector.ATTACH_PLACHOLDER);
@@ -337,10 +338,19 @@ class Attach {
 
     this._templates.row = this._list.find( Selector.ATTACH_ROW ).first().clone();
     this._templates.placeholder = this._placeholder.first().clone();
+    this._templates = this._input.first().clone();
 
-    this._input.change((ev) => {
-      console.log(this._input.get(0).file);
+    this._input.change(() => {
+
+      this._input.detach();
+      
+      console.log(this._input);
+
     });
+  }
+
+  _makeRow(input) {
+
   }
 
   _findRemove(el) {
