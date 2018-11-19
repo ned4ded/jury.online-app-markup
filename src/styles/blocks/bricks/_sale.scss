@@ -56,6 +56,13 @@
 			padding-right: rem(16px);
 		}
 	}
+	&__buttons {
+		.btn {
+			&:not(:last-child) {
+				margin-right: 10px;
+			}
+		}
+	}
 }
 
 .user {
