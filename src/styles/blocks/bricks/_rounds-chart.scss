@@ -33,7 +33,8 @@
 		background-color: #E5E5E5;
 	}
 	&__bonus {
-		padding: 7px 27px;
+		padding: 7px;
+		min-width: 120px;
 		color: #75A3BF;
 		position: relative;
 		border-radius: 18px;
