@@ -45,7 +45,8 @@
                   </div>
 
                   <label class="create__cycle-label mb-5">
-                    <input data-language='ru' data-create-project-cycle="date" type='text' data-range="true" data-date-format="dd.mm.yyyy" data-multiple-dates-separator=" - " class="datepicker-here form-control create__cycle-datepicker" placeholder="__.__.____ - __.__.____" name="project[cycles_attributes][1][date]"/>
+                    <input data-inline="true" data-classes="create__cycle-datepicker" data-language='ru' data-create-project-cycle="date" type='text' data-range="true" data-date-format="dd.mm.yyyy" data-multiple-dates-separator=" - " class="form-control create__cycle-datepicker" placeholder="__.__.____ - __.__.____" name="project[cycles_attributes][1][date]"/>
+
                   </label>
 
                   <p class="m-0 d-flex flex-column align-items-center text-muted text-sm">
@@ -102,7 +103,7 @@
                         <span class="create__milestone-dot"></span>
 
                         <label class="create__cycle-label create__milestone-label">
-                          <input data-language='ru' data-create-project-milestone="date" type='text' data-range="true" data-date-format="dd.mm" data-multiple-dates-separator=" - " class="form-control create__cycle-datepicker create__milestone-datepicker" placeholder="__.__ - __.__" name="project[milestone_attributes][1][date]"/>
+                          <input data-inline="true" data-language='ru' data-create-project-milestone="date" type='text' data-range="true" data-date-format="dd.mm" data-multiple-dates-separator=" - " class="form-control create__cycle-datepicker create__milestone-datepicker" placeholder="__.__ - __.__" name="project[milestone_attributes][1][date]"/>
                         </label>
                       </li>
 
@@ -111,6 +112,9 @@
                       <button data-create-project-milestone="add" class="create__milestones-add btn-plus" type="button" name="button">Add</button>
                     </span>
                   </div>
+                </div>
+
+                <div class="row create__cycles-details">
                   <div class="col-xxl-6">
                     <h2 class="h5 font-weight-normal mb-9">Resource allocation</h2>
 
@@ -166,7 +170,7 @@
 
                     <div class="pl-xxl-12">
                       <label class="create__cycle-label create__cycle-label--w--fixed mb-5">
-                        <input data-language='ru' data-create-project-cycle="date" type='text' data-range="true" data-date-format="dd.mm.yyyy" data-multiple-dates-separator=" - " class="form-control create__cycle-datepicker" placeholder="__.__.____ - __.__.____" />
+                        <input data-language='ru' data-inline="true" data-create-project-cycle="date" type='text' data-range="true" data-date-format="dd.mm.yyyy" data-multiple-dates-separator=" - " class="form-control create__cycle-datepicker" placeholder="__.__.____ - __.__.____" />
                       </label>
                     </div>
                   </div>
@@ -203,9 +207,8 @@
                 </ul>
 
                 <div class="col-6 pt-4 pb-4">
-                  <input data-create-project-attach="input" id="create-project-file" type="file" name="" value="" multiple hidden>
                   <p class="text-lg text-info text-center mb-3"><span data-create-project-attach="count">0</span> Attachments Loaded</p>
-                  <p class="mb-0 text-center"><label for="create-project-file" data-create-project-attach="add" type="button" class="btn btn-outline-primary">+ Add New</label></p>
+                  <p class="mb-0 text-center"><label data-create-project-attach="add" type="button" class="btn btn-outline-primary">+ Add New<input data-create-project-attach="input" type="file" name="some-file" hidden></label></p>
                 </div>
               </div>
 
