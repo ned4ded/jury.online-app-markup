@@ -112,6 +112,11 @@
     *:nth-child(n + 2) {
       margin-top: spacer(1);
     }
+
+    &--whole-row {
+      width: 100%;
+      flex-basis: auto;
+    }
   }
 
   &__status {
