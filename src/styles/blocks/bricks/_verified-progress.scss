@@ -4,7 +4,6 @@
 		position: relative;
 		margin: 0 10px;
 		height: 2px;
-		background-color: #FF7864;
 	}
 	&__item {
 		position: absolute;
@@ -52,7 +51,6 @@
 			}
 		}
 		&.is-check {
-			background-color: $de-york;
 			&:not(:last-child):before {
 				border-color: $de-york;
 			}
