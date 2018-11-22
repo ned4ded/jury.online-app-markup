@@ -164,8 +164,13 @@ class Tab {
     });
 
     this._milestones = new Milestones(this.container, cycle);
+    
+    // piechart
+    this._piechart = [];
+    this.container.find(Selector.CYCLE_PIE_CHART).each((i,el) => {
+      this._piechart.push( new PieChart( el ) );
+    });
 
-    this._piechart = new PieChart( this.container.find(Selector.CYCLE_PIE_CHART).get(0) );
     this._ipfs = this.container.find(Selector.TAB_IPFS);
 
     this._ipfs.attr('name', makeName(cycle, 'ipfs'))
@@ -177,7 +182,9 @@ class Tab {
   }
 
   getPieChart() {
-    return this._piechart;
+    for (var i = 0; i <= this._piechart.length; i++) {
+      return this._piechart[i];
+    }
   }
 
   getDate() {
