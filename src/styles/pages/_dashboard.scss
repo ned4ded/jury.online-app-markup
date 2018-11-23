@@ -61,9 +61,9 @@
         min-width: 380px;
         margin: 0 $slide-gutters / 2 rem(18px);
 
-        &:not(.swiper-slide-active) {
-          opacity: 0.5;
-        }
+        // &:not(.swiper-slide-active) {
+        //   opacity: 0.5;
+        // }
       }
       @include bp-up(2xl) {
         &.swiper-slide-next,

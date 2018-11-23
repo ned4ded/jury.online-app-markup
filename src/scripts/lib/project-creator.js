@@ -105,7 +105,6 @@ class Milestone {
 
 class Milestones {
   constructor(container, cycle) {
-    console.log(cycle);
     this._list = container.find( Selector.MILESTONE_LIST );
 
     this._cycle = cycle;
@@ -164,7 +163,7 @@ class Tab {
     });
 
     this._milestones = new Milestones(this.container, cycle);
-    
+
     // piechart
     this._piechart = [];
     this.container.find(Selector.CYCLE_PIE_CHART).each((i,el) => {
@@ -347,13 +346,10 @@ class Attach {
     this._templates.placeholder = this._placeholder.first().clone();
     this._templates = this._input.first().clone();
 
-    this._input.change(() => {
-
-      this._input.detach();
-      
-      console.log(this._input);
-
-    });
+    // this._input.change(() => {
+    //
+    //   this._input.detach();
+    // });
   }
 
   _makeRow(input) {
@@ -385,9 +381,9 @@ class ProjectCreator {
     });
 
     this._form.find('[type="submit"]').click((ev) => {
-      ev.preventDefault();
+      // ev.preventDefault();
 
-      console.log(this._form.serializeArray());
+      // console.log(this._form.serializeArray());
     })
   }
 
@@ -402,21 +398,11 @@ class ProjectCreator {
   }
 
   _bindData(cycle) {
-    const cyclePie = cycle.getPieChart();
     const cycleDate = cycle.getDate();
     const cycleId = cycle.getId();
 
     const tab = this._tabs.getTabByIndex(cycleId - 1);
-    const tabPie = tab.getPieChart();
     const tabDate = tab.getDate();
-
-    cyclePie.onUpdate(function(ev, value) {
-      tabPie.updateNoTrigger(value);
-    });
-
-    tabPie.onUpdate(function(ev, value) {
-      cyclePie.updateNoTrigger(value);
-    });
 
     cycleDate.change(function() {
       const val = $( this ).val();
