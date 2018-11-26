@@ -13,7 +13,11 @@
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.1);
 
   &--jo-modal {
-    padding-top: 95px;
+    padding: 15px 10px;
+
+    @include bp-up('xl') {
+      padding: 95px $p-x 25px;
+    };
   }
 
   &__block {
@@ -29,8 +33,19 @@
 
     &--inputs {
       min-height: 120px;
-      margin-right: -$p-x;
-      padding-left: $p-x;
+      padding: 0 $p-x;
+      // margin-right: -$p-x;
+      // padding-left: $p-x;
+    }
+
+    &--button {
+      margin-top: spacer(4);
+      margin-bottom: 0;
+
+      @include bp-up('xl') {
+        margin-top: 0;
+        margin-bottom: 0;
+      };
     }
   }
 
@@ -94,7 +109,7 @@
     font-size: $font-size-base;
     font-weight: $font-weight-bold;
 
-    padding-right: $p-x;
+    // padding-right: $p-x;
 
     border-bottom: 2px solid theme-info('500');
 
@@ -131,7 +146,7 @@
     width: 100%;
     min-height: 34px;
     margin-bottom: 0;
-    padding-right: $p-x;
+    // padding-right: $p-x;
 
     cursor: pointer;
     text-align: right;

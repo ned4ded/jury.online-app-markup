@@ -18,7 +18,7 @@
   padding: spacer(2) 0;
 
   @include bp-up($navbar-collapse-bp) {
-    max-width: 285px;
+    width: 285px;
     // max-width: 350px;
 
     border-radius: $bdrs-md;

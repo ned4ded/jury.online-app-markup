@@ -3,25 +3,34 @@
   $p-y-bottom: 70px;
   $p-x: 60px;
   $overhang: 40px;
-  
+
   position: relative;
 
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
   justify-content: space-between;
 
   min-height: 380px;
-  padding: $p-y-top $p-x $p-y-bottom;
+  padding: 25px 30px;
 
   border-radius: 6px;
   background-image: linear-gradient(143deg, theme-primary(), theme-primary('700'));
 
+  @include bp-up('xl') {
+    flex-direction: row;
+    padding: $p-y-top $p-x $p-y-bottom;
+  }
+
   &__form {
     align-self: stretch;
+    width: 100%;
 
-    width: 315px;
-    margin-top: -$p-y-top - $overhang;
-    margin-bottom: -$p-y-bottom - $overhang;
+    @include bp-up('xl') {
+      width: 315px;
+      margin-top: -$p-y-top - $overhang;
+      margin-bottom: -$p-y-bottom - $overhang;
+    };
+
   }
 
   &__content {
@@ -30,7 +39,13 @@
     justify-content: space-between;
 
     max-width: 350px;
-    padding-right: spacer(2);
+    margin-bottom: spacer(4);
+
+    @include bp-up('xl') {
+      margin-bottom: 0;
+      padding-right: spacer(2);
+    };
+
   }
 
   &__brand {
