@@ -8,10 +8,9 @@
 	&__img {
 		width: rem(135px);
 		height: rem(135px);
-		border-radius: 50%;
+		border-radius: 7px;
 		background-size: cover;
 		background-position: center;
-		box-shadow: 0 0 10px 0 rgba(0,0,0,0.13);
 		display: block;
 	}
 	&__upload {
@@ -44,5 +43,6 @@
 		position: absolute;
 		top: 0;
 		right: 0;
+		background-color: #fff;
 	}
 }
