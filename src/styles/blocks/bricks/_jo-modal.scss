@@ -36,7 +36,7 @@
   &__content {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-between;
+    justify-content: flex-start;
 
     max-width: 350px;
     margin-bottom: spacer(4);
@@ -49,7 +49,7 @@
   }
 
   &__brand {
-    margin-bottom: spacer(2);
+    margin-bottom: spacer(4);
   }
 
   &__close {
