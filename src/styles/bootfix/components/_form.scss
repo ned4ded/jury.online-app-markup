@@ -291,3 +291,20 @@ textarea.form-control {
     margin-right: 15px;
   }
 }
+
+.border-input {
+  position: relative;
+  display: inline-block;
+  &.is-open {
+    .datepicker-inline {
+      display: block;
+    }
+  }
+  .datepicker-inline {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 2;
+    display: none;
+  }
+}

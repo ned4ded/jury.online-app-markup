@@ -23,6 +23,7 @@ import './tabs';
 import './accordion';
 import './editior';
 import './checkSocInput';
+import './bonusCreator';
 
 DOC.ready(function () {
   const body = document.querySelector('body');

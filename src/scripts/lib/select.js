@@ -41,7 +41,7 @@ class SelectContainer {
   }
 }
 
-class Select {
+export class Select {
   constructor(el, options) {
     this.el = el;
 

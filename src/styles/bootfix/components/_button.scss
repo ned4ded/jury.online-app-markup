@@ -120,3 +120,18 @@
 		display: inline-block;
 	}
 }
+
+.btn-add {
+	padding: 22px;
+	width: 100%;
+	text-align: center;
+	cursor: pointer;
+	border: 1px dashed #2A2550;
+	border-radius: 7px;
+	vertical-align: top;
+	background-color: #FFF;
+	display: inline-block;
+	&:focus {
+		outline: none;
+	}
+}

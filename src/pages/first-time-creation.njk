@@ -168,6 +168,181 @@
         <!-- begin row -->
         <div class="row mt-5">
           <div class="col-xxl-3 mt-5">
+            <h4 class="mb-5">Round Bonuses</h4>
+          </div>
+          <div class="col-xxl-9 mt-4">
+            <!-- begin bonuses -->
+            <div class="bonuses js-bonuses" 
+              data-bonuses-shadow="#75A3BF, #B8E986, #F5A623">
+              <!-- begin bonus -->
+              <div class="bonus js-accordion js-bonus-template mt-5 is-open">
+                <div class="bonus__trigger js-accordion-trigger">
+                  <div class="bonus__serial"><span class="bonus__serial-numb js-bonus-serial-numb"></span> Bonus</div>
+                  <div class="bonus__arrow">{{ icon.make('arrow') }}</div>
+                  <div class="bonus__trigger-wrap">
+                    <div class="bonus__date">
+                      <span data-bonus-text="from">__.__.____</span> - <span data-bonus-text="to">__.__.____</span>
+                    </div>
+                    <div class="bonus__separator">/</div>
+                    <div class="bonus__parcent"><span class="js-bonus-text-parcent">0</span>% Bonus</div>
+                  </div>
+                </div>
+                <div class="bonus__wrap js-accordion-wrap">
+                  <div class="row">
+                    <div class="col-md-4 mb-2">
+                      <span class="form-label">Start of Round</span>
+                      <label class="border-input js-bonus-parent mt-2">
+                        <input name="bonus-date-for-1" data-language='ru' data-inline="true" type='text' data-date-format="dd.mm.yyyy" data-multiple-dates-separator=" - " class="form-control text-center js-bonus-datepicker" placeholder="__.__.____" data-start-select-date="2018, 11, 8" data-bonus-input="from" readonly />
+                      </label>
+                    </div>
+                    <div class="col-md-4 mb-2">
+                      <span class="form-label">End of Round</span>
+                      <label class="border-input js-bonus-parent mt-2">
+                        <input name="bonus-date-to-1" data-language='ru' data-inline="true" type='text' data-date-format="dd.mm.yyyy" data-multiple-dates-separator=" - " class="form-control text-center js-bonus-datepicker" placeholder="__.__.____" data-start-select-date="2018, 11, 19" data-bonus-input="to" readonly />
+                      </label>
+                    </div>
+                    <div class="col-xl-3 col-md-4 mb-2">
+                      <span class="form-label">Bonus</span>
+                      <label class="border-input mt-2">
+                        <input name="bonus-parcent-" type='text' data-range="true" class="form-control text-center js-bonus-parcent" value="25" />
+                        <span class="border-input__text">%</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end bonus -->
+              <!-- begin bonus -->
+              <div class="bonus js-accordion js-bonus-template mt-5">
+                <div class="bonus__trigger js-accordion-trigger">
+                  <div class="bonus__serial"><span class="bonus__serial-numb js-bonus-serial-numb"></span> Bonus</div>
+                  <div class="bonus__arrow">{{ icon.make('arrow') }}</div>
+                  <div class="bonus__trigger-wrap">
+                    <div class="bonus__date">
+                      <span data-bonus-text="from">__.__.____</span> - <span data-bonus-text="to">__.__.____</span>
+                    </div>
+                    <div class="bonus__separator">/</div>
+                    <div class="bonus__parcent"><span class="js-bonus-text-parcent">0</span>% Bonus</div>
+                  </div>
+                </div>
+                <div class="bonus__wrap js-accordion-wrap">
+                  <div class="row">
+                    <div class="col-md-4 mb-2">
+                      <span class="form-label">Start of Round</span>
+                      <label class="border-input js-bonus-parent mt-2">
+                        <input name="bonus-date-for-1" data-language='ru' data-inline="true" type='text' data-date-format="dd.mm.yyyy" data-multiple-dates-separator=" - " class="form-control text-center js-bonus-datepicker" placeholder="__.__.____" data-start-select-date="2018, 11, 8" data-bonus-input="from" readonly />
+                      </label>
+                    </div>
+                    <div class="col-md-4 mb-2">
+                      <span class="form-label">End of Round</span>
+                      <label class="border-input js-bonus-parent mt-2">
+                        <input name="bonus-date-to-1" data-language='ru' data-inline="true" type='text' data-date-format="dd.mm.yyyy" data-multiple-dates-separator=" - " class="form-control text-center js-bonus-datepicker" placeholder="__.__.____" data-start-select-date="2018, 11, 9" data-bonus-input="to" readonly />
+                      </label>
+                    </div>
+                    <div class="col-xl-3 col-md-4 mb-2">
+                      <span class="form-label">Bonus</span>
+                      <label class="border-input mt-2">
+                        <input name="bonus-parcent-" type='text' data-range="true" class="form-control text-center js-bonus-parcent" value="15" />
+                        <span class="border-input__text">%</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end bonus -->
+              <!-- begin bonus -->
+              <div class="bonus js-accordion js-bonus-template mt-5 is-open">
+                <div class="bonus__trigger js-accordion-trigger">
+                  <div class="bonus__serial"><span class="bonus__serial-numb js-bonus-serial-numb"></span> Bonus</div>
+                  <div class="bonus__arrow">{{ icon.make('arrow') }}</div>
+                  <div class="bonus__trigger-wrap">
+                    <div class="bonus__date">
+                      <span data-bonus-text="from">__.__.____</span> - <span data-bonus-text="to">__.__.____</span>
+                    </div>
+                    <div class="bonus__separator">/</div>
+                    <div class="bonus__parcent"><span class="js-bonus-text-parcent">0</span>% Bonus</div>
+                  </div>
+                </div>
+                <div class="bonus__wrap js-accordion-wrap">
+                  <div class="row">
+                    <div class="col-md-4 mb-2">
+                      <span class="form-label">Start of Round</span>
+                      <label class="border-input js-bonus-parent mt-2">
+                        <input name="bonus-date-for-1" data-language='ru' data-inline="true" type='text' data-date-format="dd.mm.yyyy" data-multiple-dates-separator=" - " class="form-control text-center js-bonus-datepicker" placeholder="__.__.____" value="08.11.2018" data-start-select-date="2018, 11, 8" data-bonus-input="from" readonly />
+                      </label>
+                    </div>
+                    <div class="col-md-4 mb-2">
+                      <span class="form-label">End of Round</span>
+                      <label class="border-input js-bonus-parent mt-2">
+                        <input name="bonus-date-to-1" data-language='ru' data-inline="true" type='text' data-date-format="dd.mm.yyyy" data-multiple-dates-separator=" - " class="form-control text-center js-bonus-datepicker" placeholder="__.__.____" value="09.11.2018" data-start-select-date="2018, 11, 9" data-bonus-input="to" readonly />
+                      </label>
+                    </div>
+                    <div class="col-xl-3 col-md-4 mb-2">
+                      <span class="form-label">Bonus</span>
+                      <label class="border-input mt-2">
+                        <input name="bonus-parcent-" type='text' value="5" data-range="true" class="form-control text-center js-bonus-parcent" />
+                        <span class="border-input__text">%</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end bonus -->
+            </div>
+            <!-- end bonuses -->
+            <button class="btn-add js-add-bonus mt-8" type="button">
+              <span class="btn-plus"></span>
+            </button>
+            <!-- begin template -->
+            <div class="js-bonus-template-parent" hidden>
+              <!-- begin bonus -->
+              <div class="bonus js-accordion js-bonus-template mt-5 is-open">
+                <div class="bonus__trigger js-accordion-trigger">
+                  <div class="bonus__serial"><span class="bonus__serial-numb js-bonus-serial-numb"></span> Bonus</div>
+                  <div class="bonus__arrow">{{ icon.make('arrow') }}</div>
+                  <div class="bonus__trigger-wrap">
+                    <div class="bonus__date">
+                      <span data-bonus-text="from">__.__.____</span> - <span data-bonus-text="to">__.__.____</span>
+                    </div>
+                    <div class="bonus__separator">/</div>
+                    <div class="bonus__parcent"><span class="js-bonus-text-parcent">0</span>% Bonus</div>
+                  </div>
+                </div>
+                <div class="bonus__wrap js-accordion-wrap" style="display: block;">
+                  <div class="row">
+                    <div class="col-md-4 mb-2">
+                      <span class="form-label">Start of Round</span>
+                      <label class="border-input mt-2 js-bonus-parent">
+                        <input name="bonus-date-for-" data-language='ru' data-inline="true" type='text' data-date-format="dd.mm.yyyy" data-multiple-dates-separator=" - " class="form-control text-center js-bonus-datepicker" placeholder="__.__.____" data-bonus-input="from" readonly />
+                      </label>
+                    </div>
+                    <div class="col-md-4 mb-2">
+                      <span class="form-label">End of Round</span>
+                      <label class="border-input mt-2 js-bonus-parent">
+                        <input name="bonus-date-to-" data-language='ru' data-inline="true" type='text' data-date-format="dd.mm.yyyy" data-multiple-dates-separator=" - " class="form-control text-center js-bonus-datepicker" placeholder="__.__.____" data-bonus-input="to" readonly />
+                      </label>
+                    </div>
+                    <div class="col-xl-3 col-md-4 mb-2">
+                      <span class="form-label">Bonus</span>
+                      <label class="border-input mt-2">
+                        <input name="bonus-parcent-" type='text' data-range="true" class="form-control js-bonus-parcent" />
+                        <span class="border-input__text">%</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end bonus -->
+            </div>
+            <!-- end template -->
+          </div>
+        </div>
+        <!-- end row -->
+        <!-- end row -->
+        <hr class="box__hr mt-8">
+        <!-- begin row -->
+        <div class="row mt-5">
+          <div class="col-xxl-3 mt-5">
             <h4 class="mb-5">Token Info</h4>
           </div>
           <div class="col-xxl-9 mt-4">
