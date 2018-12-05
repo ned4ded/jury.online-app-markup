@@ -5,6 +5,8 @@
   $cards-max-width: 1184px;
 
   &__filters {
+    position: relative;
+    z-index: 20;
     margin-right: -$grid-gutter-width / 2;
     margin-left: -$grid-gutter-width / 2;
 
