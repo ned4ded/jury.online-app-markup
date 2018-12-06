@@ -31,7 +31,7 @@
     'ico' : 'ICO'
   } %}
 
-  <span class="card-dyed__stage-name">{{ stages[stage] }}</span> / {{ left }} D left
+  <span class="card-dyed__stage-name">{{ stages[stage] }}</span>{% if left %} / {{ left }} D left{% endif %}
 {% endmacro %}
 
 {% macro stage(name, left) %}

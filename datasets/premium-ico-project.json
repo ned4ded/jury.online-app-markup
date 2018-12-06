@@ -126,5 +126,68 @@
       "text" : "active"
     },
     "kyc" : false
+  },
+  {
+    "name" : "Populstay",
+    "id" : "populstay",
+    "field" : "Tourism",
+    "brand" : "assets/imgs/icon-ico-project-populstay.png",
+    "images" : {
+      "mobile" : "style=\"background-image: url('assets/imgs/premium-card-populstay.png'); width: 125px; height: 132px; bottom: 0; right: -10px;\"",
+      "desktop" : "style=\"background-image: url('assets/imgs/premium-card-populstay.png'); width: 171px; height: 100%; max-height: 180px; bottom: 0;\""
+    },
+    "stage-type" : "pre-ico",
+    "period" : "20 JUN - 22 SEP",
+    "investment" : "5 ETH",
+    "theme" : "charm",
+    "kyc" : false
+  },
+  {
+    "name" : "Vanig",
+    "id" : "vanig",
+    "field" : "Retail",
+    "brand" : "assets/imgs/icon-ico-project-vanig.png",
+    "images" : {
+      "mobile" : "style=\"background-image: url('assets/imgs/premium-card-vanig.png'); width: 135px; height: 125px; right: -10px;\"",
+      "desktop" : "style=\"background-image: url('assets/imgs/premium-card-vanig.png'); width: 188px; height: 100%; max-height: 174px; bottom: auto; transform: translateY(-50%); top: 50%;\""
+    },
+    "stage-type" : "pre-ico",
+    "days left" : "25",
+    "period" : "20 JUN - 22 SEP",
+    "investment" : "5 ETH",
+    "theme" : "danube",
+    "kyc" : false
+  },
+  {
+    "name" : "Membrana",
+    "id" : "membrana",
+    "field" : "Investment",
+    "brand" : "assets/imgs/icon-ico-project-membrana.png",
+    "images" : {
+      "mobile" : "style=\"background-image: url('assets/imgs/premium-card-membrana.png'); width: 135px; height: 125px; right: -10px;\"",
+      "desktop" : "style=\"background-image: url('assets/imgs/premium-card-membrana.png'); width: 188px; height: 100%; max-height: 174px; bottom: auto; transform: translateY(-50%); top: 50%;\""
+    },
+    "stage-type" : "pre-ico",
+    "days left" : "",
+    "period" : "20 JUN - 22 SEP",
+    "investment" : "5 ETH",
+    "theme" : "dark-purple",
+    "kyc" : false
+  },
+  {
+    "name" : "Calero",
+    "id" : "calero",
+    "field" : "E-commerce",
+    "brand" : "assets/imgs/icon-ico-project-calero.png",
+    "images" : {
+      "mobile" : "style=\"background-image: url('assets/imgs/premium-card-calero.png'); width: 135px; height: 125px; right: -10px;\"",
+      "desktop" : "style=\"background-image: url('assets/imgs/premium-card-calero.png'); width: 188px; height: 100%; max-height: 174px; bottom: auto; transform: translateY(-50%); top: 50%;\""
+    },
+    "stage-type" : "ico",
+    "days left" : "",
+    "period" : "20 JUN - 22 SEP",
+    "investment" : "5 ETH",
+    "theme" : "green",
+    "kyc" : false
   }
 ]

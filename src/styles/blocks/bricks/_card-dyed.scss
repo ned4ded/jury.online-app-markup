@@ -125,6 +125,86 @@
 
       )
     ),
+    'populstay': (
+      'mobile': (
+        background-image: url('../assets/imgs/premium-card-populstay.png'),
+        width: 182px,
+        height: 138px,
+        right: -24px,
+        bottom: -17px
+      ),
+      'desktop': (
+        background-image: url('../assets/imgs/premium-card-populstay.png'),
+        width: 240px,
+        height: 100%,
+        max-height: 200px,
+        bottom: auto,
+        transform: translateY(-50%),
+        top: 57%,
+        right: -25px,
+
+      )
+    ),
+    'vanig': (
+      'mobile': (
+        background-image: url('../assets/imgs/premium-card-vanig.png'),
+        width: 182px,
+        height: 138px,
+        right: -24px,
+        bottom: -17px
+      ),
+      'desktop': (
+        background-image: url('../assets/imgs/premium-card-vanig.png'),
+        width: 240px,
+        height: 100%,
+        max-height: 200px,
+        bottom: auto,
+        transform: translateY(-50%),
+        top: 53%,
+        right: -25px,
+
+      )
+    ),
+    'membrana': (
+      'mobile': (
+        background-image: url('../assets/imgs/premium-card-membrana.png'),
+        width: 128px,
+        height: 127px,
+        right: -2px,
+        bottom: -4px
+      ),
+      'desktop': (
+        background-image: url('../assets/imgs/premium-card-membrana.png'),
+        width: 240px,
+        height: 100%,
+        max-height: 200px,
+        bottom: auto,
+        transform: translateY(-50%),
+        top: 53%,
+        right: -4px,
+
+      )
+    ),
+    'calero': (
+      'mobile': (
+        background-image: url('../assets/imgs/premium-card-calero.png'),
+        width: 182px,
+        height: 138px,
+        right: -34px,
+        bottom: -17px
+      ),
+      'desktop': (
+        background-image: url('../assets/imgs/premium-card-calero.png'),
+        width: 240px,
+        height: 100%,
+        max-height: 200px,
+        bottom: auto,
+        transform: translateY(-50%),
+        top: 53%,
+        right: -40px,
+
+      )
+    ),
   );
 
   @mixin make-properties($map) {
@@ -283,6 +363,39 @@
     "stage" : (
     )
   );
+  
+  $dark-purple: (
+    "emphasis" : (
+      background-color: rgba(#34364d, .5)
+    ),
+    "flat" : (
+      background-color: #eaebee,
+      box-shadow: 0px 0px 0px 2px #cbd0dd,
+    ),
+    "gradient" : (
+      background-image: (linear-gradient(to top, #3d3369 10%, #5a619f 100%), linear-gradient(180deg, #ffffff, #3d3369)),
+      box-shadow: 0 6px 13px rgba(81, 202, 180, 0.29),
+    ),
+    "stage" : (
+      color: #b3e9ff,
+    )
+  );
+  $green: (
+    "emphasis" : (
+      background-color: rgba(#34364d, .5)
+    ),
+    "flat" : (
+      background-color: #eaebee,
+      box-shadow: 0px 0px 0px 2px #cbd0dd,
+    ),
+    "gradient" : (
+      background-image: (linear-gradient(to bottom, #5bc682 10%, #10685f 100%), linear-gradient(180deg, #ffffff, #3d3369)),
+      box-shadow: 0 6px 13px rgba(112, 94, 204, 0.29),
+    ),
+    "stage" : (
+      color: #d6f1c6
+    )
+  );
 
   $themes: (
     'ziggurat' : $ziggurat,
@@ -293,7 +406,9 @@
     'danube' : $danube,
     'default' : $ziggurat,
     'silver' : $silver,
-    'shakespeare' : $shakespeare
+    'shakespeare' : $shakespeare,
+    'dark-purple' : $dark-purple,
+    'green': $green
   );
 
   @function get-properties($theme-name: 'default', $value: 'flat') {
