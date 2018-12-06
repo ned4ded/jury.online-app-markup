@@ -7,6 +7,11 @@
     <!-- end hero -->
     <div class="create__container container-lg container-fluid">
       <div class="box box--p--lg">
+        {{ steps.make({
+          class: 'mt-5 mb-10',
+          prevBtnDisabled: true,
+          active: 1
+        }) }}
         <div class="simple-head">
           <div class="simple-head__center text-center">
             <h2>Hello! This is a project creation page</h2>
@@ -16,11 +21,6 @@
             last autosave in <span class="text-blue">Drafts</span> 10 october 19:03
           </div>
         </div>
-        {{ steps.make({
-          class: 'mt-5 mb-10',
-          prevBtnDisabled: true,
-          active: 1
-        }) }}
         <!-- begin row -->
         <div class="row mt-5">
           <div class="col-xxl-3 mt-4">

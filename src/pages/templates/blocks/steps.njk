@@ -5,7 +5,11 @@
   <a href="#" class="steps__btn steps__btn--prev{% if props.prevBtnDisabled %} is-disabled{% endif %}">{{ icon.make('arrow-left') }}</a>
   <ul class="steps__list">
     {% for text in ['Base information', 'General info', 'Round info', 'Team', 'Cycles'] %}
-    <li class="steps__item{% if loop.index < props.active %} is-check{% endif %}{% if loop.index == props.active %} is-active{% endif %}"><span class="steps__title">{{ text }}</span></li>
+	    {% if loop.index == props.active %}
+	   		<li class="steps__item{% if loop.index < props.active %} is-check{% endif %} is-active"><span class="steps__title">{{ text }}</span></li>
+	    {% else %}
+	    	<li class="steps__item{% if loop.index < props.active %} is-check{% endif %}"><a href="#" class="steps__title">{{ text }}</a></li>
+    {% endif %}
     {% endfor %}
   </ul>
   <a href="#" class="steps__btn steps__btn--next{% if props.nextBtnDisabled %} is-disabled{% endif %}">{{ icon.make('arrow-right') }}</a>

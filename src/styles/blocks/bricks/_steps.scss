@@ -76,6 +76,8 @@
 				opacity: 1;
 			}
 			.steps__title {
+				color: #67dc8a;
+				font-weight: 700;
 				display: block;
 			}
 		}
@@ -99,7 +101,7 @@
 			height: 24px;
 			border-radius: 50%;
 			background-color: #EBEEF5;
-			opacity: 0;
+			// opacity: 0;
 		}
 	}
 	&__title {
@@ -112,6 +114,8 @@
 		font-weight: 400;
 		margin-bottom: 25px;
 		white-space: nowrap;
-		display: none;
+		@include bp-down(lg) {
+			display: none;
+		}
 	}
 }
