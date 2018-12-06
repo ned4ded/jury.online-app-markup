@@ -171,11 +171,10 @@
 
     width: $navbar-brand-w-sm;
     height: 100%;
-    padding-top: rem(5px);
 
     @include bp-up($navbar-collapse-bp) {
       width: $navbar-brand-w-lg;
-      padding-top: rem(15px);
+      padding-top: rem(12px);
     }
   }
 

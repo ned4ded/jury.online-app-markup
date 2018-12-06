@@ -24,6 +24,7 @@ import './accordion';
 import './editior';
 import './checkSocInput';
 import './bonusCreator';
+import './warningBox';
 
 DOC.ready(function () {
   const body = document.querySelector('body');

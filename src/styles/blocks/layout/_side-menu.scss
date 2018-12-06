@@ -59,6 +59,7 @@ $side-menu-divider: 1px solid theme-primary('400');
     }
 
     &--nav {
+      padding: 0;
       align-items: stretch;
 
       @extend %side-menu-fluid-block;

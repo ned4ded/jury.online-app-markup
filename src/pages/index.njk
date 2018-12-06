@@ -10,6 +10,10 @@
 {% set page = { active: 'dashboard' } %}
 
 {% block content %}
+  <div class="box bg-warning text-center collapse js-warning-box" id="alert" style="display: block;">
+    <div class="box__content text-white" id="alert-content">Error: web3 not found. Install metamask extension!</div>
+    <button class="box__close js-warning-box-close" type="button">{{ icon.make('cancel') }}</button>
+  </div>
 <div class="container-fluid">
   <div class="row mb-9 mt-lg-10">
     <div class="col-12">

@@ -83,6 +83,10 @@ $box-spacers: (
     padding: 0  0 spacer(6);
   }
 
+  &.bg-warning {
+    padding: $padding-y $padding-x * 2;
+  }
+
   &__head {
     padding: spacer(4) spacer(8);
     font-size: 18px;
@@ -232,6 +236,26 @@ $box-spacers: (
     &:last-child {
       text-align: right;
     };
+  }
+
+  &__close {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    padding: 0;
+    line-height: 1;
+    background-color: transparent;
+    border: none;
+    right: 10px;
+    font-size: 0;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+    .icon {
+      font-size: 12px;
+    }
   }
 
   @each $size, $length-map in $box-spacers {
