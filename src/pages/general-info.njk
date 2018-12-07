@@ -1,4 +1,6 @@
 {% extends "layout.njk" %}
+{% import "blocks/close-modal.njk" as close %}
+
 
 {% block content %}
 
@@ -191,6 +193,7 @@
   <!-- end create -->
   {% set addModalContent %}
     <div class="add-modal">
+    {{ close.make('add-modal__close') }}
      <div class="add-modal__head">Add contact</div>
      <div class="add-modal__wrap">
        <!-- begin soc-tabs -->
