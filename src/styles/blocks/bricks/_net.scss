@@ -1,6 +1,7 @@
 .net {
   &__text {
     max-width: 70px;
+    text-align: right;
 
     font-weight: 600;
     line-height: 1;
@@ -22,7 +23,7 @@
     z-index: 0;
 
     margin: $circle-outer-w;
-    margin-left: 20px;
+    margin-left: 15px;
 
     &:before {
       position: absolute;
