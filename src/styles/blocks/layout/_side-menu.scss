@@ -22,7 +22,7 @@ $side-menu-divider: 1px solid theme-primary('400');
   min-width: $side-bar-w;
   // height: 100%;
   // min-height: 100%;
-  padding: rem(20px) rem($side-menu-p-x) rem(30px);
+  padding: rem(20px) rem($side-menu-p-x) rem(15px);
 
   color: $white;
   background-image: linear-gradient(to top, theme-primary(), theme-primary('600'));
@@ -55,7 +55,8 @@ $side-menu-divider: 1px solid theme-primary('400');
     }
 
     &--profile {
-      border-bottom: $side-menu-divider;
+      border-bottom: 1px solid #3d405c;
+      padding-bottom: rem(12px);
     }
 
     &--nav {
@@ -64,6 +65,9 @@ $side-menu-divider: 1px solid theme-primary('400');
 
       @extend %side-menu-fluid-block;
       @extend %side-menu-flexible-block;
+    }
+    &--logout {
+      padding-top: rem(10px);
     }
   }
 
@@ -147,7 +151,7 @@ $side-menu-divider: 1px solid theme-primary('400');
     width: calc(100% - 12px);
 
     &--add {
-      margin: spacer(6) auto 0;
+      margin: spacer(3) auto 0;
       font-weight: bold;
 
       color: $white;

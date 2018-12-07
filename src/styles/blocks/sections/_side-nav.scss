@@ -27,8 +27,8 @@
   }
 
   &--sub-nav {
-    padding-top: 0.625rem;
-    padding-bottom: 0.625rem;
+    // padding-top: 0.625rem;
+    // padding-bottom: 0.625rem;
   }
 
   &__link {
@@ -38,7 +38,7 @@
     justify-content: space-between;
 
     width: 100%;
-    padding: #{rem(21px) - $link-item-m-y} #{rem($side-menu-p-x) - $link-active-border-w} #{rem(18px) - $link-item-m-y} $px;
+    padding: #{rem(10px) - $link-item-m-y} #{rem($side-menu-p-x) - $link-active-border-w} #{rem(10px) - $link-item-m-y} $px;
 
     transition: background-color .15s ease-in;
 
