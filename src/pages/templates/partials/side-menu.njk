@@ -34,20 +34,6 @@
     <span data-entry-checked="sign-in">Sign in</span>
     <span data-entry-checked="sign-up">Sign up</span>
   </p>
-
-  <form id="sign-up-form" data-entry-checked="sign-up" class="entry__block entry__block--inputs">
-    <input class="entry__input form-control" type="email" name="email" value="" placeholder="email" required>
-    <input class="entry__input form-control" type="password" name="email" value="" placeholder="password" required>
-
-    <label for="sign-in-check" class="entry__label">Don't have an account yet?</label>
-  </form>
-
-  <form id="sign-in-form" data-entry-checked="sign-in" class="entry__block entry__block--inputs">
-    <input class="entry__input form-control" type="email" name="email" value="" placeholder="email" required>
-
-    <label for="sign-up-check" class="entry__label">Already have an account?</label>
-  </form>
-
   <ul class="entry__block entry__block--links entry__links">
     {% set links = [
       { name: 'Google', icon: 'ggl', ref: '#' },
@@ -66,6 +52,20 @@
     </li>
     {% endfor %}
   </ul>
+
+  <form id="sign-up-form" data-entry-checked="sign-up" class="entry__block entry__block--inputs">
+    <input class="entry__input form-control" type="email" name="email" value="" placeholder="email" required>
+    <input class="entry__input form-control" type="password" name="email" value="" placeholder="password" required>
+
+    <label for="sign-in-check" class="entry__label">Don't have an account yet?</label>
+  </form>
+
+  <form id="sign-in-form" data-entry-checked="sign-in" class="entry__block entry__block--inputs">
+    <input class="entry__input form-control" type="email" name="email" value="" placeholder="email" required>
+
+    <label for="sign-up-check" class="entry__label">Already have an account?</label>
+  </form>
+
 
   <div class="entry__block entry__block--button">
     <button form="sign-up-form" data-entry-checked="sign-up" type="submit" class="btn btn-info entry__submit">Submit</button>
