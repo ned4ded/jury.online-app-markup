@@ -25,7 +25,6 @@ import './editior';
 import './checkSocInput';
 import './bonusCreator';
 import './warningBox';
-import './paralax';
 
 DOC.ready(function () {
   const body = document.querySelector('body');

@@ -1,0 +1,78 @@
+{% extends "layout.njk" %}
+{% import "blocks/card-brand.njk" as brand %}
+
+{% block content %}
+
+  <!-- begin projects -->
+  <div class="projects">
+    <div class="projects__container container-md container-fluid">
+      <div class="projects__chat">
+        <h3 class="mb-4">Project Chat</h3>
+        <div class="box box--has--head pb-0">
+          <div class="box__head">
+            {% set content %}
+            <p class="mb-0 h4 font-weight-bold text-primary">Elysian Project</p>
+            <p class="mb-0 font-weight-bold text-muted text-xs">was online 3 hours ago</p>
+            {% endset %}
+
+            {{ brand.make(content, 'assets/imgs/icon-ico-project-elysian.png', 'box__brand') }}
+          </div>
+          <div class="box__chat-out">
+            <div class="chat">
+              <div class="chat__wrap">
+                <div class="chat__field">
+                  <div class="chat__message">Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor consectetuer adipiscing</div>
+                  <div class="chat__date">{{ icon.make('check-purple', 'chat__check') }}9.02 PM</div>
+                </div>
+                <div class="chat__field chat__field--right">
+                  <div class="chat__message">Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor consectetuer adipiscing</div>
+                  <div class="chat__date">{{ icon.make('check-purple', 'chat__check') }}9.02 PM</div>
+                </div>
+                <div class="chat__field">
+                  <div class="chat__message">Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor consectetuer adipiscing</div>
+                  <div class="chat__date">{{ icon.make('check-purple', 'chat__check') }}9.02 PM</div>
+                </div>
+                <div class="chat__field">
+                  <div class="chat__message">Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor consectetuer adipiscing</div>
+                  <div class="chat__date">{{ icon.make('check-purple', 'chat__check') }}9.02 PM</div>
+                </div>
+                <div class="chat__field chat__field--right">
+                  <div class="chat__message">Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor consectetuer adipiscing</div>
+                  <div class="chat__date">{{ icon.make('check-purple', 'chat__check') }}9.02 PM</div>
+                </div>
+                <div class="chat__field">
+                  <div class="chat__message">Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor consectetuer adipiscing</div>
+                  <div class="chat__date">{{ icon.make('check-purple', 'chat__check') }}9.02 PM</div>
+                </div>
+                <div class="chat__field">
+                  <div class="chat__message">Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor consectetuer adipiscing</div>
+                  <div class="chat__date">{{ icon.make('check-purple', 'chat__check') }}9.02 PM</div>
+                </div>
+                <div class="chat__field chat__field--right">
+                  <div class="chat__message">Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor consectetuer adipiscing</div>
+                  <div class="chat__date">{{ icon.make('check-purple', 'chat__check') }}9.02 PM</div>
+                </div>
+                <div class="chat__field">
+                  <div class="chat__message">Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor consectetuer adipiscing</div>
+                  <div class="chat__date">{{ icon.make('check-purple', 'chat__check') }}9.02 PM</div>
+                </div>
+              </div>
+              <form class="chat__footer">
+                <div class="chat__control">
+                  <textarea placeholder="Type your message..."></textarea>
+                </div>
+                <div class="chat__controls">
+                  <label class="chat__file">{{ icon.make('file') }}<input type="file" hidden></label>
+                  <button class="chat__emojis" type="button">{{ icon.make('emojis') }}</button>
+                  <button class="chat__send" type="submit">{{ icon.make('send') }}</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end projects -->
+
+{% endblock %}

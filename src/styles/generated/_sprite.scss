@@ -85,6 +85,11 @@
 	@include get-em-width(7, 5);
 }
 
+.icon--check-purple {
+	font-size: 10.31px;
+	@include get-em-width(9.91, 10.31);
+}
+
 .icon--check-valid {
 	font-size: 9px;
 	@include get-em-width(14, 9);
@@ -130,6 +135,11 @@
 	@include get-em-width(16, 13);
 }
 
+.icon--emojis {
+	font-size: 23px;
+	@include get-em-width(22, 23);
+}
+
 .icon--ethereum {
 	font-size: 512px;
 	@include get-em-width(512, 512);
@@ -153,6 +163,11 @@
 .icon--feed {
 	font-size: 16px;
 	@include get-em-width(15.97, 16);
+}
+
+.icon--file {
+	font-size: 24px;
+	@include get-em-width(14, 24);
 }
 
 .icon--filters {
@@ -253,6 +268,11 @@
 .icon--search {
 	font-size: 17px;
 	@include get-em-width(17, 17);
+}
+
+.icon--send {
+	font-size: 18px;
+	@include get-em-width(22, 18);
 }
 
 .icon--sign-out {

@@ -2,24 +2,17 @@
 	position: relative;
 	height: 300px;
 	background-color: #EBEEF5;
-	&__bg-wrap {
+	&__bg {
 		position: absolute;
 		top: 0;
 		left: 0;
 		right: 0;
 		bottom: 0;
-		overflow: hidden;
-	}
-	&__bg {
-		position: absolute;
-		top: -150px;
-		left: 0;
-		right: 0;
-		bottom: -150px;
 		opacity: .75;
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
+		background-attachment: fixed;
 	}
 	&__container {
 		position: relative;

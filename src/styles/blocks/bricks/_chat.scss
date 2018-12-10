@@ -1,0 +1,124 @@
+.chat {
+	position: relative;
+	padding: 50px 50px 68px;
+	overflow: hidden;
+	&:before {
+		position: absolute;
+		content: "";
+		top: 0;
+		left: 20px;
+		right: 20px;
+		height: 1px;
+		background-color: #D3D4D9;
+	}
+	&__wrap {
+		overflow: auto;
+		height: calc(100vh - 400px);
+		min-height: 300px;
+	}
+	&__field {
+		padding: 10px;
+		margin-top: 15px;
+		&--right {
+			padding-right: 10px;
+			text-align: right;
+		}
+	}
+	&__message {
+		position: relative;
+		padding: 14px 17px; 
+		max-width: 50%;
+		color: #fff;
+		line-height: 1.5;
+		min-width: 230px;
+		background-color: #83a2bd;
+		border: 1px solid white;
+		border-radius: 10px;
+		vertical-align: top;
+		display: inline-block;
+		&:before {
+			position: absolute;
+			content: "";
+			top: 50%;
+			right: 100%;
+			margin-top: -7px;
+			margin-right: 1px;
+			@include arr(9,13,#83a2bd,l)
+		}
+		.chat__field--right & {
+			background-color: #f4f4f4;
+			color: #34364d;
+			&:before {
+				left: 100%;
+				margin-right: auto;
+				margin-left: 1px;
+				@include arr(9,13,#f4f4f4,r)
+			}
+		}
+	}
+	&__check {
+		margin-right: 5px;
+	}
+	&__date {
+		margin-top: 12px;
+		color: #34364d;
+		text-transform: uppercase;
+	}
+	&__footer {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 2;
+		width: 100%;
+		padding: 0 54px 0 60px;
+		display: flex;
+		width: 100%;
+		align-items: center;
+		border-radius: 10px;
+		background-color: #FFF;
+		box-shadow: 2.1px 2.1px 22.1px 1.9px rgba(0, 0, 0, 0.09);
+	}
+	&__control {
+		flex-grow: 1;
+		input, textarea {
+			width: 100%;
+			height: 65px;
+			display: block;
+			color: #34364d;
+			border: none;
+			&:focus {
+				outline: none;
+				&::placeholder {
+					font-size: 0;
+				}
+			}
+			&::placeholder {
+				color: #34364d;
+			}
+		}
+		textarea {
+			padding: 20px 0;
+			resize: none;
+		}
+	}
+	&__controls {
+		width: 150px;
+		text-align: right;
+	}
+	&__file,
+	&__emojis,
+	&__send {
+		border: none;
+		cursor: pointer;
+		background-position: center;
+		&:focus {
+			outline: none;
+		}
+		&:not(:first-child) {
+			margin-left: 10px;
+		}
+	}
+	&__send {
+		margin-left: 30px;
+	}
+}
