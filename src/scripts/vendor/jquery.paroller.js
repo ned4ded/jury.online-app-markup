@@ -26,7 +26,7 @@ export default (function() {
   };
 
   $.fn.paroller = function(options) {
-    var windowHeight = $(window).height();
+    var windowHeight = $('.js-dashboard-content').height();
     var documentHeight = $(document).height();
 
     // default options
@@ -67,7 +67,7 @@ export default (function() {
         }
       }
 
-      $(window).on('scroll', function() {
+      $('.js-dashboard-content').on('scroll', function() {
         var scrolling = $(this).scrollTop();
         bgOffset = Math.round((offset - scrolling) * factor);
         transform = Math.round(((offset - (windowHeight / 2) + height) - scrolling) * factor);

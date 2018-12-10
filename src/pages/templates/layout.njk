@@ -33,7 +33,7 @@
       <div data-state="closed" class="dashboard__side-bar">
         {% include "partials/side-menu.njk" %}
       </div>
-      <div class="dashboard__content{{ ' page-' + page.active if page.active }}">
+      <div class="dashboard__content{{ ' page-' + page.active if page.active }} js-dashboard-content">
         {% block content %} {% endblock %}
       </div>
     </div>

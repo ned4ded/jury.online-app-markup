@@ -6,14 +6,16 @@
   <div class="projects">
     <!-- begin hero -->
     <div class="hero">
-      <div class="hero__bg" style="background-image: url(./assets/imgs/hero-project.png);" data-paroller-factor="0.5" data-paroller-type="foreground"></div>
-      <div data-paroller-factor="0.5" data-paroller-type="foreground"></div>
-      <div class="hero__container container-md container-fluid">
-        {{ breadcrumbs.make({
-          class: 'breadcrumbs_white text-right',
-          list: ['Main', 'Projects', 'LancerNetwork']
-        }) }}
+      <div class="hero__bg-wrap">
+        <div class="hero__bg" style="background-image: url(./assets/imgs/hero-project.png);"  data-paroller-factor="0.5" data-paroller-type="foreground"></div>
+        <div class="hero__container container-md container-fluid">
+          {{ breadcrumbs.make({
+            class: 'breadcrumbs_white text-right',
+            list: ['Main', 'Projects', 'LancerNetwork']
+          }) }}
+        </div>
       </div>
+     
     </div>
     <!-- end hero -->
     <div class="projects__container container-md container-fluid">
