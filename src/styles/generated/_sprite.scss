@@ -280,6 +280,11 @@
 	@include get-em-width(25, 25);
 }
 
+.icon--upload {
+	font-size: 16px;
+	@include get-em-width(16, 16);
+}
+
 .icon--url {
 	font-size: 15px;
 	@include get-em-width(15, 15);
