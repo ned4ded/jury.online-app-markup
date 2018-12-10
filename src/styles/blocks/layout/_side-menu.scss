@@ -16,6 +16,7 @@ $side-menu-divider: 1px solid theme-primary('400');
 
   overflow: hidden;
   height: 100%;
+  min-height: 0;
   display: flex;
   flex-flow: column nowrap;
 
@@ -28,6 +29,7 @@ $side-menu-divider: 1px solid theme-primary('400');
   background-image: linear-gradient(to top, theme-primary(), theme-primary('600'));
 
   @include bp-up($navbar-collapse-bp) {
+    min-height: 450px;
     &[data-desktop-state="closed"] {
       width: 100%;
       min-width: 0;
