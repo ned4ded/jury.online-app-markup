@@ -34,9 +34,11 @@
 
           <div class="col-xxl-9 create__cycles">
             <ul data-create-project-cycle="list" class="create__cycles-list">
-
               <li data-create-project-cycle="container" class="create__cycle">
-                  <h3 class="text-lg font-weight-normal mb-5"><span data-create-project-cycle="index">1</span> Cycle</h3>
+                  <button type="button" class="create__cycles-remove">
+                    {{ icon.make('remove') }}
+                  </button>
+                  <h3 class="create__cycles-title text-lg font-weight-normal mb-5"><span data-create-project-cycle="index">1</span> Cycle</h3>
 
                   <div data-create-project-cycle="pie-chart" class="mb-5 chart chart--md chart--input" data-percent="20">
                     <div class="chart__inner">
@@ -80,17 +82,9 @@
         </div>
 
         <div class="row">
-          <div class="col-xxl-3">
-            <div class="help-inf xl-hide mt-4">
-              <p class="help-inf__text">A brief description will help investors pay attention to you</p>
-              <div class="help-inf__icon">{{ icon.make('arr-right') }}</div>
-            </div>
-            <div class="help-inf xl-hide mt-14">
-              <p class="help-inf__text">Better more contact information. People can reach you conveniently</p>
-              <div class="help-inf__icon">{{ icon.make('arr-right') }}</div>
-            </div>
+          <div class="col-xxl-2">
           </div>
-          <div class="col-xxl-9">
+          <div class="col-xxl-10">
             <div data-project-creator-tab="content" class="tab-content">
               <div class="tab-pane active fade show" id="tabs-1">
                 <div class="row">
@@ -123,126 +117,142 @@
                     </span>
                   </div>
                 </div>
-                <hr class="mb-10 mt-0">
-                <h2 class="h5 font-weight-normal mb-9">Resource allocation</h2>
-                <div class="row">
-                  <div class="col-xxl-6">
+                <div class="tab-wrapper">
+                  <div class="row">
+                    <div class="col-md-8">
+                      <h4 class="mt-2">2’ND Milestone</h4>
+                    </div>
+                    <div class="col-md-4 text-right">
+                      <a href="#" class="btn btn-outline-info mr-3">Delete</a>
+                      <a href="#" class="btn btn-outline-info">Save</a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 mt-8">
+                      <h2 class="h5 mb-8">Dates</h2>
 
-                    <div class="mb-5">
-                      <div data-create-project-cycle="pie-chart" class="chart chart--md chart--input d-inline-block" data-percent="20">
-                        <div class="chart__inner">
-                          <input data-create-project-cycle="percentage" data-pie-chart-value type="number" class="chart__input" value="20" min="0" max="100"><span class="chart__parcent">%</span>
+                      <div class="pl-xxl-12">
+                        <label class="create__cycle-label create__cycle-label--w--fixed mb-5">
+                          <input data-language='ru' data-inline="true" data-create-project-cycle="date" type='text' data-range="true" data-date-format="dd.mm.yyyy" data-multiple-dates-separator=" - " class="form-control create__cycle-datepicker" placeholder="__.__.____ - __.__.____" />
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="col-12 mt-11">
+                      <h2 class="h5 mb-9">Resource allocation</h2>
+                      <div class="pl-xxl-12">
+                        <div class="row">
+                          <div class="col-xxl-6">
+
+                            <div class="mb-5">
+                              <div data-create-project-cycle="pie-chart" class="chart chart--md chart--input d-inline-block" data-percent="20">
+                                <div class="chart__inner">
+                                  <input data-create-project-cycle="percentage" data-pie-chart-value type="number" class="chart__input" value="20" min="0" max="100"><span class="chart__parcent">%</span>
+                                </div>
+                              </div>
+
+                              <span class="info-block" data-toggle="tooltip" title="Disabled tooltip">?</span>
+
+                              <p class="m-0 ml-9 d-inline-flex flex-column align-items-center text-muted align-middle">
+                                <span>260 000 PHT</span>
+                                <span>(<span>9 500</span> ETH)</span>
+                                <span class="text-sm">totally on</span>
+                                <span class="text-sm">milestone</span>
+                              </p>
+                            </div>
+
+                          </div>
+                          <div class="col-xxl-6">
+
+                            <div class="mb-5">
+                              <div data-create-project-cycle="pie-chart" class="chart chart--md chart--input d-inline-block" data-percent="20">
+                                <div class="chart__inner">
+                                  <input data-create-project-cycle="percentage" data-pie-chart-value type="number" class="chart__input" value="10" min="0" max="100"><span class="chart__parcent">%</span>
+                                </div>
+                              </div>
+
+                              <span class="info-block" data-toggle="tooltip" title="Disabled tooltip">?</span>
+
+                              <p class="m-0 ml-9 d-inline-flex flex-column align-items-center text-muted align-middle">
+                                <span>260 000 PHT</span>
+                                <span>(<span>9 500</span> ETH)</span>
+                                <span class="text-sm">totally on</span>
+                                <span class="text-sm">milestone</span>
+                              </p>
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {# <div class="col-12 mt-11">
+                      <h2 class="h5 font-weight-normal mb-9">Milestone settings</h2>
+                      <p>
+                        <span class="badge badge-outline-info">IPFS</span>
+                        <span class="info-block ml-4" data-toggle="tooltip" title="Disabled tooltip">?</span>
+                      </p>
+                      <p class="form-check-inline">
+                        <div class="form-check form-check--inline-block mb-2 mr-5">
+                          <label>
+                            <input data-project-creator-tab="ipfs" class="form-check-input" type="radio" name="" value="true">
+
+                            <span class="form-check-label">
+                              Yes
+                            </span>
+                          </label>
+                        </div>
+
+                        <div class="form-check form-check--inline-block mb-2">
+                          <label>
+                            <input data-project-creator-tab="ipfs" class="form-check-input" type="radio" name="" value="false" checked>
+                            <span class="form-check-label">
+                              No
+                            </span>
+                          </label>
+                        </div>
+                      </p>
+                    </div> #}
+
+                    <div class="col-12 mt-11">
+                      <h2 class="h5 mb-5">Description</h2>
+
+                      <div class="editor editor--sm js-editor">
+                        <div class="js-editor-container">
+                          It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                         </div>
                       </div>
 
-                      <span class="info-block" data-toggle="tooltip" title="Disabled tooltip">?</span>
-
-                      <p class="m-0 ml-9 d-inline-flex flex-column align-items-center text-muted align-middle">
-                        <span>260 000 PHT</span>
-                        <span>(<span>9 500</span> ETH)</span>
-                        <span class="text-sm">totally on</span>
-                        <span class="text-sm">milestone</span>
-                      </p>
                     </div>
 
-                  </div>
-                  <div class="col-xxl-6">
+                    <div class="col-12 mt-11">
+                      <h2 class="h5 mb-5">Definition of Done</h2>
 
-                    <div class="mb-5">
-                      <div data-create-project-cycle="pie-chart" class="chart chart--md chart--input d-inline-block" data-percent="20">
-                        <div class="chart__inner">
-                          <input data-create-project-cycle="percentage" data-pie-chart-value type="number" class="chart__input" value="10" min="0" max="100"><span class="chart__parcent">%</span>
-                        </div>
+                      <div class="editor editor--sm js-editor">
+                        <div class="js-editor-container">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
                       </div>
 
-                      <span class="info-block" data-toggle="tooltip" title="Disabled tooltip">?</span>
-
-                      <p class="m-0 ml-9 d-inline-flex flex-column align-items-center text-muted align-middle">
-                        <span>260 000 PHT</span>
-                        <span>(<span>9 500</span> ETH)</span>
-                        <span class="text-sm">totally on</span>
-                        <span class="text-sm">milestone</span>
-                      </p>
-                    </div>
-
-                  </div>
-
-                  <div class="col-12 mt-11">
-                    <h2 class="h5 font-weight-normal mb-9">Milestone settings</h2>
-                    <p>
-                      <span class="badge badge-outline-info">IPFS</span>
-                      <span class="info-block ml-4" data-toggle="tooltip" title="Disabled tooltip">?</span>
-                    </p>
-                    <p class="form-check-inline">
-                      <div class="form-check form-check--inline-block mb-2 mr-5">
-                        <label>
-                          <input data-project-creator-tab="ipfs" class="form-check-input" type="radio" name="" value="true">
-
-                          <span class="form-check-label">
-                            Yes
-                          </span>
-                        </label>
-                      </div>
-
-                      <div class="form-check form-check--inline-block mb-2">
-                        <label>
-                          <input data-project-creator-tab="ipfs" class="form-check-input" type="radio" name="" value="false" checked>
-                          <span class="form-check-label">
-                            No
-                          </span>
-                        </label>
-                      </div>
-                    </p>
-                  </div>
-
-                  <div class="col-12 mt-11">
-                    <h2 class="h5 font-weight-normal mb-5">Dates</h2>
-
-                    <div class="pl-xxl-12">
-                      <label class="create__cycle-label create__cycle-label--w--fixed mb-5">
-                        <input data-language='ru' data-inline="true" data-create-project-cycle="date" type='text' data-range="true" data-date-format="dd.mm.yyyy" data-multiple-dates-separator=" - " class="form-control create__cycle-datepicker" placeholder="__.__.____ - __.__.____" />
-                      </label>
                     </div>
                   </div>
+              <div class="mt-11">
+                <h2 class="h5 mb-5">Attachments</h2>
 
-                  <div class="col-12 mt-11">
-                    <h2 class="h5 font-weight-normal mb-5">Description</h2>
+                <div class="row pl-xxl-12">
+                  <ul data-create-project-attach="list" class="col-6 create__block--vertical-divider text-info pt-4 pb-4 mb-0">
+                    <li data-create-project-attach="row" data-create-project-attach="placeholder" class="added-file pl-2">No files are added <button type="button" class="added-file__remove">{{ icon.make('remove') }}</button></li>
+                  </ul>
 
-                    <div class="editor editor--sm js-editor pl-xxl-12">
-                      <div class="js-editor-container">
-                        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                      </div>
-                    </div>
-
+                  <div class="col-6 pt-4 pb-4">
+                    <p class="text-lg text-info text-center mb-3"><span data-create-project-attach="count">0</span> Attachments Loaded</p>
+                    <p class="mb-0 text-center"><label data-create-project-attach="add" class="btn btn-outline-primary">+ Add New<input data-create-project-attach="input" type="file" name="some-file" hidden></label></p>
                   </div>
+                </div>
 
-                  <div class="col-12 mt-11">
-                    <h2 class="h5 font-weight-normal mb-5">Definition of Done</h2>
-
-                    <div class="editor editor--sm js-editor pl-xxl-12">
-                      <div class="js-editor-container">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-                    </div>
-
-                  </div>
+              </div>
                 </div>
               </div>
             </div>
 
-            <div class="mt-11">
-              <h2 class="h5 mb-5 font-weight-normal">Attachments</h2>
-
-              <div class="row pl-xxl-12">
-                <ul data-create-project-attach="list" class="col-6 create__block--vertical-divider text-info pt-4 pb-4 mb-0">
-                  <li data-create-project-attach="row" data-create-project-attach="placeholder" class="pl-2">No files are added</li>
-                </ul>
-
-                <div class="col-6 pt-4 pb-4">
-                  <p class="text-lg text-info text-center mb-3"><span data-create-project-attach="count">0</span> Attachments Loaded</p>
-                  <p class="mb-0 text-center"><label data-create-project-attach="add" class="btn btn-outline-primary">+ Add New<input data-create-project-attach="input" type="file" name="some-file" hidden></label></p>
-                </div>
-              </div>
-
-            </div>
           </div>
         </div>
 

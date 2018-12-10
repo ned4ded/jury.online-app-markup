@@ -83,8 +83,27 @@
 		}
 	}
 
+	&__cycles-remove {
+		position: absolute;
+		top: -3px;
+		right: 0;
+		border: none;
+		padding: 0;
+		background-color: transparent;
+		outline: none;
+		cursor: pointer;
+		&:focus {
+			outline: none;
+		}
+	}
+	&__cycles-title {
+		padding: 0 20px;
+	}
+
 	&__cycle {
 		$w: 200px;
+		
+		position: relative;
 
 		display: flex;
 		align-items: center;

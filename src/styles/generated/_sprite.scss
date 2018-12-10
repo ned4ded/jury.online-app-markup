@@ -240,6 +240,11 @@
 	@include get-em-width(15.94, 17);
 }
 
+.icon--remove {
+	font-size: 12px;
+	@include get-em-width(12, 12);
+}
+
 .icon--sale {
 	font-size: 18px;
 	@include get-em-width(15, 18);

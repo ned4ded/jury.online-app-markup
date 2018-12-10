@@ -92,3 +92,12 @@
 		}
 	}
 }
+
+.tab-wrapper { 
+	padding: rem(60px) rem(50px);
+	border-radius: 7px;
+	box-shadow: 0 0 15px 0 rgba(0,0,0,0.15);
+	@include bp-down(sm) {
+		padding: rem(30px) rem(20px);
+	}
+}
