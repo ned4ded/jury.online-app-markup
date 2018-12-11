@@ -2,6 +2,9 @@
 	position: relative;
 	padding: 50px 50px 68px;
 	overflow: hidden;
+	@include bp-down(sm) {
+		padding: 30px 20px 68px;
+	}
 	&:before {
 		position: absolute;
 		content: "";
@@ -27,10 +30,10 @@
 	&__message {
 		position: relative;
 		padding: 14px 17px; 
-		max-width: 50%;
+		max-width: 567px;
 		color: #fff;
 		line-height: 1.5;
-		min-width: 230px;
+		min-width: 180px;
 		background-color: #83a2bd;
 		border: 1px solid white;
 		border-radius: 10px;
@@ -77,6 +80,9 @@
 		border-radius: 10px;
 		background-color: #FFF;
 		box-shadow: 2.1px 2.1px 22.1px 1.9px rgba(0, 0, 0, 0.09);
+		@include bp-down(sm) {
+			padding: 0 20px;
+		}
 	}
 	&__control {
 		flex-grow: 1;
