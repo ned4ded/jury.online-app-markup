@@ -91,7 +91,11 @@
 			height: 65px;
 			display: block;
 			color: #34364d;
+			font-size: rem(16px);
 			border: none;
+			@include bp-down(sm) {
+				font-size: rem(14px);
+			}
 			&:focus {
 				outline: none;
 				&::placeholder {
@@ -105,6 +109,9 @@
 		textarea {
 			padding: 20px 0;
 			resize: none;
+			@include bp-down(sm) {
+				padding: 24px 0;
+			}
 		}
 	}
 	&__controls {
