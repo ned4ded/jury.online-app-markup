@@ -108,7 +108,7 @@
 		}
 	}
 	&__controls {
-		width: 150px;
+		width: 140px;
 		text-align: right;
 	}
 	&__file,
@@ -116,6 +116,7 @@
 	&__send {
 		border: none;
 		cursor: pointer;
+		font-size: 0;
 		background-position: center;
 		&:focus {
 			outline: none;
