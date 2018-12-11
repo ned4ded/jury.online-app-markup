@@ -1,10 +1,37 @@
 {% extends "layout.njk" %}
+{% import "blocks/card-dyed.njk" as cardDyed %}
 
 {% set page = { active: 'styleguide' } %}
 
 {% block content %}
 <div class="content pb-6 pt-6">
   <div class="container-fluid">
+
+    {% for project in datasets.get('premium-ico-project.json') %}
+    {% set content %}
+    <p class="mb-0 h2 font-weight-bolder text-primary text-lg-white">{{ project.name }}</p>
+    <p class="mb-0 h2 font-weight-bold text-uppercase text-xs text-primary text-lg-white">{{ project.field }}</p>
+    {% endset %}
+
+    {% set options = {
+      brand: { src: project.brand, content: content },
+      images: project.images,
+      'stage-type': project['stage-type'],
+      'days left': project['days left'],
+      period: project.period,
+      investment: project.investment,
+      content: {
+        stage: false,
+        meta: true
+      },
+      theme: project.theme,
+      badge: project.badge,
+      id: project.id
+    } %}
+    <div class="mt-3">
+      {{ cardDyed.make(options) }}
+    </div>
+    {% endfor %}
     <div id="scale" class="row mb-5">
       <div class="col-12">
         <h2 class="h1">Scale</h2>
