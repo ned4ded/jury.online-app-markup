@@ -16,7 +16,7 @@
     padding: 15px 10px;
 
     @include bp-up('xl') {
-      padding: 95px $p-x 25px;
+      padding: $p-x $p-x 25px;
     };
   }
 
@@ -33,7 +33,7 @@
 
     &--inputs {
       min-height: 120px;
-      padding: 0 $p-x;
+      // padding: 0 $p-x;
       // margin-right: -$p-x;
       // padding-left: $p-x;
     }

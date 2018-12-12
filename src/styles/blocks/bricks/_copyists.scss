@@ -1,0 +1,183 @@
+.copyists {
+	border-radius: 7px;
+	box-shadow: 5px 0 47.4px 3.6px rgba(13, 11, 45, 0.25);
+	&__search {
+		position: relative;
+		font-size: 0;
+		padding: 0 20px 0 70px;
+	}
+	&__btn-search {
+		position: absolute;
+		top: 25px;
+		left: 35px;
+		font-size: 0;
+		padding: 0;
+		border: none;
+		.icon {
+			font-size: 17px;
+			fill: #34364d;
+		}
+	}
+	&__control {
+		padding: 15px 0;
+		height: 65px;
+		width: 100%;
+		color: #222641;
+		font-family: "Proxima Nova",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+		font-size: 17px;
+		font-weight: 400;
+		border: none;
+		display: inline-block;
+		background-color: transparent;
+		&:focus {
+			outline: none;
+			&::placeholder {
+				font-size: 0;
+			}
+		}
+		&::placeholder {
+			color: #222641;
+		}
+	}
+	&__list {
+		position: relative;
+		padding: 5px 15px;
+		height: calc(100vh - 335px);
+		min-height: 340px;
+		overflow: auto;
+		&::-webkit-scrollbar {
+			width: 4px;
+		}
+		 
+		&::-webkit-scrollbar-thumb {
+			background-color: #85a4be;
+		}
+	}
+	&__list-out {
+		position: relative;
+		overflow: hidden;
+		&:before {
+			position: absolute;
+			content: "";
+			top: -1px;
+			left: 0;
+			right: 15px;
+			height: 1px;
+			z-index: 1;
+			box-shadow: 55px 0 55px 40px #fff;
+		}
+		&:after {
+			position: absolute;
+			content: "";
+			bottom: -1px;
+			left: 0;
+			right: 15px;
+			height: 1px;
+			z-index: 1;
+			box-shadow: 55px 0 55px 40px #fff;
+		}
+	}
+	&__filter {
+		padding: 11px 26px;
+		display: flex;
+		border-bottom: 1px solid rgba(#222641, 0.2);
+	}
+	&__item {
+		width: 50%;
+		color: #b8b8b8;
+		&:not(:last-child) {
+			padding-right: 10px;
+		}
+		&.is-active {
+			color: #83a2bd;
+		}
+	}
+	&__link {
+		display: block;
+		color: currentColor;
+		transition: color .3s;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	&__favorite-star {
+		margin: 2px 9px 0 0;
+		font-size: 14px;
+		vertical-align: top;
+		display: inline-block;
+	}
+}
+
+.copyist {
+	padding: 13px;
+	display: block;
+	&:hover {
+		text-decoration: none;
+	}
+	&__head {
+		display: flex;
+		align-items: center;
+	}
+	&__avatar {
+		margin: 3px;
+		max-width: 49px;
+		flex: 0 0 49px;
+		height: 49px;
+		border-radius: 50%;
+		border: 2px solid #fff;
+		box-shadow: 0 0 0 3px #83a2bd;
+		background-size: cover;
+		background-position: center;
+	}
+	&__info {
+		padding-left: 18px;
+		flex-grow: 1;
+	}
+	&__name {
+		color: #34364d;
+		font-size: 16px;
+		font-weight: 600;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		text-transform: uppercase;
+	}
+	&__date {
+		color: #a4a4a4;
+		font-size: 12px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		font-weight: 600;
+	}
+	&__text {
+		margin-top: 15px;
+		height: 38px;
+		color: #34364d;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 1.25;
+		overflow: hidden;
+	}
+	&__sender {
+		margin-right: 5px;
+		font-weight: 600;
+		color: #b1b1b1;
+	}
+	&__message {
+		margin-left: 4px;
+		width: 19px;
+		height: 19px;
+		line-height: 19px;
+		border-radius: 50%;
+		text-align: center;
+		color: #FFF;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		text-shadow: 0 0 3px rgba(1, 13, 46, 0.5);
+		font-size: 11px;
+		background-color: #ff7765;
+		box-shadow: 0 0 6px rgba(1, 13, 46, 0.33);
+	}
+}

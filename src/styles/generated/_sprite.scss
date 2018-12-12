@@ -285,6 +285,11 @@
 	@include get-em-width(47.41, 45.09);
 }
 
+.icon--star-current {
+	font-size: 45.09px;
+	@include get-em-width(47.41, 45.09);
+}
+
 .icon--star-outline {
 	font-size: 22px;
 	@include get-em-width(22, 22);

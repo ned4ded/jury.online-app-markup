@@ -9,16 +9,72 @@
       <div class="projects__chat">
         <h3 class="mb-4">Project Chat</h3>
         <div class="box box--has--head pb-0">
-          <div class="box__head">
-            {% set content %}
-            <p class="mb-0 h4 font-weight-bold text-primary">Elysian Project</p>
-            <p class="mb-0 font-weight-bold text-muted text-xs">was online 3 hours ago</p>
-            {% endset %}
+          <div class="chat">
+            <div class="chat__copyists copyists">
+              <form class="copyists__search">
+                <button class="copyists__btn-search" type="button">{{ icon.make('search') }}</button>
+                <input type="text" class="copyists__control" placeholder="Search messages, project">
+              </form>
+              <div class="copyists__filter">
+                <div class="copyists__item is-active"><a href="#" class="copyists__link">All messages</a></div>
+                <div class="copyists__item"><a href="#" class="copyists__link">{{ icon.make('star-current', 'copyists__favorite-star') }}Favorites</a></div>
+              </div>
+              <div class="copyists__list-out">
+                <div class="copyists__list">
+                  {% for i in range(0,10) %}
+                  {% if i.last %}
+                  <!-- begin copyist -->
+                  <a href="#" class="copyist">
+                    <div class="copyist__head">
+                      <div class="copyist__avatar" style="background-image: url(http://www.fillmurray.com/100/100)"></div>
+                      <div class="copyist__info">
+                        <div class="copyist__name">John Smith</div>
+                        <div class="copyist__date">Yesterday, 13:50</div>
+                      </div>
+                    </div>
+                    <div class="copyist__text">
+                      <span class="copyist__sender">You:</span>Tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                    </div>
+                  </a>
+                  <!-- end copyist -->
+                  {% else %}
+                  <!-- begin copyist -->
+                  <a href="#" class="copyist">
+                    <div class="copyist__head">
+                      <div class="copyist__avatar" style="background-image: url(http://www.fillmurray.com/100/100)"></div>
+                      <div class="copyist__info">
+                        <div class="copyist__name">John Smith</div>
+                        <div class="copyist__date">Yesterday, 13:50</div>
+                      </div>
+                      {% if i === 3 %}
+                      <div class="copyist__message">4</div>
+                      {% endif %}
+                    </div>
+                    <div class="copyist__text">
+                      <span class="copyist__sender">You:</span>Tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                    </div>
+                  </a>
+                  <hr class="m-0 p-0">
+                  <!-- end copyist -->
+                  {% endif %}
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+            <div class="chat__window">
+              <div class="chat__topic">
+                <div class="chat__topic-left">
+                  {% set content %}
+                  <p class="mb-0 h4 font-weight-bold text-primary">Elysian Project</p>
+                  <p class="mb-0 font-weight-bold text-muted text-xs">was online 3 hours ago</p>
+                  {% endset %}
 
-            {{ brand.make(content, 'assets/imgs/icon-ico-project-elysian.png', 'box__brand') }}
-          </div>
-          <div class="box__chat-out">
-            <div class="chat">
+                  {{ brand.make(content, 'assets/imgs/icon-ico-project-elysian.png', 'box__brand') }}
+                </div>
+                <div class="chat__topic-right">
+                  
+                </div>
+              </div>
               <div class="chat__wrap">
                 <div class="chat__field">
                   <div class="chat__message">Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor consectetuer adipiscing</div>
