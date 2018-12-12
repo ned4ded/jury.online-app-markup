@@ -83,6 +83,10 @@ $box-spacers: (
     padding: 0  0 spacer(6);
   }
 
+  &--h100 {
+    height: 100%;
+  }
+
   &.bg-warning {
     padding: $padding-y $padding-x * 2;
   }

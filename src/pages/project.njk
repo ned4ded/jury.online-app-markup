@@ -81,8 +81,12 @@
               <div class="tabs__wrap" data-tabs-wrapper>
                 {% for item in tabsData %}
                 <div class="tabs__container" data-tabs-container="{{ item.id }}">
-                  <p>{{ loop.index }}Lancer Network is a decentralized freelance site for the advertising and romotion of crowdsale and blockchain projects. Our members are comprised of those that want to earn cryptocurrency and the businesses that have the budget to pay for SMM and marketing services. Lancer Network is a decentralized freelance site for the advertising and promotion of crowdsale and blockchain projects.</p>
-                  <p>Our members are comprised of those that want to earn cryptocurrency and the businesses that have the budget to pay for SMM and marketing.</p>
+                  <div class="tabs__inner">
+                    <p>{{ loop.index }}Lancer Network is a decentralized freelance site for the advertising and romotion of crowdsale and blockchain projects. Our members are comprised of those that want to earn cryptocurrency and the businesses that have the budget to pay for SMM and marketing services. Lancer Network is a decentralized freelance site for the advertising and promotion of crowdsale and blockchain projects.</p>
+                    <p>Our members are comprised of those that want to earn cryptocurrency and the businesses that have the budget to pay for SMM and marketing.</p>
+                    <p>Our members are comprised of those that want to earn cryptocurrency and the businesses that have the budget to pay for SMM and marketing.</p>
+                    <p>Our members are comprised of those that want to earn cryptocurrency and the businesses that have the budget to pay for SMM and marketing.</p>
+                  </div>
                   <div class="tabs__footer">
                     <div class="tabs__link">
                       <a href="#" class="link link--border">http://lancer.networ</a>
@@ -116,7 +120,7 @@
       <div class="row">
         <div class="col-xxl-5 mt-9">
           <!-- begin box -->
-          <div class="box box--p--lg">
+          <div class="box box--h100 box--p--lg">
             <h4 class="title-bord mb-6">Token Info</h4>
             <!-- begin project-tokens -->
             <div class="project-tokens">
@@ -172,33 +176,55 @@
         </div>
         <div class="col-xxl-7 mt-9">
           <!-- begin box -->
-          <div class="box box--p--lg">
+          <div class="box box--h100 box--p--lg">
             <h4 class="title-bord">Attachments</h4>
             <!-- begin attachments -->
             <div class="attachments">
-              <a href="#" class="attach-card mt-6">
-                <div class="attach-card__date">10.02.2018</div>
-                <div class="attach-card__wrap">
-                  <div class="attach-card__title">WP</div>
-                  <div class="attach-card__description">White Paper</div>
+              <div class="attachments__swiper swiper-container" data-carousel="swiper">
+                <div class="attachments__swiper-wrapper swiper-wrapper">
+                  <div class="attachments-slide swiper-slide">
+                    <a href="#" class="attach-card mt-6">
+                      <div class="attach-card__date">10.02.2018</div>
+                      <div class="attach-card__wrap">
+                        <div class="attach-card__title">WP</div>
+                        <div class="attach-card__description">White Paper</div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="attachments-slide swiper-slide">
+                    <a href="#" class="attach-card attach-card--orange mt-6">
+                      <div class="attach-card__date">10.02.2018</div>
+                      <div class="attach-card__wrap">
+                        <div class="attach-card__title">T&C</div>
+                        <div class="attach-card__description">Terms & Conditions</div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="attachments-slide swiper-slide">
+                   <a href="#" class="attach-card attach-card--blue mt-6">
+                     <div class="attach-card__date">10.02.2018</div>
+                     <div class="attach-card__wrap">
+                       <div class="attach-card__title">SN</div>
+                       <div class="attach-card__description">Something new</div>
+                     </div>
+                   </a>
+                  </div>
+                  <div class="attachments-slide swiper-slide">
+                    <a href="#" class="attach-card attach-card--orange mt-6">
+                      <div class="attach-card__date">10.02.2018</div>
+                      <div class="attach-card__wrap">
+                        <div class="attach-card__title">T&C</div>
+                        <div class="attach-card__description">Terms & Conditions</div>
+                      </div>
+                    </a>
+                  </div>
                 </div>
-              </a>
-              <a href="#" class="attach-card attach-card--orange mt-6">
-                <div class="attach-card__date">10.02.2018</div>
-                <div class="attach-card__wrap">
-                  <div class="attach-card__title">T&C</div>
-                  <div class="attach-card__description">Terms & Conditions</div>
-                </div>
-              </a>
-              <a href="#" class="attach-card attach-card--blue mt-6">
-                <div class="attach-card__date">10.02.2018</div>
-                <div class="attach-card__wrap">
-                  <div class="attach-card__title">SN</div>
-                  <div class="attach-card__description">Something new</div>
-                </div>
-              </a>
+              </div>
+                <div class="swiper-button-prev attachments__btn attachments__btn--next"></div>
+                <div class="swiper-button-next attachments__btn attachments__btn--prev"></div>
             </div>
             <!-- end attachments -->
+            
           </div>
           <!-- end box -->
         </div>
