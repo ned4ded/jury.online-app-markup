@@ -87,6 +87,10 @@ $box-spacers: (
     height: 100%;
   }
 
+  &--chat {
+    border-radius: 7px;
+  }
+
   &.bg-warning {
     padding: $padding-y $padding-x * 2;
   }

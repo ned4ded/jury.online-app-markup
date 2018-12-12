@@ -8,7 +8,7 @@
     <div class="projects__container container-md container-fluid">
       <div class="projects__chat">
         <h3 class="mb-4">Project Chat</h3>
-        <div class="box box--has--head pb-0">
+        <div class="box box--chat p-0">
           <div class="chat">
             <div class="chat__copyists copyists">
               <form class="copyists__search">
@@ -65,14 +65,21 @@
               <div class="chat__topic">
                 <div class="chat__topic-left">
                   {% set content %}
-                  <p class="mb-0 h4 font-weight-bold text-primary">Elysian Project</p>
-                  <p class="mb-0 font-weight-bold text-muted text-xs">was online 3 hours ago</p>
+                  <p class="chat__inform mb-0 h4 font-weight-bold text-primary">Elysian Project</p>
+                  <p class="chat__inform mb-0 font-weight-bold text-muted text-xs">was online 3 hours ago</p>
                   {% endset %}
 
                   {{ brand.make(content, 'assets/imgs/icon-ico-project-elysian.png', 'box__brand') }}
                 </div>
                 <div class="chat__topic-right">
-                  
+                  <div class="chat__topic-forms">
+                    <form class="chat__search">
+                      <input type="text" class="form-control pr-0" placeholder="Search text">
+                    </form>
+                    <div class="chat__notifications">
+                      <button class="chat-notifications" type="button">{{ icon.make('bell') }}</button>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="chat__wrap">

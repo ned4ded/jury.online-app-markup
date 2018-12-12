@@ -1,10 +1,14 @@
 .copyists {
+	overflow: hidden;
 	border-radius: 7px;
 	box-shadow: 5px 0 47.4px 3.6px rgba(13, 11, 45, 0.25);
 	&__search {
 		position: relative;
 		font-size: 0;
 		padding: 0 20px 0 70px;
+		@include bp-down(sm) {
+			display: none;
+		}
 	}
 	&__btn-search {
 		position: absolute;
@@ -45,6 +49,10 @@
 		height: calc(100vh - 335px);
 		min-height: 340px;
 		overflow: auto;
+		@include bp-down(sm) {
+			padding: 0;
+			height: 100%;
+		}
 		&::-webkit-scrollbar {
 			width: 4px;
 		}
@@ -56,6 +64,9 @@
 	&__list-out {
 		position: relative;
 		overflow: hidden;
+		@include bp-down(sm) {
+			height: 100%;
+		}
 		&:before {
 			position: absolute;
 			content: "";
@@ -81,6 +92,9 @@
 		padding: 11px 26px;
 		display: flex;
 		border-bottom: 1px solid rgba(#222641, 0.2);
+		@include bp-down(sm) {
+			display: none;
+		}
 	}
 	&__item {
 		width: 50%;
@@ -109,8 +123,12 @@
 }
 
 .copyist {
+	position: relative;
 	padding: 13px;
 	display: block;
+	@include bp-down(sm) {
+		padding: 13px 9px;
+	}
 	&:hover {
 		text-decoration: none;
 	}
@@ -132,6 +150,12 @@
 	&__info {
 		padding-left: 18px;
 		flex-grow: 1;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		@include bp-down(sm) {
+			display: none;
+		}
 	}
 	&__name {
 		color: #34364d;
@@ -158,6 +182,9 @@
 		font-size: 16px;
 		line-height: 1.25;
 		overflow: hidden;
+		@include bp-down(sm) {
+			display: none;
+		}
 	}
 	&__sender {
 		margin-right: 5px;
@@ -179,5 +206,10 @@
 		font-size: 11px;
 		background-color: #ff7765;
 		box-shadow: 0 0 6px rgba(1, 13, 46, 0.33);
+		@include bp-down(sm) {
+			position: absolute;
+			top: 2px;
+			right: 2px;
+		}
 	}
 }

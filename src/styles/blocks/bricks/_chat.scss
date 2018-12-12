@@ -9,15 +9,38 @@
 		right: 0;
 		height: 1px;
 		background-color: #D3D4D9;
+		@include bp-down(sm){
+			left: 77px;
+		}
 	}
 	&__topic {
 		padding: 10px 45px 10px 28px;
 		font-size: 18px;
 		font-weight: 600;
-		display: flex;
+		display: table;
+		width: 100%;
+		table-layout: fixed;
 		align-items: center;
+		justify-content: space-between;
+		@include bp-down(xl){
+			padding: 10px 28px;
+		}
+		@include bp-down(sm) {
+			padding: 10px 15px;
+		}
 		&--md {
 		  padding: spacer(7) spacer(8) spacer(6);
+		}
+		&-left {
+			width: calc(100% - 150px);
+			display: table-cell;
+			vertical-align: middle;
+		}
+		&-right {
+			padding-left: 15px;
+			width: 150px;
+			display: table-cell;
+			vertical-align: middle;
 		}
 	}
 	&__wrap {
@@ -26,6 +49,14 @@
 		padding: 0 50px 0 90px;
 		height: calc(100vh - 350px);
 		min-height: 300px;
+		@include bp-down(xl) {
+			margin-right: 4px;
+			padding: 0 15px 0 27px;
+			height: calc(100vh - 355px);
+		}
+		@include bp-down(sm) {
+			padding: 0 7px 0 15px;
+		}
 		&::-webkit-scrollbar {
 			width: 4px;
 		}
@@ -36,6 +67,9 @@
 	&__field {
 		padding: 10px;
 		margin-top: 15px;
+		@include bp-down(sm) {
+			margin-top: 5px;
+		}
 		&--right {
 			padding-right: 10px;
 			text-align: right;
@@ -53,6 +87,10 @@
 		border-radius: 10px;
 		vertical-align: top;
 		display: inline-block;
+		@include bp-down(xl) {
+			padding: 10px 16px;
+			font-size: 14px;
+		}
 		&:before {
 			position: absolute;
 			content: "";
@@ -80,6 +118,10 @@
 		margin-top: 12px;
 		color: #34364d;
 		text-transform: uppercase;
+		@include bp-down(xl) {
+			margin-top: 7px;
+			font-size: 12px;
+		}
 	}
 	&__footer {
 		position: absolute;
@@ -94,6 +136,9 @@
 		background-color: #FFF;
 		box-shadow: 3px 0 22.1px 1.9px rgba(0, 0, 0, 0.09);
 		@include bp-down(sm) {
+			left: -77px;
+			bottom: 0;
+			right: 0;
 			padding: 0 20px;
 		}
 	}
@@ -152,16 +197,57 @@
 	&__send {
 		margin-left: 30px;
 	}
-	&__copyists {
-		max-width: 320px;
-		flex: 0 0 320px;
-	}
 	&__window {
 		position: relative;
 		padding: 0 0 83px;
 		flex-grow: 1;
 		@include bp-down(sm) {
-			padding: 0 20px 68px;
+			padding: 0 0 66px;
 		}
+	}
+	&__inform {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	&__topic-forms {
+		display: flex;
+		align-items: center;
+	}
+	&__notifications {
+		margin-left: 10px;
+		font-size: 0;
+	}
+	.card-brand {
+		max-width: 100%;
+	}
+	.chat__copyists {
+		max-width: 320px;
+		flex: 0 0 320px;
+		@include bp-down(sm) {
+			max-width: 77px;
+			flex: 0 0 77px;
+			border-bottom-right-radius: 7px;
+			height: calc(100vh - 299px);
+		}
+	}
+	.card-brand__name {
+		overflow: hidden;
+		@include bp-down(sm) {
+			display: none;
+		}
+	}
+}
+
+.chat-notifications {
+	margin: 0;
+	padding: 0;
+	border: none;
+	cursor: pointer;
+	font-size: 0;
+	background-color: transparent;
+	color: #83a2bd;
+	.icon {
+		height: 18px;
 	}
 }
