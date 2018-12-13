@@ -25,12 +25,14 @@ import './editior';
 import './checkSocInput';
 import './bonusCreator';
 import './warningBox';
+import videoCardsBg from './videoCardsBg';
 
 DOC.ready(function () {
   const body = document.querySelector('body');
 
   body.classList.remove('no-js');
 
+  videoCardsBg();
   carousel();
   slider();
   select();
@@ -40,4 +42,5 @@ DOC.ready(function () {
   piechart();
   datepicker();
   projectCreator();
+
 });

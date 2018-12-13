@@ -7,6 +7,35 @@
 <div class="content pb-6 pt-6">
   <div class="container-fluid">
 
+    <div class="card-dyed card-dyed_over js-cards-bg">
+      <div class="card-dyed__overlay"></div>
+      <div class="card-dyed__bg">
+        <iframe class="card-dyed__video js-cards-bg-video" width="1280" height="557" src="https://www.youtube.com/embed/Q0oIoR9mLwc?rel=0&controls=0&showinfo=0&loop=1​&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="card-dyed__block card-dyed__block--brand">
+        <div class="card-brand card-dyed__brand">
+          <span class="card-brand__badge">
+            <span class="card-brand__logo" style="background-image: url(assets/imgs/icon-ico-project-brixby.png);"></span>
+          </span>
+          <div class="card-brand__name">
+            <p class="mb-0 h2 font-weight-bolder text-primary text-lg-white">BRIXBY</p>
+            <p class="mb-0 h2 font-weight-bold text-uppercase text-xs text-primary text-lg-white">Carasharing</p></div>
+          </div>
+        </div>
+        <div class="card-dyed__wrapper">
+          <div class="card-dyed__block card-dyed__block--stage">
+            <p class="card-dyed__stage">COMING SOON</p>
+          </div>
+          <div class="card-dyed__block card-dyed__block--meta">
+            <p class="card-dyed__meta">
+              <strong>8 JUN - 20 JUL</strong>
+            </p>
+            <p class="card-dyed__meta">MIN Invest: <strong>1.5 ETH</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     {% for project in datasets.get('premium-ico-project.json') %}
     {% set content %}
     <p class="mb-0 h2 font-weight-bolder text-primary text-lg-white">{{ project.name }}</p>
