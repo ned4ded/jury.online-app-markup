@@ -9,7 +9,7 @@
 		right: 0;
 		height: 1px;
 		background-color: #D3D4D9;
-		@include bp-down(sm){
+		@include bp-down(sm) {
 			left: 77px;
 		}
 	}
@@ -22,7 +22,7 @@
 		table-layout: fixed;
 		align-items: center;
 		justify-content: space-between;
-		@include bp-down(xl){
+		@include bp-down(xl) {
 			padding: 10px 28px;
 		}
 		@include bp-down(sm) {

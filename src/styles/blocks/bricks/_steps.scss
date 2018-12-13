@@ -54,8 +54,8 @@
 	&__item {
 		position: relative;
 		height: 2px;
-		flex-basis: 25%;
-		max-width: 25%;
+		flex-basis: 100%;
+		max-width: 100%;
 		background-color: #E5E5E5;
 		display: inline-block;
 		&:first-child {
