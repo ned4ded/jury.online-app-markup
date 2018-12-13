@@ -459,16 +459,16 @@
     text-decoration: none;
     .card-dyed__overlay {
       opacity: 0;
-      transition-delay: 0.1s;
+      // transition-delay: 0.1s;
     }
   }
 
   &__bg {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: -22%;
+    left: -22%;
+    width: 144%;
+    height: 144%;
   }
   &__video {
     width: 100%;
@@ -483,8 +483,8 @@
     bottom: 0;
     z-index: 1;
     background-color: rgba(#000, .5);
-    transition: opacity .01s ease-in-out;
-    transition-delay: 0s;
+    transition: opacity .3s ease-in-out;
+    // transition-delay: 0s;
     &:before {
       position: absolute;
       content: "";
