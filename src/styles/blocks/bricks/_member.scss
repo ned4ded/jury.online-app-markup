@@ -16,6 +16,8 @@
 		border-radius: 50%;
 		vertical-align: top;
 		display: inline-block;
+		background-size: cover;
+		background-position: center;
 		.is-black &,
 		.is-disabled & {
 			filter: grayscale(1);
