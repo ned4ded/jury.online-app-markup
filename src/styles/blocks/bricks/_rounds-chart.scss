@@ -34,7 +34,8 @@
 	}
 	&__bonus {
 		padding: 7px;
-		min-width: 130px;
+		min-width: 70px;
+		cursor: pointer;
 		color: #75A3BF;
 		position: relative;
 		border-radius: 18px;
@@ -88,6 +89,12 @@
 	}
 	&__date	 {
 		color: currentColor;
+		transition: visibility .3s, opacity .3s;
+		column-span: none;
+		&.is-hide {
+			visibility: hidden;
+			opacity: 0;
+		}
 		&:not(:last-child) {
 			padding-right: 5px;
 		}

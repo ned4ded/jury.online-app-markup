@@ -18,6 +18,11 @@
 			z-index: 0;
 			overflow: visible;
 		}
+		&.is-init ~ .attachments__btn {
+			@include bp-up($navbar-collapse-bp) {
+			  display: block;
+			}
+		}
 	}
 	&__swiper-wrapper {
 		justify-content: flex-start;
@@ -46,12 +51,6 @@
 	  
 	  &:focus {
 	  	outline: none;
-	  }
-
-	  @include bp-up($navbar-collapse-bp) {
-	    .is-init & {
-	    	display: block;
-	    }
 	  }
 
 	  @mixin gradient($direction: to right) {

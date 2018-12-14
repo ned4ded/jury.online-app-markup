@@ -234,20 +234,20 @@
         <h4 class="title-bord mb-8">Invest Rounds</h4>
         <!-- begin rounds-chart -->
         <div class="rounds-chart-wrap">
-          <div class="rounds-chart">
+          <div class="rounds-chart js-rounds-chart">
             <div class="rounds-chart__out">
               <div class="rounds-chart__row">
                 <div class="rounds-chart__parcent">20%</div>
                 <div class="rounds-chart__wrap">
                   <div class="rounds-chart__line"></div>
-                  <div class="rounds-chart__bonus" style="margin-left: 2%; width: 30%;"><span class="rounds-chart__bonus-text">BONUS</span><span class="rounds-chart__line-parcent">+ 20%</span></div>
+                  <div class="rounds-chart__bonus" data-chart-bonus="first" style="margin-left: 2%; width: 30%;"><span class="rounds-chart__bonus-text">BONUS</span><span class="rounds-chart__line-parcent">+ 20%</span></div>
                 </div>
               </div>
               <div class="rounds-chart__row">
                 <div class="rounds-chart__parcent">10%</div>
                 <div class="rounds-chart__wrap">
                   <div class="rounds-chart__line"></div>
-                  <div class="rounds-chart__bonus rounds-chart__bonus--green"  style="margin-left: 33%;">
+                  <div class="rounds-chart__bonus rounds-chart__bonus--green" data-chart-bonus="second"  style="margin-left: 33%;">
                     <span class="rounds-chart__bonus-text">BONUS</span><span class="rounds-chart__line-parcent">+ 10%</span>
                   </div>
                 </div>
@@ -256,7 +256,7 @@
                 <div class="rounds-chart__parcent">5%</div>
                 <div class="rounds-chart__wrap">
                   <div class="rounds-chart__line"></div>
-                  <div class="rounds-chart__bonus rounds-chart__bonus--orange" style="margin-left: 55%; width: 40%;">
+                  <div class="rounds-chart__bonus rounds-chart__bonus--orange" data-chart-bonus="third" style="margin-left: 55%; width: 40%;">
                     <span class="rounds-chart__bonus-text">BONUS</span><span class="rounds-chart__line-parcent">+ 5%</span>
                   </div>
                 </div>
@@ -269,9 +269,16 @@
               </div>
             </div>
             <div class="rounds-chart__footer">
-              {% for text in ['10 JAN', '15 JAN', '15 JAN', '15 JAN', '20 JAN', '25 JAN', '30 JAN', '05 FEB', '10 FEB', '15 FEB'] %}
-              <div class="rounds-chart__date">{{ text }}</div>
-              {% endfor %}   
+              <div class="rounds-chart__date js-rounds-chart-date">10 JAN</div>
+              <div class="rounds-chart__date js-rounds-chart-date" data-chart-date="first">15 JAN</div>
+              <div class="rounds-chart__date js-rounds-chart-date" data-chart-date="first">16 JAN</div>
+              <div class="rounds-chart__date js-rounds-chart-date" data-chart-date="first">17 JAN</div>
+              <div class="rounds-chart__date js-rounds-chart-date" data-chart-date="second">20 JAN</div>
+              <div class="rounds-chart__date js-rounds-chart-date" data-chart-date="third">25 JAN</div>
+              <div class="rounds-chart__date js-rounds-chart-date" data-chart-date="third">30 JAN</div>
+              <div class="rounds-chart__date js-rounds-chart-date" data-chart-date="third">05 FEB</div>
+              <div class="rounds-chart__date js-rounds-chart-date" data-chart-date="third">10 FEB</div>
+              <div class="rounds-chart__date js-rounds-chart-date">15 FEB</div>
             </div>
           </div>
         </div>

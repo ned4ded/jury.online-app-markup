@@ -3,6 +3,7 @@ export const OPEN = 'is-open';
 export const ACTIVE = 'is-active';
 export const ANIMATE = 'is-animate';
 export const INIT = 'is-init';
+export const HIDE = 'is-hide';
 export const SHOW = 'is-show';
 export const LOADED = 'is-loaded';
 export const DISABLED = 'is-disabled';
