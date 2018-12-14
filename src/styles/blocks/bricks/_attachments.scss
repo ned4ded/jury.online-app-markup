@@ -49,7 +49,9 @@
 	  }
 
 	  @include bp-up($navbar-collapse-bp) {
-	    display: block;
+	    .is-init & {
+	    	display: block;
+	    }
 	  }
 
 	  @mixin gradient($direction: to right) {
