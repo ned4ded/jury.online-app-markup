@@ -451,17 +451,21 @@
       #{$prop} : $value;
     }
   }
+  &_over {
+    &:hover {
+      .card-brand__inf,
+      .card-dyed__wrapper,
+      .card-dyed__img,
+      .card-dyed__overlay {
+        opacity: 0;
+        visibility: hidden;
+        // transition-delay: 0.1s;
+      }
+    }
+  }
 
   &:hover {
     text-decoration: none;
-    .card-brand__inf,
-    .card-dyed__wrapper,
-    .card-dyed__img,
-    .card-dyed__overlay {
-      opacity: 0;
-      visibility: hidden;
-      // transition-delay: 0.1s;
-    }
   }
 
   .card-brand__inf,
