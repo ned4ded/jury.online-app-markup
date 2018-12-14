@@ -10,14 +10,14 @@
       <span class="card-light__status badge badge-gradient-{{ status.color }}">{{ status.text }}</span>
       <span class="card-light__left">{{ left }}</span>
     </p>
-  </div>
-
-  <div class="card-light__wrapper">
     {% if descr %}
     <p class="card-light__block card-light__block--descr card-light__descr">
       {{ descr }}
     </p>
     {% endif %}
+  </div>
+
+  <div class="card-light__wrapper">
 
     <div class="card-light__block card-light__block--meta">
       <p class="card-light__period">{{ period }}</p>
