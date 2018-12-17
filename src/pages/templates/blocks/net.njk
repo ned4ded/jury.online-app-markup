@@ -1,6 +1,7 @@
 {% import "lib/dropdown.njk" as dropdown %}
 {% import "lib/icon.njk" as icon %}
 {% import "lib/helpers.njk" as helpers %}
+{% import "blocks/card-brand.njk" as brand %}
 
 {% macro make(id, classes) %}
 {% set link %}
@@ -13,7 +14,30 @@
 {% endset %}
 
 {% set content %}
-<p class="net__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor...</p>
+<div class="net__content">
+	<div class="net__head">
+		<div class="net__title h4">Messages</div>
+		<div class="net__btn btn btn--xs btn-outline-info text-uppercase">see all</div>
+	</div>
+	<hr class="net__hr">
+	<div class="net__field">
+		{% set content %}
+		<a href="#" class="chat__inform mb-0 h5 font-weight-bold text-primary text-uppercase">Lily baister</a>
+		<p class="chat__inform mb-0 font-weight-bold text-muted text-xs">Yesterday, 9:32 am</p>
+		{% endset %}
+		{{ brand.make(content, 'assets/imgs/icon-ico-project-elysian.png', 'net__brand') }}
+		<p>Tempor incididunt ut labore et dolore magna aliqua. Ut en... </p>
+	</div>
+	<hr class="net__hr">
+	<div class="net__field">
+		{% set content %}
+		<a href="#" class="chat__inform mb-0 h5 font-weight-bold text-primary text-uppercase">Lily baister</a>
+		<p class="chat__inform mb-0 font-weight-bold text-muted text-xs">Yesterday, 9:32 am</p>
+		{% endset %}
+		{{ brand.make(content, 'assets/imgs/icon-ico-project-elysian.png', 'net__brand') }}
+		<p>Tempor incididunt ut labore et dolore magna aliqua. Ut en... </p>
+	</div>
+</div>
 {% endset %}
 
 {% set classes = 'dropdown-absolute dropdown-align-right net' + helpers.parse(classes) %}

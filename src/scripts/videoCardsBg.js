@@ -15,7 +15,6 @@ export default function() {
             }
         }
       });
-      console.log(player);
       playersArray.push(player);
     });
   }

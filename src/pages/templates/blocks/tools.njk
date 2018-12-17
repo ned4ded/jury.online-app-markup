@@ -1,15 +1,45 @@
 {% import "lib/helpers.njk" as helpers %}
 {% import "lib/icon.njk" as icon %}
+{% import "lib/dropdown.njk" as dropdown %}
 
 {% macro make(tools, classes) %}
 <ul class="tools{{ helpers.parse(classes) }}">
   {% for tool in tools %}
+	{% if loop.index == 1 %}
+		<li class="tools__item">
+			{% set link %}
+			  <!-- <a href="{{ tool.href }}" class="tools__link"> -->
+			    {{ icon.make(tool.icon, 'tools__icon') }}<span class="tools__name" data-notification="{{ tool.notify }}">{{ tool.name | capitalize }}</span>
+			  <!-- </a> -->
+			{% endset %}
+			{% set content %}
 
+			<div class="net__content">
+				<div class="net__head">
+					<div class="net__title h4">Messages</div>
+					<div class="net__btn btn btn--xs text-uppercase btn-outline-info">see all</div>
+				</div>
+				<hr class="net__hr">
+				<div class="net__field">
+					<p>Tempor incididunt ut labore et dolore magna aliqua. Ut en... </p>
+				</div>
+				<hr class="net__hr">
+				<div class="net__field">
+					<p>Tempor incididunt ut labore et dolore magna aliqua. Ut en... </p>
+				</div>
+			</div>
+			{% endset %}
+			{% set classes = 'dropdown-absolute dropdown-align-right tools__link' %}
+			{{ dropdown.make(link, content, 'dropdown-content', classes, false) }}
+		</li>
+
+	{% else %}
   <li class="tools__item">
     <a href="{{ tool.href }}" class="tools__link">
       {{ icon.make(tool.icon, 'tools__icon') }}<span class="tools__name" data-notification="{{ tool.notify }}">{{ tool.name | capitalize }}</span>
     </a>
   </li>
+	{% endif %}
 
   {% endfor %}
 </ul>
