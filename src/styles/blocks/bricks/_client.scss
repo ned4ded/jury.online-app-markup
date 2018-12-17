@@ -46,7 +46,7 @@
 		  text-align: center;
 		}
 		&:not(:first-child) {
-			margin-top: 40px;
+			margin-top: 49px;
 			@include bp-down(sm) {
 			  margin-top: 15px;
 			}
