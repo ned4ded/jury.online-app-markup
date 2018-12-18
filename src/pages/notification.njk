@@ -1,9 +1,89 @@
-{% import "blocks/rating.njk" as rating %}
-
+{% import "blocks/card-brand.njk" as brand %}
 {% extends "layout.njk" %}
 
 {% block content %}
 
-  jjjj
+  <!-- begin notification -->
+  <div class="notification pt-10 pb-10">
+    <div class="notification__container container-md container-fluid">
+      <h2 class="mb-5">Notifications</h2>
+      <div class="box box--p--lg">
+        <!-- begin tabs -->
+        <div class="tabs" data-tabs>
+          <div class="tabs__out">
+            <ul class="tabs__list">
+              {% set tabsData = [
+                {
+                  id: 'today',
+                  text: 'Today'
+                },
+                {
+                  id: 'yesterday',
+                  text: 'yesterday'
+                },
+                {
+                  id: 'last-week',
+                  text: 'last week'
+                },
+                {
+                  id: 'last-month',
+                  text: 'last month'
+                },
+                {
+                  id: 'favorites',
+                  text: 'favorites',
+                  icon: 'star'
+                }
+                ] %}
+              {% for item in tabsData %}
+                <li class="tabs__item" data-tabs-control="{{ item.id }}">
+                  {% if item.icon %}{{ icon.make(item.icon) }}{% endif %}
+                  {{ item.text }}
+                </li>
+              {% endfor %}
+            </ul>
+            <hr class="m-0 p-0">
+          </div>
+          <div class="tabs__wrap" data-tabs-wrapper>
+            {% for item in tabsData %}
+              <div class="tabs__container" data-tabs-container="{{ item.id }}">
+                <div class="notif">
+                  <div class="notif__left">
+                    {% set content %}
+                    <a href="#" class="chat__inform mb-0 h5 font-weight-bold text-primary">Lily baister</a>
+                    <a href="#" class="chat__inform mt-1 h5 font-weight-bold text-sm text-blue">Project</a>
+                    {% endset %}
+                    {{ brand.make(content, 'assets/imgs/icon-ico-project-elysian.png') }}
+                  </div>
+                  <div class="notif__right">
+                    <div class="notif-info">
+                      <div class="notif-info__content">
+                        <div class="notif-info__time">5 minutes ago (<span class="text-bold">11:44 am</span>)</div>
+                        <a href="#" class="notif-info__text text-blue text-bold">has published a new stage of the project development</a>
+                      </div>
+                      <div class="notif-info__icon">
+                        
+                      </div>
+                    </div>
+                    <div class="notif-info">
+                      <div class="notif-info__content">
+                        <div class="notif-info__time">5 minutes ago (<span class="text-bold">11:44 am</span>)</div>
+                        <a href="#" class="notif-info__text text-blue text-bold">has published a new stage of the project development</a>
+                      </div>
+                      <div class="notif-info__icon">
+                        {{ icon.make('star-outline') }}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+        <!-- end tabs -->
+      </div>
+    </div>
+  </div>
+  <!-- end notification -->
 
 {% endblock %}
