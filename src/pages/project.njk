@@ -1,4 +1,5 @@
 {% extends "layout.njk" %}
+{% import "blocks/card-brand.njk" as brand %}
 
 {% block content %}
 
@@ -80,7 +81,100 @@
               </div>
               <div class="tabs__wrap" data-tabs-wrapper>
                 {% for item in tabsData %}
+
                 <div class="tabs__container" data-tabs-container="{{ item.id }}">
+                {% if loop.index == 3 %}
+                  <div class="tabs__inner tabs__inner--md">
+                    <hr class="m-0 p-0">
+                    <!-- begin project-token -->
+                    <div class="project-token">
+                      <div class="project-token__logo" style="background-image: url(./assets/imgs/hero-project.png);"></div>
+                      <div class="project-token__wrap">
+                        <div class="project-token__table">
+                          <div class="project-token__left">
+                            <div class="project-token__head">
+                              <div class="project-token__date">21.12.2016</div>
+                              <a href="#" class="project-token__title">Lancer Race: the gather for next</a>
+                            </div>
+                            <div class="project-token__text">He attacks observe mr cottage am examine gravity dear.Deal 5000 damage to enemies with grenades…</div>
+                          </div>
+                          <div class="project-token__right">
+                            <a href="#" class="btn btn--sm btn-info text-uppercase">more</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end project-token -->
+                    <hr class="m-0 p-0">
+                    <!-- begin project-token -->
+                    <div class="project-token">
+                      <div class="project-token__logo" style="background-image: url(./assets/imgs/hero-project.png);"></div>
+                      <div class="project-token__wrap">
+                        <div class="project-token__table">
+                          <div class="project-token__left">
+                            <div class="project-token__head">
+                              <div class="project-token__date">21.12.2016</div>
+                              <a href="#" class="project-token__title">Lancer Race: the gather for next</a>
+                            </div>
+                            <div class="project-token__text">He attacks observe mr cottage am examine gravity dear.Deal 5000 damage to enemies with grenades…</div>
+                          </div>
+                          <div class="project-token__right">
+                            <a href="#" class="btn btn--sm btn-info text-uppercase">more</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end project-token -->
+                    <hr class="m-0 p-0">
+                  </div>
+                {% elseif loop.index == 4 %}
+                  <div class="tabs__inner tabs__inner--md">
+                    <table class="tabs__table">
+                      <tr>
+                        <th>Channel Name</th>
+                        <th>Context</th>
+                        <th>Date</th>
+                      </tr>
+                      <tr>
+                        <td>
+                          {% set content %}
+                          <a href="#" class="chat__inform mb-0 h5 font-weight-bold text-primary">Lily baister</a>
+                          {% endset %}
+                          {{ brand.make(content, 'assets/imgs/icon-ico-project-elysian.png') }}
+                        </td>
+                        <td>
+                          <div class="tabs__table-text">…caring about tech with #Lancer</div>
+                        </td>
+                        <td><span class="text-blue">today</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          {% set content %}
+                          <a href="#" class="chat__inform mb-0 h5 font-weight-bold text-primary">Lily baister</a>
+                          {% endset %}
+                          {{ brand.make(content, 'assets/imgs/icon-ico-project-elysian.png') }}
+                        </td>
+                        <td>
+                          <div class="tabs__table-text">…caring about tech with #Lancer</div>
+                        </td>
+                        <td><span class="text-blue">4 days ago</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          {% set content %}
+                          <a href="#" class="chat__inform mb-0 h5 font-weight-bold text-primary">Lily baister</a>
+                          {% endset %}
+                          {{ brand.make(content, 'assets/imgs/icon-ico-project-elysian.png') }}
+                        </td>
+                        <td>
+                          <div class="tabs__table-text">…caring about tech with #Lancer</div>
+                        </td>
+                        <td><span class="text-blue">today</span></td>
+                      </tr>
+                    </table>
+                  </div>
+                {% else %}
+                
                   <div class="tabs__inner">
                     <p>{{ loop.index }}Lancer Network is a decentralized freelance site for the advertising and romotion of crowdsale and blockchain projects. Our members are comprised of those that want to earn cryptocurrency and the businesses that have the budget to pay for SMM and marketing services. Lancer Network is a decentralized freelance site for the advertising and promotion of crowdsale and blockchain projects.</p>
                     <p>Our members are comprised of those that want to earn cryptocurrency and the businesses that have the budget to pay for SMM and marketing.</p>
@@ -103,6 +197,8 @@
                       </a></li>
                     </ul>
                   </div>
+
+                {% endif %}
                 </div>
                 {% endfor %}
               </div>
