@@ -101,13 +101,13 @@
 			@include arr(9,13,#83a2bd,l)
 		}
 		.chat__field--right & {
-			background-color: #f4f4f4;
-			color: #34364d;
+			// background-color: #f4f4f4;
+			// color: #34364d;
 			&:before {
 				left: 100%;
 				margin-right: auto;
 				margin-left: 1px;
-				@include arr(9,13,#f4f4f4,r)
+				@include arr(9,13,#83a2bd,r)
 			}
 		}
 	}
