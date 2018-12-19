@@ -119,6 +119,9 @@ body {
 .text-blue {
 	color: $glacier !important;
 }
+a.text-blue:hover {
+	color: $glacier !important;
+}
 
 .title-info {
 	color: $dusty-gray;

@@ -10,8 +10,8 @@
       <div class="box box--p--lg">
         <!-- begin tabs -->
         <div class="tabs" data-tabs>
-          <div class="tabs__out">
-            <ul class="tabs__list">
+          <div class="tabs__out tabs__out--flex">
+            <ul class="tabs__list mr-2">
               {% set tabsData = [
                 {
                   id: 'today',
@@ -42,11 +42,15 @@
                 </li>
               {% endfor %}
             </ul>
-            <hr class="m-0 p-0">
+            <div class="tabs__control-right">
+              <form class="tabs__search"><input type="text" class="form-control pr-0" placeholder="Search text"></form>
+            </div>
           </div>
+          <hr class="m-0 p-0">
           <div class="tabs__wrap" data-tabs-wrapper>
             {% for item in tabsData %}
               <div class="tabs__container" data-tabs-container="{{ item.id }}">
+                <!-- begin notif -->
                 <div class="notif">
                   <div class="notif__left">
                     {% set content %}
@@ -61,11 +65,8 @@
                         <div class="notif-info__time">5 minutes ago (<span class="text-bold">11:44 am</span>)</div>
                         <a href="#" class="notif-info__text text-blue text-bold">has published a new stage of the project development</a>
                       </div>
-                      <div class="notif-info__icon">
-                        
-                      </div>
                     </div>
-                    <div class="notif-info">
+                    <div class="notif-info notif-info--yellow">
                       <div class="notif-info__content">
                         <div class="notif-info__time">5 minutes ago (<span class="text-bold">11:44 am</span>)</div>
                         <a href="#" class="notif-info__text text-blue text-bold">has published a new stage of the project development</a>
@@ -74,8 +75,102 @@
                         {{ icon.make('star-outline') }}
                       </div>
                     </div>
+                    <div class="notif-info notif-info--blue">
+                      <div class="notif-info__content">
+                        <div class="notif-info__time">5 minutes ago (<span class="text-bold">11:44 am</span>)</div>
+                        <a href="#" class="notif-info__text text-blue text-bold">has published a new stage of the project development</a>
+                      </div>
+                      <div class="notif-info__icon">
+                        {{ icon.make('star-outline', 'text-blue') }}
+                      </div>
+                    </div>
                   </div>
                 </div>
+                <!-- end notif -->
+                <hr class="p-0">
+                <!-- begin notif -->
+                <div class="notif">
+                  <div class="notif__left">
+                    {% set content %}
+                    <a href="#" class="chat__inform mb-0 h5 font-weight-bold text-primary">Lily baister</a>
+                    <a href="#" class="chat__inform mt-1 h5 font-weight-bold text-sm text-blue">Project</a>
+                    {% endset %}
+                    {{ brand.make(content, 'assets/imgs/icon-ico-project-elysian.png') }}
+                  </div>
+                  <div class="notif__right">
+                    <div class="notif-info">
+                      <div class="notif-info__content">
+                        <div class="notif-info__time">5 minutes ago (<span class="text-bold">11:44 am</span>)</div>
+                        <a href="#" class="notif-info__text text-blue text-bold">has published a new stage of the project development</a>
+                      </div>
+                    </div>
+                    <div class="notif-info">
+                      <div class="notif-info__content">
+                        <div class="notif-info__time">5 minutes ago (<span class="text-bold">11:44 am</span>)</div>
+                        <a href="#" class="notif-info__text text-blue text-bold">has published a new stage of the project development</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end notif -->
+                <hr class="p-0">
+                <!-- begin notif -->
+                <div class="notif">
+                  <div class="notif__left">
+                    {% set content %}
+                    <a href="#" class="chat__inform mb-0 h5 font-weight-bold text-primary">Lily baister</a>
+                    <a href="#" class="chat__inform mt-1 h5 font-weight-bold text-sm text-blue">Project</a>
+                    {% endset %}
+                    {{ brand.make(content, 'assets/imgs/icon-ico-project-elysian.png') }}
+                  </div>
+                  <div class="notif__right">
+                    <div class="notif-info notif-info--yellow">
+                      <div class="notif-info__content">
+                        <div class="notif-info__time">5 minutes ago (<span class="text-bold">11:44 am</span>)</div>
+                        <a href="#" class="notif-info__text text-blue text-bold">has published a new stage of the project development</a>
+                      </div>
+                      <div class="notif-info__icon">
+                        {{ icon.make('star-outline') }}
+                      </div>
+                    </div> 
+                    <div class="notif-info">
+                      <div class="notif-info__content">
+                        <div class="notif-info__time">5 minutes ago (<span class="text-bold">11:44 am</span>)</div>
+                        <a href="#" class="notif-info__text text-blue text-bold">has published a new stage of the project development</a>
+                      </div>
+                    </div> 
+                  </div>
+                </div>
+                <!-- end notif -->
+                <hr class="p-0">
+                <!-- begin notif -->
+                <div class="notif">
+                  <div class="notif__left">
+                    {% set content %}
+                    <a href="#" class="chat__inform mb-0 h5 font-weight-bold text-primary">Lily baister</a>
+                    <a href="#" class="chat__inform mt-1 h5 font-weight-bold text-sm text-blue">Project</a>
+                    {% endset %}
+                    {{ brand.make(content, 'assets/imgs/icon-ico-project-elysian.png') }}
+                  </div>
+                  <div class="notif__right">
+                    <div class="notif-info notif-info--red">
+                      <div class="notif-info__content">
+                        <div class="notif-info__time">5 minutes ago (<span class="text-bold">11:44 am</span>)</div>
+                        <a href="#" class="notif-info__text text-blue text-bold">has published a new stage of the project development</a>
+                      </div>
+                      <div class="notif-info__icon">
+                        {{ icon.make('star-outline') }}
+                      </div>
+                    </div> 
+                    <div class="notif-info">
+                      <div class="notif-info__content">
+                        <div class="notif-info__time">5 minutes ago (<span class="text-bold">11:44 am</span>)</div>
+                        <a href="#" class="notif-info__text text-blue text-bold">has published a new stage of the project development</a>
+                      </div>
+                    </div> 
+                  </div>
+                </div>
+                <!-- end notif -->
               </div>
             {% endfor %}
           </div>
