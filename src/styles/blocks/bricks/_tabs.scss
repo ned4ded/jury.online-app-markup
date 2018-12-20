@@ -86,6 +86,12 @@
       display: inline-block;
     }
   }
+  &__item-img {
+    img {
+      max-height: 24px;
+      display: block;
+    }
+  }
   &__container {
     padding-top: 22px;
   }

@@ -62,20 +62,18 @@
                     {
                       id: 'disclaimer',
                       text: 'Disclaimer'
-                    },
-                    {
-                      id: 'blog',
-                      text: 'Blog'
-                    },
-                    {
-                      id: 'buzzim',
-                      text: 'Buzz.im'
                     }
                     ] %}
                   {% for item in tabsData %}
+                    {% if item.img %}
+                    <li class="tabs__item" data-tabs-control="{{ item.id }}">
+                      <span class="tabs__item-img"><img src="./assets/imgs/{{ item.img }}" alt="{{ item.id }}"></span>
+                    </li>
+                    {% else %}
                     <li class="tabs__item" data-tabs-control="{{ item.id }}">
                       {{ item.text }}
                     </li>
+                    {% endif %}
                   {% endfor %}
                 </ul>
               </div>
@@ -83,52 +81,34 @@
                 {% for item in tabsData %}
 
                 <div class="tabs__container" data-tabs-container="{{ item.id }}">
-                {% if loop.index == 3 %}
-                  <div class="tabs__inner tabs__inner--md">
-                    <hr class="m-0 p-0">
-                    <!-- begin project-token -->
-                    <div class="project-token">
-                      <div class="project-token__logo" style="background-image: url(./assets/imgs/hero-project.png);"></div>
-                      <div class="project-token__wrap">
-                        <div class="project-token__table">
-                          <div class="project-token__left">
-                            <div class="project-token__head">
-                              <div class="project-token__date">21.12.2016</div>
-                              <a href="#" class="project-token__title">Lancer Race: the gather for next</a>
-                            </div>
-                            <div class="project-token__text">He attacks observe mr cottage am examine gravity dear.Deal 5000 damage to enemies with grenades…</div>
-                          </div>
-                          <div class="project-token__right">
-                            <a href="#" class="btn btn--sm btn-info text-uppercase">more</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- end project-token -->
-                    <hr class="m-0 p-0">
-                    <!-- begin project-token -->
-                    <div class="project-token">
-                      <div class="project-token__logo" style="background-image: url(./assets/imgs/hero-project.png);"></div>
-                      <div class="project-token__wrap">
-                        <div class="project-token__table">
-                          <div class="project-token__left">
-                            <div class="project-token__head">
-                              <div class="project-token__date">21.12.2016</div>
-                              <a href="#" class="project-token__title">Lancer Race: the gather for next</a>
-                            </div>
-                            <div class="project-token__text">He attacks observe mr cottage am examine gravity dear.Deal 5000 damage to enemies with grenades…</div>
-                          </div>
-                          <div class="project-token__right">
-                            <a href="#" class="btn btn--sm btn-info text-uppercase">more</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- end project-token -->
-                    <hr class="m-0 p-0">
+                  <div class="tabs__inner">
+                    <p>{{ loop.index }}Lancer Network is a decentralized freelance site for the advertising and romotion of crowdsale and blockchain projects. Our members are comprised of those that want to earn cryptocurrency and the businesses that have the budget to pay for SMM and marketing services. Lancer Network is a decentralized freelance site for the advertising and promotion of crowdsale and blockchain projects.</p>
+                    <p>Our members are comprised of those that want to earn cryptocurrency and the businesses that have the budget to pay for SMM and marketing.</p>
+                    <p>Our members are comprised of those that want to earn cryptocurrency and the businesses that have the budget to pay for SMM and marketing.</p>
+                    <p>Our members are comprised of those that want to earn cryptocurrency and the businesses that have the budget to pay for SMM and marketing.</p>
                   </div>
-                {% elseif loop.index == 4 %}
+                  <div class="tabs__footer">
+                    <div class="tabs__link">
+                      <a href="#" class="link link--border">http://lancer.networ</a>
+                    </div>
+                    <ul class="tabs__soc soc">
+                      <li class="soc__item"><a href="#">
+                        {{ icon.make('linkedin-md') }}
+                      </a></li>
+                      <li class="soc__item"><a href="#">
+                        {{ icon.make('facebook') }}
+                      </a></li>
+                      <li class="soc__item"><a href="#">
+                        {{ icon.make('twitter') }}
+                      </a></li>
+                    </ul>
+                  </div>
+               {# {% if loop.index == 3 %}
                   <div class="tabs__inner tabs__inner--md">
+                    <div class="item-center">
+                      <a href="#" class="btn btn-info mb-3 mr-2 text-uppercase">worldopo</a>
+                      <a href="#" class="btn-icon mb-3">+</a>
+                    </div>
                     <table class="tabs__table">
                       <tr>
                         <th>Channel Name</th>
@@ -172,33 +152,51 @@
                         <td><span class="text-blue">today</span></td>
                       </tr>
                     </table>
+                    <hr class="m-0 p-0">
+                    <!-- begin project-token -->
+                    <div class="project-token">
+                      <div class="project-token__logo" style="background-image: url(./assets/imgs/hero-project.png);"></div>
+                      <div class="project-token__wrap">
+                        <div class="project-token__table">
+                          <div class="project-token__left">
+                            <div class="project-token__head">
+                              <div class="project-token__date">21.12.2016</div>
+                              <a href="#" class="project-token__title">Lancer Race: the gather for next</a>
+                            </div>
+                            <div class="project-token__text">He attacks observe mr cottage am examine gravity dear.Deal 5000 damage to enemies with grenades…</div>
+                          </div>
+                          <div class="project-token__right">
+                            <a href="#" class="btn btn--sm btn-info text-uppercase">more</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end project-token -->
+                    <hr class="m-0 p-0">
+                    <!-- begin project-token -->
+                    <div class="project-token">
+                      <div class="project-token__logo" style="background-image: url(./assets/imgs/hero-project.png);"></div>
+                      <div class="project-token__wrap">
+                        <div class="project-token__table">
+                          <div class="project-token__left">
+                            <div class="project-token__head">
+                              <div class="project-token__date">21.12.2016</div>
+                              <a href="#" class="project-token__title">Lancer Race: the gather for next</a>
+                            </div>
+                            <div class="project-token__text">He attacks observe mr cottage am examine gravity dear.Deal 5000 damage to enemies with grenades…</div>
+                          </div>
+                          <div class="project-token__right">
+                            <a href="#" class="btn btn--sm btn-info text-uppercase">more</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end project-token -->
+                    <hr class="m-0 p-0">
                   </div>
                 {% else %}
-                
-                  <div class="tabs__inner">
-                    <p>{{ loop.index }}Lancer Network is a decentralized freelance site for the advertising and romotion of crowdsale and blockchain projects. Our members are comprised of those that want to earn cryptocurrency and the businesses that have the budget to pay for SMM and marketing services. Lancer Network is a decentralized freelance site for the advertising and promotion of crowdsale and blockchain projects.</p>
-                    <p>Our members are comprised of those that want to earn cryptocurrency and the businesses that have the budget to pay for SMM and marketing.</p>
-                    <p>Our members are comprised of those that want to earn cryptocurrency and the businesses that have the budget to pay for SMM and marketing.</p>
-                    <p>Our members are comprised of those that want to earn cryptocurrency and the businesses that have the budget to pay for SMM and marketing.</p>
-                  </div>
-                  <div class="tabs__footer">
-                    <div class="tabs__link">
-                      <a href="#" class="link link--border">http://lancer.networ</a>
-                    </div>
-                    <ul class="tabs__soc soc">
-                      <li class="soc__item"><a href="#">
-                        {{ icon.make('linkedin-md') }}
-                      </a></li>
-                      <li class="soc__item"><a href="#">
-                        {{ icon.make('facebook') }}
-                      </a></li>
-                      <li class="soc__item"><a href="#">
-                        {{ icon.make('twitter') }}
-                      </a></li>
-                    </ul>
-                  </div>
 
-                {% endif %}
+                {% endif %} #}
                 </div>
                 {% endfor %}
               </div>
@@ -212,6 +210,55 @@
           </div>
         </div>
       </div> 
+      <!-- end box -->
+      <!-- begin box -->
+      <div class="box box--p--lg mt-9">
+        <h4 class="title-bord mb-6">Blog by <img class="title-bord__logo" src="./assets/imgs/buzz-im.png" alt="buzz.in"></h4>
+        <div class="item-center">
+          <a href="#" class="btn btn-info mb-3 mr-2 text-uppercase">worldopo</a>
+          <a href="#" class="btn-icon mb-3">Add tag</a>
+        </div>
+        <div class="panel-project mt-3">
+          <div class="panel-project__topic">
+            <div class="panel-project__name mt-2">
+              <div class="h5 inline">Burger King Channel</div>
+              <div class="text-blue inline ml-2">Jhon Doe</div>
+            </div>
+            <div class="panel-project__topic-date mt-2">21 Feb 2018  10:10</div>
+          </div>
+          
+          <div class="panel-project__box box box--p--md mt-3">
+            <div class="panel-project__box-row row">
+              <div class="panel-project__btn text-center col-md-3 col-2xl-2">
+                <a href="#" class="panel-project__img-btn panel-project__img-btn--md">
+                  <img src="./assets/imgs/buzz-im.png" alt="buzz.in">
+                </a>
+              </div>
+              <div class="panel-project__text text-center col-md-9 col-2xl-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit ...Lorem ipsum dolor sit amet, consectetur adipisicing elit ...Lorem ipsum dolor sit amet, consectetur adipisicing elit ...Lorem ipsum dolor sit amet, consectetur adipisicing elit ...Lorem ipsum dolor sit amet, consectetur adipisicing elit ...Lorem ipsum dolor sit amet, consectetur adipisicing elit ...</div>
+            </div>
+          </div>
+        </div>
+        <div class="panel-project mt-3">
+          <div class="panel-project__topic">
+            <div class="panel-project__name mt-2">
+              <div class="h5 inline">Burger King Channel</div>
+              <div class="text-blue inline ml-2">Jhon Doe</div>
+            </div>
+            <div class="panel-project__topic-date mt-2">21 Feb 2018  10:10</div>
+          </div>
+          
+          <div class="panel-project__box box box--p--md mt-3">
+            <div class="panel-project__box-row row">
+              <div class="panel-project__btn text-center col-md-3 col-2xl-2">
+                <a href="#" class="project-token project-token--inline p-0">
+                  <div class="project-token__logo" style="background-image: url(./assets/imgs/hero-project.png);"></div>
+                </a>
+              </div>
+              <div class="panel-project__text text-center col-md-9 col-2xl-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit ...Lorem ipsum dolor sit amet, consectetur adipisicing elit ...Lorem ipsum dolor sit amet, consectetur adipisicing elit ...Lorem ipsum dolor sit amet, consectetur adipisicing elit ...Lorem ipsum dolor sit amet, consectetur adipisicing elit ...Lorem ipsum dolor sit amet, consectetur adipisicing elit ...</div>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- end box -->
       <div class="row">
         <div class="col-xxl-5 mt-9">

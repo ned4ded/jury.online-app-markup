@@ -29,6 +29,10 @@
     background-color: #FF7864;
     box-shadow: 1px 1px 4px rgba(#FF7864, .5);
   }
+  &__logo {
+    max-height: 24px;
+    display: inline-block;
+  }
 }
 .large {
   font-size: 115%;

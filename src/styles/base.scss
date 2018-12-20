@@ -129,9 +129,26 @@ a.text-blue:hover {
 	font-size: 14px;
 }
 
+.item-center {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.inline {
+	display: inline;
+}
+
 .hide {
 	display: none;
 }
+
+.sm-hide {
+	@include bp-down(sm) {
+	  display: none !important;
+	}
+}
+
 .md-hide {
 	@include bp-down(md) {
 	  display: none !important;

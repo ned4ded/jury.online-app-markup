@@ -108,6 +108,9 @@
 	@include bp-down(sm) {
 	  flex-wrap: wrap;
 	}
+	&--inline {
+		display: inline-flex;
+	}
 	& + .project-token {
 		border-top: 1px solid #E5E5E5;
 	}
