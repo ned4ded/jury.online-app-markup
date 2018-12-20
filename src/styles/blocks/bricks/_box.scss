@@ -163,6 +163,18 @@ $box-spacers: (
     &--sm {
       padding: spacer(6) spacer(5) spacer(2);
     }
+    &--h530 {
+      overflow: auto;
+      max-height: 530px;
+      
+      &::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: #85a4be;
+      }
+    }
   }
 
 

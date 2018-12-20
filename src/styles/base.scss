@@ -155,6 +155,12 @@ a.text-blue:hover {
 	}
 }
 
+.lg-hide {
+	@include bp-down(lg) {
+	  display: none !important;
+	}
+}
+
 .xl-hide {
 	@include bp-down(xl) {
 	  display: none !important;
