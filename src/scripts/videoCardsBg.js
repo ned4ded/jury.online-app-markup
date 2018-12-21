@@ -1,8 +1,11 @@
+import Player from '@vimeo/player';
+import { BODY } from 'constants';
+
+
 export default function() {
   const tag = document.createElement('script');
   tag.src = "//www.youtube.com/iframe_api";
-  const firstScriptTag = $('script:last-child')[0];
-  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  $('body').append(tag);
 
   let players = $('.js-cards-bg-video');
   let playersArray = [];
@@ -36,5 +39,47 @@ export default function() {
     }, function(){
       playersArray[i].pauseVideo();
     });
-  }
+  };
+
+  const cards = $('.js-cards-bg');
+  cards.each((i,el) => {
+    const that = $(el);
+    const video = $('video', that)[0];
+    
+    if (video) {
+      // canplaythrough
+      $(video).on('canplay', ()=>{
+        that.hover(function(){
+          that.addClass('is-active');
+          video.play();
+        }, function(){
+          video.pause();
+        });
+      });
+    };
+
+    const vimeo = $('.js-card-bg-vimeo', that)[0];
+    if (vimeo) {
+      const id = $(vimeo).data('video-id');
+      var options = {
+        id: id,
+        width: 640,
+        loop: true,
+        title: false,
+        background: true,
+        byline: false,
+        speed: false,
+        portrait: false,
+        fun: false,
+        muted: true,
+      };
+      const player = new Player(vimeo, options);
+      player.setVolume(0);
+      that.hover(function(){
+        player.play();
+      }, function(){
+        player.pause();
+      });
+    }
+  });
 };
