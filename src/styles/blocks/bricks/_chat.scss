@@ -151,6 +151,9 @@
 			color: #34364d;
 			font-size: rem(16px);
 			border: none;
+			border: none !important;
+			outline: none !important;
+			box-shadow: none !important;
 			@include bp-down(sm) {
 				font-size: rem(14px);
 			}
